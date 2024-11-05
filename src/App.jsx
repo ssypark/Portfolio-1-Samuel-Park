@@ -5,7 +5,7 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Work from "./components/pages/Work";
 import Layout from './components/Layout';
-import HTMLElements from './components/pages/HTMLElements'
+// import HTMLElements from './components/pages/HTMLElements';
 
 function App() {
 
