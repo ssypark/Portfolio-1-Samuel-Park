@@ -1,15 +1,16 @@
 import React from "react";
-import styles from "./Home.module.css";
 
 function Home() {
     return (
-        <div className={styles.home}>
-            <div className="container">
-                <div className="grid">
-                    <div className="col-8 col-6-md">
+        <div >
+            <div className="min-h-screen flex items-center justify-center bg-gray-100">
+                <div className="container mx-auto p-4">
+                    <div className="grid grid-cols-4 md:grid-cols-12 gap-4">
+                        <div className="col-span-4 md:col-span-6 bg-white p-4 shadow rounded">
                         <p className="text-xl">I am 8 columns on mobile, 6 on desktop</p>
+                        </div>
                     </div>
-                    <div className="col-4 col-6-md">
+                    <div className="col-span-4 md:col-span-6 bg-white p-4 shadow rounded">
                         <p>I am 4 columns on mobile, 6 on desktop</p>
                     </div>
                 </div>

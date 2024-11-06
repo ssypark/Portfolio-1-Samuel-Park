@@ -1,16 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=Work+Sans:wght@400;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* HELPER CLASSES */
-.flex {display: flex;}
-.between {justify-content: space-between;}
+/* .flex {display: flex;}
+.between {justify-content: space-between;} */
 
 
 
 /* GRID */
 
-.container {
+/* .container {
     max-width: 80rem;
     margin: 0 auto;
     padding: 0 1rem;
@@ -84,11 +86,11 @@
     .col-11-lg { grid-column: span 11; }
     .col-12-lg { grid-column: span 12; }
 
-}
+} */
 
 /* Discipline Box */
 
-.discipline-box {
+/* .discipline-box {
     border-width: 1px;
     border-style: solid;
     border-color: var(--dark-gray);
@@ -111,4 +113,4 @@
 
 .discipline-box__content {
     padding: 1.5rem 1rem;
-}
+} */
