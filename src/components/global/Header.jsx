@@ -5,11 +5,13 @@ import logo from "../../assets/logo.svg";
 
 
 function Header() {
+    const [isScrolled]
+
     return (
-        <header className="bg-olive" >
-            <div className="max-w-screen-xl mx-auto flex justify-between items-center p-4 text-offwhite font-workSans">                
-            <img src={logo} alt="logo" className="max-w-20" />
-            <nav>
+        <header className="bg-olive w-full">
+            <div className="flex justify-between items-center p-4 text-offwhite font-workSans">                
+            <img src={logo} alt="logo" className="max-w-16" />
+            <nav className="hidden md:flex gap-4">
                 <ul className="list-none flex gap-4 ">
                     <li className="text-offwhite hover:text-redwood">
                         <Link to="/">Home</Link>

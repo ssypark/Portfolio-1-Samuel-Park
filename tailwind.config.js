@@ -7,6 +7,7 @@ export default {
         olive: '#5F6B53',
         ink: '#24261B',
         sage: '#95ABAD',
+        redwood: '#A84D1B',
         offwhite: '#F3F1EE',
         florange: '#FF5B03',
       },
