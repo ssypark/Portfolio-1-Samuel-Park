@@ -27,7 +27,7 @@ function ProjectShowcase({ image, title, description, tags }) {
             <div className="absolute inset-0 bg-ink opacity-90 group-hover:opacity-0 transition-opacity duration-300 ease-in-out"></div>
             
             {/* Content */}
-            <div className="relative p-8 z-10">
+            <div className="relative p-8 z-10 flex flex-col items-end text-right">
                 <h2 className="text-2xl font-syne font-bold text-offwhite">{title}</h2>
                 <p className="mt-2 text-sm text-offwhite font-workSans opacity-75">{description}</p>
                 {/* Skill Pills */}
@@ -42,7 +42,7 @@ function ProjectShowcase({ image, title, description, tags }) {
             
             {/* CTA */}
             <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                <button className="px-4 py-2 bg-redWood text-offwhite font-bold font-syne rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <button className="px-4 py-2 bg-redwood text-offwhite font-bold font-syne rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
                     View Project
                 </button>
             </div>

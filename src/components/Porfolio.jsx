@@ -20,11 +20,12 @@ function Portfolio() {
         },
         {
             image: interactiveImage,
-            title: 'The Salmon Sanctuary2',
-            description: 'Lorem',
-            tags: ['UX Research', 'Website Design', 'UX/UI'],
+            title: 'Interactive Document',
+            description: 'An interactive document designed to educate readers about the diverse species of the Thompson River through engaging visuals and intuitive navigation.',
+            tags: ['Interaction Design', 'Graphic Design'],
         },
     ]);
+
 
     return (
         <div className="container mx-auto p-8">

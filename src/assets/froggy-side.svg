@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 685.4 1209.4">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #5f6b53;
+      }
+
+      .st1 {
+        fill: none;
+        stroke: #e0e2e1;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 18px;
+      }
+    </style>
+  </defs>
+  <circle class="st0" cx="604.8" cy="438.5" r="75.4"/>
+  <circle class="st0" cx="377.5" cy="600.6" r="273.4"/>
+  <circle class="st0" cx="604.8" cy="760.3" r="75.4"/>
+  <polyline class="st1" points="569.2 542 533 599.4 569.2 656.8"/>
+  <line class="st1" x1="628" y1="446.8" x2="598.1" y2="409"/>
+  <line class="st1" x1="628" y1="753.2" x2="598.1" y2="790.9"/>
+  <path class="st0" d="M550.2,389.3c-37.5-75-155.7-87.4-241.2-134.5C205.1,197.5,110.1,127,86.1,59.7,62.1-7.6,16.9.1,9.2,20.3s-1,543.9,1.9,602.5l392.1-5.8,147-227.7Z"/>
+  <path class="st0" d="M549.3,813.2c-37.5,75-155.7,87.4-241.2,134.5-104,57.2-198.9,127.8-222.9,195.1-24,67.3-69.2,59.6-76.9,39.4-7.7-20.2-1-543.9,1.9-602.5l277.6,120.2,261.5,113.3Z"/>
+</svg>

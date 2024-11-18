@@ -8,7 +8,8 @@ import Layout from './components/Layout';
 // import 'react-burger-menu/lib/styles.css';
 import './css/Menu.css'
 import { slide as Menu } from 'react-burger-menu'
-
+// use https://github.com/locomotivemtl/locomotive-scroll for smooth scrolling
+//https://thednp.github.io/kute.js/ for animations
 function App() {
 
 
