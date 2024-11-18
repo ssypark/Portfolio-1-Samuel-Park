@@ -19,7 +19,7 @@ function ProjectShowcase({ image, title, description, tags }) {
         >
             {/* Background Image */}
             <div 
-                className="absolute inset-0 bg-cover bg-center transform filter grayscale transition-transform duration-300 ease-in-out group-hover:scale-110 group-hover:filter-none"
+                className="absolute inset-0 bg-cover bg-top transform filter grayscale transition-transform duration-300 ease-in-out group-hover:scale-110 group-hover:filter-none"
                 style={{ backgroundImage: `url(${image})` }}
             ></div>
             
