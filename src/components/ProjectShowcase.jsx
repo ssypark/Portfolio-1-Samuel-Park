@@ -27,8 +27,8 @@ function ProjectShowcase({ image, title, description, tags }) {
             <div className="absolute inset-0 bg-ink opacity-90 group-hover:opacity-0 transition-opacity duration-300 ease-in-out"></div>
             
             {/* Content */}
-            <div className="relative p-8 z-10 flex flex-col items-end text-right">
-                <h2 className="text-2xl font-syne font-bold text-offwhite">{title}</h2>
+            <div className="relative p-8 z-10 flex flex-col items-end text-right ">
+                <h2 className="text-2xl font-syne font-bold text-offwhite ">{title}</h2>
                 <p className="mt-2 text-sm text-offwhite font-workSans opacity-75">{description}</p>
                 {/* Skill Pills */}
                 <div className="flex gap-2 mt-4">

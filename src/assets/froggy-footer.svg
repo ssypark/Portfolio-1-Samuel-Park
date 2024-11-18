@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 701.3 694">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0, .st1, .st2 {
+        fill: #5f6b53;
+      }
+
+      .st3 {
+        stroke-width: 24px;
+      }
+
+      .st3, .st4 {
+        fill: none;
+        stroke: #e0e2e1;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .st1 {
+        filter: url(#drop-shadow-1);
+      }
+
+      .st2 {
+        filter: url(#drop-shadow-2);
+      }
+
+      .st4 {
+        stroke-width: 56px;
+      }
+
+      .st5 {
+        display: none;
+      }
+    </style>
+    <filter id="drop-shadow-1" x="-3" y="40" width="724" height="561" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="10"/>
+      <feGaussianBlur result="blur" stdDeviation="9"/>
+      <feFlood flood-color="#000" flood-opacity=".6"/>
+      <feComposite in2="blur" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="drop-shadow-2" x="-3" y="40" width="724" height="561" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="10"/>
+      <feGaussianBlur result="blur1" stdDeviation="9"/>
+      <feFlood flood-color="#000" flood-opacity=".6"/>
+      <feComposite in2="blur1" operator="in"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Layer_1" class="st5">
+    <circle class="st0" cx="327.6" cy="361" r="320.3"/>
+    <circle class="st0" cx="137.9" cy="94.8" r="88.4"/>
+    <circle class="st0" cx="514.7" cy="94.8" r="88.4"/>
+    <polyline class="st3" points="259 136.6 326.3 178.9 393.6 136.6"/>
+    <line class="st3" x1="147.6" y1="78.1" x2="129.2" y2="59.7"/>
+    <line class="st3" x1="506.4" y1="78.3" x2="525.3" y2="59.5"/>
+  </g>
+  <g id="Layer_1_copy_2" class="st5">
+    <path class="st1" d="M595.9,209.6c16.8-16.1,27.2-38.7,27.2-63.8,0-48.8-39.6-88.4-88.4-88.4s-67,21.5-80.8,52.4c-33.3-11.7-69.1-18.1-106.3-18.1s-74.7,6.7-108.6,18.9c-13.6-31.3-44.8-53.2-81.1-53.2s-88.4,39.6-88.4,88.4,11.1,49.1,28.7,65.2c-25.2,66-45.2,141-70.9,201-69.7,162.6,150.8,151,327.7,151s387.3,9.5,312.9-151c-32.9-71-53.9-143-72-202.4Z"/>
+    <polyline class="st3" points="279 187.6 346.3 229.9 413.6 187.6"/>
+    <line class="st3" x1="167.6" y1="129.1" x2="149.2" y2="110.7"/>
+    <line class="st3" x1="526.4" y1="129.3" x2="545.3" y2="110.5"/>
+  </g>
+  <g id="Layer_1_copy_3">
+    <path class="st2" d="M595.9,209.6c16.8-16.1,27.2-38.7,27.2-63.8,0-48.8-39.6-88.4-88.4-88.4s-67,21.5-80.8,52.4c-33.3-11.7-69.1-18.1-106.3-18.1s-74.7,6.7-108.6,18.9c-13.6-31.3-44.8-53.2-81.1-53.2s-88.4,39.6-88.4,88.4,11.1,49.1,28.7,65.2c-25.2,66-45.2,141-70.9,201-69.7,162.6,150.8,151,327.7,151s387.3,9.5,312.9-151c-32.9-71-53.9-143-72-202.4Z"/>
+    <polyline class="st4" points="341.4 175.5 341.5 176.2 341.4 177"/>
+    <line class="st3" x1="167.6" y1="129.1" x2="167.6" y2="102.2"/>
+    <line class="st3" x1="526.4" y1="129.3" x2="526.4" y2="102.2"/>
+  </g>
+  <g id="Layer_1_copy" class="st5">
+    <path class="st0" d="M575.9,158.6c16.8-16.1,27.2-38.7,27.2-63.8,0-48.8-39.6-88.4-88.4-88.4s-67,21.5-80.8,52.4c-33.3-11.7-69.1-18.1-106.3-18.1s-74.7,6.7-108.6,18.9c-13.6-31.3-44.8-53.2-81.1-53.2S49.5,46,49.5,94.8s11.1,49.1,28.7,65.2C33.9,215,7.3,284.9,7.3,361c0,176.9,143.4,320.3,320.3,320.3s320.3-143.4,320.3-320.3-27-147.2-72-202.4Z"/>
+    <polyline class="st3" points="259 136.6 326.3 178.9 393.6 136.6"/>
+    <line class="st3" x1="147.6" y1="78.1" x2="129.2" y2="59.7"/>
+    <line class="st3" x1="506.4" y1="78.3" x2="525.3" y2="59.5"/>
+  </g>
+</svg>

@@ -1,5 +1,6 @@
 
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { ReactLenis, useLenis } from 'lenis/react';
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Work from "./components/pages/Work";
@@ -11,9 +12,12 @@ import { slide as Menu } from 'react-burger-menu'
 // use https://github.com/locomotivemtl/locomotive-scroll for smooth scrolling
 //https://thednp.github.io/kute.js/ for animations
 function App() {
+  const lenis = useLenis(({scroll}) => {
 
+  })
 
   return (
+    <ReactLenis root>
     <BrowserRouter>
     <div id="outer-container">
       {/* Burger Menu */}
@@ -35,7 +39,7 @@ function App() {
       </main>
       </div>
     </BrowserRouter>
-
+    </ReactLenis>
   )
 }
 

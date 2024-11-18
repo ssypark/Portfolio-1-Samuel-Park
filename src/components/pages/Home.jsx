@@ -1,33 +1,16 @@
 import React from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import logo from "../../assets/logo-black.svg";
 import froggy from "../../assets/froggy.svg";
 import froggySide from "../../assets/froggy-side.svg";
 import Portfolio from "../Porfolio";
 import Contact from "../Contact";
 
+gsap.registerPlugin(ScrollTrigger);
+
 function Home() {
-    const heroFrogStyles = {
-        position: "absolute",
-        bottom: "-80px",
-        left: "50%",
-        transform: "translateX(-50%)",
-        zIndex: 10,
-        width: "256px",
-        height: "256px",
-    };
-
-    const sideFrogStyles = {
-        position: "absolute",
-        top: "50%",
-        left: "-30%",
-        transform: "translateY(-50%)",
-        zIndex: 0,
-        width: "192px",
-        height: "192px",
-    };
-
     useGSAP(() => {
         // Logo Animation
         gsap.fromTo(
@@ -50,7 +33,7 @@ function Home() {
             ".side-frog",
             { x: "-100%", opacity: 0 },
             {
-                x: "-30%",
+                x: "-35%",
                 opacity: 1,
                 duration: 1,
                 ease: "power3.out",
@@ -68,8 +51,8 @@ function Home() {
         <div className="relative bg-olive">
             {/* Sidebars */}
             <div className="absolute inset-0">
-                <div className="absolute top-0 left-0 w-16 h-full bg-olive"></div>
-                <div className="absolute top-0 right-0 w-8 h-full bg-olive"></div>
+                <div className="absolute top-0 left-0 w-16 z-10 h-full bg-olive"></div>
+                <div className="absolute top-0 right-0 w-8 z-10 h-full bg-olive"></div>
             </div>
 
             {/* Main Content */}
@@ -98,8 +81,7 @@ function Home() {
                     {/* Hero Frog */}
                     <div className="absolute bottom-0 left-0 w-full h-20 bg-olive z-20"></div>
                     <img
-                        className="hero-frog"
-                        style={heroFrogStyles}
+                        className="hero-frog w-40 h-40 absolute -bottom-5 left-1/2 transform -translate-x-1/2 z-10"
                         src={froggy}
                         alt="Frog"
                     />
@@ -109,20 +91,22 @@ function Home() {
                 <Portfolio />
 
                 {/* More Projects Section */}
-                <div className="more-projects relative bg-ink py-16 px-16 flex items-center justify-start gap-8">
+                <div className="more-projects relative bg-ink py-16 px-16 flex items-center gap-8 rounded-t-xl">
                     <img
-                        className="side-frog"
-                        style={sideFrogStyles}
+                        className="side-frog w-48 h-48 absolute top-1/2 -translate-y-1/2 -left-8 z-10"
                         src={froggySide}
                         alt="Frog"
                     />
-                    <button className="px-6 py-3 ml-8 bg-redwood text-offwhite font-syne font-bold rounded hover:bg-opacity-90 transition">
+                    <button className="px-6 py-3 bg-redwood text-offwhite font-syne font-bold rounded hover:bg-opacity-90 transition">
                         More Projects
                     </button>
                 </div>
+                 {/* Contact Section */}
+                <div>               
+                    <Contact />
+                    
+                    </div>
 
-                {/* Contact Section */}
-                <Contact />
             </div>
         </div>
     );

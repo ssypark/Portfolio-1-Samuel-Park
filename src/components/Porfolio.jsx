@@ -28,7 +28,7 @@ function Portfolio() {
 
 
     return (
-        <div className="container mx-auto px-8 py-0 mb-8">
+        <div className="container mx-auto px-0 py-0 mb-8">
             <div className="bg-olive w-full">
             <h2 className="text-4xl font-syne font-bold p-4 text-offwhite">Featured Projects</h2>
             </div>
