@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
+
 export default {
   content: ["./index.html", "./src/**/*.jsx"],
   theme: {
@@ -25,6 +27,16 @@ export default {
       },
     },
   },
-  plugins: [],
-}
-
+  plugins: [
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        '.bg-paper': {
+          backgroundImage: "url('src/assets/paper.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        },
+      });
+    }),
+  ],
+};

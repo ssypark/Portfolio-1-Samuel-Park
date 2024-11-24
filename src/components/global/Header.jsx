@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import logo from "../../assets/logo.svg";
 
+
+
 function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -22,11 +24,12 @@ function Header() {
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-50 bg-olive transition-all duration-300 ${
-                isScrolled ? "py-2" : "py-4"
+            className={`fixed top-0 left-0 w-full z-[200] transition-all duration-300 ${
+                isScrolled ? "py-2 shadow-lg bg-ink" : "py-4 bg-olive"
             }`}
         >
-            <div className="max-w-screen-xl mx-auto flex justify-between items-center px-4 text-offwhite font-workSans">
+            <div className="max-w-screen-xl mx-auto flex justify-between items-center text-offwhite font-workSans">
+                <Link to="/">
                 <img
                     src={logo}
                     alt="logo"
@@ -34,8 +37,9 @@ function Header() {
                         isScrolled ? "w-12" : "w-20"
                     }`}
                 />
-                <nav className="hidden md:flex gap-4">
-                    <ul className="list-none flex gap-4">
+                </Link>
+                <nav className="hidden md:flex">
+                    <ul className="list-none flex gap-8">
                         <li className="text-offwhite hover:text-redwood">
                             <Link to="/">Home</Link>
                         </li>

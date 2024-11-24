@@ -3,6 +3,7 @@ import React from "react";
 function Contact() {
     return (
         <>
+        
         <div className="bg-sage py-16 px-16 flex flex-col items-star rounded-b-xl">
         <h2 className="text-5xl font-syne font-bold text-ink mb-8">YOUR IDEAS MATTER</h2>
         <p className="text-xl text-ink font-workSans mb-4">
@@ -18,11 +19,7 @@ function Contact() {
         </div>
     </div>
 
-    <div className="bg-olive py-4 text-center">
-        <button className="px-4 py-2 bg-redwood text-offwhite rounded font-syne font-bold">
-            extras!
-        </button>
-    </div>
+
     </>
     );
 }

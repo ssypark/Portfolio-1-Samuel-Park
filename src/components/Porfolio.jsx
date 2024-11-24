@@ -1,10 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ProjectShowcase from "./ProjectShowcase";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+//Image Imports
 import ssImage from '../assets/ssi.png';
 import amalgmImage from '../assets/amalgm.png';
 import interactiveImage from '../assets/interactive.png';
 
 function Portfolio() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+            easing: "ease-in-out",
+        });
+    }, []);
+
     const [projects, setProjects] = useState([
         {
             image: ssImage,
@@ -30,17 +41,21 @@ function Portfolio() {
     return (
         <div className="container mx-auto px-0 py-0 mb-8">
             <div className="bg-olive w-full">
-            <h2 className="text-4xl font-syne font-bold p-4 text-offwhite">Featured Projects</h2>
+            <h2 className="sm:text-4xl text-3xl font-syne font-bold p-4 mb-4 mt-0 text-offwhite">Featured Projects</h2>
             </div>
             <div className="grid gap-8">
                 {projects.map((project, index) => (
-                    <ProjectShowcase
+                    <div
                         key={index}
-                        image={project.image}
-                        title={project.title}
-                        description={project.description}
-                        tags={project.tags}
-                    />
+                        data-aos="fade-right" // Use the same animation type for all projects
+                    >
+                        <ProjectShowcase
+                            image={project.image}
+                            title={project.title}
+                            description={project.description}
+                            tags={project.tags}
+                        />
+                    </div>
                 ))}
             </div>
 

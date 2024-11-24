@@ -8,9 +8,9 @@ import Layout from './components/Layout';
 //React Burger Menu (yum)
 // import 'react-burger-menu/lib/styles.css';
 import './css/Menu.css'
-import { slide as Menu } from 'react-burger-menu'
-// use https://github.com/locomotivemtl/locomotive-scroll for smooth scrolling
+import { bubble as Menu } from 'react-burger-menu'
 //https://thednp.github.io/kute.js/ for animations
+// Lottie JS for AE to JS
 function App() {
   const lenis = useLenis(({scroll}) => {
 

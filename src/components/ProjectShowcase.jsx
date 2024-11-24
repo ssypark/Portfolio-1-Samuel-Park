@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 function ProjectShowcase({ image, title, description, tags }) {
     const  [isExpanded, setIsExpanded] = useState(false);
 
@@ -25,7 +26,9 @@ function ProjectShowcase({ image, title, description, tags }) {
             
             {/* Overlay with text */}
             <div className="absolute inset-0 bg-ink opacity-90 group-hover:opacity-0 transition-opacity duration-300 ease-in-out"></div>
-            
+           
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-0 group-hover:opacity-75 transition-opacity duration-300 ease-in-out"></div>
             {/* Content */}
             <div className="relative p-8 z-10 flex flex-col items-end text-right ">
                 <h2 className="text-2xl font-syne font-bold text-offwhite ">{title}</h2>
