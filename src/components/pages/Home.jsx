@@ -37,17 +37,17 @@ function Home() {
         // Side Frog Animation
         gsap.fromTo(
             ".side-frog",
-            { x: "-100%", opacity: 0 },
+            { x: "-100%", opacity: 0 }, // initial position and opacity for when the user scrolls down to the section
             {
-                x: "-35%",
+                x: "-35%", // final position for when the user scrolls down to the section
                 opacity: 1,
                 duration: 1,
                 ease: "power3.out",
                 scrollTrigger: {
-                    trigger: ".more-projects",
-                    start: "top 80%",
-                    end: "bottom 20%",
-                    scrub: true,
+                    trigger: ".more-projects", // this class triggers the animation
+                    start: "top 80%", // this sets the starting point of the animation
+                    end: "bottom 20%", // this sets the ending point of the animation
+                    scrub: true, // this makes the animation smoother
 
                 },
             }
@@ -98,8 +98,8 @@ function Home() {
                 // This is necessary for the rotation of the fish since radians will not work with CSS
                 const angle = Math.atan2(dy, dx) * (180 / Math.PI);
 
-                // Repulsion Logic
-                // To keep the fish from congregrating into one point, this part of the code checks if the fish is close to another fish
+                // Repulsion Function
+                // To keep the fish from congregating into one point, this part of the code checks if the fish is close to another fish
                 fishElements.forEach((otherFish, otherIndex) => { // This loops through all the 'other' fish
                     if (index !== otherIndex) { // This is so that the condition ensures that the fish doesn't repel itself
                         const otherRect = otherFish.getBoundingClientRect(); // this gets the position of the other fish
@@ -119,10 +119,10 @@ function Home() {
                             // Finally, after getting the constants for the distance between the fish (odx/ody) and otherfish(otherX/otherY), we can calculate the repulsion force
                             gsap.to(fish, {
                                 // This is to animate the fish to move proportionally
-                                // We need to 'normalize' the vector of the fish to a unit vector
-                                // This is done by dividing the vector by the distance between the fish and the other fish
-                                x: `-=${odx / otherDistance * 10}`, // Move away from the other fish (X-axis)
-                                y: `-=${ody / otherDistance * 10}`, // Move away from the other fish (Y-axis)
+                                // We need to 'normalize' the vector of the fish to a "unit vector" = odx/y. This allows us to represent the direction from one fish to the others
+                                // This is done by dividing the unit vector by the distance between the fish and the other fish
+                                x: `-=${odx / otherDistance * 10}`, // Move away from the other fish (X-axis) multiplied by 10 (to control how far apart they should repel each other)
+                                y: `-=${ody / otherDistance * 10}`, // Move away from the other fish (Y-axis) (see comment above )
                                 duration: 0.5,
                                 ease: "power3.out",
                             });
@@ -132,17 +132,18 @@ function Home() {
 
                 // Animate fish towards the mouse
                 gsap.to(fish, {
-                    x: `+=${dx / distance * 20}`, // Move towards the mouse
-                    y: `+=${dy / distance * 20}`,
-                    rotation: angle, // Rotate toward the mouse
+                    x: `+=${dx / distance * 20}`, // Move horizontally towards the mouse. dividing the "dx" constant by the distance to ensure that the movement is proportional and this more realistic.
+                    y: `+=${dy / distance * 20}`, // += adds the calculated value to the fish's current position, this makes it move relative rather than absolute.
+                    rotation: angle, // Rotate animate the fish towards the mouse
                     duration: 1.5,
                     ease: "power3.out",
                 });
             });
         };
-
+        // This is to listens for the mouse movement by the user
         window.addEventListener("mousemove", handleMouseMove);
 
+        // This is to clean up the event listener when the component is unmounted, it also prevents memory leaks and other unwanted behavior
         return () => {
             window.removeEventListener("mousemove", handleMouseMove);
         };
@@ -153,20 +154,18 @@ function Home() {
             {/* Main Content */}
             <div className="container mx-auto">
                 {/* Hero Section */}
-                <div className="relative min-h-screen px-16 mt-0 flex items-center justify-center bg-paper bg-sage text-ink p-8">
+                <div className="relative min-h-screen px-16 mt-0 flex items-center justify-center bg-sage text-ink p-8">
                     <div className="flex flex-col md:flex-row items-center md:items-start text-left space-y-8 md:space-y-0 md:space-x-8 z-20 mb-12">
                         <img
-                            className="logo w-36 sm:w-72 mr-8 "
+                            className="logo w-36 sm:w-72 mr-8 animate-pulse"
                             src={logo}
                             alt="Samuel Park Logo"
                         />
                         <div className="text-left">
                             <h1 className="sm:text-h1 text-3xl font-bold font-syne tracking-wide mb-4">
-                                Hey
+                                Hello, I'm Samuel Park
                             </h1>
-                            <h1 className="sm:text-h1 text-3xl font-bold font-syne tracking-wide mb-4">
-                                I'm Samuel Park
-                            </h1>
+
                             <p className="text-md md:text-2xl max-w-2xl font-workSans">
                                 I'm a UI and visual designer with a
                                 background in fine arts, blending creativity
@@ -196,16 +195,18 @@ function Home() {
                     />
 
                     {/* Fish */}
+                    {/*  This creates and displays an array of10 fish icons from Font Awesome */}
+                    {/* .map() is used to create an array of 10 fish icons */}
                     {[...Array(10)].map((_, i) => (
                         <FaFishFins
-                            key={i}
-                            className="fish absolute text-slate-600"
-                            data-speed={Math.random() * 1 + 0.5} // Random speed multiplier
+                            key={i} // A key is necessary to assign a unique identifier to each fish icon
+                            className="fish absolute text-slate-600" // Class name for the fish icon for the animation along with styling
+                            data-speed={Math.random() * 1 + 0.5} // Random speed multiplier to create a more natural movement
                             style={{
-                                fontSize: `${Math.random() * 30 + 20}px`, // Random size
-                                top: `${Math.random() * 80 + 10}%`, // Random position
-                                left: `${Math.random() * 80 + 10}%`,
-                                transform: "rotate(0deg)", // Initial rotation
+                                fontSize: `${Math.random() * 30 + 20}px`, // Random sizes to create depth and variation
+                                top: `${Math.random() * 80 + 10}%`, // Random position to ensure the fish are spread out more evenly (vertically)
+                                left: `${Math.random() * 80 + 10}%`, // Random position to ensure the fish are spread out more evenly (horizontally)
+                                transform: "rotate(0deg)", // Initial rotation so the fish start out facing correctly
                             }}
                         />
                     ))}
