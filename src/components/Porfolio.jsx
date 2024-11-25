@@ -7,6 +7,8 @@ import "aos/dist/aos.css";
 import ssImage from '../assets/ssi.png';
 import amalgmImage from '../assets/amalgm.png';
 import interactiveImage from '../assets/interactive.png';
+import flyDexImage from '../assets/flydex.png';
+import introBumperImage from '../assets/intro-bumper.png';
 
 function Portfolio() {
     useEffect(() => {
@@ -35,14 +37,24 @@ function Portfolio() {
             description: 'An interactive document designed to educate readers about the diverse species of the Thompson River through engaging visuals and intuitive navigation.',
             tags: ['Interaction Design', 'Graphic Design'],
         },
+        {
+            image: flyDexImage,
+            title: 'FlyDex App',
+            description: 'FlyDex is an educational app designed to help fly fishing enthusiasts of all levels learn about techniques, find fishing spots, and connect with other anglers through an intuitive, all-in-one digital resource.',
+            tags: ['UX/UI', 'UX Research', 'Wireframing'],
+        },
+        {
+            image: introBumperImage,
+            title: 'Into Bumper Video',
+            description: 'Utilizing After Effects, I animated an intro bumper that showcases the different aspects of myself as a visual artist.',
+            tags: ['Animation', 'Video Editing', 'Graphic Design'],
+        },
     ]);
 
 
     return (
         <div className="container mx-auto px-0 py-0 mb-8">
-            <div className="bg-olive w-full">
-            <h2 className="sm:text-4xl text-3xl font-syne font-bold p-4 mb-4 mt-0 text-offwhite">Featured Projects</h2>
-            </div>
+            
             <div className="grid gap-8">
                 {projects.map((project, index) => (
                     <div

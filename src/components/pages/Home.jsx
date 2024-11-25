@@ -8,11 +8,10 @@ import logo from "../../assets/logo-black.svg";
 import logoBlack from "../../assets/logo-darkblack.svg";
 import froggy from "../../assets/froggy.svg";
 import froggySide from "../../assets/froggy-side.svg";
-import dragonfly from "../../assets/dragonfly.svg";
 import Portfolio from "../Porfolio";
 import Contact from "../Contact";
-import { FaFishFins } from "react-icons/fa6";
-import { parse } from "postcss";
+import { FaFishFins, FaArrowDown } from "react-icons/fa6";
+
 
 gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger for GSAP
 function Home() {
@@ -77,7 +76,7 @@ function Home() {
             fishElements.forEach((fish, index) => {
                 //in order to rotate the fish properly, we first need to get the center point of the fish
                 // This gets the position of the fish by binding the fish in a rectangle via "getBoundingClientRect"
-                const rect = fish.getBoundingClientRect(); 
+                const rect = fish.getBoundingClientRect();
                 // This gets the center of each fish. "rect" 
                 const fishX = rect.left + rect.width / 2; //the distance from the left to the right (x-coordinate) of the fish 'rectangle' divided by 2 to get the center
                 const fishY = rect.top + rect.height / 2; // same as above but vertically
@@ -86,7 +85,7 @@ function Home() {
                 //  using clientX and clientY (from above), along with the fish coordinates (fishX and fishY),
                 //  we can calculate the distance and direction between the mouse and the fish
                 // this is necessary for the animation of the fish to move towards the mouse
-                const dx = clientX - fishX; 
+                const dx = clientX - fishX;
                 const dy = clientY - fishY;
                 // Using pythagorean theorem (Mathematical!), we can calculate the distance (straight line distance) for the fish's center to the mouse
                 const distance = Math.sqrt(dx * dx + dy * dy);
@@ -173,29 +172,33 @@ function Home() {
                             </p>
                         </div>
                     </div>
-                    {/* Dragonflies */}
-                    {/* {[...Array(4)].map((_, i) => (
-                        <img
-                            key={i}
-                            src={dragonfly}
-                            alt="Dragonfly"
-                            className="dragonfly absolute w-16 h-16"
-                            style={{
-                                top: `${gsap.utils.random(10, 90)}%`,
-                                left: `${gsap.utils.random(10, 90)}%`,
-                            }}
-                        />
-                    ))} */}
+
                     {/* Hero Frog */}
                     <div className="absolute bottom-0 left-0 w-full h-10 bg-olive z-20"></div>
                     <img
                         className="hero-frog w-40 h-40 absolute -bottom-10 left-1/2 transform -translate-x-1/2 z-10"
                         src={froggy}
                         alt="Frog"
+                        title="Jump to Featured Projects"
+                        // This is to scroll to the "Featured Projects" section when the frog is clicked
+                        onClick={() => {
+                            document.getElementById("featuredProjects").scrollIntoView({ // This targets the "Featured Projects" section by its ID
+                                behavior: "smooth", // Smooth scrolling animation
+                                block: "start", // Scroll to the top of the section "featuredProjects"
+                            });
+                            //However, it scrolled too far down that it would hide the header by the nav bar.
+                            // To fix this, we add a slight offset for after the scroll and a bounce effect
+                            setTimeout(() => {
+                                window.scrollBy({
+                                    top: -60, //offset value for the scroll to show the header of "featuredProjects"
+                                    behavior: "smooth",
+                                });
+                            }, 400); // Delay the scroll by 400ms
+                        }}
                     />
 
                     {/* Fish */}
-                    {/*  This creates and displays an array of10 fish icons from Font Awesome */}
+                    {/*  This creates and displays an array of 10 fish icons from Font Awesome */}
                     {/* .map() is used to create an array of 10 fish icons */}
                     {[...Array(10)].map((_, i) => (
                         <FaFishFins
@@ -216,10 +219,14 @@ function Home() {
                 </div>
 
                 {/* Projects */}
-                <Portfolio />
-
+                <div id="featuredProjects">
+                    <div className="w-full">
+                        <h2 className="sm:text-4xl text-3xl font-syne font-bold p-4 mb-4 mt-0 text-offwhite flex items-center">Featured Projects <FaArrowDown className="ml-4" /></h2>
+                    </div>
+                    <Portfolio />
+                </div>
                 {/* More Projects Section */}
-                <div className="more-projects relative bg-ink py-16 px-16 flex items-center gap-8 rounded-t-xl z-50"
+                <div className="more-projects relative bg-ink p-16 flex items-center gap-8 rounded-t-xl z-50"
                     style={{
                         backgroundImage: `url(${logoBlack})`,
                         backgroundSize: "400px",
@@ -237,7 +244,7 @@ function Home() {
                 </div>
 
                 {/* Contact Section */}
-                <div>
+                <div className="pb-28">
                     <Contact />
                 </div>
 
