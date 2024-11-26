@@ -36,6 +36,12 @@ export default {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         },
+        '.bg-water': {
+          backgroundImage: "url('src/assets/water.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        },
       });
     }),
   ],

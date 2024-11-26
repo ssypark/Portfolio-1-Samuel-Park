@@ -16,6 +16,10 @@ import logoBlack from "../../assets/logo-darkblack.svg";
 import froggySide from "../../assets/froggy-side.svg";
 import tempest from "../../assets/tempest.jpg";
 
+import {
+    initSideFrogAnimation,
+} from "../animations/animations";
+
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -25,10 +29,13 @@ function About() {
     const iconsRef = useRef(null);
 
     useEffect(() => {
+        // Initialize AOS animations
         AOS.init({
             duration: 1000,
             easing: "ease-in-out",
-    });
+        });
+
+        // TackleBox Animation
         gsap.fromTo(
             ".tackle-box",
             { opacity: 0, x: "-100%" },
@@ -44,40 +51,17 @@ function About() {
                     end: "bottom 20%",
                     toggleActions: "restart none none reset ",
                 }
-            }
-        );
+            });
 
-        //Side Frog Animation
-        gsap.fromTo(
-            ".side-frog",
-            { x: "-100%", opacity: 0 },
-            {
-                x: "-35%",
-                opacity: 1,
-                duration: 1,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: ".more-projects",
-                    start: "top 80%",
-                    end: "bottom 20%",
-                    scrub: true,
-                },
-            }
-        )
-
+        // Side Frog Animation
+        initSideFrogAnimation();
     }, []);
-
-
-
-
-
-
 
     return (
 
         <div className="bg-olive pt-48 pb-32 px-8 relative">
             {/* Header Introduction */}
-            <div className="container min-h-screen mx-auto p-16 flex flex-col lg:flex-row md:-mt-32 sm:-mt-64 items-center gap-8 mb-12 justify-between bg-redwood bg-paper rounded-md">
+            <div className="container min-h-screen mx-auto p-16 flex flex-col lg:flex-row md:-mt-32 sm:-mt-64 items-center gap-8 mb-12 justify-between bg-redwood bg-paper rounded-md shadow-md">
                 <div data-aos="fade-right" className="lg:w-2/3 text-offwhite">
                     <h1 className="text-5xl font-bold font-syne mb-6">Nice to meet you</h1>
                     <p className="text-lg leading-relaxed mb-4 font-workSans">Hi, I'm Samuel. I'm a UX/UI designer with a background in fine arts, driven by a
@@ -135,28 +119,28 @@ function About() {
             {/* Skill Marquee */}
             <div className="container mx-auto px-8 flex flex-col lg:flex-row items-center gap-8 mb-12 justify-between">
                 <div className="w-1/2 text-offwhite">
-                    <h1 className="text-5xl font-bold font-syne mb-6">My Tacklebox</h1>
-                    <p className="text-xl leading-relaxed mb-4 font-workSans">Design tools:</p>
-                    <div className="gap-4 m-2 flex flex-row tackle-box">
-                        <SiFigma size={50} />
-                        <SiAdobeillustrator size={50} />
-                        <SiAdobephotoshop size={50} />
-                        <SiAdobeaftereffects size={50} />
+                    <h1 className="text-5xl sm:text-h1 font-bold font-syne mb-6">My Tacklebox</h1>
+                    <p className="text-xl leading-relaxed font-semibold mb-4 font-workSans">Design tools:</p>
+                    <div className="gap-6 mb-8 flex flex-row tackle-box">
+                        <SiFigma className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
+                        <SiAdobeillustrator className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
+                        <SiAdobephotoshop className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
+                        <SiAdobeaftereffects className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
                     </div>
-                    <p className="text-xl leading-relaxed mb-4 font-workSans">Languages:</p>
-                    <div className="gap-4 m-2 flex flex-row tackle-box">
-                        <SiHtml5 size={50} />
-                        <SiCss3 size={50} />
-                        <SiReact size={50} />
-                        <SiTailwindcss size={50} />
-
+                    <p className="text-xl leading-relaxed mb-4 font-semibold font-workSans">Languages:</p>
+                    <div className="gap-6 mb-8 flex flex-row tackle-box">
+                        <SiHtml5 className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
+                        <SiCss3 className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
+                        <SiReact className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
+                        <SiTailwindcss className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
                     </div>
                 </div>
-                <div className="w-1/2 flex justify-center mb-8 mt-8">
+                <div className="w-1/2 flex justify-center">
                     <img
                         src={flyFishing}
                         alt="Fly Fishing"
-                        className="rounded-md w-64 h-84 object-cover shadow-md"
+                        className="rounded-md w-128 h-auto object-cover shadow-md"
+                        data-aos="fade-up"
                     />
                 </div>
             </div>

@@ -35,7 +35,7 @@ function Header() {
                     alt="logo"
                     className={`transition-all duration-300 ${
                         isScrolled ? "w-12" : "w-20"
-                    }`}
+                    } animate-pulse`}
                 />
                 </Link>
                 <nav className="hidden md:flex">
