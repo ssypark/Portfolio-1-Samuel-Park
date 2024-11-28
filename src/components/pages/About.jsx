@@ -77,7 +77,7 @@ function About() {
                     <img
                         src={avatar}
                         alt="Profile Photo"
-                        className="rounded-full w-64 h-64 object-cover grayscale shadow-md"
+                        className="rounded-full w-64 h-64 object-cover shadow-md"
                     />
                 </div>
             </div>
