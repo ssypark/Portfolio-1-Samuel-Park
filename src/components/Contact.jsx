@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+
+import { initFooterFrogAnimation } from "./animations/animations";
 
 //Image Imports
 import froggyFooter from "../assets/froggy-footer.svg";
@@ -9,39 +11,32 @@ import froggyFooter from "../assets/froggy-footer.svg";
 
 function Contact() {
 
-    useGSAP(() => {
-        // Footer Frog Animation
-        gsap.to(".footer-frog", {
-            y: -15, //moves up the frog up and down by 15px
-            duration: 0.6, // duration of the animation
-            repeat: -1, // repeats the animation indefinitely
-            yoyo: true, // reverses the animation on each repeat
-            ease: "power3.inOut", // easing function
-        });
-    })
+    useEffect(() => {
+        initFooterFrogAnimation();
+    }, []);
 
 
     return (
         <>
             {/* Main Contact Section */}
             <div className="bg-sage bg-water px-4 sm:px-16 py-8 sm:py-24 flex flex-col items-start rounded-b-xl relative">
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-syne font-bold text-ink mb-8 pt-8">YOUR IDEAS MATTER</h2>
-<p className="text-lg sm:text-xl lg:text-2xl text-ink font-workSans mb-4">
+            <h2 className="text-h1 font-syne font-bold text-ink mb-2 pt-8">YOUR IDEAS MATTER</h2>
+<p className="text-h3 text-ink font-workSans mb-8">
     I’m here to listen, collaborate, and create.
 </p>
                 <div className="flex flex-col space-y-2">
-                    <a href="mailto:example@example.com" className="text-ink hover:text-redwood text-lg">
+                    <a href="mailto:example@example.com" className="text-ink hover:text-redwood text-h6">
                         → EMAIL
                     </a>
-                    <a href="mailto:example@example.com" className="text-ink hover:text-redwood text-lg">
+                    <a href="mailto:example@example.com" className="text-ink hover:text-redwood text-h6">
                         → RESUME
                     </a>
-                    <a href="mailto:example@example.com" className="text-ink hover:text-redwood text-lg">
+                    <a href="mailto:example@example.com" className="text-ink hover:text-redwood text-h6">
                         → ARTIST CV
                     </a>
                 </div>
                 {/* Socials */}
-                <div className="absolute bottom-6 right-6 flex space-x-4 text-2xl sm:text-4xl text-ink">
+                <div className="absolute bottom-6 right-6 flex space-x-4 text-h2 text-ink">
                 <a
                     href="https://github.com/ssypark"
                     target="_blank"

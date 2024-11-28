@@ -34,7 +34,7 @@ function About() {
             duration: 1000,
             easing: "ease-in-out",
         });
-
+        
         // TackleBox Animation
         gsap.fromTo(
             ".tackle-box",
@@ -63,10 +63,10 @@ function About() {
             {/* Header Introduction */}
             <div className="container min-h-screen mx-auto p-16 flex flex-col lg:flex-row md:-mt-32 sm:-mt-64 items-center gap-8 mb-12 justify-between bg-redwood bg-paper rounded-md shadow-md">
                 <div data-aos="fade-right" className="lg:w-2/3 text-offwhite">
-                    <h1 className="text-5xl font-bold font-syne mb-6">Nice to meet you</h1>
-                    <p className="text-lg leading-relaxed mb-4 font-workSans">Hi, I'm Samuel. I'm a UX/UI designer with a background in fine arts, driven by a
+                    <h1 className="text-h1 font-bold font-syne mb-6">Nice to meet you</h1>
+                    <p className="text-body leading-relaxed mb-4 font-workSans">Hi, I'm Samuel. I'm a UX/UI designer with a background in fine arts, driven by a
                         passion for creating meaningful, user-centered designs.</p>
-                    <p className="text-lg leading-relaxed font-workSans">
+                    <p className="text-body leading-relaxed font-workSans">
                         My work blends creativity with digital innovation, aiming to deliver designs that
                         are not just visually compelling but also intuitive and impactful. I believe in
                         making the digital world accessible and engaging for everyone.
@@ -86,8 +86,8 @@ function About() {
             <div data-aos="fade-left" className="bg-sage container flex justify-center items-center px-16 py-8 mx-auto rounded-lg shadow-md hover:shadow-lg hover:scale-105 transition-transform duration-300">
                 <div className="container mx-auto">
 
-                    <h1 className="text-5xl font-bold font-syne mb-6 text-ink">My Philosophy</h1>
-                    <p className="text-lg leading-relaxed mb-4 font-workSans">I see design as a bridge between creativity and functionality. I aim to create intuitive, adaptable, and user-centered experiences that not only solve problems but also tell a story. My background in fine arts shapes my visual style, while my focus on UX ensures that designs are accessible, inclusive, and engaging.</p>
+                    <h1 className="text-h1 font-bold font-syne mb-6 text-ink">My Philosophy</h1>
+                    <p className="text-body leading-relaxed mb-4 font-workSans">I see design as a bridge between creativity and functionality. I aim to create intuitive, adaptable, and user-centered experiences that not only solve problems but also tell a story. My background in fine arts shapes my visual style, while my focus on UX ensures that designs are accessible, inclusive, and engaging.</p>
                 </div>
             </div>
 
@@ -108,9 +108,9 @@ function About() {
                     />
                 </div>
                 <div className="lg:w-2/3 text-offwhite z-10">
-                    <h1 className="text-5xl font-bold font-syne mb-6">As an Artist</h1>
-                    <p className="text-lg leading-relaxed mb-4 font-workSans mb-6">I started my creative journey in fine arts, specializing in painting and illustration. Over time, I transitioned into the digital world, bringing my artistic sensibilities into digital design. This combination of traditional and digital skills allows me to approach projects with both creativity and precision.</p>
-                    <button className="px-6 py-3 bg-redwood text-offwhite font-syne font-bold rounded hover:bg-florange hover:scale-105 transition-transform duration-300 z-20">
+                    <h1 className="text-h1 font-bold font-syne mb-6">As an Artist</h1>
+                    <p className="text-body leading-relaxed mb-4 font-workSans mb-6">I started my creative journey in fine arts, specializing in painting and illustration. Over time, I transitioned into the digital world, bringing my artistic sensibilities into digital design. This combination of traditional and digital skills allows me to approach projects with both creativity and precision.</p>
+                    <button className="text-h6 px-6 py-3 bg-redwood text-offwhite font-syne font-bold rounded hover:bg-florange hover:scale-105 transition-transform duration-300 z-20">
                         View My Art!
                     </button>
                 </div>
@@ -119,15 +119,15 @@ function About() {
             {/* Skill Marquee */}
             <div className="container mx-auto px-8 flex flex-col lg:flex-row items-center gap-8 mb-12 justify-between">
                 <div className="w-1/2 text-offwhite">
-                    <h1 className="text-5xl sm:text-h1 font-bold font-syne mb-6">My Tacklebox</h1>
-                    <p className="text-xl leading-relaxed font-semibold mb-4 font-workSans">Design tools:</p>
+                    <h1 className="text-h1 font-bold font-syne mb-6">My Tacklebox</h1>
+                    <p className="text-h5 leading-relaxed font-semibold mb-4 font-workSans">Design tools:</p>
                     <div className="gap-6 mb-8 flex flex-row tackle-box">
                         <SiFigma className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
                         <SiAdobeillustrator className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
                         <SiAdobephotoshop className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
                         <SiAdobeaftereffects className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
                     </div>
-                    <p className="text-xl leading-relaxed mb-4 font-semibold font-workSans">Languages:</p>
+                    <p className="text-h5 leading-relaxed mb-4 font-semibold font-workSans">Languages:</p>
                     <div className="gap-6 mb-8 flex flex-row tackle-box">
                         <SiHtml5 className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
                         <SiCss3 className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
@@ -159,7 +159,7 @@ function About() {
                         src={froggySide}
                         alt="Frog"
                     />
-                    <button className="px-6 py-3 bg-redwood text-offwhite font-syne font-bold rounded hover:bg-opacity-90 transition z-20">
+                    <button className="text-h6 px-6 py-3 bg-redwood text-offwhite font-syne font-bold rounded hover:bg-opacity-90 transition z-20">
                         View My Work
                     </button>
                 </div>

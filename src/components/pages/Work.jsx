@@ -43,15 +43,15 @@ function Work() {
             {/* Main Content */}
             <div className="container mx-auto">
                 {/* Hero Section */}
-                <div className="relative p-16 flex items-center justify-center bg-sage bg-water">
+                <div className="relative p-16 flex items-center justify-center content-center bg-sage bg-water">
                     <div className="flex flex-col  md:flex-row items-center md:items-start md:space-x-8 text-center md:text-left z-20 mb-12">
                         <img
                             className="logo w-24 sm:w-36 md:w-48 lg:w-72 mr-0 sm:mr-8"
                             src={logo}
                             alt="Samuel Park Logo"
                         />
-                        <div className="text-left mt-4 sm:mt-0">
-                            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-8xl font-bold font-syne tracking-wide text-ink">
+                        <div className="text-left sm:text-center">
+                            <h1 className="text-h1 font-bold font-syne  tracking-wide text-ink  pt-24 md:pt-24 sm:pt-4">
                                 WORK & PROJECTS
                             </h1>
 
@@ -106,7 +106,7 @@ function Work() {
                 {/* Projects */}
                 <div id="featuredProjects">
                     <div className="w-full">
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-syne font-bold p-4 mb-4 mt-0 text-offwhite flex items-center">Current Projects <FaArrowDown className="ml-4 animate-bounce" /></h2>
+                        <h2 className="text-h2 font-syne font-bold p-4 mb-4 mt-0 text-offwhite flex items-center">Current Projects <FaArrowDown className="ml-4 animate-bounce" /></h2>
                     </div>
                     <Portfolio />
                 </div>

@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 // Hero Frog Animation
 export const initHeroFrogAnimation = () => {
     gsap.to(".hero-frog", {

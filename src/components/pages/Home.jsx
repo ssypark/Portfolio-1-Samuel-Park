@@ -50,11 +50,11 @@ function Home() {
                             alt="Samuel Park Logo"
                         />
                         <div className="text-left">
-                            <h1 className="sm:text-h1 text-3xl font-bold font-syne tracking-wide mb-4 leading-normal">
+                            <h1 className="sm:text-h1 font-bold font-syne tracking-wide mb-4 leading-normal">
                                 Hello, I'm Samuel Park
                             </h1>
 
-                            <p className="text-md md:text-2xl max-w-2xl font-workSans">
+                            <p className="text-h6 max-w-2xl font-workSans">
                                 I'm a UI and visual designer with a
                                 background in fine arts, blending creativity
                                 with digital innovation to create impactful designs.
@@ -112,7 +112,7 @@ function Home() {
                 {/* Projects */}
                 <div id="featuredProjects">
                     <div className="w-full">
-                        <h2 className="sm:text-4xl text-3xl font-syne font-bold p-4 mb-4 mt-0 text-offwhite flex items-center">Featured Projects <FaArrowDown className="ml-4 animate-bounce" /></h2>
+                        <h2 className="text-h2 font-syne font-bold p-4 mb-4 mt-0 text-offwhite flex items-center">Featured Projects <FaArrowDown className="text-h2 ml-4 animate-bounce" /></h2>
                     </div>
                     {/* with the limit prop (see Portfolio.jsx), we can limit the number of projects displayed */}
                     <div className="z-100">
@@ -132,7 +132,7 @@ function Home() {
                         src={froggySide}
                         alt="Frog"
                     />
-                    <button className="px-6 py-3 bg-redwood text-offwhite font-syne font-bold rounded hover:bg-opacity-90 transition z-20">
+                    <button className="px-6 py-3 bg-redwood text-offwhite text-h6 font-syne font-bold rounded hover:bg-opacity-90 transition z-20">
                         More Projects
                     </button>
                 </div>

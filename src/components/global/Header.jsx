@@ -25,7 +25,7 @@ function Header() {
     return (
         <header
             className={`fixed top-0 left-0 w-full z-[200] transition-all duration-300 ${
-                isScrolled ? "py-2 shadow-lg bg-ink" : "py-4 bg-olive"
+                isScrolled ? "py-2 shadow-lg bg-ink" : "py-4 px-4 bg-olive"
             }`}
         >
             <div className="max-w-screen-xl mx-auto flex justify-between items-center text-offwhite font-workSans">

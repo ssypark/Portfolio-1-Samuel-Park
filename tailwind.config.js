@@ -18,12 +18,13 @@ export default {
         workSans: ['Work Sans', 'sans-serif'],
       },
       fontSize: {
-        h1: '3rem',    // 48px
-        h2: '2.5rem',  // 40px
-        h3: '2rem',    // 32px
-        h4: '1.75rem', // 28px
-        h5: '1.5rem',  // 24px
-        h6: '1.25rem', // 20px
+        h1: ['clamp(2.5rem, 5vw, 3rem)', '1.2'], // 40px to 48px with 1.2 line-height
+        h2: ['clamp(2rem, 4.5vw, 2.5rem)', '1.2'], // 32px to 40px
+        h3: ['clamp(1.5rem, 4vw, 2rem)', '1.2'], // 24px to 32px
+        h4: ['clamp(1.25rem, 3.5vw, 1.75rem)', '1.2'], // 20px to 28px
+        h5: ['clamp(1rem, 3vw, 1.5rem)', '1.2'], // 16px to 24px
+        h6: ['clamp(0.875rem, 2.5vw, 1.25rem)', '1.2'], // 14px to 20px
+        body: ['clamp(1rem, 2.5vw, 1.125rem)', '1.6'], // 16px to 18px with 1.6 line-height
       },
     },
   },
