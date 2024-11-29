@@ -32,13 +32,13 @@ export default {
     plugin(({ addUtilities }) => {
       addUtilities({
         '.bg-paper': {
-          backgroundImage: "url('src/assets/paper.png')",
+          backgroundImage: "url('/src/assets/paper.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
         },
         '.bg-water': {
-          backgroundImage: "url('src/assets/water.png')",
+          backgroundImage: "url('/src/assets/water.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
