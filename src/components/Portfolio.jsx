@@ -52,7 +52,7 @@ function Portfolio({ limit}) {
         },
     ]);
 
-    //In order to limit the number of projects displayed on the home page vs projects page, we need to add a limit prop and use that to slice the projects array.
+    //In order to limit the number of projects displayed on the home page vs projects page, we need to add a limit prop and use that to slice the projects array. 
     const displayProjects = limit ? projects.slice(0, limit) : projects;
 
     return (
