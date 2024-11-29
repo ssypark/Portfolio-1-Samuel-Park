@@ -46,7 +46,7 @@ function Portfolio({ limit}) {
         },
         {
             image: introBumperImage,
-            title: 'Into Bumper Video',
+            title: 'Intro Bumper Video',
             description: 'Utilizing After Effects, I animated an intro bumper that showcases the different aspects of myself as a visual artist.',
             tags: ['Animation', 'Video Editing', 'Graphic Design'],
         },
