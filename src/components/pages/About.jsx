@@ -16,16 +16,17 @@ import logoBlack from "../../assets/logo-darkblack.svg";
 import froggySide from "../../assets/froggy-side.svg";
 import tempest from "../../assets/tempest.jpg";
 
+// Animation Imports
 import {
     initSideFrogAnimation,
 } from "../animations/animations";
-
 gsap.registerPlugin(ScrollTrigger);
 
 
 function About() {
 
     //Icon Animation
+    //useRef is null because the icons are not rendered yet. So, we need to use useEffect to get the icons.
     const iconsRef = useRef(null);
 
     useEffect(() => {
@@ -34,8 +35,9 @@ function About() {
             duration: 1000,
             easing: "ease-in-out",
         });
-        
+
         // TackleBox Animation
+        // this animation is triggered when the user scrolls down to the section
         gsap.fromTo(
             ".tackle-box",
             { opacity: 0, x: "-100%" },
@@ -54,12 +56,13 @@ function About() {
             });
 
         // Side Frog Animation
+        // see animations.js for details
         initSideFrogAnimation();
     }, []);
 
     return (
 
-        <div className="bg-olive pt-48 pb-32 px-8 relative">
+        <div className="bg-olive pt-48 pb-32 px-4 sm:px-8 relative">
             {/* Header Introduction */}
             <div className="container min-h-screen mx-auto p-16 flex flex-col lg:flex-row md:-mt-32 sm:-mt-64 items-center gap-8 mb-12 justify-between bg-redwood bg-paper rounded-md shadow-md">
                 <div data-aos="fade-right" className="lg:w-2/3 text-offwhite">
@@ -109,7 +112,7 @@ function About() {
                 </div>
                 <div className="lg:w-2/3 text-offwhite z-10">
                     <h1 className="text-h1 font-bold font-syne mb-6">As an Artist</h1>
-                    <p className="text-body leading-relaxed mb-4 font-workSans mb-6">I started my creative journey in fine arts, specializing in painting and illustration. Over time, I transitioned into the digital world, bringing my artistic sensibilities into digital design. This combination of traditional and digital skills allows me to approach projects with both creativity and precision.</p>
+                    <p className="text-body leading-relaxed mb-4 font-workSans mb-6">I started my creative journey in fine arts, specializing in painting and illustration and earned a Bachelor of Fine Arts degree at UBC. Over time, I transitioned into the digital world, bringing my artistic sensibilities into digital design. This combination of traditional and digital skills allows me to approach projects with both creativity and precision.</p>
                     <button className="text-h6 px-6 py-3 bg-redwood text-offwhite font-syne font-bold rounded hover:bg-florange hover:scale-105 transition-transform duration-300 z-20">
                         View My Art!
                     </button>
@@ -122,17 +125,17 @@ function About() {
                     <h1 className="text-h1 font-bold font-syne mb-6">My Tacklebox</h1>
                     <p className="text-h5 leading-relaxed font-semibold mb-4 font-workSans">Design tools:</p>
                     <div className="gap-6 mb-8 flex flex-row tackle-box">
-                        <SiFigma className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
-                        <SiAdobeillustrator className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
-                        <SiAdobephotoshop className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
-                        <SiAdobeaftereffects className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
+                        <SiFigma className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl" />
+                        <SiAdobeillustrator className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl" />
+                        <SiAdobephotoshop className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl" />
+                        <SiAdobeaftereffects className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl" />
                     </div>
                     <p className="text-h5 leading-relaxed mb-4 font-semibold font-workSans">Languages:</p>
                     <div className="gap-6 mb-8 flex flex-row tackle-box">
-                        <SiHtml5 className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
-                        <SiCss3 className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
-                        <SiReact className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
-                        <SiTailwindcss className="text-lg sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl" />
+                        <SiHtml5 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl" />
+                        <SiCss3 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl" />
+                        <SiReact className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl" />
+                        <SiTailwindcss className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl" />
                     </div>
                 </div>
                 <div className="w-1/2 flex justify-center">

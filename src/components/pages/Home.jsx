@@ -38,7 +38,7 @@ function Home() {
     }, []);
 
     return (
-        <div className="relative mt-24 bg-olive">
+        <div className="relative mt-24 px-4 sm:px-8 bg-olive">
             {/* Main Content */}
             <div className="container mx-auto">
                 {/* Hero Section */}

@@ -122,7 +122,7 @@ export const initFishAnimation = () => {
     window.addEventListener("mousemove", handleMouseMove);
 
     // This is to clean up the event listener when the component is unmounted, it also prevents memory leaks and other unwanted behavior
-    // NOTE: Since GSAP ScrollTrigger animations clean up automatically, we don't need to do anything for the other animations (ie. Side Frog)
+    // NOTE: Since GSAP ScrollTrigger animations clean up automatically, we don't need to do anything for the other animations (ie. Side Frog animation)
     return () => {
         window.removeEventListener("mousemove", handleMouseMove);
     };

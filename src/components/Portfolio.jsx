@@ -10,7 +10,8 @@ import interactiveImage from '../assets/interactive.png';
 import flyDexImage from '../assets/flydex.png';
 import introBumperImage from '../assets/intro-bumper.png';
 
-// destructuring is used to include the limit prop that is passed from the parent component. This is used to limit the number of projects to display.
+// destructuring is used to include the limit prop that is passed from the parent component. This is used to limit the number of projects to display on the page.
+// This is done to allow us to limit the number of projects displayed on the home page vs projects page.
 function Portfolio({ limit}) {
     useEffect(() => {
         AOS.init({
@@ -19,6 +20,7 @@ function Portfolio({ limit}) {
         });
     }, []);
     
+    // This state is used to store the projects array for the Portfolio component
     const [projects, setProjects] = useState([
         {
             image: ssImage,
@@ -58,12 +60,14 @@ function Portfolio({ limit}) {
     return (
         <div className="container mx-auto px-0 py-0 mb-8">
             <div className="grid gap-8">
+                {/* This maps over the projects array and displays each project in a ProjectShowcase component */}
                 {displayProjects.map((project, index) => (
                     <div
                         key={index}
                         data-aos="fade-right" // the animation class for aos so that each project slides in from the left as the user scrolls
                     >
                         <ProjectShowcase
+                            // we set the image, title, description, and tags props for each project
                             image={project.image}
                             title={project.title}
                             description={project.description}

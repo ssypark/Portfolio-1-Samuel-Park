@@ -1,17 +1,18 @@
 import React, {useState} from "react";
 
 function ProjectShowcase({ image, title, description, tags }) {
-    const  [isExpanded, setIsExpanded] = useState(false);
+    const  [isExpanded, setIsExpanded] = useState(false); // State to track whether the project is expanded or not. 
 
     const handleMouseEnter = () => {
-        setIsExpanded(true);
+        setIsExpanded(true); // This sets the isExpanded state to true when the user hovers over the project
     };
     const handleMouseLeave = () => {
-        setIsExpanded(false);
+        setIsExpanded(false); // This sets the isExpanded state to false when the user leaves the project
     };
 
 
     return (
+        // with the className prop isExpanded, we can apply different styles to the project depending on whether it is expanded or not using a ternary operator
         <div className={`relative group overflow-hidden rounded-lg shadow-lg transition-all duration-300 ease-in-out 
         ${isExpanded ? 'h-96' : 'h-60'}`} 
         onMouseEnter={handleMouseEnter}
