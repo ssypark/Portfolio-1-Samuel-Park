@@ -65,7 +65,7 @@ function Contact() {
                     </div>
                 </div>
 
-                {/* Footer Frog */}
+                {/* Footer Frog! */}
                 <img
                     className="footer-frog w-36 h-auto absolute -bottom-16 left-1/2 transform -translate-x-1/2 z-10"
                     src={froggyFooter}
