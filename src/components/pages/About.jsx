@@ -63,6 +63,21 @@ function About() {
     return (
 
         <div className="bg-olive pt-48 pb-32 px-4 sm:px-8 relative">
+            <Helmet>
+                {/* General Meta Tags */}
+                <title>About Samuel Park - UX/UI Designer & Fine Artist</title>
+                <meta name="description" content="Learn more about Samuel Park, a UX/UI designer with a fine arts background. Explore his philosophy, creative journey, skills, and passion for blending art with digital innovation." />
+                <meta name="author" content="Samuel Park" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+                {/* Open Graph Tags */}
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="About Samuel Park - UX/UI Designer & Fine Artist" />
+                <meta property="og:description" content="Discover Samuel Park's journey from fine arts to UX/UI design. See how his artistic background shapes his user-centered, innovative designs." />
+                <meta property="og:image" content="../../assets/avatar.jpg" />
+                <meta property="og:url" content="https://sampark.ca/about" />
+                <meta property="og:site_name" content="Samuel Park Portfolio" />
+            </Helmet>
             {/* Header Introduction */}
             <div className="container min-h-screen mx-auto p-16 flex flex-col lg:flex-row md:-mt-32 sm:-mt-64 items-center gap-8 mb-12 justify-between bg-redwood bg-paper rounded-md shadow-md">
                 <div data-aos="fade-right" className="lg:w-2/3 text-offwhite">

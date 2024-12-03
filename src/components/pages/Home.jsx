@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 // Animation Imports
 import {
@@ -39,6 +40,27 @@ function Home() {
 
     return (
         <div className="relative mt-24 px-4 sm:px-8 bg-olive">
+            {/* Metadata */}
+            <Helmet>
+                <title>Samuel Park - UX/UI & Visual Designer Portfolio</title>
+                <meta
+                    name="description"
+                    content="Welcome to Samuel Park's portfolio! Explore a blend of UX/UI design, fine arts, and digital innovation. Check out featured projects and learn more about Samuel's work."
+                />
+                <meta
+                    name="keywords"
+                    content="UX/UI design, visual design, digital innovation, Samuel Park portfolio, featured projects, fine arts"
+                />
+                <meta name="author" content="Samuel Park" />
+                <meta property="og:title" content="Samuel Park - UX/UI & Visual Designer Portfolio" />
+                <meta
+                    property="og:description"
+                    content="Discover Samuel Park's portfolio showcasing UX/UI design, fine arts, and creative projects. Explore his featured projects and contact him for collaborations."
+                />
+                <meta property="og:image" content="../../assets/logo.svg" />
+                <meta property="og:url" content="https://sampark.ca/" />
+                
+            </Helmet>
             {/* Main Content */}
             <div className="container mx-auto">
                 {/* Hero Section */}
