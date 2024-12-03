@@ -6,6 +6,11 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Work from "./components/pages/Work";
 import Layout from './components/Layout';
+import SalmonSanctuary from './components/pages/projects/SalmonSanctuary';
+import Amalgm from './components/pages/projects/Amalgm';
+import InteractiveDocument from './components/pages/projects/InteractiveDocument';
+import FlyDex from './components/pages/projects/FlyDex';
+import IntroBumper from './components/pages/projects/IntroBumper';
 
 // Animation Imports
 import ScrollToTop from './components/animations/ScrollToTop';
@@ -40,6 +45,11 @@ function App() {
           {/* <Route path="/starter" element={<Home />}></Route> may be used later for a onboarding/loading page? */} 
           <Route path="/about" element={<About />}></Route>
           <Route path="/work" element={<Work />}></Route>
+          <Route path="/work/salmon-sanctuary" element={<SalmonSanctuary />}></Route>
+          <Route path="/work/amalgm-brand-book" element={<Amalgm />}></Route>
+        <Route path="/work/interactive-document" element={<InteractiveDocument />}></Route>
+        <Route path="/work/flydex-app" element={<FlyDex />}></Route>
+        <Route path="/work/intro-bumper-video" element={<IntroBumper />}></Route>
         </Route>
       </Routes>
       </main>

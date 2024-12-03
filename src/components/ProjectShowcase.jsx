@@ -1,7 +1,8 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-function ProjectShowcase({ image, title, description, tags }) {
-    const  [isExpanded, setIsExpanded] = useState(false); // State to track whether the project is expanded or not. 
+function ProjectShowcase({ image, title, description, tags, link }) {
+    const [isExpanded, setIsExpanded] = useState(false); // State to track whether the project is expanded or not. 
 
     const handleMouseEnter = () => {
         setIsExpanded(true); // This sets the isExpanded state to true when the user hovers over the project
@@ -14,19 +15,19 @@ function ProjectShowcase({ image, title, description, tags }) {
     return (
         // with the className prop isExpanded, we can apply different styles to the project depending on whether it is expanded or not using a ternary operator
         <div className={`relative group overflow-hidden rounded-lg shadow-lg transition-all duration-300 ease-in-out 
-        ${isExpanded ? 'h-96' : 'h-60'}`} 
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
+        ${isExpanded ? 'h-96' : 'h-60'}`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
         >
             {/* Background Image */}
-            <div 
+            <div
                 className="absolute inset-0 bg-cover bg-top transform filter grayscale transition-transform duration-300 ease-in-out group-hover:scale-110 group-hover:filter-none"
                 style={{ backgroundImage: `url(${image})` }}
             ></div>
-            
+
             {/* Overlay with text */}
             <div className="absolute inset-0 bg-ink opacity-90 group-hover:opacity-0 transition-opacity duration-300 ease-in-out"></div>
-           
+
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-b from-black to-transparent opacity-0 group-hover:opacity-75 transition-opacity duration-300 ease-in-out"></div>
             {/* Content */}
@@ -42,12 +43,15 @@ function ProjectShowcase({ image, title, description, tags }) {
                     ))}
                 </div>
             </div>
-            
+
             {/* CTA */}
             <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                <button className="px-4 py-2 bg-redwood text-offwhite font-bold font-syne rounded shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <Link
+                    to={link}
+                    className="px-4 py-2 bg-redwood text-offwhite font-bold font-syne rounded shadow-lg hover:shadow-xl transition-shadow duration-300"
+                >
                     View Project
-                </button>
+                </Link>
             </div>
         </div>
     );
