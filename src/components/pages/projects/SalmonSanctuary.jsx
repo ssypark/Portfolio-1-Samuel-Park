@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AOS from "aos";
@@ -98,6 +99,28 @@ function SalmonSanctuary() {
 
     return (
         <div className="relative mt-24 px-4 sm:px-8 bg-olive">
+            {/* Metadata */}
+            <Helmet>
+                <title>Salmon Sanctuary Initiative | UX/UI Case Study</title>
+                <meta
+                    name="description"
+                    content="Explore the Salmon Sanctuary Initiative: a UX/UI case study focused on Pacific salmon conservation, information architecture, and interactive design."
+                />
+                <meta
+                    name="keywords"
+                    content="Salmon conservation, UX/UI design, information architecture, case study, user flow, site map, user personas, wireframes"
+                />
+                <meta name="author" content="Samuel Park" />
+                <meta property="og:title" content="Salmon Sanctuary Initiative | UX/UI Case Study" />
+                <meta
+                    property="og:description"
+                    content="Dive into the UX/UI design process of the Salmon Sanctuary Initiative, focused on conservation efforts and user-centered design."
+                />
+                <meta property="og:image" content="../../../assets/salmonsanctuary/ssi-icon.png" />
+                <meta property="og:url" content="https://sampark.ca/work/salmon-sanctuary" />
+                
+            </Helmet>
+
             {/* Header Section */}
             <div className="container mx-auto p-16 min-h-screen bg-offwhite bg-paper rounded-md shadow-md">
                 {/* Header and Icon */}

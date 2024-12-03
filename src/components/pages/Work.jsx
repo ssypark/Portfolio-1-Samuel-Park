@@ -40,6 +40,21 @@ function Work() {
 
     return (
         <div className="relative  mt-24 px-4 sm:px-8 bg-olive">
+            <Helmet>
+                {/* General Meta Tags */}
+                <title>Work & Projects - Samuel Park</title>
+                <meta name="description" content="Explore the creative projects of Samuel Park, a UX/UI designer and visual artist. Discover current and featured projects showcasing innovation and user-centered design." />
+                <meta name="author" content="Samuel Park" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+                {/* Open Graph Tags */}
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Work & Projects - Samuel Park" />
+                <meta property="og:description" content="Discover Samuel Park's portfolio featuring innovative and user-centered designs. See current projects and visual artwork." />
+                <meta property="og:image" content="../../assets/logo.svg" />
+                <meta property="og:url" content="https://sampark.ca/work" />
+                <meta property="og:site_name" content="Samuel Park Portfolio" />
+            </Helmet>
             {/* Main Content */}
             <div className="container mx-auto">
                 {/* Hero Section */}
