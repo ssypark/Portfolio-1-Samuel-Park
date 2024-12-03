@@ -101,13 +101,13 @@ function SalmonSanctuary() {
             {/* Header Section */}
             <div className="container mx-auto p-16 min-h-screen bg-offwhite bg-paper rounded-md shadow-md">
                 {/* Header and Icon */}
-                <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 mb-8">
-                    <div data-aos="fade-right" className="lg:w-2/3 text-offwhite">
+                <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 sm:pt-24">
+                    <div data-aos="fade-right" className="lg:w-2/3 text-offwhite pt-12">
                         <h1 className="text-h1 font-bold font-syne text-ink">
                             Information Architecture for Salmon Sanctuary
                         </h1>
                     </div>
-                    <div data-aos="fade-left" className="lg:w-1/3 flex justify-center">
+                    <div data-aos="fade-left" className="lg:w-1/3 flex justify-center ">
                         <img
                             src={ssiIcon}
                             alt="Salmon Sanctuary Icon"
@@ -117,7 +117,7 @@ function SalmonSanctuary() {
                 </div>
 
                 {/* Role, Date, and Visit Website */}
-                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8 sm:mt-64">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8 sm:mt-32">
                     {/* Role and Date */}
                     <div className="flex flex-col sm:flex-row gap-8">
                         <div>
