@@ -27,30 +27,35 @@ function Portfolio({ limit}) {
             title: 'The Salmon Sanctuary',
             description: 'A user-centric charity website that effectively communicates the mission while enhancing user engagement and the donation process.',
             tags: ['UX Research', 'Website Design', 'UX/UI'],
+            link: '/work/salmon-sanctuary',
         },
         {
             image: amalgmImage,
             title: 'Amalgm Brand Book',
             description: 'This brand book outlines Amalgm’s commitment to sustainable, collaborative, and artistic apparel, emphasizing individuality and ethical design.',
             tags: ['Branding', 'Graphic Design', 'Product Design'],
+            link: '/work/amalgm-brand-book',
         },
         {
             image: interactiveImage,
             title: 'Interactive Document',
             description: 'An interactive document designed to educate readers about the diverse species of the Thompson River through engaging visuals and intuitive navigation.',
             tags: ['Interaction Design', 'Graphic Design'],
+            link: '/work/interactive-document',
         },
         {
             image: flyDexImage,
             title: 'FlyDex App',
             description: 'FlyDex is an educational app designed to help fly fishing enthusiasts of all levels learn about techniques, find fishing spots, and connect with other anglers through an intuitive, all-in-one digital resource.',
             tags: ['UX/UI', 'UX Research', 'Wireframing'],
+            link: '/work/flydex-app',
         },
         {
             image: introBumperImage,
             title: 'Intro Bumper Video',
             description: 'Utilizing After Effects, I animated an intro bumper that showcases the different aspects of myself as a visual artist.',
             tags: ['Animation', 'Video Editing', 'Graphic Design'],
+            link: '/work/intro-bumper-video',
         },
     ]);
 
@@ -72,6 +77,7 @@ function Portfolio({ limit}) {
                             title={project.title}
                             description={project.description}
                             tags={project.tags}
+                            link={project.link}
                         />
                     </div>
                 ))}
