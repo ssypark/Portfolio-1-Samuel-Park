@@ -155,8 +155,19 @@ function SalmonSanctuary() {
                         </div>
                         <div>
                             <h2 className="text-sm font-bold">Duration</h2>
-                            <p className="text-base">4 Weeks</p>
+                            <p className="text-base">47 Hours</p>
                         </div>
+                        <div>
+                            <h2 className="text-sm font-bold text-offwhite">Tools</h2>
+                            <p className="text-base text-offwhite">
+                                Figma
+                                <br />
+                                Adobe Illustrator
+                                <br />
+                                Procreate
+                            </p>
+                        </div>
+                        
                     </div>
 
                     {/* Visit Website */}

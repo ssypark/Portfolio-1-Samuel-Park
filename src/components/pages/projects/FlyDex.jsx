@@ -112,7 +112,7 @@ function FlyDex() {
                         </div>
                         <div>
                             <h2 className="text-sm font-bold text-offwhite">Duration</h2>
-                            <p className="text-base text-offwhite">4 Weeks</p>
+                            <p className="text-base text-offwhite">51 Hours</p>
                         </div>
                         <div>
                             <h2 className="text-sm font-bold text-offwhite">Tools</h2>
@@ -120,6 +120,8 @@ function FlyDex() {
                                 Figma
                                 <br />
                                 Adobe Illustrator
+                                <br />
+                                Procreate
                             </p>
                         </div>
                     </div>

@@ -145,7 +145,19 @@ function Amalgm() {
                         </div>
                         <div>
                             <h2 className="text-sm font-bold">Duration</h2>
-                            <p className="text-base">6 Weeks</p>
+                            <p className="text-base">44 Hours</p>
+                        </div>
+                        <div>
+                            <h2 className="text-sm font-bold text-offwhite">Tools</h2>
+                            <p className="text-base text-offwhite">
+                                Adobe Photoshop
+                                <br />
+                                Adobe Illustrator
+                                <br />
+                                Adobe InDesign
+                                <br />
+                                Procreate
+                            </p>
                         </div>
                     </div>
                     {/* View CTA*/}
