@@ -169,45 +169,61 @@ function Amalgm() {
             />
             {/* The Journey Section */}
             <div className="relative p-8 bg-gray-100 rounded-md shadow-md">
-                <h2 className="text-hmax font-tomarik font-bold text-ink mb-8">The Journey</h2>
+                <h2 className="text-hmax font-tomarik font-bold text-ink mb-8 text-center">The Journey</h2>
 
                 {/* Inspiration and Ideation */}
-                <div className="mb-16 flex flex-col gap-4">
-                    <h3 className="text-h2 font-tomarik text-gray-900">1. Inspiration and Ideation</h3>
-                    <p className="text-gray-800 text-body font-workSans leading-relaxed">
-                        Amalgm was conceived as a personal project to explore branding at the intersection of creativity and sustainability. During the brainstorming phase, I imagined a brand that celebrates individuality while fostering collaboration between artists and eco-conscious consumers. Concepts were sketched, and mood boards were created to envision a cohesive story and aesthetic for the brand.
-                    </p>
-                    {/* Slick Slider */}
-                    <div className="p-8">
-                        <Slider {...sliderSettings}>
-                            {/* Slide 1 */}
-                            <div>
-                                <img
-                                    src={mindMap}
-                                    alt="Sketches and Mood Boards"
-                                    className="rounded-lg shadow-md mx-auto"
-                                />
-                                <p className="text-center mt-4 text-lg">Initial Mind Map</p>
+                <div className="mb-16 px-8">
+
+
+                    {/* Content Wrapper */}
+                    <div className="flex flex-col lg:flex-row gap-12 max-w-screen-2xl mx-auto">
+                        {/* Text Section */}
+                        <div className="lg:w-4/12">
+                            {/* Header */}
+                            <h3 className="text-h2 font-tomarik text-gray-900 mb-4 text-left">
+                                1. Inspiration and Ideation
+                            </h3>
+                            <p className="text-gray-800 text-body font-workSans leading-relaxed">
+                                Amalgm was conceived as a personal project to explore branding at the intersection of creativity and sustainability. During the brainstorming phase, I imagined a brand that celebrates individuality while fostering collaboration between artists and eco-conscious consumers. Concepts were sketched, and mood boards were created to envision a cohesive story and aesthetic for the brand.
+                            </p>
+                        </div>
+
+                        {/* Slider Section */}
+                        <div className="lg:w-8/12">
+                            <div className="p-4 flex justify-center">
+                                <div className="w-full max-w-screen-md h-256">
+                                    <Slider {...sliderSettings}>
+                                        {/* Slide 1 */}
+                                        <div className="h-full flex items-center justify-center">
+                                            <img
+                                                src={mindMap}
+                                                alt="Sketches and Mood Boards"
+                                                className="rounded-lg shadow-md object-contain max-h-full mx-auto"
+                                            />
+                                            <p className="text-center mt-4 text-lg">Initial Mind Map</p>
+                                        </div>
+                                        {/* Slide 2 */}
+                                        <div className="h-full flex items-center justify-center">
+                                            <img
+                                                src={moodBoard}
+                                                alt="Brand Mood Board"
+                                                className="rounded-lg shadow-md object-contain max-h-full mx-auto"
+                                            />
+                                            <p className="text-center mt-4 text-lg">Brand Mood Board</p>
+                                        </div>
+                                        {/* Slide 3 */}
+                                        <div className="h-full flex items-center justify-center">
+                                            <img
+                                                src={logoSketch}
+                                                alt="Early Logo Concepts"
+                                                className="rounded-lg shadow-md object-contain max-h-full mx-auto"
+                                            />
+                                            <p className="text-center mt-4 text-lg">Iterating on logo concepts</p>
+                                        </div>
+                                    </Slider>
+                                </div>
                             </div>
-                            {/* Slide 2 */}
-                            <div>
-                                <img
-                                    src={moodBoard}
-                                    alt="Brand Mood Board"
-                                    className="rounded-lg shadow-md mx-auto"
-                                />
-                                <p className="text-center mt-4 text-lg">Brand Mood Board</p>
-                            </div>
-                            {/* Slide 3 */}
-                            <div>
-                                <img
-                                    src={logoSketch}
-                                    alt="Early Logo Concepts"
-                                    className="rounded-lg shadow-md mx-auto"
-                                />
-                                <p className="text-center mt-4 text-lg">Iterating on logo concepts</p>
-                            </div>
-                        </Slider>
+                        </div>
                     </div>
                 </div>
 
@@ -215,43 +231,57 @@ function Amalgm() {
                 <hr className="my-12 border-t border-gray-300" />
 
                 {/* Crafting the Visual Identity */}
-                <div className="mb-16 flex flex-col gap-4">
-                    <h3 className="text-h1 font-tomarik font-bold text-gray-900">2. Crafting the Visual Identity</h3>
-                    <p className="text-gray-800 text-body
-                        font-workSans leading-relaxed">
-                        The logo design was inspired by themes of connection and collaboration. Typography choices balanced boldness and elegance, reflecting the brand's vision of individuality and professionalism. The earthy yet vibrant color palette symbolized the intersection of sustainability and creative energy, resulting in a unified and distinctive visual identity.
-                    </p>
-                    {/* Slick Slider */}
-                    <div className="p-8">
-                        <Slider {...sliderSettings}>
-                            {/* Slide 1 */}
-                            <div>
-                                <img
-                                    src={logoFinal}
-                                    alt="Sketches and Mood Boards"
-                                    className="rounded-lg shadow-md mx-auto"
-                                />
-                                <p className="text-center mt-4 text-lg">Finalized logo</p>
+                <div className="mb-16 px-8">
+
+                    {/* Content Wrapper */}
+                    <div className="flex flex-col lg:flex-row gap-12 max-w-screen-2xl mx-auto">
+                        {/* Text Section */}
+                        <div className="lg:w-4/12">
+                            {/* Header */}
+                            <h3 className="text-h2 font-tomarik text-gray-900 mb-4 text-left">
+                                2. Crafting the Visual Identity
+                            </h3>
+                            <p className="text-gray-800 text-body font-workSans leading-relaxed">
+                                The logo design was inspired by themes of connection and collaboration. Typography choices balanced boldness and elegance, reflecting the brand's vision of individuality and professionalism. The earthy yet vibrant color palette symbolized the intersection of sustainability and creative energy, resulting in a unified and distinctive visual identity.
+                            </p>
+                        </div>
+
+                        {/* Slider Section */}
+                        <div className="lg:w-8/12">
+                            <div className="p-4 flex justify-center">
+                                <div className="w-full max-w-screen-md h-256">
+                                    <Slider {...sliderSettings}>
+                                        {/* Slide 1 */}
+                                        <div className="h-full flex items-center justify-center">
+                                            <img
+                                                src={logoFinal}
+                                                alt="Finalized Logo"
+                                                className="rounded-lg shadow-md object-contain max-h-full mx-auto"
+                                            />
+                                            <p className="text-center mt-4 text-lg">Finalized Logo</p>
+                                        </div>
+                                        {/* Slide 2 */}
+                                        <div className="h-full flex items-center justify-center">
+                                            <img
+                                                src={typography}
+                                                alt="Brand Typography"
+                                                className="rounded-lg shadow-md object-contain max-h-full mx-auto"
+                                            />
+                                            <p className="text-center mt-4 text-lg">Brand Typography</p>
+                                        </div>
+                                        {/* Slide 3 */}
+                                        <div className="h-full flex items-center justify-center">
+                                            <img
+                                                src={colorGuide}
+                                                alt="Brand Color Guide"
+                                                className="rounded-lg shadow-md object-contain max-h-full mx-auto"
+                                            />
+                                            <p className="text-center mt-4 text-lg">Color Guide</p>
+                                        </div>
+                                    </Slider>
+                                </div>
                             </div>
-                            {/* Slide 2 */}
-                            <div>
-                                <img
-                                    src={typography}
-                                    alt="Brand typography"
-                                    className="rounded-lg shadow-md mx-auto"
-                                />
-                                <p className="text-center mt-4 text-lg">Brand typography</p>
-                            </div>
-                            {/* Slide 3 */}
-                            <div>
-                                <img
-                                    src={colorGuide}
-                                    alt="Brand Color Guide"
-                                    className="rounded-lg shadow-md mx-auto"
-                                />
-                                <p className="text-center mt-4 text-lg">Color Guide</p>
-                            </div>
-                        </Slider>
+                        </div>
                     </div>
                 </div>
 
@@ -259,41 +289,50 @@ function Amalgm() {
                 <hr className="my-12 border-t border-gray-300" />
 
                 {/* Prototyping and Mockups */}
-                <div className="mb-16 flex flex-col gap-4">
-                    <h3 className="text-h1 font-tomarik text-gray-900">3. Prototyping and Mockups</h3>
-                    <p className="text-gray-800 text-body font-workSans leading-relaxed">
-                        To bring the concept to life, I developed mockups showcasing how Amalgm's branding could translate across various applications. From product labels and apparel tags to digital advertisements, these prototypes demonstrated the flexibility and cohesiveness of the brand's visual identity.
-                    </p>
-                    <img
-                        src={tagMockup}
-                        alt="Prototyping and Mockups"
-                        className="rounded-lg shadow-md"
-                    />
-                    <img
-                        src={sketchBook}
-                        alt="Prototyping and Mockups"
-                        className="rounded-lg shadow-md"
-                    />
-                    <img
-                        src={shirtMockup}
-                        alt="Prototyping and Mockups"
-
-                    />
+                {/* Prototyping and Mockups */}
+                <div className="mb-16">
+                    {/* Content Wrapper */}
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-screen-2xl mx-auto">
+                        {/* Text Section */}
+                        <div className="lg:col-span-2 lg:mb-0">
+                            <h3 className="text-h1 font-tomarik text-gray-900 mb-4">3. Prototyping and Mockups</h3>
+                            <p className="text-gray-800 text-body font-workSans leading-relaxed mb-8">
+                                To bring the concept to life, I developed mockups showcasing how Amalgm's branding could translate across various applications. From product labels and apparel tags to digital advertisements, these prototypes demonstrated the flexibility and cohesiveness of the brand's visual identity.
+                            </p>
+                        </div>
+                        {/* Images */}
+                        <img
+                            src={tagMockup}
+                            alt="Product Labels and Tags"
+                            className="rounded-lg shadow-md w-full object-contain"
+                        />
+                        <img
+                            src={sketchBook}
+                            alt="Sketchbooks and Concepts"
+                            className="rounded-lg shadow-md w-full object-contain"
+                        />
+                        <img
+                            src={shirtMockup}
+                            alt="Apparel Mockup"
+                            className="rounded-lg shadow-md w-full object-contain"
+                        />
+                    </div>
                 </div>
-
                 {/* Divider */}
                 <hr className="my-12 border-t border-gray-300" />
 
                 {/* Reflecting on the Project */}
-                <div className="flex flex-col gap-4 mb-24">
-                    <h3 className="text-h1 font-tomarik text-gray-900">4. Reflecting on the Project</h3>
-                    <p className="text-gray-800 text-body font-workSans leading-relaxed">
-                        Although Amalgm is a conceptual project, it allowed me to explore the complete branding process—from ideation to execution. Through this experience, I gained valuable insights into creating a cohesive brand narrative and visual identity while enhancing my skills in storytelling, design, and mockup creation.
-                    </p>
+                <div className="flex flex-col gap-4 mb-24 items-center">
+                    <div className="max-w-screen-md text-center lg:text-left">
+                        <h3 className="text-h1 font-tomarik text-gray-900 mb-4">4. Reflecting on the Project</h3>
+                        <p className="text-gray-800 text-body font-workSans leading-relaxed">
+                            Although Amalgm is a conceptual project, it allowed me to explore the complete branding process—from ideation to execution. Through this experience, I gained valuable insights into creating a cohesive brand narrative and visual identity while enhancing my skills in storytelling, design, and mockup creation.
+                        </p>
+                    </div>
                     <img
                         src={throwie}
                         alt="Reflection and Learnings"
-                        className="animate-wiggle"
+                        className="animate-wiggle w-[30%] mx-auto"
                     />
                     <p className="text-center mt-4 text-body font-workSans">Thank you for reading!</p>
                 </div>
@@ -319,12 +358,12 @@ function Amalgm() {
                         src={froggySide}
                         alt="Frog"
                     />
-<a 
-  href="/work" 
-  className="px-6 py-3 bg-redwood text-offwhite text-h6 font-syne font-bold rounded hover:bg-opacity-90 transition z-20"
->
-  Go
-</a>
+                    <a
+                        href="/work"
+                        className="px-6 py-3 bg-redwood text-offwhite text-h6 font-syne font-bold rounded hover:bg-opacity-90 transition z-20"
+                    >
+                        Go
+                    </a>
                 </div>
 
                 {/* Contact Section */}
@@ -332,9 +371,9 @@ function Amalgm() {
                     <Contact />
                 </div>
             </div>
-           
+
         </div>
-        
+
     )
 }
 
