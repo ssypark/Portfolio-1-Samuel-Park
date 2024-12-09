@@ -9,15 +9,20 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // Components
 import Contact from "../../Contact";
+import FigmaEmbed from "../FigmaEmbed";
 
 // FlyDex Image Imports
 import flyDexLogo from "../../../assets/flydex/flydex-logo.png";
 import flyDexLogo2 from "../../../assets/flydex/flydex-logo-w.png";
 import lesson from "../../../assets/flydex/flydex-lesson-mockup.png";
-import splashMockup from "../../../assets/flydex/flydex-login-mockup.png";
+import splashMockup from "../../../assets/flydex/flydex-login-mockup.jpg";
 import lessonVideo from "../../../assets/flydex//flydex-lessonvideo.png";
 import justin from "../../../assets/flydex/justin.png";
-import tangled from "../../../assets/flydex/tangled.png";
+import tangled from "../../../assets/flydex/tangled.jpg";
+import persona from "../../../assets/flydex/persona.png";
+import empathy from "../../../assets/flydex/empathymap.png";
+import journey from "../../../assets/flydex/journey.png";
+import coho from "../../../assets/flydex/coho.png";
 
 import logo from "../../../assets/logo-black.svg";
 import logoBlack from "../../../assets/logo-darkblack.svg";
@@ -43,54 +48,23 @@ function FlyDex() {
 
     };
     useEffect(() => {
-        gsap.set(".amalgm-font", {
-            opacity: 0,
-            y: 50, // Position below
-        });
-        // GSAP Animation for Logo
-        const logoAnimation = gsap.fromTo(
-            ".amalgm-logo", // Target logo by class
-            {
-                scale: 0, // Start at 0 scale
-                rotation: 0, // Start with no rotation
-            },
-            {
-                scale: 1, // End at full size
-                rotation: 1080, // Full spin
-                duration: 2, // Animation duration
-                ease: "power3.out", // Smooth easing
-                onComplete: () => {
-                    // Animation for font starts after logo animation completes
-                    gsap.fromTo(
-                        ".amalgm-font", // Target font by class
-                        {
-                            y: 50, // Start below
-                            opacity: 0, // Start fully transparent
-                        },
-                        {
-                            y: 0, // End at original position
-                            opacity: 1, // Fully visible
-                            duration: 1.5, // Animation duration
-                            ease: "power3.out", // Smooth easing
-                        }
-                    );
-                },
-            }
-        );
+
         AOS.init();
         initSideFrogAnimation();
     })
 
-    const [isModalOpen, setModalOpen] = useState(false);
+    const [justinModalOpen, setJustinModalOpen] = useState(false);
     const [modalImage, setModalImage] = useState("");
 
-    const openImageModal = (imagePath) => {
+    // Open modal function
+    const openJustinModal = (imagePath) => {
         setModalImage(imagePath);
-        setModalOpen(true);
+        setJustinModalOpen(true);
     };
 
-    const closeModal = () => {
-        setModalOpen(false);
+    // Close modal function
+    const closeJustinModal = () => {
+        setJustinModalOpen(false);
         setModalImage("");
     };
     return (
@@ -169,7 +143,7 @@ function FlyDex() {
                 {/* Left Section: Project Overview */}
                 <div className="lg:col-span-1 p-8">
                     <h2 className="text-h2 font-bold font-syne text-offwhite">Project Overview</h2>
-                    <p className="text-body font-workSans text-offwhite mt-4 leading-relaxed">
+                    <p className="text-body font-workSans text-gray-300  mt-4 leading-relaxed">
                         FlyDex is a conceptual app designed to make fly fishing more accessible and enjoyable. It offers a clean, intuitive interface with features like fishing spot recommendations, fly fishing techniques, and a personal catch log.
                     </p>
                     <img src={flyDexLogo2} alt="FlyDex Logo" className="w-64 mt-12 mx-auto animate-pulse" />
@@ -180,7 +154,7 @@ function FlyDex() {
                     {/* Challenges Section */}
                     <div className="p-8">
                         <h2 className="text-h2 font-bold font-syne text-offwhite">Challenges</h2>
-                        <p className="text-body font-workSans text-offwhite mt-4 leading-relaxed">
+                        <p className="text-body font-workSans text-gray-300  mt-4 leading-relaxed">
                             Designing FlyDex involved overcoming several key challenges:
                         </p>
                         <ul className="list-disc pl-5 mt-6 space-y-3 text-offwhite">
@@ -199,10 +173,10 @@ function FlyDex() {
                     {/* What I Accomplished Section */}
                     <div className="p-8">
                         <h2 className="text-h2 font-bold font-syne text-offwhite">What I Accomplished</h2>
-                        <p className="text-body font-workSans text-offwhite mt-4 leading-relaxed">
+                        <p className="text-body font-workSans text-gray-300  mt-4 leading-relaxed">
                             The design process for FlyDex led to several accomplishments:
                         </p>
-                        <ul className="list-disc pl-5 mt-6 space-y-3 text-offwhite">
+                        <ul className="list-disc pl-5 mt-6 space-y-3 text-gray-300 ">
                             <li>
                                 Developed a user-centered design that adapts seamlessly to different skill levels, providing an engaging experience for both beginners and seasoned anglers.
                             </li>
@@ -218,7 +192,7 @@ function FlyDex() {
             </div>
 
             {/* Identifying the Problem Section */}
-            <div className="container mx-auto bg-redwood flex flex-col lg:flex-row items-center gap-12 py-16 px-4 sm:px-8" data-aos="fade-right">
+            <div className="container mx-auto bg-redwood rounded-md shadow-md flex flex-col lg:flex-row items-center gap-12 py-16 px-4 sm:px-8" data-aos="fade-right">
                 <div className="lg:w-1/2">
                     <h2 className="text-h2 font-syne font-bold text-offwhite mb-4">Identifying the Problem</h2>
                     <p className="text-body font-workSans text-offwhite leading-relaxed">
@@ -254,15 +228,21 @@ function FlyDex() {
                         <div className="mt-6 flex gap-4">
                             <button
                                 className="px-4 py-2 bg-redwood text-offwhite font-workSans rounded shadow-md hover:bg-opacity-90 transition"
-                                onClick={() => openImageModal('src/assets/flydex/persona.png')}
+                                onClick={() => openJustinModal(persona)}
                             >
                                 Learn More About Justin
                             </button>
                             <button
                                 className="px-4 py-2 bg-redwood text-offwhite font-workSans rounded shadow-md hover:bg-opacity-90 transition"
-                                onClick={() => openImageModal('path/to/justin-journey-image.jpg')}
+                                onClick={() => openJustinModal(empathy)}
                             >
-                                See His Journey
+                                Empathy Map
+                            </button>
+                            <button
+                                className="px-4 py-2 bg-redwood text-offwhite font-workSans rounded shadow-md hover:bg-opacity-90 transition"
+                                onClick={() => openJustinModal(journey)}
+                            >
+                                User Journey
                             </button>
                         </div>
                     </div>
@@ -273,14 +253,14 @@ function FlyDex() {
             <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 py-16 px-4 sm:px-8" data-aos="fade-left">
                 <div className="lg:w-1/2 order-2 lg:order-1">
                     <img
-                        src="https://via.placeholder.com/600x400"
+                        src={lesson}
                         alt="Solution Design"
                         className="rounded-lg shadow-md"
                     />
                 </div>
                 <div className="lg:w-1/2 order-1 lg:order-2">
-                    <h2 className="text-h2 font-syne font-bold text-ink mb-4">Designing the Solution</h2>
-                    <p className="text-body font-workSans text-gray-700 leading-relaxed">
+                    <h2 className="text-h2 font-syne font-bold text-offwhite mb-4">Designing the Solution</h2>
+                    <p className="text-body font-workSans text-gray-300  leading-relaxed">
                         FlyDex provides beginner-friendly tutorials, personalized equipment suggestions, and an
                         interactive map to locate fishing spots. The design process focused on creating an intuitive
                         interface, reducing cognitive load, and maintaining a visually engaging experience.
@@ -291,16 +271,31 @@ function FlyDex() {
             {/* Features and Iterations Section */}
             <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 py-16 px-4 sm:px-8" data-aos="fade-right">
                 <div className="lg:w-1/2">
-                    <h2 className="text-h2 font-syne font-bold text-ink mb-4">Features & Iterations</h2>
-                    <p className="text-body font-workSans text-gray-700 leading-relaxed">
-                        Our iterative process led to standout features like a fly identification tool and a checklist
-                        for trip preparation. User feedback informed every decision, ensuring that FlyDex truly
-                        addressed the needs of its target audience.
+                    <h2 className="text-h2 font-syne font-bold text-offwhite mb-4">Features & Iterations</h2>
+                    <p className="text-body font-workSans text-gray-300  leading-relaxed">
+                        The iterative process behind FlyDex focused on refining features to cater to both beginner and experienced anglers. Key highlights include:
+                    </p>
+                    <ul className="list-disc pl-5 mt-6 space-y-3 font-workSans text-gray-300 ">
+                        <li>
+                            <strong>Downloadable Lessons for Offline Use:</strong> Interactive tutorials covering essential techniques, available for offline viewing to support users during outdoor fishing trips.
+                        </li>
+                        <li>
+                            <strong>Checklist for Trip Preparation:</strong> A dynamic, customizable checklist tailored to user location, weather, and targeted fish species, ensuring every trip is fully equipped.
+                        </li>
+                        <li>
+                            <strong>Location-Based Fishing Spot Recommendations:</strong> Enhanced with GPS functionality, user-generated reviews, and filtering options for proximity, accessibility, and species availability.
+                        </li>
+                        <li>
+                            <strong>Personal Catch Log:</strong> A visual log allowing photo uploads, tagging, and progress tracking, with the option to share catches on social media or with the FlyDex community.
+                        </li>
+                    </ul>
+                    <p className="text-body font-workSans text-gray-300 leading-relaxed mt-4">
+                        Each iteration leveraged user feedback to create an engaging, user-friendly app that empowers anglers and simplifies the fly fishing experience.
                     </p>
                 </div>
                 <div className="lg:w-1/2">
                     <img
-                        src="https://via.placeholder.com/600x400"
+                        src={lessonVideo}
                         alt="Features & Iterations"
                         className="rounded-lg shadow-md"
                     />
@@ -311,14 +306,14 @@ function FlyDex() {
             <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 py-16 px-4 sm:px-8" data-aos="fade-up">
                 <div className="lg:w-1/2 order-2 lg:order-1">
                     <img
-                        src="https://via.placeholder.com/600x400"
+                        src={coho}
                         alt="Reflection"
                         className="rounded-lg shadow-md"
                     />
                 </div>
                 <div className="lg:w-1/2 order-1 lg:order-2">
-                    <h2 className="text-h2 font-syne font-bold text-ink mb-4">Reflecting on the Project</h2>
-                    <p className="text-body font-workSans text-gray-700 leading-relaxed">
+                    <h2 className="text-h2 font-syne font-bold text-offwhite mb-4">Reflecting on the Project</h2>
+                    <p className="text-body font-workSans text-gray-300 leading-relaxed">
                         FlyDex was an opportunity to create a meaningful, user-focused product. From concept to
                         execution, the project reinforced the importance of empathy in design and demonstrated how
                         thoughtful features can empower users to overcome challenges.
@@ -326,10 +321,15 @@ function FlyDex() {
                 </div>
             </div>
 
+            {/* Conclusion Section */}
+            <div className="container mx-auto justify-center flex flex-col items-center gap-12 py-16 px-4 sm:px-8" data-aos="fade-left">
+                <h1 className="text-h1 font-syne font-bold text-offwhite mb-4">Try out Flydex</h1>
+                <FigmaEmbed />
+            </div>
 
             {/* More Projects Section */}
-            <div className="min-w-screen mx-auto  mb-0 bg-olive">
-                <h2 className="ml-4 py-16 text-h3 font-syne font-bold text-offwhite mb-6">View More of My Work!</h2>
+            <div className="container min-w-screen mx-auto px-4 sm:px-8 mb-0">
+                <h2 className="text-h3 font-syne font-bold text-offwhite mb-6">View More of My Work!</h2>
 
                 <div className="more-projects relative bg-ink p-16 flex items-center gap-8 rounded-t-xl z-10"
                     style={{
@@ -357,6 +357,35 @@ function FlyDex() {
                 </div>
             </div>
 
+
+
+            {justinModalOpen && (
+                <div
+                className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+                onClick={closeJustinModal} 
+            >
+                    <div className="relative bg-white p-6 rounded-lg shadow-lg"
+                    onClick={(e) => e.stopPropagation()}>
+                        {/* Modal Image */}
+                        <img
+                            src={modalImage}
+                            alt="Justin Modal Content"
+                            className="rounded"
+                            style={{
+                                maxWidth: "80vw", 
+                                maxHeight: "80vh", 
+                                objectFit: "contain", 
+                            }}
+                        />
+                        <button
+                            className="absolute top-2 right-2 text-ink p-2 rounded-full"
+                            onClick={closeJustinModal}
+                        >
+                            X
+                        </button>
+                    </div>
+                </div>
+            )}
         </div>
 
     )

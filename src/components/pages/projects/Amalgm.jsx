@@ -179,35 +179,7 @@ function Amalgm() {
                     </p>
                     {/* Slick Slider */}
                     <div className="p-8">
-                        <Slider {...sliderSettings}>
-                            {/* Slide 1 */}
-                            <div>
-                                <img
-                                    src={mindMap}
-                                    alt="Sketches and Mood Boards"
-                                    className="rounded-lg shadow-md mx-auto"
-                                />
-                                <p className="text-center mt-4 text-lg">Initial Mind Map</p>
-                            </div>
-                            {/* Slide 2 */}
-                            <div>
-                                <img
-                                    src={moodBoard}
-                                    alt="Brand Mood Board"
-                                    className="rounded-lg shadow-md mx-auto"
-                                />
-                                <p className="text-center mt-4 text-lg">Brand Mood Board</p>
-                            </div>
-                            {/* Slide 3 */}
-                            <div>
-                                <img
-                                    src={logoSketch}
-                                    alt="Early Logo Concepts"
-                                    className="rounded-lg shadow-md mx-auto"
-                                />
-                                <p className="text-center mt-4 text-lg">Iterating on logo concepts</p>
-                            </div>
-                        </Slider>
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/gCVW1snYrr66F7o51z2MCb/Flydex?page-id=955%3A391&node-id=961-420&node-type=frame&viewport=652%2C1156%2C0.42&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=961%3A420&embed-host=share" allowfullscreen></iframe>
                     </div>
                 </div>
 
