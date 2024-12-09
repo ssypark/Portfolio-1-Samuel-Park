@@ -134,7 +134,7 @@ function Amalgm() {
                 {/* Role, Date, and Project Link */}
                 <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8 p-8 border-t border-gray-300">
                     {/* Role and Date */}
-                    <div className="flex flex-col sm:flex-row gap-8">
+                    <div className="flex flex-col sm:flex-row gap-8 text-ink">
                         <div>
                             <h2 className="text-sm font-bold">Role</h2>
                             <p className="text-base">Brand Designer<br />Creative Strategist</p>
@@ -148,8 +148,8 @@ function Amalgm() {
                             <p className="text-base">44 Hours</p>
                         </div>
                         <div>
-                            <h2 className="text-sm font-bold text-offwhite">Tools</h2>
-                            <p className="text-base text-offwhite">
+                            <h2 className="text-sm font-bold">Tools</h2>
+                            <p className="text-base">
                                 Adobe Photoshop
                                 <br />
                                 Adobe Illustrator

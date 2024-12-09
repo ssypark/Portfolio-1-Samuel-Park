@@ -144,7 +144,7 @@ function SalmonSanctuary() {
                 {/* Role, Date, and Visit Website */}
                 <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8 p-8 border-t border-gray-300">
                     {/* Role and Date */}
-                    <div className="flex flex-col sm:flex-row gap-8">
+                    <div className="flex flex-col sm:flex-row gap-8 text-ink">
                         <div>
                             <h2 className="text-sm font-bold">Role</h2>
                             <p className="text-base">Lead UX/UI Designer<br />Information Architect</p>
@@ -158,8 +158,8 @@ function SalmonSanctuary() {
                             <p className="text-base">47 Hours</p>
                         </div>
                         <div>
-                            <h2 className="text-sm font-bold text-offwhite">Tools</h2>
-                            <p className="text-base text-offwhite">
+                            <h2 className="text-sm font-bold ">Tools</h2>
+                            <p className="text-base ">
                                 Figma
                                 <br />
                                 Adobe Illustrator
