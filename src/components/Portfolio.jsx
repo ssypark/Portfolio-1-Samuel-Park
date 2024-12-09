@@ -7,7 +7,7 @@ import "aos/dist/aos.css";
 import ssImage from '../assets/ssi.png';
 import amalgmImage from '../assets/amalgm.png';
 import interactiveImage from '../assets/interactive.png';
-import flyDexImage from '../assets/flydex.png';
+import flyDexImage from '../assets/flydex/flydex-login-mockup.jpg';
 import introBumperImage from '../assets/intro-bumper.png';
 
 // destructuring is used to include the limit prop that is passed from the parent component. This is used to limit the number of projects to display on the page.
@@ -37,19 +37,20 @@ function Portfolio({ limit}) {
             link: '/work/amalgm-brand-book',
         },
         {
-            image: interactiveImage,
-            title: 'Interactive Document',
-            description: 'An interactive document designed to educate readers about the diverse species of the Thompson River through engaging visuals and intuitive navigation.',
-            tags: ['Interaction Design', 'Graphic Design'],
-            link: '/work/interactive-document',
-        },
-        {
             image: flyDexImage,
             title: 'FlyDex App',
             description: 'FlyDex is an educational app designed to help fly fishing enthusiasts of all levels learn about techniques, find fishing spots, and connect with other anglers through an intuitive, all-in-one digital resource.',
             tags: ['UX/UI', 'UX Research', 'Wireframing'],
             link: '/work/flydex-app',
         },
+        {
+            image: interactiveImage,
+            title: 'Interactive Document',
+            description: 'An interactive document designed to educate readers about the diverse species of the Thompson River through engaging visuals and intuitive navigation.',
+            tags: ['Interaction Design', 'Graphic Design'],
+            link: '/work/interactive-document',
+        },
+        
         {
             image: introBumperImage,
             title: 'Intro Bumper Video',
