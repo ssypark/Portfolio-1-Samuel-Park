@@ -59,7 +59,7 @@ function Home() {
                 />
                 <meta property="og:image" content="../../assets/logo.svg" />
                 <meta property="og:url" content="https://sampark.ca/" />
-                
+
             </Helmet>
             {/* Main Content */}
             <div className="container mx-auto">
@@ -111,21 +111,21 @@ function Home() {
                     {/* Fish */}
                     {/* pointer events none ensures that the fish don't interfere with user click events */}
                     <div className="absolute inset-0 z-0 pointer-events-none">
-                    {/*  This creates and displays an array of 10 fish icons from Font Awesome */}
-                    {/* .map() is used to create an array of 10 fish icons */}
-                    {[...Array(10)].map((_, i) => (
-                        <FaFishFins
-                            key={i} // A key is necessary to assign a unique identifier to each fish icon
-                            className="fish absolute text-ink opacity-50" // Class name for the fish icon for the animation along with styling
-                            data-speed={Math.random() * 1 + 0.8} // Random speed multiplier to create a more natural movement
-                            style={{
-                                fontSize: `${Math.random() * 30 + 20}px`, // Random sizes to create depth and variation
-                                top: `${Math.random() * 60 + 20}%`, // Random position to ensure the fish are spread out more evenly (vertically)
-                                left: `${Math.random() * 80 + 10}%`, // Random position to ensure the fish are spread out more evenly (horizontally)
-                                transform: "rotate(0deg)", // Initial rotation so the fish start out facing correctly
-                            }}
-                        />
-                    ))}
+                        {/*  This creates and displays an array of 10 fish icons from Font Awesome */}
+                        {/* .map() is used to create an array of 10 fish icons */}
+                        {[...Array(10)].map((_, i) => (
+                            <FaFishFins
+                                key={i} // A key is necessary to assign a unique identifier to each fish icon
+                                className="fish absolute text-ink opacity-50" // Class name for the fish icon for the animation along with styling
+                                data-speed={Math.random() * 1 + 0.8} // Random speed multiplier to create a more natural movement
+                                style={{
+                                    fontSize: `${Math.random() * 30 + 20}px`, // Random sizes to create depth and variation
+                                    top: `${Math.random() * 60 + 20}%`, // Random position to ensure the fish are spread out more evenly (vertically)
+                                    left: `${Math.random() * 80 + 10}%`, // Random position to ensure the fish are spread out more evenly (horizontally)
+                                    transform: "rotate(0deg)", // Initial rotation so the fish start out facing correctly
+                                }}
+                            />
+                        ))}
                     </div>
 
 
@@ -138,7 +138,7 @@ function Home() {
                     </div>
                     {/* with the limit prop (see Portfolio.jsx), we can limit the number of projects displayed */}
                     <div className="z-100">
-                    <Portfolio limit={3} />
+                        <Portfolio limit={3} />
                     </div>
                 </div>
                 {/* More Projects Section */}
@@ -154,9 +154,12 @@ function Home() {
                         src={froggySide}
                         alt="Frog"
                     />
-                    <button className="px-6 py-3 bg-redwood text-offwhite text-h6 font-syne font-bold rounded hover:bg-opacity-90 transition z-20">
+                    <a
+                        href="/work"
+                        className="px-6 py-3 bg-redwood text-offwhite text-h6 font-syne font-bold rounded hover:bg-opacity-90 transition z-20"
+                    >
                         More Projects
-                    </button>
+                    </a>
                 </div>
 
                 {/* Contact Section */}

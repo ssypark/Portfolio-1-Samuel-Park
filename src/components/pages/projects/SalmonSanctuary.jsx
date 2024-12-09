@@ -54,7 +54,7 @@ function SalmonSanctuary() {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const wireframes = [wireframe1, wireframe2, wireframe3];
+    const wireframes = [wireframe1, wireframe2, wireframe3, wireframe4, wireframe5, wireframe6, wireframe7, wireframe8, wireframe9, wireframe10];
     const styleGuide = [styleGuide1, styleGuide2, styleGuide3, styleGuide4, styleGuide5, styleGuide6];
 
     const handleOpenModal = (type, index) => {
@@ -98,7 +98,7 @@ function SalmonSanctuary() {
     }, []);
 
     return (
-        <div className="relative mt-24 px-4 sm:px-8 bg-olive">
+        <div className="relative mt-18 px-4 sm:px-8 bg-olive">
             {/* Metadata */}
             <Helmet>
                 <title>Salmon Sanctuary Initiative | UX/UI Case Study</title>
@@ -118,29 +118,31 @@ function SalmonSanctuary() {
                 />
                 <meta property="og:image" content="../../../assets/salmonsanctuary/ssi-icon.png" />
                 <meta property="og:url" content="https://sampark.ca/work/salmon-sanctuary" />
-                
+
             </Helmet>
 
             {/* Header Section */}
-            <div className="container mx-auto p-16 min-h-screen bg-offwhite bg-paper rounded-md shadow-md">
-                {/* Header and Icon */}
-                <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-8 sm:pt-24">
-                    <div data-aos="fade-right" className="lg:w-2/3 text-offwhite pt-12">
+            <div className="relative min-h-screen p-8 bg-offwhite bg-paper rounded-md shadow-md flex flex-col justify-between">
+                {/* Centered Logo and Header */}
+                <div className="flex items-center justify-center flex-grow">
+                    {/* Logo */}
+                    <div className="flex justify-center lg:justify-end p-8" data-aos="fade-left">
+                        <img
+                            src={ssiIcon}
+                            alt="Salmon Sanctuary Icon"
+                            className="w-64 h-64 object-contain"
+                        />
+                    </div>
+                    {/* Header */}
+                    <div data-aos="fade-right" className="text-left">
                         <h1 className="text-h1 font-bold font-syne text-ink">
                             Information Architecture for Salmon Sanctuary
                         </h1>
                     </div>
-                    <div data-aos="fade-left" className="lg:w-1/3 flex justify-center ">
-                        <img
-                            src={ssiIcon}
-                            alt="Salmon Sanctuary Icon"
-                            className="w-64 h-64 object-cover"
-                        />
-                    </div>
                 </div>
 
                 {/* Role, Date, and Visit Website */}
-                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8 sm:mt-32">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8 p-8 border-t border-gray-300">
                     {/* Role and Date */}
                     <div className="flex flex-col sm:flex-row gap-8">
                         <div>
@@ -150,6 +152,10 @@ function SalmonSanctuary() {
                         <div>
                             <h2 className="text-sm font-bold">Date</h2>
                             <p className="text-base">2023</p>
+                        </div>
+                        <div>
+                            <h2 className="text-sm font-bold">Duration</h2>
+                            <p className="text-base">4 Weeks</p>
                         </div>
                     </div>
 
@@ -166,9 +172,8 @@ function SalmonSanctuary() {
                     </div>
                 </div>
             </div>
-
             {/* About Section */}
-            <div className="container flex justify-between items-center mx-auto mt-16 px-4 sm:px-8 mb-16 gap-8" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out">
+            <div className="container flex flex-col lg:flex-row justify-between items-center mx-auto mt-16 px-4 sm:px-8 mb-16 gap-8" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out">
                 {/* Logo */}
                 <div className="lg:w-1/3 flex justify-center mb-8 lg:mb-0">
                     <img
@@ -250,7 +255,12 @@ function SalmonSanctuary() {
             </div>
 
             {/* Personas & Scenarios Section */}
-            <div className="container mx-auto px-4 sm:px-8 my-16 pt-8" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out">
+            <div
+                className="container mx-auto px-4 sm:px-8 my-16 pt-8"
+                data-aos="fade-up"
+                data-aos-duration="500"
+                data-aos-easing="ease-in-out"
+            >
                 <h2 className="text-h3 font-syne font-bold text-offwhite mb-6">User Personas & Scenarios</h2>
                 <p className="text-body font-workSans text-offwhite leading-relaxed mb-8">
                     Based on the interviews, I developed two primary personas:
@@ -266,30 +276,27 @@ function SalmonSanctuary() {
                 <p className="text-body font-workSans text-offwhite leading-relaxed mb-16">
                     User scenarios were crafted to simulate user journeys, focusing on tasks like finding volunteer opportunities, accessing educational materials, and making donations.
                 </p>
-                <div className="flex flex-col lg:flex-row items-start gap-8 bg-paper p-8 rounded-lg shadow-md" data-aos="fade-right" data-aos-duration="500" data-aos-easing="ease-in-out">
+                <div
+                    className="flex flex-col lg:flex-row items-start gap-8 bg-paper p-8 rounded-lg shadow-md"
+                    data-aos="fade-right"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-in-out"
+                >
                     {/* Persona Image */}
                     <div className="w-full lg:w-1/3 relative group">
-                        <a
-                            href={userPersona} // Link to the persona image
-                            target="_blank" // Open in a new tab
-                            rel="noopener noreferrer" // Security best practices
-                        >
-                            <img
-                                src={userJourney}
-                                alt="Environmental Activist Persona"
-                                className="rounded-lg shadow-md cursor-pointer"
-                            />
-                        </a>
+                        <img
+                            src={userJourney}
+                            alt="Environmental Activist Persona"
+                            className="rounded-lg shadow-md cursor-pointer"
+                            onClick={handleOpenPersonaModal} // Modal trigger
+                        />
                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-center items-center">
-                            <a
-                                href={userPersona}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <button
+                                className="px-6 py-3 bg-redwood text-offwhite text-lg font-bold rounded shadow-md hover:scale-105 transform transition-transform duration-300"
+                                onClick={handleOpenPersonaModal} // Modal trigger
                             >
-                                <button className="px-6 py-3 bg-redwood text-offwhite text-lg font-bold rounded shadow-md hover:scale-105 transform transition-transform duration-300">
-                                    Learn More About Maya
-                                </button>
-                            </a>
+                                Learn More About Maya
+                            </button>
                         </div>
                     </div>
                     {/* Persona Details */}
@@ -308,6 +315,34 @@ function SalmonSanctuary() {
                         </p>
                     </div>
                 </div>
+
+                {/* Persona Modal */}
+                {isPersonaModalOpen && (
+                    <div
+                        className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center p-4 z-50"
+                        onClick={handleClosePersonaModal}
+                    >
+                        <div
+                            className="relative bg-white rounded-lg overflow-hidden max-h-[90vh] max-w-full"
+                            onClick={handleClosePersonaModal}// Prevent background click from closing modal
+                        >
+                            {/* Close Button */}
+                            <button
+                                className="absolute top-4 right-4 text-offwhite text-2xl hover:text-redwood transition"
+                                onClick={handleClosePersonaModal}
+                            >
+                                <FaTimes />
+                            </button>
+
+                            {/* Image */}
+                            <img
+                                src={userPersona}
+                                alt="Environmental Activist Persona"
+                                className="max-h-[85vh] w-auto object-contain"
+                            />
+                        </div>
+                    </div>
+                )}
             </div>
 
             {/* Divider */}
@@ -419,7 +454,7 @@ function SalmonSanctuary() {
                     onClick={() => handleOpenModal("wireframes", 0)} // Open modal for wireframes
                 >
                     <img
-                        src={wireframe1}
+                        src={wireframe2}
                         alt="Wireframe Design"
                         className="rounded-lg shadow-md mx-auto"
                     />
@@ -436,12 +471,12 @@ function SalmonSanctuary() {
             {(isWireframeModalOpen || isStyleGuideModalOpen) && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
-                    onClick={handleCloseModal} // Close modal on background click
+                    onClick={handleCloseModal}
                 >
                     {/* Carousel Container */}
                     <div
                         className="relative max-w-[90%] max-h-[90vh]"
-                        onClick={(e) => e.stopPropagation()} // Prevent click from propagating to the background
+                        onClick={(e) => e.stopPropagation()}
                     >
                         {/* Close Button */}
                         <button
@@ -516,9 +551,12 @@ function SalmonSanctuary() {
                         src={froggySide}
                         alt="Frog"
                     />
-                    <button className="px-6 py-3 bg-redwood text-offwhite text-h6 font-syne font-bold rounded hover:bg-opacity-90 transition z-20">
+                    <a
+                        href="/work"
+                        className="px-6 py-3 bg-redwood text-offwhite text-h6 font-syne font-bold rounded hover:bg-opacity-90 transition z-20"
+                    >
                         Go
-                    </button>
+                    </a>
                 </div>
 
                 {/* Contact Section */}

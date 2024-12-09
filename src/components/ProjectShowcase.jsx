@@ -45,7 +45,7 @@ function ProjectShowcase({ image, title, description, tags, link }) {
             </div>
 
             {/* CTA */}
-            <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+            <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 hover:bg-florange transition-opacity duration-300 ease-in-out">
                 <Link
                     to={link}
                     className="px-4 py-2 bg-redwood text-offwhite font-bold font-syne rounded shadow-lg hover:shadow-xl transition-shadow duration-300"

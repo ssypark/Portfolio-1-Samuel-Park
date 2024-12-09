@@ -140,7 +140,7 @@ function Work() {
                         alt="Frog"
                     />
                     <button className="px-6 py-3 bg-redwood text-offwhite font-syne font-bold rounded hover:bg-opacity-90 transition z-20">
-                        Extras!
+                        I Also Paint!
                     </button>
                 </div>
 
