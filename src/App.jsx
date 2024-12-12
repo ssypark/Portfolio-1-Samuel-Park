@@ -15,9 +15,7 @@ import IntroBumper from './components/pages/projects/IntroBumper';
 // Animation Imports
 import ScrollToTop from './components/animations/ScrollToTop';
 
-//React Burger Menu (yum)
-import './css/Menu.css'
-import { bubble as Menu } from 'react-burger-menu'
+
 
 function App() {
   const lenis = useLenis(({scroll}) => {
@@ -31,12 +29,7 @@ function App() {
     {/* The ScrollToTop component is used to scroll to the top of the page when a new route is loaded (see ScrollToTop.js) */}
     <ScrollToTop />
     <div id="outer-container">
-    {/* Burger Menu */}
-    <Menu className='block md:hidden' pageWrapId="page-wrapper" outerContainerId="outer-container" right>
-      <Link className="menu-item" to="/">Home</Link>
-      <Link className="menu-item" to="/about">About</Link>
-      <Link className="menu-item" to="/work">Work</Link>
-    </Menu>
+   
       {/* page-wrapper is necessary for the burger menu. All the content goes in here */}
       <main className="page-wrapper"> 
       <Routes>

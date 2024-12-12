@@ -29,32 +29,38 @@ function Header() {
     return (
         <header
             // This is the header that is fixed to the top of the page. When the user scrolls down (isScrolled=true), the header shrinks in size and changes color.
-            className={`fixed top-0 left-0 w-full z-[200] transition-all duration-300 ${
-                isScrolled ? "py-2 shadow-lg bg-ink" : "py-4 px-8 bg-olive"
-            }`}
+            className={`fixed top-0 left-0 w-full z-[200] transition-all duration-300 ${isScrolled ? "py-2 px-4 shadow-lg bg-ink" : "py-4 px-8 bg-olive"
+                }`}
         >
-            <div className="max-w-screen-xl mx-auto flex px-4  justify-between items-center text-offwhite font-workSans">
+            <div className="container mx-auto flex  justify-between items-center text-offwhite font-workSans">
                 <Link to="/">
-                <img
-                    src={logo}
-                    alt="logo"
-                    className={`transition-all duration-300 ${
-                        // if the isScrolled state is true, this will set the width of the logo to 12, otherwise set it to 20
-                        isScrolled ? "w-12" : "w-20"
-                    } animate-pulse`}
-                />
+                    <img
+                        src={logo}
+                        alt="logo"
+                        className={`transition-all duration-300 ${
+                            // if the isScrolled state is true, this will set the width of the logo to 12, otherwise set it to 20
+                            isScrolled ? "w-12" : "w-20"
+                            } animate-pulse`}
+                    />
+
                 </Link>
-                {/* This takes care of the navigation it is hidden on mobile for responsiveness */}
-                <nav className="hidden md:flex">
-                    <ul className="list-none flex gap-8">
-                        <li className="text-offwhite hover:text-redwood">
-                            <Link to="/">Home</Link>
+
+                <nav className="flex" aria-label="Primary Navigation">
+                    <ul className="list-none flex gap-8 font-syne font-semibold">
+                        <li>
+                            <Link to="/" className="text-offwhite hover:text-florange">
+                                Home
+                            </Link>
                         </li>
-                        <li className="text-offwhite hover:text-redwood">
-                            <Link to="/about">About</Link>
+                        <li>
+                            <Link to="/about" className="text-offwhite hover:text-florange">
+                                About
+                            </Link>
                         </li>
-                        <li className="text-offwhite hover:text-redwood">
-                            <Link to="/work">Work</Link>
+                        <li>
+                            <Link to="/work" className="text-offwhite hover:text-florange">
+                                Work
+                            </Link>
                         </li>
                     </ul>
                 </nav>

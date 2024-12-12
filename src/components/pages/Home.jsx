@@ -18,7 +18,7 @@ import froggy from "../../assets/froggy.svg";
 import froggySide from "../../assets/froggy-side.svg";
 import Portfolio from "../Portfolio";
 import Contact from "../Contact";
-import { FaFishFins, FaArrowDown } from "react-icons/fa6";
+import { FaFishFins, FaSeedling } from "react-icons/fa6";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -84,8 +84,10 @@ function Home() {
                         </div>
                     </div>
 
-                    {/* Hero Frog */}
+                    {/* Hero Frog Bar*/}
+                    {/* Olive bar for frog */}
                     <div className="absolute bottom-0 left-0 w-full h-10 bg-olive z-20"></div>
+                    {/* Hero Frog */}
                     <img
                         className="hero-frog w-40 h-40 absolute -bottom-10 left-1/2 transform -translate-x-1/2 z-10"
                         src={froggy}
@@ -134,7 +136,7 @@ function Home() {
                 {/* Projects */}
                 <div id="featuredProjects">
                     <div className="w-full">
-                        <h2 className="text-h2 font-syne font-bold p-4 mb-4 mt-0 text-offwhite flex items-center">Featured Projects <FaArrowDown className="text-h2 ml-4 animate-bounce" /></h2>
+                        <h2 className="text-h2 font-syne font-bold p-4 mb-4 mt-0 text-offwhite flex items-center">Featured Projects <FaSeedling className="text-h2 ml-4" /></h2>
                     </div>
                     {/* with the limit prop (see Portfolio.jsx), we can limit the number of projects displayed */}
                     <div className="z-100">
