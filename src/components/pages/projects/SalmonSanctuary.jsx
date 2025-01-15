@@ -4,7 +4,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { FaChevronLeft, FaChevronRight, FaTimes } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaTimes} from "react-icons/fa";
+import { MdArrowOutward } from "react-icons/md";
 // Components
 import Contact from "../../Contact";
 
@@ -123,7 +124,7 @@ function SalmonSanctuary() {
             </Helmet>
 
             {/* Header Section */}
-            <div className="relative min-h-screen p-8 bg-offwhite bg-paper rounded-md shadow-md flex flex-col justify-between">
+            <div className="relative min-h-screen p-8 bg-offwhite rounded-md shadow-md flex flex-col justify-between">
                 {/* Centered Logo and Header */}
                 <div className="flex items-center justify-center flex-grow">
                     {/* Logo */}
@@ -147,25 +148,27 @@ function SalmonSanctuary() {
                     {/* Role and Date */}
                     <div className="flex flex-col sm:flex-row gap-8 text-ink">
                         <div>
-                            <h2 className="text-sm font-bold">Role</h2>
-                            <p className="text-base">Lead UX/UI Designer<br />Information Architect</p>
+                            <h2 className="text-md font-bold">Role</h2>
+                            <p className="text-sm font-workSans">Lead UX/UI Designer<br />Information Architect</p>
                         </div>
                         <div>
-                            <h2 className="text-sm font-bold">Date</h2>
-                            <p className="text-base">2023</p>
+                            <h2 className="text-md font-bold font-workSans">Date</h2>
+                            <p className="text-sm font-workSans">2023</p>
                         </div>
                         <div>
-                            <h2 className="text-sm font-bold">Duration</h2>
-                            <p className="text-base">47 Hours</p>
+                            <h2 className="text-md font-bold font-workSans">Duration</h2>
+                            <p className="text-sm font-workSans">47 Hours</p>
                         </div>
                         <div>
-                            <h2 className="text-sm font-bold ">Tools</h2>
-                            <p className="text-base ">
+                            <h2 className="text-md font-bold font-workSans ">Tools</h2>
+                            <p className="text-sm font-workSans ">
                                 Figma
                                 <br />
                                 Adobe Illustrator
                                 <br />
                                 Procreate
+                                <br />
+                                Wordpress
                             </p>
                         </div>
                         
@@ -177,9 +180,9 @@ function SalmonSanctuary() {
                             href="https://salmonsanctuary.sampark.ca/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block px-6 py-3 bg-redwood text-offwhite text-lg rounded shadow-md hover:shadow-lg transition duration-300"
+                            className="flex items-center text-sm gap-2 px-2 py-1 bg-redwood text-offwhite font-bold font-syne rounded shadow-lg hover:shadow-xl hover:bg-florange transition-shadow duration-300 w-max"
                         >
-                            → VISIT WEBSITE
+                            VISIT WEBSITE <MdArrowOutward />
                         </a>
                     </div>
                 </div>

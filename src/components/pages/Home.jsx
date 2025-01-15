@@ -84,8 +84,11 @@ function Home() {
                             alt="Samuel Park Logo"
                         />
                         <div className="text-left">
+                        <p className="sm:text-h3 max-w-2xl font-workSans">
+                                Hello, I'm
+                            </p>
                             <h1 className="sm:text-hmax font-bold font-syne tracking-wide mb-4 leading-normal">
-                                Hello, I'm Samuel Park
+                                Samuel Park
                             </h1>
 
                             <p className="sm:text-h3 max-w-2xl font-workSans">
