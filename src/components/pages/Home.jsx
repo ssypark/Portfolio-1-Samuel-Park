@@ -186,7 +186,7 @@ function Home() {
                         href="/work"
                         className="px-6 py-3 bg-redwood text-offwhite text-h6 font-syne font-bold rounded hover:bg-opacity-90 transition z-20"
                     >
-                        More Projects
+                        More Projects!
                     </a>
                 </div>
 
