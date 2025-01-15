@@ -29,40 +29,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger for GSAP
 
 function Work() {
-    gsap.set(".amalgm-font", {
-        opacity: 0,
-        y: 50, // Position below
-    });
-    // GSAP Animation for Logo
-    const logoAnimation = gsap.fromTo(
-        ".amalgm-logo", // Target logo by class
-        {
-            scale: 0, // Start at 0 scale
-            rotation: 0, // Start with no rotation
-        },
-        {
-            scale: 1, // End at full size
-            rotation: 1080, // Full spin
-            duration: 2, // Animation duration
-            ease: "power3.out", // Smooth easing
-            onComplete: () => {
-                // Animation for font starts after logo animation completes
-                gsap.fromTo(
-                    ".amalgm-font", // Target font by class
-                    {
-                        y: 50, // Start below
-                        opacity: 0, // Start fully transparent
-                    },
-                    {
-                        y: 0, // End at original position
-                        opacity: 1, // Fully visible
-                        duration: 1.5, // Animation duration
-                        ease: "power3.out", // Smooth easing
-                    }
-                );
-            },
-        }
-    );
+
+
     // To see the animation code logic, refer to animations.js
     useEffect(() => {
         initSideFrogAnimation();
@@ -98,16 +66,11 @@ function Work() {
             {/* Main Content */}
             <div className="container mx-auto">
                 {/* Hero Section */}
-                <div className="relative p-16 flex items-center justify-center content-center bg-sage bg-paper">
+                <div className="relative p-16 flex items-center justify-center content-center bg-sage">
                     <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-8 text-center md:text-left z-20 mb-12">
-                        {/* Animated Logo */}
-                        <img
-                            className="logo w-24 sm:w-36 md:w-48 lg:w-72 amalgm-logo"
-                            src={redLogo}
-                            alt="Samuel Park Logo"
-                        />
+                
                         {/* Header Section */}
-                        <div className="text-left sm:text-center">
+                        <div className="text-left mb-8 sm:text-center">
                             <h1 className="text-h1 font-bold font-syne tracking-wide text-offwhite pt-24 md:pt-24 sm:pt-4 amalgm-font">
                                 WORK & PROJECTS
                             </h1>
@@ -191,7 +154,7 @@ function Work() {
                         alt="Frog"
                     />
                     <button className="px-6 py-3 bg-redwood text-offwhite font-syne font-bold rounded hover:bg-opacity-90 transition z-20">
-                        I Also Paint!
+                        View My Artwork!
                     </button>
                 </div>
 

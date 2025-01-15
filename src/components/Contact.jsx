@@ -13,7 +13,7 @@ function Contact() {
     return (
         <>
             {/* Main Contact Section */}
-            <div className="bg-sage bg-water px-4 sm:px-16 py-8 sm:py-24 pb-32 flex flex-col items-start rounded-b-xl relative">
+            <div className="bg-sage px-4 sm:px-16 py-8 sm:py-24 pb-32 flex flex-col items-start rounded-b-xl relative">
                 <h2 className="text-h1 font-syne font-bold text-ink mb-2 pt-8">YOUR IDEAS MATTER</h2>
                 <p className="text-h3 text-ink font-workSans mb-8">
                     I’m here to listen, collaborate, and create.
