@@ -18,15 +18,11 @@ import froggy from "../../assets/froggy.svg";
 import froggySide from "../../assets/froggy-side.svg";
 import Portfolio from "../Portfolio";
 import Contact from "../Contact";
-<<<<<<< Updated upstream
 import { FaFishFins, FaSeedling } from "react-icons/fa6";
 import plantSm from "../../assets/plant-sm.svg";
 import plantMd from "../../assets/plant-lg.svg";
 import borderL from "../../assets/border-l.svg";
 import borderR from "../../assets/border-r.svg";
-=======
-import { FaFishFins, FaArrowDown } from "react-icons/fa6";
->>>>>>> Stashed changes
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -72,11 +68,7 @@ function Home() {
             {/* Main Content */}
             <div className="container mx-auto">
                 {/* Hero Section */}
-<<<<<<< Updated upstream
                 <div className="relative min-h-screen px-16 -mt-16 flex items-center justify-center  bg-[#c1c5c9] bg-water text-ink">
-=======
-                <div className="relative min-h-screen px-16 -mt-16 flex items-center justify-center  bg-sand  text-ink">
->>>>>>> Stashed changes
                     <div className="flex flex-col md:flex-row items-center md:items-start text-left space-y-8 md:space-y-0 md:space-x-8 z-20 mb-12" data-aos="fade-up">
                         <img
                             className="logo w-36 sm:w-72 mr-8"
@@ -96,7 +88,6 @@ function Home() {
                         </div>
                     </div>
 
-<<<<<<< Updated upstream
                     {/* Hero Frog Bar*/}
                     {/* Decorative borders */}
                     <img
@@ -122,10 +113,7 @@ function Home() {
                     /> */}
                     {/* Olive bar for frog */}
                     <div className="absolute bottom-0 left-0 w-full h-10 bg-olive z-20"></div>
-=======
->>>>>>> Stashed changes
                     {/* Hero Frog */}
-                    <div className="absolute bottom-0 left-0 w-full h-10 bg-olive z-20"></div>
                     <img
                         className="hero-frog w-40 h-40 absolute -bottom-10 left-1/2 transform -translate-x-1/2 z-10"
                         src={froggy}
@@ -174,7 +162,7 @@ function Home() {
                 {/* Projects */}
                 <div id="featuredProjects">
                     <div className="w-full">
-                        <h2 className="text-h2 font-syne font-bold p-4 mb-4 mt-0 text-offwhite flex items-center">Featured Projects <FaArrowDown className="text-h2 ml-4 animate-bounce" /></h2>
+                        <h2 className="text-h2 font-syne font-bold p-4 mb-4 mt-0 text-offwhite flex items-center">Featured Projects <FaSeedling className="text-h2 ml-4" /></h2>
                     </div>
                     {/* with the limit prop (see Portfolio.jsx), we can limit the number of projects displayed */}
                     <div className="z-100">
