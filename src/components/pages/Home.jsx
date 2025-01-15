@@ -9,6 +9,10 @@ import {
     initFooterFrogAnimation,
     initFishAnimation,
 } from "../animations/animations";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 //Image Imports
@@ -18,24 +22,27 @@ import froggy from "../../assets/froggy.svg";
 import froggySide from "../../assets/froggy-side.svg";
 import Portfolio from "../Portfolio";
 import Contact from "../Contact";
-import { FaFishFins, FaSeedling } from "react-icons/fa6";
+import { FaFishFins, FaArrowDown } from "react-icons/fa6";
 import plantSm from "../../assets/plant-sm.svg";
 import plantMd from "../../assets/plant-lg.svg";
 import borderL from "../../assets/border-l.svg";
 import borderR from "../../assets/border-r.svg";
+import { HelmetProvider } from "react-helmet-async";
 
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger for GSAP
 
 function Home() {
     // To see the animation code, refer to animations.js
     useEffect(() => {
+        AOS.init({
+            once: true, // This will make the animations run only once
+        });
         initSideFrogAnimation();
         initHeroFrogAnimation();
         initFooterFrogAnimation();
         const fishAnimationCleanup = initFishAnimation();
-
+        
         //Cleanup function for the fish animation
         return () => {
             fishAnimationCleanup();
@@ -43,6 +50,7 @@ function Home() {
     }, []);
 
     return (
+        <HelmetProvider>
         <div className="relative mt-24 px-4 sm:px-8 bg-olive">
             {/* Metadata */}
             <Helmet>
@@ -68,7 +76,7 @@ function Home() {
             {/* Main Content */}
             <div className="container mx-auto">
                 {/* Hero Section */}
-                <div className="relative min-h-screen px-16 -mt-16 flex items-center justify-center  bg-[#c1c5c9] bg-water text-ink">
+                <div className="relative min-h-screen px-16 -mt-16 flex items-center justify-center  bg-[#c1c5c9] text-ink">
                     <div className="flex flex-col md:flex-row items-center md:items-start text-left space-y-8 md:space-y-0 md:space-x-8 z-20 mb-12" data-aos="fade-up">
                         <img
                             className="logo w-36 sm:w-72 mr-8"
@@ -76,11 +84,11 @@ function Home() {
                             alt="Samuel Park Logo"
                         />
                         <div className="text-left">
-                            <h1 className="sm:text-h1 font-bold font-syne tracking-wide mb-4 leading-normal">
+                            <h1 className="sm:text-hmax font-bold font-syne tracking-wide mb-4 leading-normal">
                                 Hello, I'm Samuel Park
                             </h1>
 
-                            <p className="text-h3 max-w-2xl font-workSans">
+                            <p className="sm:text-h3 max-w-2xl font-workSans">
                                 I'm a UI and visual designer with a
                                 background in fine arts, blending creativity
                                 with digital innovation to create impactful designs.
@@ -162,7 +170,7 @@ function Home() {
                 {/* Projects */}
                 <div id="featuredProjects">
                     <div className="w-full">
-                        <h2 className="text-h2 font-syne font-bold p-4 mb-4 mt-0 text-offwhite flex items-center">Featured Projects <FaSeedling className="text-h2 ml-4" /></h2>
+                        <h2 className="text-h2 font-syne font-bold p-4 mb-4 mt-0 text-offwhite flex items-center">Featured Projects <FaArrowDown className="ml-4" /></h2>
                     </div>
                     {/* with the limit prop (see Portfolio.jsx), we can limit the number of projects displayed */}
                     <div className="z-100">
@@ -197,7 +205,9 @@ function Home() {
 
             </div>
         </div>
+        </HelmetProvider>
     );
 }
+
 
 export default Home;

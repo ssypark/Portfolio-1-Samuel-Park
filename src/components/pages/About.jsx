@@ -35,6 +35,7 @@ function About() {
         AOS.init({
             duration: 1000,
             easing: "ease-in-out",
+            once: true,
         });
 
         // TackleBox Animation
@@ -80,7 +81,7 @@ function About() {
                 <meta property="og:site_name" content="Samuel Park Portfolio" />
             </Helmet>
             {/* Header Introduction */}
-            <div className="container min-h-screen mx-auto p-16 flex flex-col lg:flex-row md:-mt-32 sm:-mt-64 items-center gap-8 mb-12 justify-between bg-redwood bg-paper rounded-md shadow-md">
+            <div className="container min-h-screen mx-auto p-16 flex flex-col lg:flex-row md:-mt-32 sm:-mt-64 items-center gap-8 mb-12 justify-between bg-redwood rounded-md shadow-md">
                 <div data-aos="fade-right" className="lg:w-2/3 text-offwhite">
                     <h1 className="text-h1 font-bold font-syne mb-6">Nice to meet you</h1>
                     <p className="text-body leading-relaxed mb-4 font-workSans">Hi, I'm Samuel. I'm a UX/UI designer with a background in fine arts, driven by a

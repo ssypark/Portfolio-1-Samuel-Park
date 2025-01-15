@@ -83,7 +83,10 @@ function Amalgm() {
                 },
             }
         );
-        AOS.init();
+        AOS.init({
+            once: true,
+            duration: 1000,
+        });
         initSideFrogAnimation();
     })
     return (

@@ -40,7 +40,7 @@ function Header() {
                         className={`transition-all duration-300 ${
                             // if the isScrolled state is true, this will set the width of the logo to 12, otherwise set it to 20
                             isScrolled ? "w-12" : "w-20"
-                            } animate-pulse`}
+                            }`}
                     />
 
                 </Link>

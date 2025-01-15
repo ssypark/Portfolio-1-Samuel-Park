@@ -10,6 +10,7 @@ import {
     initFishAnimation,
 } from "../animations/animations";
 
+
 //Image Imports
 import redLogo from "../../assets/logo-red.svg";
 import logoBlack from "../../assets/logo-darkblack.svg";
@@ -172,7 +173,7 @@ function Work() {
                 {/* Projects */}
                 <div id="featuredProjects">
                     <div className="w-full">
-                        <h2 className="text-h2 font-syne font-bold p-4 mb-4 mt-0 text-offwhite flex items-center">Current Projects <FaArrowDown className="ml-4 animate-bounce" /></h2>
+                        <h2 className="text-h2 font-syne font-bold p-4 mb-4 mt-0 text-offwhite flex items-center">Current Projects <FaArrowDown className="ml-4" /></h2>
                     </div>
                     <Portfolio />
                 </div>

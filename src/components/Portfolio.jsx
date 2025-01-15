@@ -65,7 +65,7 @@ function Portfolio({ limit}) {
 
     return (
         <div className="container mx-auto px-0 py-0 mb-8">
-            <div className="grid gap-8">
+            <div className="grid gap-8 text-left">
                 {/* This maps over the projects array and displays each project in a ProjectShowcase component */}
                 {displayProjects.map((project, index) => (
                     <div
