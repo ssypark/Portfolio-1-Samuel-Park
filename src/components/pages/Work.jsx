@@ -11,33 +11,71 @@ import {
 } from "../animations/animations";
 
 //Image Imports
-import logo from "../../assets/logo-black.svg";
+import redLogo from "../../assets/logo-red.svg";
 import logoBlack from "../../assets/logo-darkblack.svg";
 import froggy from "../../assets/froggy.svg";
 import froggySide from "../../assets/froggy-side.svg";
 import Portfolio from "../Portfolio";
 import Contact from "../Contact";
-import { FaFishFins, FaArrowDown } from "react-icons/fa6";
+import { FaArrowDown } from "react-icons/fa6";
+import borderL from "../../assets/border-l.svg";
+import borderR from "../../assets/border-r.svg";
+import bee from "../../assets/bee.svg";
+
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger for GSAP
 
 function Work() {
-        // To see the animation code logic, refer to animations.js
-        useEffect(() => {
-            initSideFrogAnimation();
-            initHeroFrogAnimation();
-            initFooterFrogAnimation();
-            const fishAnimationCleanup = initFishAnimation();
-    
-            //Cleanup function for the fish animation
-            return () => {
-                fishAnimationCleanup();
-            };
-        }, []);
+    gsap.set(".amalgm-font", {
+        opacity: 0,
+        y: 50, // Position below
+    });
+    // GSAP Animation for Logo
+    const logoAnimation = gsap.fromTo(
+        ".amalgm-logo", // Target logo by class
+        {
+            scale: 0, // Start at 0 scale
+            rotation: 0, // Start with no rotation
+        },
+        {
+            scale: 1, // End at full size
+            rotation: 1080, // Full spin
+            duration: 2, // Animation duration
+            ease: "power3.out", // Smooth easing
+            onComplete: () => {
+                // Animation for font starts after logo animation completes
+                gsap.fromTo(
+                    ".amalgm-font", // Target font by class
+                    {
+                        y: 50, // Start below
+                        opacity: 0, // Start fully transparent
+                    },
+                    {
+                        y: 0, // End at original position
+                        opacity: 1, // Fully visible
+                        duration: 1.5, // Animation duration
+                        ease: "power3.out", // Smooth easing
+                    }
+                );
+            },
+        }
+    );
+    // To see the animation code logic, refer to animations.js
+    useEffect(() => {
+        initSideFrogAnimation();
+        initHeroFrogAnimation();
+        initFooterFrogAnimation();
+        const fishAnimationCleanup = initFishAnimation();
 
-       
+        //Cleanup function for the fish animation
+        return () => {
+            fishAnimationCleanup();
+        };
+    }, []);
+
+
 
     return (
         <div className="relative  mt-24 px-4 sm:px-8 bg-olive">
@@ -59,23 +97,35 @@ function Work() {
             {/* Main Content */}
             <div className="container mx-auto">
                 {/* Hero Section */}
-                <div className="relative p-16 flex items-center justify-center content-center bg-sage bg-water">
-                    <div className="flex flex-col  md:flex-row items-center md:items-start md:space-x-8 text-center md:text-left z-20 mb-12">
+                <div className="relative p-16 flex items-center justify-center content-center bg-sage bg-paper">
+                    <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-8 text-center md:text-left z-20 mb-12">
+                        {/* Animated Logo */}
                         <img
-                            className="logo w-24 sm:w-36 md:w-48 lg:w-72 mr-0 sm:mr-8"
-                            src={logo}
+                            className="logo w-24 sm:w-36 md:w-48 lg:w-72 amalgm-logo"
+                            src={redLogo}
                             alt="Samuel Park Logo"
                         />
+                        {/* Header Section */}
                         <div className="text-left sm:text-center">
-                            <h1 className="text-h1 font-bold font-syne  tracking-wide text-ink  pt-24 md:pt-24 sm:pt-4">
+                            <h1 className="text-h1 font-bold font-syne tracking-wide text-offwhite pt-24 md:pt-24 sm:pt-4 amalgm-font">
                                 WORK & PROJECTS
                             </h1>
-
                         </div>
                     </div>
 
                     {/* Hero Frog */}
                     <div className="absolute bottom-0 left-0 w-full h-10 bg-olive z-20"></div>
+                    {/* Decorative borders */}
+                    <img
+                        className="absolute bottom-9 left-0 w-72 z-20" // Bottom-left plant
+                        src={borderL}
+                        alt="left border"
+                    />
+                    <img
+                        className="absolute bottom-9 right-0 w-64 z-20" // Bottom-right plant
+                        src={borderR}
+                        alt="Right Border"
+                    />
                     <img
                         className="hero-frog w-24 sm:w-32 md:w-40 h-auto absolute -bottom-6 sm:-bottom-10 left-1/2 transform -translate-x-1/2 z-10"
                         src={froggy}
@@ -101,10 +151,10 @@ function Work() {
                     {/* Fish */}
                     {/*  This creates and displays an array of 10 fish icons from Font Awesome */}
                     {/* .map() is used to create an array of 10 fish icons */}
-                    {[...Array(4)].map((_, i) => (
-                        <FaFishFins
+                    {[...Array(3)].map((_, i) => (
+                        <img src={bee}
                             key={i} // A key is necessary to assign a unique identifier to each fish icon
-                            className="fish absolute text-ink opacity-50" // Class name for the fish icon for the animation along with styling
+                            className="fish absolute opacity-50 z-30" // Class name for the fish icon for the animation along with styling
                             data-speed={Math.random() * 1 + 0.8} // Random speed multiplier to create a more natural movement
                             style={{
                                 fontSize: `${Math.random() * 30 + 20}px`, // Random sizes to create depth and variation
