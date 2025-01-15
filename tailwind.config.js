@@ -12,6 +12,7 @@ export default {
         redwood: '#A84D1B',
         offwhite: '#F3F1EE',
         florange: '#FF5B03',
+        sand: '#ab9778',
       },
       fontFamily: {
         syne: ['Syne', 'sans-serif'],
