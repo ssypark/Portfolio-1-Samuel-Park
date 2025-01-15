@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { MdArrowOutward } from "react-icons/md";
 
 function ProjectShowcase({ image, title, description, tags, link }) {
     const [isExpanded, setIsExpanded] = useState(false); // State to track whether the project is expanded or not. 
@@ -44,15 +45,15 @@ function ProjectShowcase({ image, title, description, tags, link }) {
                 </div>
             </div>
 
-            {/* CTA */}
-            <div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 hover:bg-florange transition-opacity duration-300 ease-in-out">
-                <Link
-                    to={link}
-                    className="px-4 py-2 bg-redwood text-offwhite font-bold font-syne rounded shadow-lg hover:shadow-xl transition-shadow duration-300"
-                >
-                    View Project
-                </Link>
-            </div>
+{/* CTA */}
+<div className="absolute bottom-8 right-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+    <Link
+        to={link}
+        className="flex items-center gap-2 px-4 py-2 bg-redwood text-offwhite font-bold font-syne rounded shadow-lg hover:shadow-xl hover:bg-florange transition-shadow duration-300"
+    >
+        Dive In <MdArrowOutward />
+    </Link>
+</div>
         </div>
     );
 }
