@@ -100,7 +100,7 @@ function SalmonSanctuary() {
     }, []);
 
     return (
-        <div className="relative mt-18 px-4 sm:px-8 bg-olive">
+        <div className="relative mt-18 px-4 sm:px-8 bg-olivewhite">
             {/* Metadata */}
             <Helmet>
                 <title>Salmon Sanctuary Initiative | UX/UI Case Study</title>

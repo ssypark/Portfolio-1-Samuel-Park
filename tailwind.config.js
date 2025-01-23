@@ -6,7 +6,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        olive: '#5F6B53',
+        olivewhite: '#F3F7F1',
         ink: '#24261B',
         sage: '#95ABAD',
         redwood: '#A84D1B',
@@ -15,7 +15,7 @@ export default {
         sand: '#ab9778',
       },
       fontFamily: {
-        syne: ['Syne', 'sans-serif'],
+        syne: ['"Syne Mono"', 'sans-serif'],
         workSans: ['Work Sans', 'sans-serif'],
         tomarik: ['"tomarik-brush"', 'sans-serif'],
       },
@@ -51,6 +51,12 @@ export default {
         },
         '.bg-water': {
           backgroundImage: "url('/src/assets/water.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        },
+        '.bg-dots': {
+          backgroundImage: "url('/src/assets/dots.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

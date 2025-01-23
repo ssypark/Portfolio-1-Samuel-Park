@@ -37,11 +37,11 @@ export const initSideFrogAnimation = () => {
 // Footer Frog Animation
 export const initFooterFrogAnimation = () => {
     gsap.to(".footer-frog", {
-        y: -15, //moves up the frog up and down by 15px
+        y: -20, //moves up the frog up and down by 15px
         duration: 0.6, // duration of the animation
         repeat: -1, // repeats the animation indefinitely
         yoyo: true, // reverses the animation on each repeat
-        ease: "power3.inOut", // easing function
+        ease: "elastic.out(1, 0.3)", // easing function
     });
 };
 
