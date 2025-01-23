@@ -3,7 +3,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 function ProjectShowcase({ image, title, description, tags, link }) {
     return (
-        <Link to={link} className="relative group overflow-hidden rounded-lg shadow-lg transition-all duration-300 ease-in-out h-auto flex flex-col md:flex-row-reverse">
+        <Link to={link} className="relative border border-ink  group overflow-hidden rounded-lg transition-all duration-300 ease-in-out h-auto flex flex-col md:flex-row-reverse hover:scale-105">
             {/* Image Section */}
             <div className="w-full md:w-2/3 relative">
                 <div className="relative pb-[56.25%] overflow-hidden">
@@ -15,14 +15,14 @@ function ProjectShowcase({ image, title, description, tags, link }) {
             </div>
 
             {/* Text and CTA Section */}
-            <div className="w-full md:w-1/3 bg-ink p-8 flex flex-col justify-between">
+            <div className="w-full md:w-1/3 bg-olivewhite p-8 flex flex-col justify-between">
                 <div>
-                    <h2 className="text-2xl sm:text-h1 font-syne font-bold text-offwhite">{title}</h2>
-                    <p className="mt-2 text-sm sm:text-body text-offwhite font-workSans opacity-75">{description}</p>
+                    <h2 className="text-2xl sm:text-h3 font-syne font-bold text-ink">{title}</h2>
+                    <p className="mt-2 text-sm sm:text-body text-ink font-workSans opacity-75">{description}</p>
                     {/* Skill Pills */}
                     <div className="flex gap-2 mt-4 flex-wrap">
                         {tags.map((tag, index) => (
-                            <span key={index} className="px-2 py-1 text-xs border border-offwhite text-offwhite opacity-75 font-workSans rounded">
+                            <span key={index} className="px-2 py-1 text-xs border border-ink text-ink opacity-75 font-workSans rounded">
                                 {tag}
                             </span>
                         ))}
@@ -30,8 +30,8 @@ function ProjectShowcase({ image, title, description, tags, link }) {
                 </div>
                 {/* CTA */}
                 <div className="mt-6">
-                    <div className="flex items-center text-sm gap-2 px-2 py-1 bg-redwood text-offwhite font-bold font-syne rounded shadow-lg hover:shadow-xl hover:bg-florange transition-shadow duration-300 w-max">
-                        Dive In <MdArrowOutward />
+                    <div className="flex items-center text-body gap-2 px-2 py-1 bg-olivewhite text-ink font-bold font-syne rounded border border-ink hover:bg-florange duration-300 w-max">
+                        View Project <MdArrowOutward />
                     </div>
                 </div>
             </div>

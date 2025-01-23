@@ -4,6 +4,7 @@ import { initFooterFrogAnimation } from "./animations/animations";
 
 // Image Imports
 import froggyFooter from "../assets/froggy-footer.svg";
+import arrowUp from "../assets/arrow-up.png";
 
 function Contact() {
     useEffect(() => {
@@ -13,7 +14,7 @@ function Contact() {
     return (
         <>
             {/* Main Contact Section */}
-            <div className="bg-sage px-4 sm:px-16 py-8 sm:py-24 pb-32 flex flex-col items-start rounded-b-xl relative">
+            <div className="bg-olivewhite border border-ink px-4 sm:px-16 py-8 sm:py-24 pb-32 flex flex-col items-start rounded-b-xl relative">
                 <h2 className="text-h1 font-syne font-bold text-ink mb-2 pt-8">YOUR IDEAS MATTER</h2>
                 <p className="text-h3 text-ink font-workSans mb-8">
                     I’m here to listen, collaborate, and create.
@@ -68,7 +69,7 @@ function Contact() {
                 {/* Footer Frog! */}
                 <img
                     className="footer-frog w-36 h-auto absolute -bottom-16 left-1/2 transform -translate-x-1/2 z-10"
-                    src={froggyFooter}
+                    src={arrowUp}
                     alt="Frog"
                     title="Hop Back to the Top"
                     onClick={() =>

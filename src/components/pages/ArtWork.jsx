@@ -47,7 +47,7 @@ function Work() {
 
 
     return (
-        <div className="relative  mt-12 px-4 sm:px-8 bg-olivewhite">
+        <div className="relative  mt-24 px-4 sm:px-8 bg-olivewhite">
             <Helmet>
                 {/* General Meta Tags */}
                 <title>Work & Projects - Samuel Park</title>
@@ -64,14 +64,14 @@ function Work() {
                 <meta property="og:site_name" content="Samuel Park Portfolio" />
             </Helmet>
             {/* Main Content */}
-            <div className="container mx-auto bg-olivewhite">
+            <div className="container mx-auto">
                 {/* Hero Section */}
                 <div className="relative p-16 flex items-center justify-center content-center bg-olivewhite">
                     <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-8 text-center md:text-left z-20 mb-12">
                 
                         {/* Header Section */}
                         <div className="text-left mb-8 sm:text-center">
-                            <h1 className="text-hmax font-bold font-syne tracking-wide text-ink pt-24 md:pt-24 sm:pt-4 amalgm-font">
+                            <h1 className="text-h1 font-bold font-syne tracking-wide text-ink pt-24 md:pt-24 sm:pt-4 amalgm-font">
                                 WORK & PROJECTS
                             </h1>
                         </div>
@@ -90,7 +90,7 @@ function Work() {
                         src={borderR}
                         alt="Right Border"
                     /> */}
-                    {/* <img
+                    <img
                         className="hero-frog w-24 sm:w-32 md:w-40 h-auto absolute -bottom-6 sm:-bottom-10 left-1/2 transform -translate-x-1/2 z-10"
                         src={arrowDown}
                         alt="Frog"
@@ -110,7 +110,7 @@ function Work() {
                                 });
                             }, 400); // Delay the scroll by 400ms
                         }}
-                    /> */}
+                    />
 
                     {/* Fish */}
                     {/*  This creates and displays an array of 10 fish icons from Font Awesome */}
@@ -147,7 +147,7 @@ function Work() {
                     <Portfolio />
                 </div>
                 {/* More Projects Section */}
-                <div className="more-projects relative bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-50 border border-b-0 border-ink"
+                <div className="more-projects relative bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-50 border-t border-ink"
                     style={{
                         backgroundImage: `url(${logoBlack})`,
                         backgroundSize: "400px",
@@ -155,11 +155,11 @@ function Work() {
                         backgroundRepeat: "no-repeat",
                     }}>
                     <img
-                        className="side-frog w-32 h-32 absolute top-1/2 -translate-y-1/2 -left-8 z-20"
+                        className="side-frog w-48 h-48 absolute top-1/2 -translate-y-1/2 -left-8 z-20"
                         src={arrowSide}
                         alt="Frog"
                     />
-                    <button className="px-6 py-3 bg-olivewhite border border-ink text-ink font-syne font-bold rounded hover:bg-florange transition z-20">
+                    <button className="px-6 py-3 bg-redwood text-ink font-syne font-bold rounded hover:bg-opacity-90 transition z-20">
                         View My Artwork!
                     </button>
                 </div>

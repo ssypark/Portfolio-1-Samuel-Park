@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../../assets/logo.svg";
+import logo from "../../assets/logo-black.svg";
+import '../../css/header.css';
 
 function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -21,15 +22,14 @@ function Header() {
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-[200] transition-all duration-300 ${isScrolled ? "py-2 px-4 shadow-lg bg-ink" : "py-4 px-8 bg-olive"
-                }`}
-        >
-            <div className="container mx-auto flex justify-between items-center text-offwhite font-workSans">
+        className={`fixed w-full z-[200] transition-all duration-300 border-t border-b border-ink ${isScrolled ? "py-2 px-4 border-t border-b border-ink bg-opacity-90 bg-olivewhite" : "py-4 px-8 bg-olivewhite"} md:top-0 md:left-0 md:bottom-auto left-0`}
+    >
+            <div className="container mx-auto flex justify-between items-center text-ink font-workSans">
                 <Link to="/">
                     <img
                         src={logo}
                         alt="logo"
-                        className={`transition-all duration-300 ${isScrolled ? "w-12" : "w-20"}`}
+                        className={`transition-all duration-300 ${isScrolled ? "w-8" : "w-12"}`}
                     />
                 </Link>
 
@@ -39,7 +39,7 @@ function Header() {
                             <NavLink
                                 to="/"
                                 className={({ isActive }) =>
-                                    isActive ? "text-offwhite px-4 py-1 rounded-full border border-offwhite relative active" : "text-offwhite px-4 py-1 rounded-full hover:text-florange"
+                                    isActive ? "text-ink px-4 py-1 rounded-full border border-ink relative active" : "text-ink px-4 py-1 rounded-full hover:text-florange"
                                 }
                             >
                                 Home
@@ -49,7 +49,7 @@ function Header() {
                             <NavLink
                                 to="/work"
                                 className={({ isActive }) =>
-                                    isActive ? "text-offwhite px-4 py-1 rounded-full border border-offwhite relative active" : "text-offwhite px-4 py-1 rounded-full hover:text-florange"
+                                    isActive ? "text-ink px-4 py-1 rounded-full border border-ink relative active" : "text-ink px-4 py-1 rounded-full hover:text-florange"
                                 }
                             >
                                 Work
@@ -59,7 +59,7 @@ function Header() {
                             <NavLink
                                 to="/about"
                                 className={({ isActive }) =>
-                                    isActive ? "text-offwhite px-4 py-1 rounded-full border border-offwhite relative active" : "text-offwhite px-4 py-1 rounded-full hover:text-florange"
+                                    isActive ? "text-ink px-4 py-1 rounded-full border border-ink relative active" : "text-ink px-4 py-1 rounded-full hover:text-florange"
                                 }
                             >
                                 About
