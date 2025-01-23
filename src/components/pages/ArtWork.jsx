@@ -72,24 +72,11 @@ function Work() {
                         {/* Header Section */}
                         <div className="text-left mb-8 sm:text-center">
                             <h1 className="text-h1 font-bold font-syne tracking-wide text-ink pt-24 md:pt-24 sm:pt-4 amalgm-font">
-                                WORK & PROJECTS
+                                Artwork
                             </h1>
                         </div>
                     </div>
-
-                    {/* Hero Frog */}
-                    
-                    {/* Decorative borders */}
-                    {/* <img
-                        className="absolute bottom-9 left-0 w-72 z-20" // Bottom-left plant
-                        src={borderL}
-                        alt="left border"
-                    />
-                    <img
-                        className="absolute bottom-9 right-0 w-64 z-20" // Bottom-right plant
-                        src={borderR}
-                        alt="Right Border"
-                    /> */}
+        
                     <img
                         className="hero-frog w-24 sm:w-32 md:w-40 h-auto absolute -bottom-6 sm:-bottom-10 left-1/2 transform -translate-x-1/2 z-10"
                         src={arrowDown}
@@ -112,29 +99,8 @@ function Work() {
                         }}
                     />
 
-                    {/* Fish */}
-                    {/*  This creates and displays an array of 10 fish icons from Font Awesome */}
-                    {/* .map() is used to create an array of 10 fish icons */}
-                    {[...Array(5)].map((_, i) => {
-                    const size = Math.random() * 30 + 20; // Random size between 10 and 30
-                    return (
-                        <img
-                            src={bee}
-                            key={i}
-                            className="fish absolute opacity-50 z-30"
-                            data-speed={Math.random() * 1 + 0.8}
-                            style={{
-                                width: `${size}px`, // Set the width to the random size
-                                height: 'auto', // Maintain aspect ratio
-                                top: `${Math.random() * 60 + 20}%`,
-                                left: `${Math.random() * 80 + 10}%`,
-                                transform: "rotate(0deg)",
-                            }}
-                            alt="Bee"
-                        />
-                    );
-                })}
-
+                    
+             
 
 
                 </div>
@@ -146,6 +112,8 @@ function Work() {
                     </div>
                     <Portfolio />
                 </div>
+
+                
                 {/* More Projects Section */}
                 <div className="more-projects relative bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-50 border-t border-ink"
                     style={{
