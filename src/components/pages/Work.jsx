@@ -72,7 +72,7 @@ function Work() {
                         {/* Header Section */}
                         <div className="text-left mb-8 sm:text-center">
                             <h1 className="text-hmax font-bold font-syne tracking-wide text-ink pt-24 md:pt-24 sm:pt-4 amalgm-font">
-                                WORK & PROJECTS
+                                PROJECTS
                             </h1>
                         </div>
                     </div>
