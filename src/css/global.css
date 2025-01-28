@@ -25,3 +25,8 @@ h1,h2,h3,h4,h5,h6 {
 .font-tomarik {
     font-family: "tomarik-brush", sans-serif;
 }
+
+.custom-thumbnail {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+}

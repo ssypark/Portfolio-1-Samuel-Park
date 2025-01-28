@@ -44,7 +44,7 @@ export default {
     plugin(({ addUtilities }) => {
       addUtilities({
         '.bg-paper': {
-          backgroundImage: "url('/src/assets/paper.png')",
+          backgroundImage: "url('/src/assets/paper.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

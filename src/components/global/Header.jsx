@@ -52,7 +52,17 @@ function Header() {
                                     isActive ? "text-ink px-4 py-1 rounded-full border border-ink relative active" : "text-ink px-4 py-1 rounded-full hover:text-florange"
                                 }
                             >
-                                Work
+                                Projects
+                            </NavLink>
+                        </li>
+                        <li className="relative">
+                            <NavLink
+                                to="/gallery"
+                                className={({ isActive }) =>
+                                    isActive ? "text-ink px-4 py-1 rounded-full border border-ink relative active" : "text-ink px-4 py-1 rounded-full hover:text-florange"
+                                }
+                            >
+                                Artwork
                             </NavLink>
                         </li>
                         <li className="relative">

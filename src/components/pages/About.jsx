@@ -87,9 +87,7 @@ function About() {
                     <p className="text-body leading-relaxed mb-4 font-workSans">Hi, I'm Samuel. I'm a UX/UI designer with a background in fine arts, driven by a
                         passion for creating meaningful, user-centered designs.</p>
                     <p className="text-body leading-relaxed font-workSans">
-                        My work blends creativity with digital innovation, aiming to deliver designs that
-                        are not just visually compelling but also intuitive and impactful. I believe in
-                        making the digital world accessible and engaging for everyone.
+                    Samuel Park is a multidisciplinary artist and digital designer based in Vancouver, BC, currently studying New Media and Web Development at BCIT. With a Bachelor of Fine Arts from UBC in painting and illustration, Samuel brings a strong creative foundation to crafting user-centered digital experiences. His artwork has been featured in exhibitions across Canada, South Korea, and Mexico, and is part of permanent collections at UBC and Kwantlen Polytechnic University. Proficient in Adobe Creative Suite and Figma, Samuel is expanding his technical skills with React and Tailwind to create intuitive designs that foster connection and innovation.
                     </p>
                 </div>
                 {/* Avatar Image */}

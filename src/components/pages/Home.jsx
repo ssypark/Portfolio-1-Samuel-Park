@@ -59,7 +59,7 @@ function Home() {
 
     return (
         <HelmetProvider>
-            <div className="relative mt-24 px-4 sm:px-8 bg-olivewhite">
+            <div className="relative px-4 sm:px-8 bg-olivewhite">
                 {/* Metadata */}
                 <Helmet>
                     <title>Samuel Park - UX/UI & Visual Designer Portfolio</title>
@@ -85,19 +85,21 @@ function Home() {
                 <div className="container mx-auto">
        
                     {/* Hero Section */}
-                    <div className="relative w-full min-h-screen px-16 -mt-16 flex items-center justify-center  bg-olivewhite bg-dots  text-ink">
-                        <div className="flex flex-col md:flex-row items-center md:items-start text-left space-y-8 md:space-y-0 md:space-x-8 z-20 mb-12" data-aos="fade-up">
+                    <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center  bg-olivewhite bg-dots bg-opacity-5 text-ink">
+                        <div className="flex flex-col md:flex-row items-center md:items-start text-left space-y-8 md:space-y-0 md:space-x-8 z-20 mb-12" data-aos="zoom-in">
                             {/* <img
                                 className="logo w-36 sm:w-72 mr-8"
                                 src={logo}
                                 alt="Samuel Park Logo"
                             /> */}
+                            
                             <div className="text-left">
                                 <p className="sm:text-h3 max-w-2xl font-syne font-bold">
                                     Hello, I'm
                                 </p>
                                 <img className="w-128" src={name} alt="Samuel Park" />
-
+                                <p className="sm:text-h1 text-right  font-syne font-bold" data-aos="fade-up" data-aos-delay="800">
+                                   Digital Designer & Visual Artist </p>
                                 {/* <p className="sm:text-h5 max-w-2xl font-workSans">
                                     I'm a UI and visual designer with a
                                     background in fine arts, blending creativity
@@ -155,7 +157,7 @@ function Home() {
 
                         {/* Fish */}
                         {/* pointer events none ensures that the fish don't interfere with user click events */}
-                        <div className="absolute inset-0 z-30 pointer-events-none">
+                        {/* <div className="absolute inset-0 z-30 pointer-events-none">
                         {[...Array(10)].map((_, i) => {
                             const size = Math.random() * 500 + 400; // Random size between 20 and 50
                             return (
@@ -178,7 +180,7 @@ function Home() {
                                         </svg>
                             );
                         })}
-                    </div>
+                    </div> */}
 
                     </div>
 
@@ -209,7 +211,7 @@ function Home() {
                         />
                         <a
                             href="/work"
-                            className="px-6 py-3 bg-olivewhite border border-ink text-ink text-h6 font-syne font-bold rounded hover:bg-florange transition z-20"
+                            className="flex items-center text-body gap-2 px-2 py-1 bg-olivewhite text-ink font-bold font-syne rounded border border-ink hover:bg-florange duration-300 w-max"
                         >
                             More Projects!
                         </a>

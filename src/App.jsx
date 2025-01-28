@@ -5,6 +5,7 @@ import { ReactLenis, useLenis } from 'lenis/react';
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Work from "./components/pages/Work";
+import Gallery from "./components/pages/Gallery";
 import Layout from './components/Layout';
 import SalmonSanctuary from './components/pages/projects/SalmonSanctuary';
 import Amalgm from './components/pages/projects/Amalgm';
@@ -18,36 +19,37 @@ import ScrollToTop from './components/animations/ScrollToTop';
 
 
 function App() {
-  const lenis = useLenis(({scroll}) => {
+  const lenis = useLenis(({ scroll }) => {
   })
 
   return (
     // Lenis is used to have a smoother scrolling experience
     <ReactLenis root>
-    {/* The Browser Router is used to navigate between different routes */}
-    <BrowserRouter> 
-    {/* The ScrollToTop component is used to scroll to the top of the page when a new route is loaded (see ScrollToTop.js) */}
-    <ScrollToTop />
-    <div id="outer-container">
-   
-      {/* page-wrapper is necessary for the burger menu. All the content goes in here */}
-      <main className="page-wrapper"> 
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />}></Route>
-          {/* <Route path="/starter" element={<Home />}></Route> may be used later for a onboarding/loading page? */} 
-          <Route path="/about" element={<About />}></Route>
-          <Route path="/work" element={<Work />}></Route>
-          <Route path="/work/salmon-sanctuary" element={<SalmonSanctuary />}></Route>
-          <Route path="/work/amalgm-brand-book" element={<Amalgm />}></Route>
-        <Route path="/work/interactive-document" element={<InteractiveDocument />}></Route>
-        <Route path="/work/flydex-app" element={<FlyDex />}></Route>
-        <Route path="/work/intro-bumper-video" element={<IntroBumper />}></Route>
-        </Route>
-      </Routes>
-      </main>
-      </div>
-    </BrowserRouter>
+      {/* The Browser Router is used to navigate between different routes */}
+      <BrowserRouter>
+        {/* The ScrollToTop component is used to scroll to the top of the page when a new route is loaded (see ScrollToTop.js) */}
+        <ScrollToTop />
+        <div id="outer-container">
+
+          {/* page-wrapper is necessary for the burger menu. All the content goes in here */}
+          <main className="page-wrapper">
+            <Routes>
+              <Route path="/" element={<Layout />}>
+                <Route index element={<Home />}></Route>
+                {/* <Route path="/starter" element={<Home />}></Route> may be used later for a onboarding/loading page? */}
+                <Route path="/about" element={<About />} />
+                <Route path="/work" element={<Work />} />
+                <Route path="/work/salmon-sanctuary" element={<SalmonSanctuary />} />
+                <Route path="/work/amalgm-brand-book" element={<Amalgm />} />
+                <Route path="/work/interactive-document" element={<InteractiveDocument />} />
+                <Route path="/work/flydex-app" element={<FlyDex />} />
+                <Route path="/work/intro-bumper-video" element={<IntroBumper />} />
+                <Route path="/gallery" element={<Gallery />} />
+              </Route>
+            </Routes>
+          </main>
+        </div>
+      </BrowserRouter>
     </ReactLenis>
   )
 }

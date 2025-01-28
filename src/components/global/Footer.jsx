@@ -8,7 +8,7 @@ function Footer() {
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-12">
                     <div className="col-span-12 text-center">
-                        <p className="text-sm font-workSans">Gone Fishing. &copy; {currentYear} Samuel Park</p>
+                        <p className="text-sm text-ink font-workSans">Gone Fishing. &copy; {currentYear} Samuel Park</p>
                     </div>
                 </div>
             </div>
