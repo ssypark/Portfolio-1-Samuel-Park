@@ -59,7 +59,7 @@ function Gallery() {
             <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-8 text-center z-20 mb-12">
 
                 {/* Header Section */}
-                <div className="w-full mb-16 text-center sm:px-24">
+                <div className="w-full mb-16 text-center px-12 sm:px-24">
                     <h1 className="text-hmax font-bold font-syne tracking-wide text-ink pt-24 md:pt-24 sm:pt-4 amalgm-font">
                         Artwork
                     </h1>
@@ -67,7 +67,7 @@ function Gallery() {
                 </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 px-8 sm:px-24">
                 <div className="lg:col-span-1">
                     <h2 className="text-h3 font-syne font-bold mb-4 mt-0 text-ink">Paintings</h2>
                     <p className="text-sm font-mono text-ink">In this series, I create layered, action-oriented images

@@ -95,7 +95,7 @@ function Painting() {
                     }))}
                     index={photoIndex}
                     onIndexChange={setPhotoIndex}
-                    plugins={[Captions]} // Add the Captions plugin
+                    plugins={[Captions]} 
                     captions={{
                         showTitle: true,
                         showDescription: true,
