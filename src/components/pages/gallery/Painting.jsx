@@ -3,8 +3,9 @@ import Masonry from 'masonry-layout';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css'; // Import the Lightbox CSS
 import 'yet-another-react-lightbox/plugins/captions.css'; // Import the Captions plugin CSS
+import '../../../css/lightbox.css'; // Import your custom CSS
 import { Captions } from 'yet-another-react-lightbox/plugins'; // Import the Captions plugin
-// import '../../../css/index.css'; // Import your custom CSS
+
 
 const images = [
     {

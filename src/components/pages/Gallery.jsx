@@ -42,7 +42,7 @@ function Gallery() {
     }, []);
 
     return (
-        <div className="relative mt-12 px-4 sm:px-8 bg-olivewhite">
+        <div className="relative lg:mt-12 px-4 sm:px-8 bg-olivewhite">
             <Helmet>
                 <title>Gallery - Samuel Park</title>
                 <meta name="description" content="Explore the gallery of Samuel Park, showcasing his visual artwork and creative projects." />

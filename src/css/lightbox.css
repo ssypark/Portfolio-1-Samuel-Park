@@ -1,0 +1,36 @@
+/* Change the font for the Lightbox captions */
+.yarl__slide_description {
+    font-family: 'Courier', sans-serif; 
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    color: #000000; 
+}
+
+/* Change the font for the Lightbox titles */
+.yarl__slide_title {
+    font-family: 'Courier', sans-serif; /* Replace 'YourCustomFont' with your desired font */
+    font-size: clamp(0.875rem, 2.5vw, 1.25rem); /* Adjust the font size as needed */
+    color: #000000; /* Adjust the color as needed */
+
+}
+
+.yarl__slide_captions_container {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px; /* Add padding */
+    position: absolute; /* Position the container absolutely */
+    bottom: 0; /* Align to the bottom */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    display: flex; /* Use Flexbox for alignment */
+    flex-direction: column; /* Stack title and caption vertically */
+    align-items: flex-start; /* Adjust the background color and opacity as needed */
+}
+
+.yarl__slide, .yarl__slide_current, .yarl__flex_center {
+    background-color: rgba(255, 255, 255); /* Adjust the background color and opacity as needed */
+}
+
+.yarl__button .yarl__icon {
+
+    text-shadow: none;
+
+}
