@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Masonry from 'masonry-layout';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css'; // Import the Lightbox CSS
 import 'yet-another-react-lightbox/plugins/captions.css'; // Import the Captions plugin CSS
