@@ -44,7 +44,7 @@ function App() {
                 <Route path="/work/interactive-document" element={<InteractiveDocument />} />
                 <Route path="/work/flydex-app" element={<FlyDex />} />
                 <Route path="/work/intro-bumper-video" element={<IntroBumper />} />
-                <Route path="/gallery" element={<Gallery />} />
+                <Route path="/art" element={<Gallery />} />
               </Route>
             </Routes>
           </main>
