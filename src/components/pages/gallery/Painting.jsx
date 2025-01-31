@@ -8,52 +8,52 @@ import { Captions } from 'yet-another-react-lightbox/plugins'; // Import the Cap
 
 const images = [
     {
-        src: '../../public/gallery/tempest.jpg',
+        src: '/gallery/tempest.jpg', // Use absolute path
         title: 'Tempest, 2015',
         caption: 'Acrylic on canvas. 60x48 inches.'
     },
     {
-        src: '../../public/gallery/cannonade.jpg',
+        src: '/gallery/cannonade.jpg', // Use absolute path
         title: 'Cannonade, 2015',
         caption: 'Acrylic on canvas. 36x72 inches.'
     },
     {
-        src: '../../public/gallery/cascades.jpg',
+        src: '/gallery/cascades.jpg', // Use absolute path
         title: 'Cascades, 2015',
         caption: 'Acrylic on canvas. 40x16 inches.'
     },
     {
-        src: '../../public/gallery/duckgoof.jpg',
+        src: '/gallery/duckgoof.jpg', // Use absolute path
         title: 'Duck Goof, 2016',
         caption: 'Acrylic and holographic film on canvas. 24x36 inches.'
     },
     {
-        src: '../../public/gallery/salvo.jpg',
+        src: '/gallery/salvo.jpg', // Use absolute path
         title: 'Salvo, 2015',
         caption: 'Acrylic on canvas. 48x48 inches.'
     },
     {
-        src: '../../public/gallery/olive.jpg',
+        src: '/gallery/olive.jpg', // Use absolute path
         title: 'Olive, 2015',
         caption: 'Acrylic and oil on canvas. 16x40 inches.'
     }, 
     {
-        src: '../../public/gallery/tears.jpg',
+        src: '/gallery/tears.jpg', // Use absolute path
         title: 'Tears, 2015',
         caption: 'Acrylic on canvas. 48x36 inches.'
     }, 
     {
-        src: '../../public/gallery/flows.jpg',
+        src: '/gallery/flows.jpg', // Use absolute path
         title: 'Flows, 2015',
         caption: 'Acrylic on canvas. 48x48 inches.'
     },
     {
-        src: '../../public/gallery/untitled-pink.jpg',
+        src: '/gallery/untitled-pink.jpg', // Use absolute path
         title: 'Untitled, 2015',
         caption: 'Acrylic on canvas. 30x24 inches.'
     },
     {
-        src: '../../public/gallery/untitled.jpg',
+        src: '/gallery/untitled.jpg', // Use absolute path
         title: 'Untitled, 2013',
         caption: 'Acrylic on canvas. 48x96 inches.'
     },
