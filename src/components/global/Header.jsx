@@ -57,7 +57,7 @@ function Header() {
                         </li>
                         <li className="relative">
                             <NavLink
-                                to="/gallery"
+                                to="/art"
                                 className={({ isActive }) =>
                                     isActive ? "text-ink px-4 py-1 rounded-full border border-ink relative active" : "text-ink px-4 py-1 rounded-full hover:text-florange"
                                 }
