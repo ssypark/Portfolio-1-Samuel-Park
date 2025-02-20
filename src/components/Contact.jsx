@@ -68,9 +68,9 @@ function Contact() {
 
                 {/* Footer Frog! */}
                 <img
-                    className="footer-frog w-36 h-auto absolute -bottom-16 left-1/2 transform -translate-x-1/2 z-10"
+                    className="footer-frog w-16 h-auto absolute -bottom-16 left-1/2 transform -translate-x-1/2 z-10"
                     src={arrowUp}
-                    alt="Frog"
+                    alt="Up Arrow"
                     title="Hop Back to the Top"
                     onClick={() =>
                         window.scrollTo({

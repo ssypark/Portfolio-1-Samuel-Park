@@ -85,7 +85,7 @@ function Home() {
                 <div className="container mx-auto">
        
                     {/* Hero Section */}
-                    <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center  bg-olivewhite bg-dots bg-opacity-5 text-ink">
+                    <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center  bg-olivewhite bg-opacity-5 text-ink">
                         <div className="flex flex-col md:flex-row items-center md:items-start text-left space-y-8 md:space-y-0 md:space-x-8 z-20 mb-12" data-aos="zoom-in">
                             {/* <img
                                 className="logo w-36 sm:w-72 mr-8"
@@ -134,9 +134,9 @@ function Home() {
                
                         {/* Hero Frog */}
                         <img
-                            className="hero-frog w-32 h-32 absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10"
+                            className="hero-frog w-16 h-16 absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10"
                             src={arrowDown}
-                            alt="Frog"
+                            alt="Down Arrow"
                             title="Jump to Featured Projects"
                             // This is to scroll to the "Featured Projects" section when the frog is clicked
                             onClick={() => {

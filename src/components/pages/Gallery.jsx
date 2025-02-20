@@ -12,12 +12,11 @@ import {
 
 // Image Imports
 import redLogo from "../../assets/logo-red.svg";
-import logoBlack from "../../assets/logo-darkblack.svg";
+import logo from "../../assets/logo-darkblack.svg";
 import froggy from "../../assets/froggy.svg";
 import arrowDown from "../../assets/arrow-down.png";
 import arrowSide from "../../assets/arrow-side.png";
 import froggySide from "../../assets/froggy-side.svg";
-import logo from "../../assets/logo.svg";
 import Portfolio from "../Portfolio";
 import Contact from "../Contact";
 import { FaArrowDown } from "react-icons/fa6";
