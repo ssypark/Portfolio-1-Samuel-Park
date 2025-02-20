@@ -74,7 +74,7 @@ function Painting() {
         <div>
             <div className="columns-1 sm:columns-2 lg:columns-3   gap-4">
                 {images.map((image, index) => (
-                    <div key={index} className="mb-4 break-before-avoid">
+                    <div key={index} className="mb-4">
                         <img
                             className="w-full object-cover rounded-sm cursor-pointer"
                             src={image.src}
