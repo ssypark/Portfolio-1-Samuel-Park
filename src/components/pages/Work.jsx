@@ -121,7 +121,7 @@ function Work() {
                         <img
                             src={bee}
                             key={i}
-                            className="fish absolute opacity-50 z-30"
+                            className="fish absolute opacity-50 z-0"
                             data-speed={Math.random() * 1 + 0.8}
                             style={{
                                 width: `${size}px`, // Set the width to the random size
