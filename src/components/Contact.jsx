@@ -23,13 +23,13 @@ function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full mt-auto">
                     {/* Links */}
                     <div className="flex flex-col space-y-4">
-                        <a href="mailto:example@example.com" className="text-ink hover:text-redwood text-h6">
+                        <a href="mailto:example@example.com" className="text-ink hover:text-florange duration-300 text-h6">
                             → EMAIL
                         </a>
-                        <a href="mailto:example@example.com" className="text-ink hover:text-redwood text-h6">
+                        <a href="mailto:example@example.com" className="text-ink hover:text-florange duration-300 text-h6">
                             → RESUME
                         </a>
-                        <a href="mailto:example@example.com" className="text-ink hover:text-redwood text-h6">
+                        <a href="mailto:example@example.com" className="text-ink hover:text-florange duration-300 text-h6">
                             → ARTIST CV
                         </a>
                     </div>
@@ -40,7 +40,7 @@ function Contact() {
                             href="https://github.com/ssypark"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:text-redwood"
+                            className="hover:text-florange duration-300"
                             aria-label="GitHub"
                         >
                             <FaGithub />
@@ -49,7 +49,7 @@ function Contact() {
                             href="https://www.linkedin.com/in/samuelpark89"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:text-redwood"
+                            className="hover:text-florange duration-300"
                             aria-label="LinkedIn"
                         >
                             <FaLinkedin />
@@ -58,7 +58,7 @@ function Contact() {
                             href="https://www.instagram.com/samparkart/?hl=en"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:text-redwood"
+                            className="hover:text-florange duration-300"
                             aria-label="Instagram"
                         >
                             <FaInstagram />

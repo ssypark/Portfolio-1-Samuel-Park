@@ -19,10 +19,9 @@ export const initHeroFrogAnimation = () => {
 export const initSideFrogAnimation = () => {
     gsap.fromTo(
         ".side-frog",
-        { x: "-100%", opacity: 0 }, // initial position and opacity for when the user scrolls down to the section
+        { x: "-100%" }, // initial position and opacity for when the user scrolls down to the section
         {
             x: "-35%", // final position for when the user scrolls down to the section
-            opacity: 1,
             duration: 1,
             ease: "power3.out",
             scrollTrigger: {

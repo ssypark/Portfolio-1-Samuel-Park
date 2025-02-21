@@ -41,7 +41,7 @@ function Gallery() {
     }, []);
 
     return (
-        <div className="relative lg:mt-12 px-4 sm:px-8 bg-olivewhite">
+        <div className="relative pt-12 px-4 sm:px-8 bg-olivewhite">
             <Helmet>
                 <title>Gallery - Samuel Park</title>
                 <meta name="description" content="Explore the gallery of Samuel Park, showcasing his visual artwork and creative projects." />
@@ -58,11 +58,11 @@ function Gallery() {
             <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-8 text-center z-20 mb-12">
 
                 {/* Header Section */}
-                <div className="w-full mb-16 text-center px-12 sm:px-24">
+                <div className="w-full mb-16 text-center justify-center items-center px-12 sm:px-24">
                     <h1 className="text-hmax font-bold font-syne tracking-wide text-ink pt-24 md:pt-24 sm:pt-4 amalgm-font">
                         Artwork
                     </h1>
-                    <p className="text-body font-mono text-ink mt-8">My artwork has become a way for me to liberate my ideas and thoughts; to express myself freely, without limits or restraints. It has become a way for me to portray events and issues that are personal to me and affect me, whether it be social, internal, on-going occurrences </p>
+                    <p className="text-body  font-mono text-ink mt-8 max-w-4xl mx-auto">My artwork has become a way for me to liberate my ideas and thoughts; to express myself freely, without limits or restraints. It has become a way for me to portray events and issues that are personal to me and affect me, whether it be social, internal, on-going occurrences </p>
                 </div>
             </div>
 
@@ -90,7 +90,7 @@ function Gallery() {
                     opacity: "0.9",
                 }}>
                 <img
-                    className="side-frog w-32 h-32 absolute top-1/2 -translate-y-1/2 -left-8 z-10"
+                    className="side-frog w-24 h-24 absolute top-1/2 -translate-y-1/2 -left-8 z-10"
                     src={arrowSide}
                     alt="Frog"
                 />

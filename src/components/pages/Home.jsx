@@ -82,7 +82,7 @@ function Home() {
 
                 </Helmet>
                 {/* Main Content */}
-                <div className="container mx-auto">
+                <div className="container pt-24 md:pt-32 mx-auto">
        
                     {/* Hero Section */}
                     <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center  bg-olivewhite bg-opacity-5 text-ink">
@@ -134,7 +134,7 @@ function Home() {
                
                         {/* Hero Frog */}
                         <img
-                            className="hero-frog w-16 h-16 absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10"
+                            className="hero-frog w-16 h-16 absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10"
                             src={arrowDown}
                             alt="Down Arrow"
                             title="Jump to Featured Projects"
