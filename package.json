@@ -10,11 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@barba/core": "^2.10.3",
     "@gsap/react": "^2.1.1",
     "@reacticons/ionicons": "^7.1.0",
     "aos": "^3.0.0-beta.6",
-    "gsap": "^3.12.5",
+    "gsap": "^3.12.7",
     "lenis": "^1.1.16",
+    "pixi.js": "^8.8.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
