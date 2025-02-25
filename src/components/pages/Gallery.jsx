@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
-import Painting from "./gallery/Painting"; // Keep this import
+import Painting from "./gallery/Painting"; 
+import Illustration from "./gallery/Illustration";
 
 // Animation Imports
 import {
@@ -60,12 +61,12 @@ function Gallery() {
                 {/* Header Section */}
                 <div className="w-full mb-16 text-center justify-center items-center px-12 sm:px-24">
                     <h1 className="text-hmax font-bold font-syne tracking-wide text-ink pt-24 md:pt-24 sm:pt-4 amalgm-font">
-                        Artwork
+                        ARTWORK
                     </h1>
                     <p className="text-body  font-mono text-ink mt-8 max-w-4xl mx-auto">My artwork has become a way for me to liberate my ideas and thoughts; to express myself freely, without limits or restraints. It has become a way for me to portray events and issues that are personal to me and affect me, whether it be social, internal, on-going occurrences </p>
                 </div>
             </div>
-
+            {/* PAINTING SECTION */}
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 px-8 sm:px-24">
                 <div className="lg:col-span-1">
                     <h2 className="text-h3 font-syne font-bold mb-4 mt-0 text-ink">Paintings</h2>
@@ -77,6 +78,17 @@ function Gallery() {
                 </div>
                 <div className="lg:col-span-3 mb-24">
                     <Painting />
+                </div>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 px-8 sm:px-24">
+                <div className="lg:col-span-1">
+                    <h2 className="text-h3 font-syne font-bold mb-4 mt-0 text-ink">Illustrations</h2>
+                    <p className="text-sm font-mono text-ink">Many of my illustrations are an exploration of the subconcious and the internal imagery 
+                    seen through daily life.</p>
+                </div>
+                <div className="lg:col-span-3 mb-24">
+                    <Illustration />
                 </div>
             </div>
 

@@ -17,11 +17,14 @@ import logoBlack from "../../assets/logo-black.svg";
 import arrowSide from "../../assets/arrow-side.png";
 import tempest from "../../assets/tempest.jpg";
 import heroImage from "../../assets/portrait.jpg";
+import arrowDown from "../../assets/arrow-down.png";
 
 // Animation Imports
 import {
     initSideFrogAnimation,
+    initHeroFrogAnimation,
 } from "../animations/animations";
+
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -61,6 +64,7 @@ function About() {
         // Side Frog Animation
         // see animations.js for details
         initSideFrogAnimation();
+        initHeroFrogAnimation();
     }, []);
 
     return (
@@ -84,7 +88,7 @@ function About() {
             {/* Header Introduction */}
             {/* <div className="container min-h-screen mx-auto p-16 flex flex-col lg:flex-row md:-mt-32 sm:-mt-64 items-center gap-8 mb-12 justify-between bg-olivewhite rounded-md border border-ink">
                 <div data-aos="fade-right" className="lg:w-2/3 text-ink">
-                    <h1 className="text-h1 font-bold font-syne mb-6">Nice to meet you</h1>
+                    <h1 className="text-h1 font-bold  mb-6">Nice to meet you</h1>
                     <p className="text-body leading-relaxed mb-4 font-workSans">Hi, I'm Samuel. I'm a UX/UI designer with a background in fine arts, driven by a
                         passion for creating meaningful, user-centered designs.</p>
                     <p className="text-body leading-relaxed font-workSans">
@@ -102,23 +106,44 @@ function About() {
             </div> */}
             {/* Header Introduction */}
             {/* Hero Section */}
-            <div className="relative w-full h-screen bg-cover bg-[right_-14rem_center] sm:bg-center flex items-center" style={{ backgroundImage: `url(${heroImage})` }}>
-                <div className="absolute inset-0 bg-black opacity-50 "></div> {/* Overlay */}
-                <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between w-full h-full p-12">
+            <div className="relative w-full h-screen bg-cover bg-[right_-14rem_center] sm:bg-center flex items-center rounded-b-3xl" style={{ backgroundImage: `url(${heroImage})` }}>
+                <div className="absolute inset-0 bg-black opacity-30 rounded-b-3xl"></div> {/* Overlay */}
+                <div className="relative z-0 flex flex-col lg:flex-row items-center justify-between w-full h-full p-12">
                     <div className="lg:w-1/2 text-left sm:mt-12 text-white ">
                         <h1 className="text-4xl md:text-6xl font-syne mb-4" data-aos="fade-up">Nice to meet you</h1>
-                        <p className="text-body md:text-xl font-mono pt-1" data-aos="fade-up" data-aos-delay="600">Hi, I'm Samuel. I'm a digital designer with a background in fine arts, driven by a passion for creating meaningful, user-centered designs.</p>
+                        <p className="text-body md:text-xl font-ppObject pt-1" data-aos="fade-up" data-aos-delay="600">Hi, I'm Samuel. I'm a digital designer with a background in fine arts, driven by a passion for creating meaningful, user-centered designs.</p>
                     </div>
                 </div>
+                           {/* Hero Frog */}
+            <img
+                className="hero-frog w-16 h-16 absolute bottom-20 left-1/2 transform -translate-x-1/2 z-1000 invert cursor-pointer"
+                src={arrowDown}
+                alt="Down Arrow"
+                title="Jump to About Details"
+                // This is to scroll to the "Featured Projects" section when the arrow is clicked
+                onClick={() => {
+                    document.getElementById("philosophy").scrollIntoView({ // This targets the "Featured Projects" section by its ID
+                        behavior: "smooth", // Smooth scrolling animation
+                        block: "start", // Scroll to the top of the section "featuredProjects"
+                    });
+                    //However, it scrolled too far down that it would hide the header by the nav bar.
+                    // To fix this, we add a slight offset for after the scroll and a bounce effect
+                    setTimeout(() => {
+                        window.scrollBy({
+                            top: -60, //offset value for the scroll to show the header of "featuredProjects"
+                            behavior: "smooth",
+                        });
+                    }, 400); // Delay the scroll by 400ms
+                }}
+            />
             </div>
-
+ 
 
 
             {/* Philosophy */}
-            <div data-aos="fade-left" className="bg-olivewhite container flex justify-center items-center px-16 my-16 py-8 mx-auto rounded-lg border border-ink hover:scale-105 transition-transform duration-300">
+            <div id="philosophy" data-aos="fade-left" className="bg-olivewhite container flex justify-center items-center px-16 my-16 py-8 mx-auto rounded-lg border border-ink hover:scale-105 transition-transform duration-300">
                 <div className="container mx-auto">
-
-                    <h1 className="text-h1 font-bold font-syne mb-6 text-ink">My Philosophy</h1>
+                    <h1 className="text-h1 font-syne mb-6 text-ink">My Philosophy</h1>
                     <p className="text-body leading-relaxed mb-4 font-workSans">I see design as a bridge between creativity and functionality. I aim to create intuitive, adaptable, and user-centered experiences that not only solve problems but also tell a story. My background in fine arts shapes my visual style, while my focus on UX ensures that designs are accessible, inclusive, and engaging.</p>
                 </div>
             </div>
@@ -140,12 +165,12 @@ function About() {
                     />
                 </div>
                 <div className="lg:w-2/3 text-ink z-10">
-                    <h1 className="text-h1 font-bold font-syne mb-6">As an Artist</h1>
-                    <p className="text-body leading-relaxed font-workSans mb-4">I started my creative journey in fine arts, specializing in painting and illustration and earned a Bachelor of Fine Arts degree at UBC. Over time, I transitioned into the digital world, bringing my artistic sensibilities into digital design. This combination of traditional and digital skills allows me to approach projects with both creativity and precision.</p>
-                    <Link to ="/art">
-                    <button className="text-h6 px-6 py-3 bg-olivewhite text-ink font-syne font-bold rounded border border-ink hover:bg-florange duration-300 z-20">
-                        View My Art!
-                    </button>
+                    <h1 className="text-h1 font-syne mb-6">As an Artist</h1>
+                    <p className="text-body leading-relaxed font-ppObject mb-4">I started my creative journey in fine arts, specializing in painting and illustration and earned a Bachelor of Fine Arts degree at UBC. Over time, I transitioned into the digital world, bringing my artistic sensibilities into digital design. This combination of traditional and digital skills allows me to approach projects with both creativity and precision.</p>
+                    <Link to="/art">
+                        <button className="text-h6 px-6 font-syne py-3 bg-olivewhite text-ink rounded border border-ink hover:bg-florange duration-300 z-20">
+                            View My Art!
+                        </button>
                     </Link>
                 </div>
             </div>
@@ -153,15 +178,15 @@ function About() {
             {/* Skill Marquee */}
             <div className="container mx-auto px-8 flex flex-col lg:flex-row items-center gap-8 mb-12 justify-between">
                 <div className="w-1/2 text-ink">
-                    <h1 className="text-h1 font-bold font-syne mb-6">My Tacklebox</h1>
-                    <p className="text-h5 leading-relaxed font-semibold mb-4 font-mono">Design tools:</p>
+                    <h1 className="text-h1 font-syne mb-6">My Tacklebox</h1>
+                    <p className="text-h5 leading-relaxed font-workSans mb-4 ">Design tools:</p>
                     <div className="gap-6 mb-8 flex flex-row tackle-box">
                         <SiFigma className="text-8xl md:text-5xl lg:text-6xl xl:text-7xl" />
                         <SiAdobeillustrator className="text-8xl md:text-5xl lg:text-6xl xl:text-7xl" />
                         <SiAdobephotoshop className="text-8xl md:text-5xl lg:text-6xl xl:text-7xl" />
                         <SiAdobeaftereffects className="text-8xl md:text-5xl lg:text-6xl xl:text-7xl" />
                     </div>
-                    <p className="text-h5 leading-relaxed mb-4 font-semibold font-mono">Languages:</p>
+                    <p className="text-h5 leading-relaxed mb-4 font-workSans">Languages:</p>
                     <div className="gap-6 mb-8 flex flex-row tackle-box">
                         <SiHtml5 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl" />
                         <SiCss3 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl" />
@@ -196,7 +221,7 @@ function About() {
                     />
                     <a
                         href="/work"
-                        className="px-6 py-3 bg-olivewhite text-ink text-h6 font-syne font-bold border border-ink rounded hover:bg-florange duration-300 transition z-20"
+                        className="px-6 py-3 bg-olivewhite text-ink text-h6  font-syne border border-ink rounded hover:bg-florange duration-300 transition z-20"
                     >
                         More Projects!
                     </a>

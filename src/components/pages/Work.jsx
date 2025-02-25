@@ -115,7 +115,7 @@ function Work() {
                     {/* Fish */}
                     {/*  This creates and displays an array of 10 fish icons from Font Awesome */}
                     {/* .map() is used to create an array of 10 fish icons */}
-                    {[...Array(5)].map((_, i) => {
+                    {[...Array(1)].map((_, i) => {
                     const size = Math.random() * 30 + 20; // Random size between 10 and 30
                     return (
                         <img

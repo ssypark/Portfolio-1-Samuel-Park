@@ -17,6 +17,9 @@ import IntroBumper from './components/pages/projects/IntroBumper';
 import ScrollToTop from './components/animations/ScrollToTop';
 // import Transition from './components/animations/Transition';
 
+// CSS Imports
+import '../src/css/global.css';
+
 
 function App() {
   const lenis = useLenis(({ scroll }) => {
