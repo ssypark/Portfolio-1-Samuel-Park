@@ -26,6 +26,7 @@ import froggySide from "../../assets/froggy-side.svg";
 import Portfolio from "../Portfolio";
 import Contact from "../Contact";
 import name from "../../assets/myname.png";
+import dot from "../../assets/dot.svg";
 
 import plantSm from "../../assets/plant-sm.svg";
 import plantMd from "../../assets/plant-lg.svg";
@@ -83,23 +84,23 @@ function Home() {
                 </Helmet>
                 {/* Main Content */}
                 <div className="container pt-24 md:pt-32 mx-auto">
-       
+
                     {/* Hero Section */}
-                    <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center  bg-olivewhite bg-opacity-5 text-ink">
+                    <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center bg-olivewhite bg-opacity-5 text-ink">
                         <div className="flex flex-col md:flex-row items-center md:items-start text-left space-y-8 md:space-y-0 md:space-x-8 z-20 mb-12" data-aos="zoom-in">
                             {/* <img
                                 className="logo w-36 sm:w-72 mr-8"
                                 src={logo}
                                 alt="Samuel Park Logo"
                             /> */}
-                            
+
                             <div className="text-left">
                                 <p className="sm:text-h3 max-w-2xl font-syne font-bold">
                                     Hello, I'm
                                 </p>
                                 <img className="w-128" src={name} alt="Samuel Park" />
                                 <p className="sm:text-h1 text-right  font-syne font-bold" data-aos="fade-up" data-aos-delay="800">
-                                   Digital Designer & Visual Artist </p>
+                                    Digital Designer & Visual Artist </p>
                                 {/* <p className="sm:text-h5 max-w-2xl font-workSans">
                                     I'm a UI and visual designer with a
                                     background in fine arts, blending creativity
@@ -131,7 +132,7 @@ function Home() {
                         src={plantMd}
                         alt="Medium Plant"
                     /> */}
-               
+
                         {/* Hero Frog */}
                         <img
                             className="hero-frog w-16 h-16 absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10"
@@ -157,35 +158,31 @@ function Home() {
 
                         {/* Fish */}
                         {/* pointer events none ensures that the fish don't interfere with user click events */}
-                        {/* <div className="absolute inset-0 z-30 pointer-events-none">
-                        {[...Array(10)].map((_, i) => {
-                            const size = Math.random() * 500 + 400; // Random size between 20 and 50
-                            return (
-                                <svg
-                                    key={i}
-                                    className="blob fish absolute text-ink opacity-20"
-                                    data-speed={Math.random() * 1 + 0.8}
-                                    style={{
-                                        top: `${Math.random() * 60 + 20}%`,
-                                        left: `${Math.random() * 80 + 10}%`,
-                                        transform: "rotate(0deg)",
-                                    }}
-                                    width={size}
-                                    height={size}
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                        <ellipse cx="12" cy="12" rx="10" ry="5" stroke="black" strokeWidth="0.05" fill="none" />
-                                        </svg>
-                            );
-                        })}
-                    </div> */}
+                        <div className="absolute inset-0 z-0 pointer-events-none">
+                            {[...Array(80)].map((_, i) => {
+                                const size = Math.random() * 10 + 5; // Random size between 20 and 50
+                                return (
+                                    <img
+                                        key={i}
+                                        className="fish absolute text-ink opacity-80"
+                                        data-speed={Math.random() * 1 + 0.8}
+                                        style={{
+                                            top: `${Math.random() * 60 + 20}%`,
+                                            left: `${Math.random() * 80 + 10}%`,
+                                            transform: "rotate(0deg)",
+                                        }}
+                                        width={size}
+                                        height={size}
+                                        src={dot}
+                                        alt="dot" />
+                                );
+                            })}
+                        </div>
 
                     </div>
 
                     {/* Projects */}
-                    <div id="featuredProjects">
+                    <div id="featuredProjects" className="z-1000">
                         <div className="w-full" data-aos="fade-right">
                             <h2 className="text-h1 font-syne font-bold p-4 mb-4 mt-0 text-ink flex items-center">Featured Projects</h2>
                         </div>
@@ -197,7 +194,7 @@ function Home() {
                     {/* More Projects Section */}
                     <div className="more-projects relative border border-ink border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
                         style={{
-                             
+
                             backgroundImage: `url(${logo})`,
                             backgroundSize: "400px",
                             backgroundPosition: "right center",

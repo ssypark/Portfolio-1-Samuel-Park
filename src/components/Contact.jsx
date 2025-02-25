@@ -22,7 +22,7 @@ function Contact() {
                 {/* Main Content Area with Links and Socials */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full mt-auto">
                     {/* Links */}
-                    <div className="flex flex-col space-y-4">
+                    <div className="flex flex-col font-workSans space-y-4">
                         <a href="mailto:example@example.com" className="text-ink hover:text-florange duration-300 text-h6">
                             → EMAIL
                         </a>

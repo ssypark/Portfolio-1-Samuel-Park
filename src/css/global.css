@@ -1,7 +1,7 @@
 :root {
-    --header-font: "Work Sans", sans-serif;
+    --header-font: "Syne", sans-serif;
     --header-font-weight: 800;
-    --body-font-family: "Nunito Sans", serif;
+    --body-font-family: "PPObjectSans", sans-serif;
     --body-font-weight: 400;
 }
 /* Font Imports */
@@ -9,6 +9,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Teko:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url("https://use.typekit.net/brb8uki.css");
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Syne+Mono&display=swap');
+
+@font-face {
+    font-family: 'PPObjectSans';
+    src: url('/fonts/PPObjectSans-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPObjectSans';
+    src: url('/fonts/PPObjectSans-Heavy.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
 body {
     font-family: var(--body-font-family);
     font-weight: var(--body-font-weight);

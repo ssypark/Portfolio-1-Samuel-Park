@@ -18,7 +18,9 @@ export default {
         syne: ['"Syne Mono"', 'sans-serif'],
         workSans: ['Work Sans', 'sans-serif'],
         tomarik: ['"tomarik-brush"', 'sans-serif'],
+        ppObject: ['"PPObjectSans"', 'sans-serif'], // Now it matches your @font-face
       },
+      
       fontSize: {
         hmax: ['clamp(3rem, 8vw, 6rem)', '1.2'],
         h1: ['clamp(2.5rem, 5vw, 3rem)', '1.2'], // 40px to 48px with 1.2 line-height
@@ -44,19 +46,7 @@ export default {
     plugin(({ addUtilities }) => {
       addUtilities({
         '.bg-paper': {
-          backgroundImage: "url('/src/assets/paper.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        },
-        '.bg-water': {
-          backgroundImage: "url('/src/assets/water.png')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        },
-        '.bg-dots': {
-          backgroundImage: "url('/src/assets/dots.png')",
+          backgroundImage: "url('/src/assets/paper.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

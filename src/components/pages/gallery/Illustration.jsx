@@ -7,66 +7,60 @@ import { Captions } from 'yet-another-react-lightbox/plugins'; // Import the Cap
 
 
 const images = [
+    // {
+    //     src: '/gallery/illustrations/quasi.jpg',
+    //     title: 'Quasi, 2017',
+    //     caption: 'Ink on paper. 10.5x14 inches.'
+    // },
     {
-        src: '/gallery/tempest.jpg', // Use absolute path
-        title: 'Tempest, 2015',
-        caption: 'Acrylic on canvas. 60x48 inches.'
+        src: '/gallery/illustrations/time.jpg',
+        title: 'Would You Look at the Time!, 2016',
+        caption: 'Watercolor and ink on paper. 11.25x15.5 inches.'
+    },
+
+    {
+        src: '/gallery/illustrations/felix.jpg',
+        title: 'Felix, 2016',
+        caption: 'Plastic film and ink on paper. 7.5x9.5 inches.'
     },
     {
-        src: '/gallery/cannonade.jpg', // Use absolute path
-        title: 'Cannonade, 2015',
-        caption: 'Acrylic on canvas. 36x72 inches.'
+        src: '/gallery/illustrations/mickey.jpg',
+        title: 'Mickey, 2015',
+        caption: 'Ink on paper. 10x15 inches.'
     },
     {
-        src: '/gallery/cascades.jpg', // Use absolute path
-        title: 'Cascades, 2015',
-        caption: 'Acrylic on canvas. 40x16 inches.'
+        src: '/gallery/illustrations/whyyou.jpg',
+        title: 'Why You Little!, 2016',
+        caption: 'Ink and watercolor on paper. 7.5x9.5 inches.'
     },
     {
-        src: '/gallery/duckgoof.jpg', // Use absolute path
-        title: 'Duck Goof, 2016',
-        caption: 'Acrylic and holographic film on canvas. 24x36 inches.'
+        src: '/gallery/illustrations/sundaysbest.jpg',
+        title: 'Sunday\'s Best, 2015',
+        caption: 'Ink on paper. 7.5x9.5 inches.'
     },
     {
-        src: '/gallery/salvo.jpg', // Use absolute path
-        title: 'Salvo, 2015',
-        caption: 'Acrylic on canvas. 48x48 inches.'
+        src: '/gallery/illustrations/sart.jpg',
+        title: 'Sart Bimpson, 2015',
+        caption: 'Watercolor and ink on paper. 15.5x11.5 inches.'
     },
     {
-        src: '/gallery/olive.jpg', // Use absolute path
-        title: 'Olive, 2015',
-        caption: 'Acrylic and oil on canvas. 16x40 inches.'
-    }, 
-    {
-        src: '/gallery/tears.jpg', // Use absolute path
-        title: 'Tears, 2015',
-        caption: 'Acrylic on canvas. 48x36 inches.'
-    }, 
-    {
-        src: '/gallery/flows.jpg', // Use absolute path
-        title: 'Flows, 2015',
-        caption: 'Acrylic on canvas. 48x48 inches.'
+        src: '/gallery/illustrations/insidious.jpg',
+        title: 'Insidious, 2013',
+        caption: 'Ink and charcoal on paper. 30x40 inches.'
     },
     {
-        src: '/gallery/untitled-pink.jpg', // Use absolute path
-        title: 'Untitled, 2015',
-        caption: 'Acrylic on canvas. 30x24 inches.'
+        src: '/gallery/illustrations/knowledge.jpg',
+        title: 'Knowledge and Power, 2012',
+        caption: 'Watercolor and ink on paper. 11x15 inches.'
     },
     {
-        src: '/gallery/untitled.jpg', // Use absolute path
-        title: 'Untitled, 2013',
-        caption: 'Acrylic on canvas. 48x96 inches.'
+        src: '/gallery/illustrations/yangban.jpg',
+        title: 'Yangban (Aristocrat), 2012',
+        caption: 'Ink on paper. 16x20 inches.'
     },
-        {
-            src: '/gallery/bffs.jpg',
-            title: 'Untitled, 2015',
-            caption: 'Acrylic on canvas. 12x24 inches.'
-        },
-        {
-            src: '/gallery/destructionxreconstruction.jpg',
-            title: 'Untitled, 2013',
-            caption: 'Acrylic on canvas. 36x72 inches.'
-        },
+    
+
+
     // Add more images as needed
 ];
 
@@ -104,7 +98,7 @@ function Painting() {
                     }))}
                     index={photoIndex}
                     onIndexChange={setPhotoIndex}
-                    plugins={[Captions]} 
+                    plugins={[Captions]}
                     captions={{
                         showTitle: true,
                         showDescription: true,

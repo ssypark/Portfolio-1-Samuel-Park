@@ -15,7 +15,10 @@ import IntroBumper from './components/pages/projects/IntroBumper';
 
 // Animation Imports
 import ScrollToTop from './components/animations/ScrollToTop';
+// import Transition from './components/animations/Transition';
 
+// CSS Imports
+import '../src/css/global.css';
 
 
 function App() {
@@ -29,10 +32,11 @@ function App() {
       <BrowserRouter>
         {/* The ScrollToTop component is used to scroll to the top of the page when a new route is loaded (see ScrollToTop.js) */}
         <ScrollToTop />
+        
         <div id="outer-container">
-
           {/* page-wrapper is necessary for the burger menu. All the content goes in here */}
           <main className="page-wrapper">
+ 
             <Routes>
               <Route path="/" element={<Layout />}>
                 <Route index element={<Home />}></Route>
@@ -47,8 +51,10 @@ function App() {
                 <Route path="/art" element={<Gallery />} />
               </Route>
             </Routes>
+
           </main>
         </div>
+        
       </BrowserRouter>
     </ReactLenis>
   )
