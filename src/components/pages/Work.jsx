@@ -47,7 +47,7 @@ function Work() {
 
 
     return (
-        <div className="relative  mt-12 px-4 sm:px-8 bg-olivewhite">
+        <div className="relative px-4 sm:px-8 bg-olivewhite">
             <Helmet>
                 {/* General Meta Tags */}
                 <title>Work & Projects - Samuel Park</title>

@@ -13,7 +13,7 @@ import {
 
 // Image Imports
 import redLogo from "../../assets/logo-red.svg";
-import logo from "../../assets/logo-darkblack.svg";
+import logo from "../../assets/logo-black.svg";
 import froggy from "../../assets/froggy.svg";
 import arrowDown from "../../assets/arrow-down.png";
 import arrowSide from "../../assets/arrow-side.png";
