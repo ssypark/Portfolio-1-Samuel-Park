@@ -28,6 +28,7 @@ body {
     font-family: var(--body-font-family);
     font-weight: var(--body-font-weight);
     font-size: 1.125 rem;
+    color: var(--ink);
 
 }
 

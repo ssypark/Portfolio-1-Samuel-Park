@@ -24,9 +24,10 @@ import empathy from "../../../assets/flydex/empathymap.png";
 import journey from "../../../assets/flydex/journey.png";
 import coho from "../../../assets/flydex/coho.png";
 
-import logo from "../../../assets/logo-black.svg";
-import logoBlack from "../../../assets/logo-darkblack.svg";
-import froggySide from "../../../assets/froggy-side.svg";
+// Logo Imports
+import logoBlack from "../../../assets/logo-black.svg";
+import arrowSide from "../../../assets/arrow-side.png";
+import { MdArrowOutward } from "react-icons/md";
 
 // Animation Imports
 import { initSideFrogAnimation } from "../../animations/animations";
@@ -72,7 +73,7 @@ function FlyDex() {
         setModalImage("");
     };
     return (
-        <div className="bg-olivewhite min-h-screen">
+        <div className="bg-olivewhite pb-24 min-h-screen">
             <Helmet>
                 <title>FlyDex | UX/UI Design</title>
                 <meta
@@ -83,13 +84,13 @@ function FlyDex() {
 
             {/* Hero Section */}
             <div
-                className="relative min-h-screen p-8 bg-cover rounded-md border border-ink flex flex-col justify-end"
+                className="relative min-h-screen p-8 bg-cover bg-center bg-no-repeat rounded-md border border-ink flex flex-col justify-end"
                 style={{ backgroundImage: `url(${splashMockup})` }}
             >
                 {/* Bottom-Left Header */}
                 <div className="text-left mb-8">
                     <h1
-                        className="text-h1 font-bold font-syne text-florange"
+                        className="text-h1 font-bold font-syne text-olivewhite"
                         data-aos="fade-up"
                         data-aos-duration="2000"
                         data-aos-delay="500"
@@ -99,28 +100,28 @@ function FlyDex() {
                 </div>
 
                 {/* Role, Date, and Project Link */}
-                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8 p-8 bg-black bg-opacity-50 rounded-md">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8 p-8 bg-black bg-opacity-70 rounded-md">
                     {/* Role and Date */}
                     <div className="flex flex-col sm:flex-row gap-8">
                         <div>
-                            <h2 className="text-sm font-bold text-ink">Role</h2>
-                            <p className="text-base text-ink">
+                            <h2 className="text-body font-bold text-olivewhite">Role</h2>
+                            <p className="text-base text-olivewhite">
                                 UX/UI Designer
                                 <br />
                                 Product Strategist
                             </p>
                         </div>
                         <div>
-                            <h2 className="text-sm font-bold text-ink">Date</h2>
-                            <p className="text-base text-ink">2024</p>
+                            <h2 className="text-body font-bold text-olivewhite">Date</h2>
+                            <p className="text-base text-olivewhite">2024</p>
                         </div>
                         <div>
-                            <h2 className="text-sm font-bold text-ink">Duration</h2>
-                            <p className="text-base text-ink">51 Hours</p>
+                            <h2 className="text-body font-bold text-olivewhite">Duration</h2>
+                            <p className="text-base text-olivewhite">51 Hours</p>
                         </div>
                         <div>
-                            <h2 className="text-sm font-bold text-ink">Tools</h2>
-                            <p className="text-base text-ink">
+                            <h2 className="text-body font-bold text-olivewhite">Tools</h2>
+                            <p className="text-base text-olivewhite">
                                 Figma
                                 <br />
                                 Adobe Illustrator
@@ -133,30 +134,30 @@ function FlyDex() {
                     {/* View CTA */}
                     <div>
                         <a
-                            href="https://assets.adobe.com/id/urn:aaid:sc:US:a81bada4-4b4e-418e-9620-de905fb16f5e?view=published"
+                            href="https://embed.figma.com/proto/gCVW1snYrr66F7o51z2MCb/Flydex?page-id=1136%3A1151&node-id=1136-1152&node-type=canvas&viewport=494%2C647%2C0.17&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1136%3A1152&embed-host=share"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block px-6 py-3 bg-olivewhite text-ink text-lg rounded border border-ink hover:shadow-lg transition duration-300"
+                            className="btn-default"
                         >
-                            → VIEW BRAND BOOK
+                            View Prototype <MdArrowOutward className="inline-block ml-1" />
                         </a>
                     </div>
                 </div>
             </div>
 
             {/* Main Section */}
-            <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 py-16">
+            <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 py-16">
                 {/* Left Section: Project Overview */}
-                <div className="lg:col-span-1 p-8">
+                <div className="lg:col-span-1 p-8 bg-olivewhite" data-aos="fade-left">
                     <h2 className="text-h2 font-bold font-syne text-ink">Project Overview</h2>
                     <p className="text-body font-workSans text-ink  mt-4 leading-relaxed">
                         FlyDex is a conceptual app designed to make fly fishing more accessible and enjoyable. It offers a clean, intuitive interface with features like fishing spot recommendations, fly fishing techniques, and a personal catch log.
                     </p>
-                    <img src={flyDexLogo2} alt="FlyDex Logo" className="w-64 mt-12 mx-auto animate-pulse" />
+
                 </div>
 
                 {/* Right Section: Challenges and Accomplishments */}
-                <div className="lg:col-span-2 space-y-8">
+                <div className="lg:col-span-2 space-y-4 border border-ink rounded-md bg-olivewhite">
                     {/* Challenges Section */}
                     <div className="p-8">
                         <h2 className="text-h2 font-bold font-syne text-ink">Challenges</h2>
@@ -198,8 +199,8 @@ function FlyDex() {
             </div>
 
             {/* Identifying the Problem Section */}
-            <div className="container mx-auto bg-olivewhite rounded-md border border-redwood flex flex-col lg:flex-row items-center gap-12 py-16 px-4 sm:px-8" data-aos="fade-right">
-                <div className="lg:w-1/2">
+            {/* <div className="container mx-auto bg-olivewhite rounded-md border border-redwood flex flex-col lg:flex-row items-center gap-12 py-16 px-4 sm:px-8" data-aos="fade-right">
+                <div className="lg:w-1/2 px-8 ">
                     <h2 className="text-h2 font-syne font-bold text-ink mb-4">Identifying the Problem</h2>
                     <p className="text-body font-workSans text-ink leading-relaxed">
                         FlyDex began with a simple observation: fly fishing is a beautiful and rewarding outdoor activity, but its steep learning curve makes it inaccessible to many beginners. Complex information, technical jargon, and scattered resources on outdated blogs and forums create frustration for newcomers. With no centralized, user-friendly platform catering specifically to beginner fly fishers, I saw an opportunity to bridge this gap.
@@ -212,12 +213,37 @@ function FlyDex() {
                         className="rounded-lg border border-ink"
                     />
                 </div>
+            </div> */}
+
+
+            {/* Target User Section */}
+            <div className="container mx-auto py-16 px-4 sm:px-8" data-aos="fade-up">
+                <h2 className="text-h2 font-syne font-bold text-ink mb-4">Identifying the Problem</h2>
+                <div className="flex flex-col sm:flex-row gap-8 bg-olivewhite ">
+
+                    <div className="sm:w-2/3">
+
+                        <p className="text-body font-workSans text-gray-700 leading-relaxed">
+                        FlyDex began with a simple observation: fly fishing is a beautiful and rewarding outdoor activity, but its steep learning curve makes it inaccessible to many beginners. Complex information, technical jargon, and scattered resources on outdated blogs and forums create frustration for newcomers. With no centralized, user-friendly platform catering specifically to beginner fly fishers, I saw an opportunity to bridge this gap.
+                        </p>
+
+                    </div>
+                    <div className="sm:w-1/3">
+                        <img
+                            src={tangled}
+                            alt="Target User"
+                            className="rounded-md border border-ink"
+                        />
+                    </div>
+                </div>
             </div>
+
+
 
             {/* Target User Section */}
             <div className="container mx-auto py-16 px-4 sm:px-8" data-aos="fade-up">
                 <h2 className="text-h2 font-syne font-bold text-ink mb-4">Target User</h2>
-                <div className="flex flex-col sm:flex-row gap-8 bg-olivewhite p-8 rounded-lg border border-ink">
+                <div className="flex flex-col sm:flex-row gap-8 bg-olivewhite p-8 rounded-lg border border-sage">
                     <div className="sm:w-1/3">
                         <img
                             src={justin}
@@ -233,19 +259,19 @@ function FlyDex() {
                         {/* CTAs */}
                         <div className="mt-6 flex gap-4">
                             <button
-                                className="px-4 py-2 bg-olivewhite text-ink font-workSans rounded border border-ink hover:bg-florange transition"
+                                className="btn-default"
                                 onClick={() => openJustinModal(persona)}
                             >
                                 Learn More About Justin
                             </button>
                             <button
-                                className="px-4 py-2 bg-olivewhite text-ink font-workSans rounded border border-ink hover:bg-florange transition"
+                                className="btn-default"
                                 onClick={() => openJustinModal(empathy)}
                             >
                                 How Does Justin Feel About Flyfishing?
                             </button>
                             <button
-                                className="px-4 py-2 bg-olivewhite text-ink font-workSans rounded border border-ink hover:bg-florange transition"
+                                className="btn-default"
                                 onClick={() => openJustinModal(journey)}
                             >
                                 View Justin's Journey
@@ -334,31 +360,29 @@ function FlyDex() {
             </div>
 
             {/* More Projects Section */}
-            <div className="container min-w-screen mx-auto px-4 sm:px-8 mb-0">
-                <h2 className="text-h3 font-syne font-bold text-ink mb-6">View More of My Work!</h2>
-
-                <div className="more-projects relative bg-ink p-16 flex items-center gap-8 rounded-t-xl z-10"
+            <div className="mx-auto container">
+                <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
                     style={{
+
                         backgroundImage: `url(${logoBlack})`,
                         backgroundSize: "400px",
                         backgroundPosition: "right center",
                         backgroundRepeat: "no-repeat",
                     }}>
                     <img
-                        className="side-frog w-48 h-48 absolute top-1/2 -translate-y-1/2 -left-8 z-10"
-                        src={froggySide}
-                        alt="Frog"
+                        className="side-frog w-24 h-24 absolute top-1/2 -translate-y-1/2 -left-8 z-10"
+                        src={arrowSide}
+                        alt="side arrow"
                     />
                     <a
                         href="/work"
-                        className="px-6 py-3 bg-olivewhite text-ink text-h6 font-syne font-bold rounded hover:bg-florange transition z-20"
+                        className="btn-default"
                     >
-                        Go
+                        More Projects!
                     </a>
                 </div>
-
                 {/* Contact Section */}
-                <div className="pb-28 z-10">
+                <div>
                     <Contact />
                 </div>
             </div>
@@ -367,20 +391,20 @@ function FlyDex() {
 
             {justinModalOpen && (
                 <div
-                className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
-                onClick={closeJustinModal} 
-            >
+                    className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+                    onClick={closeJustinModal}
+                >
                     <div className="relative bg-white p-6 rounded-lg shadow-lg"
-                    onClick={(e) => e.stopPropagation()}>
+                        onClick={(e) => e.stopPropagation()}>
                         {/* Modal Image */}
                         <img
                             src={modalImage}
                             alt="Justin Modal Content"
                             className="rounded"
                             style={{
-                                maxWidth: "80vw", 
-                                maxHeight: "80vh", 
-                                objectFit: "contain", 
+                                maxWidth: "80vw",
+                                maxHeight: "80vh",
+                                objectFit: "contain",
                             }}
                         />
                         <button

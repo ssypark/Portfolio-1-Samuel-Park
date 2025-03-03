@@ -1,20 +1,19 @@
 import React, { useEffect } from "react";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { initFooterFrogAnimation } from "./animations/animations";
+import { initFooterArrowAnimation } from "./animations/animations";
 
 // Image Imports
-import froggyFooter from "../assets/froggy-footer.svg";
 import arrowUp from "../assets/arrow-up.png";
 
 function Contact() {
     useEffect(() => {
-        initFooterFrogAnimation(); // Initialize the Footer Frog Animation
+        initFooterArrowAnimation(); // Initialize the Footer Frog Animation
     }, []);
 
     return (
         <>
             {/* Main Contact Section */}
-            <div className="bg-olivewhite border border-ink px-4 sm:px-16 py-8 sm:py-24 pb-32 flex flex-col items-start rounded-b-xl relative">
+            <div className="bg-olivewhite border-2 border-ink px-4 sm:px-16 py-8 sm:py-24 pb-32 flex flex-col items-start rounded-b-xl relative">
                 <h2 className="text-h1 font-syne font-bold text-ink mb-2 pt-8">YOUR IDEAS MATTER</h2>
                 <p className="text-h3 text-ink font-workSans mb-8">
                     I’m here to listen, collaborate, and create.
@@ -23,13 +22,13 @@ function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full mt-auto">
                     {/* Links */}
                     <div className="flex flex-col font-workSans space-y-4">
-                        <a href="mailto:example@example.com" className="text-ink hover:text-florange duration-300 text-h6">
+                        <a href="mailto:hello@sampark.ca" className="text-ink hover:text-florange duration-300 text-h6">
                             → EMAIL
                         </a>
-                        <a href="mailto:example@example.com" className="text-ink hover:text-florange duration-300 text-h6">
+                        <a href="/park_samuel_resume.pdf" className="text-ink hover:text-florange duration-300 text-h6">
                             → RESUME
                         </a>
-                        <a href="mailto:example@example.com" className="text-ink hover:text-florange duration-300 text-h6">
+                        <a href="/park_samuel_artist_cv.pdf" className="text-ink hover:text-florange duration-300 text-h6">
                             → ARTIST CV
                         </a>
                     </div>
@@ -66,12 +65,12 @@ function Contact() {
                     </div>
                 </div>
 
-                {/* Footer Frog! */}
+                {/* Footer Arrow! */}
                 <img
-                    className="footer-frog w-16 h-auto absolute -bottom-16 left-1/2 transform -translate-x-1/2 z-10"
+                    className="footer-arrow w-16 h-auto absolute -bottom-16 left-1/2 transform -translate-x-1/2 z-10"
                     src={arrowUp}
                     alt="Up Arrow"
-                    title="Hop Back to the Top"
+                    title="Back to the Top"
                     onClick={() =>
                         window.scrollTo({
                             top: 0,
