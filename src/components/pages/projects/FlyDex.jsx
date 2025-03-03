@@ -149,7 +149,7 @@ function FlyDex() {
             <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 py-16">
                 {/* Left Section: Project Overview */}
                 <div className="lg:col-span-1 p-8 bg-olivewhite" data-aos="fade-left">
-                    <h2 className="text-h2 font-bold font-syne text-ink">Project Overview</h2>
+                    <h2 className="text-h2 font-bold font-worksans text-ink">Project Overview</h2>
                     <p className="text-body font-workSans text-ink  mt-4 leading-relaxed">
                         FlyDex is a conceptual app designed to make fly fishing more accessible and enjoyable. It offers a clean, intuitive interface with features like fishing spot recommendations, fly fishing techniques, and a personal catch log.
                     </p>
@@ -160,7 +160,7 @@ function FlyDex() {
                 <div className="lg:col-span-2 space-y-4 border border-ink rounded-md bg-olivewhite">
                     {/* Challenges Section */}
                     <div className="p-8">
-                        <h2 className="text-h2 font-bold font-syne text-ink">Challenges</h2>
+                        <h2 className="text-h2 font-bold font-worksans text-ink">Challenges</h2>
                         <p className="text-body font-workSans text-ink  mt-4 leading-relaxed">
                             Designing FlyDex involved overcoming several key challenges:
                         </p>
