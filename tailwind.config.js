@@ -18,9 +18,17 @@ export default {
         syne: ['"Syne Mono"', 'sans-serif'],
         workSans: ['Work Sans', 'sans-serif'],
         tomarik: ['"tomarik-brush"', 'sans-serif'],
-        ppObject: ['"PPObjectSans"', 'sans-serif'], // Now it matches your @font-face
+        ppObject: ['"PPObjectSans"', 'sans-serif'], 
       },
-      
+      borderWidth: {
+        DEFAULT: '2px',
+      },
+      borderColor: {
+        DEFAULT: '#24261B',
+      },
+      borderRadius: {
+        DEFAULT: '8px',
+      },
       fontSize: {
         hmax: ['clamp(3rem, 8vw, 6rem)', '1.2'],
         h1: ['clamp(2.5rem, 5vw, 3rem)', '1.2'], // 40px to 48px with 1.2 line-height
@@ -50,6 +58,22 @@ export default {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
+        },
+        '.btn-default': {
+          padding: '0.5rem 1rem', 
+          backgroundColor: '#F3F7F1', 
+          color: '#24261B', 
+          fontFamily: '"Syne Mono", sans-serif', 
+          fontSize: 'clamp(0.875rem, 2.5vw, 1.25rem)',
+          fontWeight: 'bold',
+          borderWidth: '2px', 
+          borderColor: '#24261B',
+          borderRadius: '8px', 
+          position: 'relative',
+          transition: 'background-color 0.3s ease-in-out', 
+        },
+        '.btn-default:hover': {
+          backgroundColor: '#FF5B03', /* hover:bg-florange */
         },
       });
     }),

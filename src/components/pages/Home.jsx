@@ -6,7 +6,6 @@ import { Helmet } from "react-helmet";
 import {
     initSideFrogAnimation,
     initHeroFrogAnimation,
-    initFooterFrogAnimation,
     initFishAnimation,
 } from "../animations/animations";
 import AOS from 'aos';
@@ -17,23 +16,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 //Image Imports
 import logo from "../../assets/logo-black.svg";
-import logoBlack from "../../assets/logo-darkblack.svg";
-import froggy from "../../assets/froggy.svg";
 import arrowDown from "../../assets/arrow-down.png";
 import arrowSide from "../../assets/arrow-side.png";
 
-import froggySide from "../../assets/froggy-side.svg";
+// Component Imports
 import Portfolio from "../Portfolio";
 import Contact from "../Contact";
 import name from "../../assets/myname.png";
 import dot from "../../assets/dot.svg";
 
-import plantSm from "../../assets/plant-sm.svg";
-import plantMd from "../../assets/plant-lg.svg";
-import borderL from "../../assets/border-l.svg";
-import borderR from "../../assets/border-r.svg";
 import { HelmetProvider } from "react-helmet-async";
-import { ArrowDown } from "react-ionicons";
 
 
 gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger for GSAP
@@ -45,11 +37,8 @@ function Home() {
             once: true, // This will make the animations run only once
         });
 
-
-
         initSideFrogAnimation();
         initHeroFrogAnimation();
-        initFooterFrogAnimation();
         const fishAnimationCleanup = initFishAnimation();
 
         //Cleanup function for the fish animation
@@ -83,7 +72,7 @@ function Home() {
 
                 </Helmet>
                 {/* Main Content */}
-                <div className="container pt-24 md:pt-32 mx-auto">
+                <div className="container py-24 md:pt-32 mx-auto">
 
                     {/* Hero Section */}
                     <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center bg-olivewhite bg-opacity-5 text-ink">
@@ -100,7 +89,7 @@ function Home() {
                                 </p>
                                 <img className="w-128" src={name} alt="Samuel Park" />
                                 <p className="sm:text-h1 text-right  font-syne font-bold" data-aos="fade-up" data-aos-delay="800">
-                                    Digital Designer & Visual Artist </p>
+                                    Product Designer & Visual Artist </p>
                                 {/* <p className="sm:text-h5 max-w-2xl font-workSans">
                                     I'm a UI and visual designer with a
                                     background in fine arts, blending creativity
@@ -192,31 +181,31 @@ function Home() {
                         </div>
                     </div>
                     {/* More Projects Section */}
-                    <div className="more-projects relative border border-ink border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
-                        style={{
+                    <div className="mx-auto container">
+                        <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
+                            style={{
 
-                            backgroundImage: `url(${logo})`,
-                            backgroundSize: "400px",
-                            backgroundPosition: "right center",
-                            backgroundRepeat: "no-repeat",
-                            opacity: "0.9",
-                        }}>
-                        <img
-                            className="side-frog w-32 h-32 absolute top-1/2 -translate-y-1/2 -left-8 z-10"
-                            src={arrowSide}
-                            alt="Frog"
-                        />
-                        <a
-                            href="/work"
-                            className="flex items-center text-body gap-2 px-2 py-1 bg-olivewhite text-ink font-bold font-syne rounded border border-ink hover:bg-florange duration-300 w-max"
-                        >
-                            More Projects!
-                        </a>
-                    </div>
-
-                    {/* Contact Section */}
-                    <div className="pb-28 z-10">
-                        <Contact />
+                                backgroundImage: `url(${logo})`,
+                                backgroundSize: "400px",
+                                backgroundPosition: "right center",
+                                backgroundRepeat: "no-repeat",
+                            }}>
+                            <img
+                                className="side-frog w-24 h-24 absolute top-1/2 -translate-y-1/2 -left-8 z-10"
+                                src={arrowSide}
+                                alt="side arrow"
+                            />
+                            <a
+                                href="/work"
+                                className="btn-default mx-auto sm:mx-0"
+                            >
+                                More Projects!
+                            </a>
+                        </div>
+                        {/* Contact Section */}
+                        <div>
+                            <Contact />
+                        </div>
                     </div>
 
                 </div>

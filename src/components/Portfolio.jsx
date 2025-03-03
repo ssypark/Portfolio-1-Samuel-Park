@@ -23,6 +23,13 @@ function Portfolio({ limit}) {
     // This state is used to store the projects array for the Portfolio component
     const [projects, setProjects] = useState([
         {
+            image: flyDexImage,
+            title: 'FlyDex App',
+            description: 'FlyDex is an educational app designed to help fly fishing enthusiasts of all levels learn about techniques, find fishing spots, and connect with other anglers through an intuitive, all-in-one digital resource.',
+            tags: ['UX/UI', 'UX Research', 'Wireframing'],
+            link: '/work/flydex-app',
+        },
+        {
             image: ssImage,
             title: 'The Salmon Sanctuary',
             description: 'A user-centric charity website that effectively communicates the mission while enhancing user engagement and the donation process.',
@@ -31,18 +38,12 @@ function Portfolio({ limit}) {
         },
         {
             image: amalgmImage,
-            title: 'Amalgm Brand Book',
-            description: 'This brand book outlines Amalgm’s commitment to sustainable, collaborative, and artistic apparel, emphasizing individuality and ethical design.',
+            title: 'Amalgm Equipment',
+            description: 'This brand book outlines Amalgm’s commitment to sustainable, collaborative, and artistic apparel and equipment, emphasizing individuality and ethical design.',
             tags: ['Branding', 'Graphic Design', 'Product Design'],
             link: '/work/amalgm-brand-book',
         },
-        {
-            image: flyDexImage,
-            title: 'FlyDex App',
-            description: 'FlyDex is an educational app designed to help fly fishing enthusiasts of all levels learn about techniques, find fishing spots, and connect with other anglers through an intuitive, all-in-one digital resource.',
-            tags: ['UX/UI', 'UX Research', 'Wireframing'],
-            link: '/work/flydex-app',
-        },
+
         {
             image: interactiveImage,
             title: 'Interactive Document',

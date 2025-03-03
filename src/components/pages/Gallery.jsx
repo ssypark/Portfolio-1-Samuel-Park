@@ -7,21 +7,14 @@ import Illustration from "./gallery/Illustration";
 import {
     initSideFrogAnimation,
     initHeroFrogAnimation,
-    initFooterFrogAnimation,
     initFishAnimation,
 } from "../animations/animations";
 
 // Image Imports
-import redLogo from "../../assets/logo-red.svg";
 import logo from "../../assets/logo-black.svg";
-import froggy from "../../assets/froggy.svg";
-import arrowDown from "../../assets/arrow-down.png";
 import arrowSide from "../../assets/arrow-side.png";
-import froggySide from "../../assets/froggy-side.svg";
-import Portfolio from "../Portfolio";
 import Contact from "../Contact";
-import { FaArrowDown } from "react-icons/fa6";
-import bee from "../../assets/bee.svg";
+
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -32,7 +25,6 @@ function Gallery() {
     useEffect(() => {
         initSideFrogAnimation();
         initHeroFrogAnimation();
-        initFooterFrogAnimation();
         const fishAnimationCleanup = initFishAnimation();
 
         // Cleanup function for the fish animation
@@ -60,17 +52,17 @@ function Gallery() {
 
                 {/* Header Section */}
                 <div className="w-full mb-16 text-center justify-center items-center px-12 sm:px-24">
-                    <h1 className="text-hmax font-bold font-syne tracking-wide text-ink pt-24 md:pt-24 sm:pt-4 amalgm-font">
+                    <h1 className="text-hmax font-bold font-syne tracking-wide text-ink pt-24 md:pt-24 sm:pt-4">
                         ARTWORK
                     </h1>
-                    <p className="text-body  font-mono text-ink mt-8 max-w-4xl mx-auto">My artwork has become a way for me to liberate my ideas and thoughts; to express myself freely, without limits or restraints. It has become a way for me to portray events and issues that are personal to me and affect me, whether it be social, internal, on-going occurrences </p>
+                    <p className="text-body font-workSans text-ink mt-8 max-w-4xl mx-auto">My artwork has become a way for me to liberate my ideas and thoughts; to express myself freely, without limits or restraints. It has become a way for me to portray events and issues that are personal to me and affect me, whether it be social, internal, on-going occurrences </p>
                 </div>
             </div>
             {/* PAINTING SECTION */}
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 px-8 sm:px-24">
                 <div className="lg:col-span-1">
                     <h2 className="text-h3 font-syne font-bold mb-4 mt-0 text-ink">Paintings</h2>
-                    <p className="text-sm font-mono text-ink">In this series, I create layered, action-oriented images
+                    <p className="text-body font-workSans text-ink">In this series, I create layered, action-oriented images
                         drawn from  my subconscious. Viscera, organic forms, and
                         flung paint mix to create curiously mesmerizing
                         almost-landscapes and organisms, influenced in equal parts
@@ -84,7 +76,7 @@ function Gallery() {
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 px-8 sm:px-24">
                 <div className="lg:col-span-1">
                     <h2 className="text-h3 font-syne font-bold mb-4 mt-0 text-ink">Illustrations</h2>
-                    <p className="text-sm font-mono text-ink">Many of my illustrations are an exploration of the subconcious and the internal imagery 
+                    <p className="text-body font-workSans text-ink">Many of my illustrations are an exploration of the subconcious and the internal imagery 
                     seen through daily life.</p>
                 </div>
                 <div className="lg:col-span-3 mb-24">
@@ -108,7 +100,7 @@ function Gallery() {
                 />
                 <a
                     href="/work"
-                    className="flex items-center text-body gap-2 px-2 py-1 bg-olivewhite text-ink font-bold font-syne rounded border border-ink hover:bg-florange duration-300 w-max"
+                    className="btn-default mx-auto sm:mx-0"
                 >
                     More Projects!
                 </a>

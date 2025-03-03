@@ -4,7 +4,7 @@ import construction from "../../assets/construction-froggy.png";
 
 function ComingSoon({ projectName }) {
     return (
-        <div className="w-full text-center py-20 mt-28 bg-sage min-h-screen">
+        <div className="w-full text-center py-20 mt-28 bg-olivewhite min-h-screen">
             <h1 className="text-4xl font-bold text-h1 font-syne">Coming Soon: {projectName}</h1>
             <img src={construction} alt="Coming Soon" className="w-72 mx-auto animate-wiggle" />
             <p className="text-lg mt-4 text-h4 font-workSans">
@@ -13,7 +13,7 @@ function ComingSoon({ projectName }) {
             <div className="mt-12">
                 <Link
                     to="/work"
-                    className="px-6 py-3 bg-redwood text-offwhite text-lg rounded shadow-lg hover:shadow-xl hover:bg-florange transition-shadow duration-300 font-workSans"
+                    className="btn-default"
                 >
                     See Other Projects
                 </Link>
