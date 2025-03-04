@@ -104,24 +104,24 @@ function FlyDex() {
                     {/* Role and Date */}
                     <div className="flex flex-col sm:flex-row gap-8">
                         <div>
-                            <h2 className="text-body font-bold text-olivewhite">Role</h2>
-                            <p className="text-base text-olivewhite">
+                            <h2 className="text-body font-workSans font-bold text-olivewhite">Role</h2>
+                            <p className="text-base font-workSans text-olivewhite">
                                 UX/UI Designer
                                 <br />
                                 Product Strategist
                             </p>
                         </div>
                         <div>
-                            <h2 className="text-body font-bold text-olivewhite">Date</h2>
+                            <h2 className="text-body font-workSans font-bold text-olivewhite">Date</h2>
                             <p className="text-base text-olivewhite">2024</p>
                         </div>
                         <div>
-                            <h2 className="text-body font-bold text-olivewhite">Duration</h2>
-                            <p className="text-base text-olivewhite">51 Hours</p>
+                            <h2 className="text-body font-workSans font-bold text-olivewhite">Duration</h2>
+                            <p className="text-base font-workSans text-olivewhite">51 Hours</p>
                         </div>
                         <div>
-                            <h2 className="text-body font-bold text-olivewhite">Tools</h2>
-                            <p className="text-base text-olivewhite">
+                            <h2 className="text-body font-workSans font-bold text-olivewhite">Tools</h2>
+                            <p className="text-base font-workSans text-olivewhite">
                                 Figma
                                 <br />
                                 Adobe Illustrator
@@ -134,7 +134,7 @@ function FlyDex() {
                     {/* View CTA */}
                     <div>
                         <a
-                            href="https://embed.figma.com/proto/gCVW1snYrr66F7o51z2MCb/Flydex?page-id=1136%3A1151&node-id=1136-1152&node-type=canvas&viewport=494%2C647%2C0.17&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1136%3A1152&embed-host=share"
+                            href="https://embed.figma.com/design/gCVW1snYrr66F7o51z2MCb/Flydex?node-id=1237-1002&embed-host=share"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-default"
