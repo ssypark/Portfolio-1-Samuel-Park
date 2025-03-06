@@ -12,7 +12,7 @@ import Amalgm from './components/pages/projects/Amalgm';
 import InteractiveDocument from './components/pages/projects/InteractiveDocument';
 import FlyDex from './components/pages/projects/FlyDex';
 import IntroBumper from './components/pages/projects/IntroBumper';
-
+import ConsciousConnections from './components/pages/projects/ConsciousConnections';
 // Animation Imports
 import ScrollToTop from './components/animations/ScrollToTop';
 // import Transition from './components/animations/Transition';
@@ -47,6 +47,7 @@ function App() {
                 <Route path="/work/amalgm-brand-book" element={<Amalgm />} />
                 <Route path="/work/interactive-document" element={<InteractiveDocument />} />
                 <Route path="/work/flydex-app" element={<FlyDex />} />
+                <Route path="/work/conscious-connections" element={<ConsciousConnections />} />
                 <Route path="/work/intro-bumper-video" element={<IntroBumper />} />
                 <Route path="/art" element={<Gallery />} />
               </Route>

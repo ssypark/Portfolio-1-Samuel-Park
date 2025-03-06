@@ -141,7 +141,7 @@ function About() {
 
 
             {/* Philosophy */}
-            <div id="philosophy" data-aos="fade-left" className="bg-olivewhite container flex justify-center items-center px-16 my-16 py-8 mx-auto rounded-lg border border-ink hover:scale-105 transition-transform duration-300">
+            <div id="philosophy" data-aos="fade-left" className="bg-olivewhite container flex justify-center items-center px-16 my-16 py-8 mx-auto  hover:scale-105 transition-transform duration-300">
                 <div className="container mx-auto">
                     <h2 className="text-h2 font-syne mb-6 text-ink">My Philosophy</h2>
                     <p className="text-body leading-relaxed mb-4 font-workSans">I see design as a bridge between creativity and functionality. I aim to create intuitive, adaptable, and user-centered experiences that not only solve problems but also tell a story. My background in fine arts shapes my visual style, while my focus on UX ensures that designs are accessible, inclusive, and engaging.</p>

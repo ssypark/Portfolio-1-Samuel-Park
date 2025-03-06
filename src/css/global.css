@@ -1,7 +1,7 @@
 :root {
-    --header-font: "Syne", sans-serif;
+    --header-font: "Syne Mono", sans-serif;
     --header-font-weight: 800;
-    --body-font-family: "PPObjectSans", sans-serif;
+    --body-font-family: 'Work Sans', sans-serif;
     --body-font-weight: 400;
 }
 /* Font Imports */
@@ -46,3 +46,10 @@ h1,h2,h3,h4,h5,h6 {
     width: 100px; /* Adjust the width as needed */
     height: auto; /* Maintain the aspect ratio */
 }
+
+.sidebar a.highlighted::before {
+    content: "-";
+    position: absolute;
+    left: -20px;
+    color: var(--redwood);
+  }
