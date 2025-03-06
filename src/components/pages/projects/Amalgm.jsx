@@ -179,7 +179,7 @@ function Amalgm() {
             </Helmet>
 
             {/* Hero Section */}
-            <div className="relative min-h-screen p-8 bg-olivewhite rounded-md shadow-md flex flex-col justify-between">
+            <div className="relative min-h-screen p-8 bg-olivewhite md:p-16 flex flex-col justify-between">
                 {/* Centered Logo and Header */}
                 <div className="flex flex-col items-center justify-center flex-grow space-y-8">
                     {/* Logo */}
@@ -198,7 +198,7 @@ function Amalgm() {
                         />
                     </div>
                     {/* Header */}
-                    <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="3000" className="text-center">
+                    <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="3000" className="text-center pb-12">
                         <h1 className="text-h1 font-bold font-tomarik text-ink">
                             Collaborative Branding & Sustainability
                         </h1>
@@ -253,7 +253,7 @@ function Amalgm() {
                 </div>
             </div>
 
-            <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 py-16">
+            <div className=" mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 px-12 py-16 border-b border-ink">
                 {/* Left Column: Project Overview */}
                 <div className="lg:col-span-1 p-8 bg-olivewhite border border-ink rounded-md" data-aos="fade-left">
                     <h2 className="text-h2 font-bold font-tomarik text-ink">Project Overview</h2>
@@ -309,7 +309,7 @@ function Amalgm() {
                 </div>
             </div>
 
-            <div className="flex max-w-container mx-auto md:gap-14 p-4 bg-olivewhite">
+            <div className="flex max-w-container mx-auto md:gap-14 px-8 bg-olivewhite">
 
                 {/* Sidebar Navigation */}
                 <div className="hidden md:block md:sticky md:top-10 md:h-fit md:py-12 ">
