@@ -24,8 +24,10 @@ import sketchBook from "../../../assets/amalgm/amalgm-sketchbooks.png";
 import tagMockup from "../../../assets/amalgm/amalgm-tag_mockup.png";
 import slogan from "../../../assets/amalgm/slogan.png";
 import throwie from "../../../assets/amalgm/throwie.png";
-import logoBlack from "../../../assets/logo-darkblack.svg";
-import froggySide from "../../../assets/froggy-side.svg";
+
+import logoBlack from "../../../assets/logo-black.svg";
+import arrowSide from "../../../assets/arrow-side.png";
+
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -167,7 +169,7 @@ function Amalgm() {
     }, []);
 
     return (
-        <div className="relative mt-18 w-full bg-olivewhite">
+        <div className="relative mt-18 w-full pb-16 bg-olivewhite">
             <Helmet>
                 <title>Amalgm | Collaborative Branding</title>
                 <meta
@@ -534,6 +536,33 @@ function Amalgm() {
                             </div>
                         </section>
                     </div>
+                </div>
+            </div>
+            {/* More Projects Section */}
+            <div className="mx-auto container px-8">
+                <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
+                    style={{
+
+                        backgroundImage: `url(${logoBlack})`,
+                        backgroundSize: "400px",
+                        backgroundPosition: "right center",
+                        backgroundRepeat: "no-repeat",
+                    }}>
+                    <img
+                        className="side-frog w-24 h-24 absolute top-1/2 -translate-y-1/2 -left-8 z-10"
+                        src={arrowSide}
+                        alt="side arrow"
+                    />
+                    <a
+                        href="/work"
+                        className="btn-default"
+                    >
+                        More Projects!
+                    </a>
+                </div>
+                {/* Contact Section */}
+                <div>
+                    <Contact />
                 </div>
             </div>
         </div>
