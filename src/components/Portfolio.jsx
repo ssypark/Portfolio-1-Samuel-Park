@@ -9,6 +9,7 @@ import amalgmImage from '../assets/amalgm.png';
 import interactiveImage from '../assets/interactive.png';
 import flyDexImage from '../assets/flydex/flydex-login-mockup.jpg';
 import introBumperImage from '../assets/intro-bumper.png';
+import ccMockup from '../assets/conscious-connections/full-mockup.png';
 
 // destructuring is used to include the limit prop that is passed from the parent component. This is used to limit the number of projects to display on the page.
 // This is done to allow us to limit the number of projects displayed on the home page vs projects page.
@@ -43,7 +44,13 @@ function Portfolio({ limit}) {
             tags: ['Branding', 'Graphic Design', 'Product Design'],
             link: '/work/amalgm-brand-book',
         },
-
+        {
+            image: ccMockup,
+            title: 'Conscious Connections',
+            description: 'Instead of designing just another dating app, we aimed to craft an immersive relationship experience that fosters meaningful connections.',
+            tags: ['Product Design', 'Graphic Design', 'Interaction Design', 'UX/UI'],
+            link: '/work/conscious-connections',
+        },
         {
             image: interactiveImage,
             title: 'Interactive Document',

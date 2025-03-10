@@ -1,7 +1,7 @@
 :root {
-    --header-font: "Syne", sans-serif;
+    --header-font: "Syne Mono", sans-serif;
     --header-font-weight: 800;
-    --body-font-family: "PPObjectSans", sans-serif;
+    --body-font-family: 'PPFraktionSans', sans-serif;
     --body-font-weight: 400;
 }
 /* Font Imports */
@@ -24,6 +24,32 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'PPNikkeiPacific';
+    src: url('/fonts/PPNikkeiPacific-Light.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPNikkeiPacific';
+    src: url('/fonts/PPNikkeiPacific-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPFraktionSans';
+    src: url('/fonts/PPFraktionSans-Light.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PPFraktionSans';
+    src: url('/fonts/PPFraktionSans-Bold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
 body {
     font-family: var(--body-font-family);
     font-weight: var(--body-font-weight);
@@ -46,3 +72,10 @@ h1,h2,h3,h4,h5,h6 {
     width: 100px; /* Adjust the width as needed */
     height: auto; /* Maintain the aspect ratio */
 }
+
+.sidebar a.highlighted::before {
+    content: "-";
+    position: absolute;
+    left: -20px;
+    color: var(--redwood);
+  }
