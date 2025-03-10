@@ -487,7 +487,7 @@ function ConsciousConnections() {
             <div className="w-full text-left text-ink mt-4">
               <p className="text-body leading-relaxed">
                 Conscious Connections' branding needed to evoke a sense of <strong>luxury, authenticity, and warmth</strong>.
-                The visual identity had to balance <strong>exclusivity and approachability</strong>, ensuring it remained
+                The visual identity had to balance <strong>exclusivity and approachability</strong>, ensuring it remained 
                 <strong>premium yet inviting</strong>.
               </p>
               <p className="text-body leading-relaxed mt-4">
