@@ -487,18 +487,18 @@ function ConsciousConnections() {
             <div className="w-full text-left text-ink mt-4">
               <p className="text-body leading-relaxed">
                 Conscious Connections' branding needed to evoke a sense of <strong>luxury, authenticity, and warmth</strong>.
-                The visual identity had to balance <strong>exclusivity and approachability</strong>, ensuring it remained
-                <strong>premium yet inviting</strong>.
+                The visual identity had to balance <strong>exclusivity and approachability</strong>, ensuring it remained 
+                <strong> premium yet inviting</strong>.
               </p>
               <p className="text-body leading-relaxed mt-4">
                 To establish the brand’s <strong>tone and direction</strong>, we created a <strong>mood board</strong> that explored
                 variations of <strong>elegance, warmth, and sophistication</strong>. This helped define the
-                <strong>visual narrative</strong> before moving into logo development.
+                <strong> visual narrative</strong> before moving into logo development.
               </p>
               <p className="text-body leading-relaxed mt-4">
                 The <strong>logo design</strong> process involved multiple <strong>drafting stages</strong>. I first created
                 initial sketches, refining them in <strong>Illustrator</strong> to explore different design directions. To expand on these ideas,
-                <strong>AI-assisted exploration</strong> was used to generate additional forms and styles.
+                <strong> AI-assisted exploration</strong> was used to generate additional forms and styles.
               </p>
               <p className="text-body leading-relaxed mt-4">
                 Ultimately, the <strong>final logo</strong> was crafted entirely in <strong>Illustrator</strong>, ensuring
@@ -512,7 +512,7 @@ function ConsciousConnections() {
                 src={moodboard}
                 alt="Mood Board"
                 className="w-full cursor-pointer"
-                onClick={() => openLightbox(5)}
+                onClick={() => openLightbox(6)}
               />
               <figcaption className="text-sm text-gray-500 mt-2 text-right">
                 A curated <strong>mood board</strong> to explore variations in <strong>tone, style, and brand direction</strong>.
@@ -527,7 +527,7 @@ function ConsciousConnections() {
                   src={logoDraft}
                   alt="Initial Logo Draft"
                   className=" cursor-pointer "
-                  onClick={() => openLightbox(4)}
+                  onClick={() => openLightbox(7)}
                 />
                 <figcaption className="text-sm text-gray-500 mt-2 text-right">
                   My <strong>initial logo draft</strong>, created in <strong>Illustrator</strong>.
@@ -540,7 +540,7 @@ function ConsciousConnections() {
                   src={logoAi}
                   alt="AI-Assisted Logo Concepts"
                   className=" cursor-pointer"
-                  onClick={() => openLightbox(5)}
+                  onClick={() => openLightbox(8)}
                 />
                 <figcaption className="text-sm text-gray-500 mt-2 text-right">
                   <strong>AI-assisted logo concepts</strong> used for additional exploration.
@@ -554,7 +554,7 @@ function ConsciousConnections() {
                 src={logoFinal}
                 alt="Final Logo Design"
                 className="w-full max-w-[500px] cursor-pointer "
-                onClick={() => openLightbox(6)}
+                onClick={() => openLightbox(9)}
               />
               <figcaption className="text-sm text-gray-500 mt-2 text-center">
                 The <strong>final logo</strong>, designed in <strong>Illustrator</strong>, refined to align with the
@@ -592,7 +592,7 @@ function ConsciousConnections() {
                     src={crazy8}
                     alt="Crazy 8s Brainstorming"
                     className="w-full max-w-[500px] md:max-w-[600px] cursor-pointer "
-                    onClick={() => openLightbox(9)}
+                    onClick={() => openLightbox(10)}
                   />
                   <figcaption className="text-sm text-gray-500 mt-2 text-right">
                     <strong>Crazy 8s sketches</strong> from our <strong>night-before brainstorming session</strong>.
@@ -605,7 +605,7 @@ function ConsciousConnections() {
                     src={clientTakeaway}
                     alt="Client Meeting Takeaways"
                     className="w-full max-w-[500px] md:max-w-[600px] cursor-pointer "
-                    onClick={() => openLightbox(8)}
+                    onClick={() => openLightbox(11)}
                   />
                   <figcaption className="text-sm text-gray-500 mt-2 text-right">
                     <strong>Key takeaways</strong> from our <strong>client meeting</strong>, influencing our <strong>design decisions</strong>.
@@ -631,7 +631,7 @@ function ConsciousConnections() {
                 </p>
                 <p className="mt-4 text-body">
                   This final stage involved refining <strong>typography, color schemes, and interactive elements</strong> to ensure
-                  a <strong>premium yet intuitive experience</strong>. Every design decision was made with the goal of enhancing <strong>usability</strong>
+                  a <strong>premium yet intuitive experience</strong>. Every design decision was made with the goal of enhancing <strong>usability </strong>
                   while maintaining the brand’s identity and vision.
                 </p>
               </div>
@@ -643,7 +643,7 @@ function ConsciousConnections() {
                     src={prototype}
                     alt="Final Hi-Fi Wireframes"
                     className="w-full cursor-pointer "
-                    onClick={() => openLightbox(10)}
+                    onClick={() => openLightbox(12)}
                   />
                   <figcaption className="text-sm text-gray-500 mt-2 text-right max-w-full">
                     <strong>Final high-fidelity prototype</strong>, designed to create a <strong>seamless, intuitive, and engaging user experience</strong>.
