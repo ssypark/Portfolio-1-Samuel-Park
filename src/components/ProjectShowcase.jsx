@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
 
+
 function ProjectShowcase({ image, title, description, tags, link }) {
     return (
+        
         <Link to={link} className="relative border border-ink  group overflow-hidden rounded-lg transition-all duration-300 ease-in-out h-auto flex flex-col md:flex-row-reverse hover:scale-105">
             {/* Image Section */}
             <div className="w-full md:w-2/3 relative md:border-l md:border-b-0 border-b">
@@ -17,7 +19,7 @@ function ProjectShowcase({ image, title, description, tags, link }) {
             {/* Text and CTA Section */}
             <div className="w-full md:w-1/3 bg-olivewhite p-8 flex flex-col justify-between">
                 <div>
-                    <h2 className="text-2xl sm:text-h3 font-syne font-bold text-ink">{title}</h2>
+                    <h2 className="text-2xl sm:text-h3 font-ppSupply  text-ink">{title}</h2>
                                         {/* Skill Pills */}
                     <div className="flex gap-2 mb-4 mt-2 flex-wrap">
                         {tags.map((tag, index) => (
@@ -31,7 +33,7 @@ function ProjectShowcase({ image, title, description, tags, link }) {
                 </div>
                 {/* CTA */}
                 <div className="mt-6">
-                    <div className="flex items-center text-body gap-2 px-2 py-1 bg-olivewhite text-ink font-bold font-syne rounded border border-ink hover:bg-florange duration-300 w-max">
+                    <div className="flex items-center text-body gap-2 px-2 py-1 bg-olivewhite text-ink  font-ppSupply rounded border border-ink hover:bg-florange duration-300 w-max">
                         View Project <MdArrowOutward />
                     </div>
                 </div>

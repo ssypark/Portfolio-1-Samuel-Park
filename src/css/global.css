@@ -1,5 +1,5 @@
 :root {
-    --header-font: "Syne Mono", sans-serif;
+    --header-font: 'PPSupplySans', sans-serif;
     --header-font-weight: 800;
     --body-font-family: 'PPFraktionSans', sans-serif;
     --body-font-weight: 400;
@@ -10,33 +10,8 @@
 @import url("https://use.typekit.net/brb8uki.css");
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Syne+Mono&display=swap');
 
-@font-face {
-    font-family: 'PPObjectSans';
-    src: url('/fonts/PPObjectSans-Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'PPObjectSans';
-    src: url('/fonts/PPObjectSans-Heavy.otf') format('opentype');
-    font-weight: 800;
-    font-style: normal;
-}
 
-@font-face {
-    font-family: 'PPNikkeiPacific';
-    src: url('/fonts/PPNikkeiPacific-Light.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'PPNikkeiPacific';
-    src: url('/fonts/PPNikkeiPacific-Regular.otf') format('opentype');
-    font-weight: 400;
-    font-style: normal;
-}
 
 @font-face {
     font-family: 'PPFraktionSans';
@@ -50,6 +25,20 @@
     font-weight: 800;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'PPSupplySans';
+    src: url('/fonts/PPSupplySans-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'PPSupplySans';
+    src: url('/fonts/PPSupplySans-Bold.otf') format('opentype');
+    font-weight: 800;
+    font-style: bold;
+}
+
 body {
     font-family: var(--body-font-family);
     font-weight: var(--body-font-weight);
@@ -60,7 +49,7 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
     
-    font-family: var(--header-font);
+    font-family: 'PPSupplySans', sans-serif;
     font-weight: var(--header-font-weight);
 }
 

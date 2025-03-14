@@ -9,7 +9,7 @@ const ScrollToTop = () => {
   useEffect(() => {
     // I needed to ensure that the scroll happens only after the DOM has fully rendered the new route.
     const timeout = setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: "instant" });
     // I needed to add a slight delay for reliable DOM update because the scrolltotop was not running 100% of the time
     }, 50); 
     

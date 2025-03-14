@@ -110,7 +110,7 @@ function About() {
                 <div className="absolute inset-0 bg-black opacity-30 rounded-b-3xl"></div> {/* Overlay */}
                 <div className="relative z-0 flex flex-col lg:flex-row items-center justify-between w-full h-full p-12">
                     <div className="lg:w-1/2 text-left sm:mt-12 text-white ">
-                        <h2 className="text-4xl md:text-6xl font-syne mb-4" data-aos="fade-up">Nice to meet you</h2>
+                        <h2 className="text-4xl md:text-6xl font-ppSupply mb-4" data-aos="fade-up">Nice to meet you</h2>
                         <p className="text-body md:text-xl font-ppObject pt-1" data-aos="fade-up" data-aos-delay="600">Hi, I'm Samuel. I'm a product designer with a background in fine arts, driven by a passion for creating meaningful, user-centered designs.</p>
                     </div>
                 </div>
@@ -143,7 +143,7 @@ function About() {
             {/* Philosophy */}
             <div id="philosophy" data-aos="fade-left" className="bg-olivewhite container flex justify-center items-center px-16 my-16 py-8 mx-auto  hover:scale-105 transition-transform duration-300">
                 <div className="container mx-auto">
-                    <h2 className="text-h2 font-syne mb-6 text-ink">My Philosophy</h2>
+                    <h2 className="text-h2 font-ppSupply mb-6 text-ink">My Philosophy</h2>
                     <p className="text-body leading-relaxed mb-4 font-workSans">I see design as a bridge between creativity and functionality. I aim to create intuitive, adaptable, and user-centered experiences that not only solve problems but also tell a story. My background in fine arts shapes my visual style, while my focus on UX ensures that designs are accessible, inclusive, and engaging.</p>
                 </div>
             </div>
@@ -165,7 +165,7 @@ function About() {
                     />
                 </div>
                 <div className="lg:w-2/3 text-ink z-10">
-                    <h2 className="text-h2 font-syne mb-6">As an Artist</h2>
+                    <h2 className="text-h2 font-ppSupply mb-6">As an Artist</h2>
                     <p className="text-body leading-relaxed font-workSans mb-4">I started my creative journey in fine arts, specializing in painting and illustration and earned a Bachelor of Fine Arts degree at UBC. Over time, I transitioned into the digital world, bringing my artistic sensibilities into digital design. This combination of traditional and digital skills allows me to approach projects with both creativity and precision.</p>
                     <Link to="/art">
                         <button className="btn-default">
@@ -178,7 +178,7 @@ function About() {
             {/* Skill Marquee */}
             <div className="container mx-auto px-8 flex flex-col lg:flex-row items-center gap-8 mb-12 justify-between">
                 <div className="w-1/2 text-ink">
-                    <h2 className="text-h2 font-syne mb-6">My Tacklebox</h2>
+                    <h2 className="text-h2 font-ppSupply mb-6">My Tacklebox</h2>
                     <p className="text-h5 leading-relaxed font-workSans mb-4 ">Design tools:</p>
                     <div className="gap-6 mb-8 flex flex-row tackle-box">
                         <SiFigma className="text-8xl md:text-5xl lg:text-6xl xl:text-7xl" />
