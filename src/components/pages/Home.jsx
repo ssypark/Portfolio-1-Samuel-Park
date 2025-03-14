@@ -24,7 +24,7 @@ import Portfolio from "../Portfolio";
 import Contact from "../Contact";
 import name from "../../assets/myname.png";
 import dot from "../../assets/dot.svg";
-
+import Particles from "../animations/react-bits/Particles";
 import { HelmetProvider } from "react-helmet-async";
 
 
@@ -71,12 +71,24 @@ function Home() {
                     <meta property="og:url" content="https://sampark.ca/" />
 
                 </Helmet>
+                <div className="absolute inset-0 w-full min-h-screen z-5" >
+                            <Particles
+                                particleColors={['#24261B', '#24261B']}
+                                particleCount={500}
+                                particleSpread={10}
+                                speed={0.1}
+                                particleBaseSize={200}
+                                moveParticlesOnHover={true}
+                                alphaParticles={false}
+                                disableRotation={false}
+                            />
+                        </div>
                 {/* Main Content */}
                 <div className="container py-24 md:pt-32 mx-auto">
 
                     {/* Hero Section */}
-                    <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center bg-olivewhite bg-opacity-5 text-ink">
-                        <div className="flex flex-col md:flex-row items-center md:items-start text-left space-y-8 md:space-y-0 md:space-x-8 z-20 mb-12" data-aos="zoom-in">
+                    <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center  text-ink">
+                        <div className="flex flex-col md:flex-row items-center md:items-start text-left space-y-8 md:space-y-0 md:space-x-8 z-0 mb-12" data-aos="zoom-in">
                             {/* <img
                                 className="logo w-36 sm:w-72 mr-8"
                                 src={logo}
@@ -84,11 +96,11 @@ function Home() {
                             /> */}
 
                             <div className="text-left">
-                                <p className="sm:text-h3 max-w-2xl font-syne font-bold">
+                                <p className="sm:text-h3 font-ppSupply max-w-2xl ">
                                     Hello, I'm
                                 </p>
-                                <img className="w-128" src={name} alt="Samuel Park" />
-                                <p className="sm:text-h1 text-right  font-syne font-bold" data-aos="fade-up" data-aos-delay="800">
+                                <img className="w-128 pointer-events-none z-0" src={name} alt="Samuel Park" />
+                                <p className="sm:text-h1 text-right  font-ppSupply" data-aos="fade-up" data-aos-delay="800">
                                     Product Designer & Visual Artist </p>
                                 {/* <p className="sm:text-h5 max-w-2xl font-workSans">
                                     I'm a UI and visual designer with a
@@ -147,7 +159,7 @@ function Home() {
 
                         {/* Fish */}
                         {/* pointer events none ensures that the fish don't interfere with user click events */}
-                        <div className="absolute inset-0 z-0 pointer-events-none">
+                        {/* <div className="absolute inset-0 z-0 pointer-events-none">
                             {[...Array(80)].map((_, i) => {
                                 const size = Math.random() * 10 + 5; // Random size between 20 and 50
                                 return (
@@ -166,14 +178,15 @@ function Home() {
                                         alt="dot" />
                                 );
                             })}
-                        </div>
+                        </div> */}
 
                     </div>
 
+
                     {/* Projects */}
-                    <div id="featuredProjects" className="z-1000">
+                    <div id="featuredProjects" className="z-2000">
                         <div className="w-full" data-aos="fade-right">
-                            <h2 className="text-h1 font-syne font-bold p-4 mb-4 mt-0 text-ink flex items-center">Featured Projects</h2>
+                            <h2 className="text-h1 font-ppSupply  p-4 mb-4 mt-0 text-ink flex items-center">Featured Projects</h2>
                         </div>
                         {/* with the limit prop (see Portfolio.jsx), we can limit the number of projects displayed */}
                         <div className="z-100">

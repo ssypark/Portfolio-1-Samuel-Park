@@ -139,7 +139,7 @@ function SalmonSanctuary() {
                     </div>
                     {/* Header */}
                     <div data-aos="fade-right" className="text-left">
-                        <h1 className="text-h1 font-bold font-syne text-ink">
+                        <h1 className="text-h1 font-bold font-ppSupply text-ink">
                             The Salmon Sanctuary
                         </h1>
                     </div>
@@ -182,7 +182,7 @@ function SalmonSanctuary() {
                             href="https://salmonsanctuary.sampark.ca/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center text-sm gap-2 px-2 py-1 bg-olivewhite text-ink font-bold font-syne border border-ink rounded hover:shadow-xl hover:bg-florange transition-shadow duration-300 w-max"
+                            className="flex items-center text-sm gap-2 px-2 py-1 bg-olivewhite text-ink font-bold font-ppSupply border border-ink rounded hover:shadow-xl hover:bg-florange transition-shadow duration-300 w-max"
                         >
                             VISIT WEBSITE <MdArrowOutward />
                         </a>
@@ -202,7 +202,7 @@ function SalmonSanctuary() {
 
                 {/* About */}
                 <div className="lg:w-2/3 flex flex-col gap-4 text-left">
-                    <h5 className="text-h4 font-bold font-syne text-ink mb-4">About</h5>
+                    <h5 className="text-h4 font-bold font-ppSupply text-ink mb-4">About</h5>
                     <p className="text-body text-ink leading-relaxed">
                         The Salmon Sanctuary Initiative is an interactive digital project
                         designed to educate users about Pacific salmon conservation. As the Lead
@@ -223,17 +223,17 @@ function SalmonSanctuary() {
             {/* UX Research Section */}
             <div className="container mx-auto px-4 sm:px-8 my-16">
                 {/* UX Research Header */}
-                <h2 className="text-h1 font-syne font-bold text-ink mb-12">UX Research</h2>
+                <h2 className="text-h1 font-ppSupply font-bold text-ink mb-12">UX Research</h2>
 
                 {/* Target Audience and Competitive Analysis */}
                 <div className="flex flex-col lg:flex-row gap-16 mb-24">
                     {/* Target Audience */}
                     <div className="lg:w-2/3" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out">
-                        <h3 className="text-h3 font-bold font-syne text-ink mb-6">Target Audience</h3>
+                        <h3 className="text-h3 font-bold font-ppSupply text-ink mb-6">Target Audience</h3>
                         <p className="text-base font-workSans text-ink leading-relaxed mb-8">
                             The Salmon Sanctuary Initiative was designed with a diverse target audience in mind, ensuring the content and features cater to both casual visitors and dedicated conservation advocates.
                         </p>
-                        <h4 className="text-h4 font-bold font-syne text-ink mb-4">Key audience segments include:</h4>
+                        <h4 className="text-h4 font-bold font-ppSupply text-ink mb-4">Key audience segments include:</h4>
                         <ul className="list-disc font-workSans text-ink text-body pl-6 space-y-4">
                             <li>
                                 <span className="font-bold">Environmental Enthusiasts</span> – Nature lovers who want to learn more about salmon conservation and take action, whether through donations, volunteer work, or sharing educational resources.
@@ -258,7 +258,7 @@ function SalmonSanctuary() {
 
                     {/* Competitive Analysis */}
                     <div className="lg:w-1/3 flex flex-col border-solid border-2 border-redwood bg-olivewhite rounded-lg p-8" data-aos="fade-left" data-aos-easing="ease-in-out">
-                        <h3 className="text-h2 font-bold font-syne text-ink mb-6">Competitive Analysis</h3>
+                        <h3 className="text-h2 font-bold font-ppSupply text-ink mb-6">Competitive Analysis</h3>
                         <p className="text-body font-workSans text-ink leading-relaxed mb-8">
                             By studying competitor websites in terms of design, functionality, marketing, and technology, I gained valuable insights that shaped my design decisions for this project. This research helped me create a user experience that is both competitive and innovative, offering a unique value to the target audience.
                         </p>
@@ -278,7 +278,7 @@ function SalmonSanctuary() {
                 data-aos-duration="500"
                 data-aos-easing="ease-in-out"
             >
-                <h2 className="text-h3 font-syne font-bold text-ink mb-6">User Personas & Scenarios</h2>
+                <h2 className="text-h3 font-ppSupply font-bold text-ink mb-6">User Personas & Scenarios</h2>
                 <p className="text-body font-workSans text-ink leading-relaxed mb-8">
                     Based on the interviews, I developed two primary personas:
                 </p>
@@ -318,15 +318,15 @@ function SalmonSanctuary() {
                     </div>
                     {/* Persona Details */}
                     <div className="w-full lg:w-2/3 text-ink">
-                        <h3 className="text-h4 font-syne font-bold mb-4">The Environmental Activist</h3>
+                        <h3 className="text-h4 font-ppSupply font-bold mb-4">The Environmental Activist</h3>
                         <p className="text-body font-workSans leading-relaxed mb-4">
                             Maya Patel, a 27-year-old environmental activist, is deeply passionate about protecting the planet and advocating for sustainability. She often finds herself seeking ways to make a meaningful impact on environmental issues and inspire others to join her cause.
                         </p>
-                        <h4 className="text-h5 font-bold font-syne mb-2">Her Journey</h4>
+                        <h4 className="text-h5 font-bold font-ppSupply mb-2">Her Journey</h4>
                         <p className="text-body font-workSans leading-relaxed mb-4">
                             In her quest to support Pacific salmon conservation, Maya visits the charity's website to explore available resources and discover ways to get involved. She navigates the site with ease, finding comprehensive information on habitat restoration projects, volunteer opportunities, and advocacy campaigns focused on saving Pacific salmon. Maya also comes across engaging educational materials and interactive tools that deepen her understanding of the challenges facing salmon populations and empower her to take action.
                         </p>
-                        <h4 className="text-h5 font-bold font-syne mb-2">The Result</h4>
+                        <h4 className="text-h5 font-bold font-ppSupply mb-2">The Result</h4>
                         <p className="text-body font-workSans leading-relaxed">
                             Feeling inspired and empowered by the wealth of resources and opportunities available on the charity's website, Maya eagerly signs up to volunteer for a habitat restoration project and makes a donation to support ongoing conservation efforts. She leaves the website with a renewed sense of purpose and optimism, knowing that her contributions, along with those of other passionate individuals, will make a positive impact on the future of Pacific salmon and the health of our oceans and river systems.
                         </p>
@@ -368,8 +368,8 @@ function SalmonSanctuary() {
             {/* Web Design Section */}
             <div className="container mx-auto px-4 sm:px-8 mb-16" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out">
                 {/* Section Header */}
-                <h2 className="text-h1 font-syne font-bold text-ink mb-6">Web Design</h2>
-                <h3 className="text-h4 font-syne font-bold text-ink mb-4">User Flow & Site Map</h3>
+                <h2 className="text-h1 font-ppSupply font-bold text-ink mb-6">Web Design</h2>
+                <h3 className="text-h4 font-ppSupply font-bold text-ink mb-4">User Flow & Site Map</h3>
 
                 {/* Description */}
                 <p className="text-body font-workSans text-ink leading-relaxed mb-8">
@@ -381,7 +381,7 @@ function SalmonSanctuary() {
                 </p>
 
                 {/* Site Map Image */}
-                <h5 className="text-h5 font-syne font-bold text-ink mb-4">Site Map</h5>
+                <h5 className="text-h5 font-ppSupply font-bold text-ink mb-4">Site Map</h5>
                 <div className="relative group">
                     <img
                         src={siteMap} // Replace with the actual path to your site map image
@@ -403,7 +403,7 @@ function SalmonSanctuary() {
                     {/* User Flow Text */}
                     <div className="w-full lg:col-span-1 text-ink">
                         {/* Description of User Flow */}
-                        <h5 className="text-h5 font-syne font-bold text-ink mb-4">User Flow</h5>
+                        <h5 className="text-h5 font-ppSupply font-bold text-ink mb-4">User Flow</h5>
                         <p className="text-body font-workSans text-ink leading-relaxed mb-4">
                             The User Flow diagram outlines the donation process, detailing each step users take from selecting a donation option to finalizing their contribution. It was designed to ensure seamless interaction while meeting specific client requirements for user experience, such as encouraging larger donations with incentives (e.g., free plushies) and offering multiple payment options.
                         </p>
@@ -433,7 +433,7 @@ function SalmonSanctuary() {
 
             {/* Style Guide & Wireframes Section */}
             <div className="container mx-auto px-4 sm:px-8 mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <h2 className="text-h1 font-syne font-bold text-ink mb-6">Style Guide & Wireframes</h2>
+                <h2 className="text-h1 font-ppSupply font-bold text-ink mb-6">Style Guide & Wireframes</h2>
                 <p className="text-body font-workSans text-ink leading-relaxed mb-8">
                     The visual and structural elements of the Salmon Sanctuary Initiative were carefully crafted to ensure a seamless user experience while reflecting the mission of salmon conservation. The design approach was rooted in a comprehensive style guide and strategic wireframes.
                 </p>
@@ -441,7 +441,7 @@ function SalmonSanctuary() {
 
             {/* Style Guide Section */}
             <div className="container mx-auto px-4 sm:px-8 mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                <h2 className="text-h3 font-syne font-bold text-ink mb-6">Style Guide</h2>
+                <h2 className="text-h3 font-ppSupply font-bold text-ink mb-6">Style Guide</h2>
                 <p className="text-body font-workSans text-ink leading-relaxed mb-8">
                     The Salmon Sanctuary Initiative's style guide was created to maintain consistency in visual design, ensuring the website reflects the conservation mission with clarity and professionalism.
                 </p>
@@ -465,7 +465,7 @@ function SalmonSanctuary() {
 
             {/* Wireframes Section */}
             <div className="container mx-auto px-4 sm:px-8 mb-32">
-                <h2 className="text-h3 font-syne font-bold text-ink mb-6">Wireframes</h2>
+                <h2 className="text-h3 font-ppSupply font-bold text-ink mb-6">Wireframes</h2>
                 <div
                     className="relative group cursor-pointer"
                     onClick={() => handleOpenModal("wireframes", 0)} // Open modal for wireframes
@@ -532,18 +532,18 @@ function SalmonSanctuary() {
             <hr className="my-12 border-t border-gray-300" />
             {/* What I Learned & What's Next Section */}
             <div className="container mx-auto px-4 sm:px-8 my-16 p-8 rounded-md shadow-md bg-redwood" data-aos="fade-up">
-                <h2 className="text-h2 font-syne font-bold text-ink mb-6">Closing Thoughts</h2>
+                <h2 className="text-h2 font-ppSupply font-bold text-ink mb-6">Closing Thoughts</h2>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     {/* What I Learned */}
                     <div className="flex flex-col gap-4">
-                        <h3 className="text-h4 font-bold font-syne text-ink">What I Learned</h3>
+                        <h3 className="text-h4 font-bold font-ppSupply text-ink">What I Learned</h3>
                         <p className="text-body font-workSans text-ink leading-relaxed">
                             Throughout the Salmon Sanctuary Initiative, I enhanced my skills in information architecture, user research, and interactive design. I learned the importance of creating clear navigation and engaging educational materials to foster user engagement. Additionally, this project helped me understand how user personas and journey maps can guide impactful design decisions.
                         </p>
                     </div>
                     {/* What's Next */}
                     <div className="flex flex-col gap-4">
-                        <h3 className="text-h4 font-bold font-syne text-ink">What's Next</h3>
+                        <h3 className="text-h4 font-bold font-ppSupply text-ink">What's Next</h3>
                         <p className="text-body font-workSans text-ink leading-relaxed">
                             I plan to apply the knowledge and insights gained from this project to improve future endeavors. By building on my strengths in user-centered design and research, I aim to deliver even more impactful and innovative solutions. Additionally, I will seek opportunities to refine my processes and ensure that every project benefits from a more thoughtful and effective approach.
                         </p>

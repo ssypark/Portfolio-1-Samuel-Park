@@ -90,7 +90,7 @@ function FlyDex() {
                 {/* Bottom-Left Header */}
                 <div className="text-left mb-8">
                     <h1
-                        className="text-h1 font-bold font-syne text-olivewhite"
+                        className="text-h1 font-bold font-ppSupply text-olivewhite"
                         data-aos="fade-up"
                         data-aos-duration="2000"
                         data-aos-delay="500"
@@ -149,7 +149,7 @@ function FlyDex() {
             <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 px-4 py-16">
                 {/* Left Section: Project Overview */}
                 <div className="lg:col-span-1 p-8 bg-olivewhite" data-aos="fade-left">
-                    <h2 className="text-h2 font-bold font-worksans text-ink">Project Overview</h2>
+                    <h2 className="text-h2 font-bold font-ppSupply text-ink">Project Overview</h2>
                     <p className="text-body font-workSans text-ink  mt-4 leading-relaxed">
                         FlyDex is a conceptual app designed to make fly fishing more accessible and enjoyable. It offers a clean, intuitive interface with features like fishing spot recommendations, fly fishing techniques, and a personal catch log.
                     </p>
@@ -160,7 +160,7 @@ function FlyDex() {
                 <div className="lg:col-span-2 space-y-4 border border-ink rounded-md bg-olivewhite">
                     {/* Challenges Section */}
                     <div className="p-8">
-                        <h2 className="text-h2 font-bold font-worksans text-ink">Challenges</h2>
+                        <h2 className="text-h2 font-bold font-ppSupply text-ink">Challenges</h2>
                         <p className="text-body font-workSans text-ink  mt-4 leading-relaxed">
                             Designing FlyDex involved overcoming several key challenges:
                         </p>
@@ -179,7 +179,7 @@ function FlyDex() {
 
                     {/* What I Accomplished Section */}
                     <div className="p-8">
-                        <h2 className="text-h2 font-bold font-syne text-ink">What I Accomplished</h2>
+                        <h2 className="text-h2 font-bold font-ppSupply text-ink">What I Accomplished</h2>
                         <p className="text-body font-workSans text-ink  mt-4 leading-relaxed">
                             The design process for FlyDex led to several accomplishments:
                         </p>
@@ -201,7 +201,7 @@ function FlyDex() {
             {/* Identifying the Problem Section */}
             {/* <div className="container mx-auto bg-olivewhite rounded-md border border-redwood flex flex-col lg:flex-row items-center gap-12 py-16 px-4 sm:px-8" data-aos="fade-right">
                 <div className="lg:w-1/2 px-8 ">
-                    <h2 className="text-h2 font-syne font-bold text-ink mb-4">Identifying the Problem</h2>
+                    <h2 className="text-h2 font-ppSupply font-bold text-ink mb-4">Identifying the Problem</h2>
                     <p className="text-body font-workSans text-ink leading-relaxed">
                         FlyDex began with a simple observation: fly fishing is a beautiful and rewarding outdoor activity, but its steep learning curve makes it inaccessible to many beginners. Complex information, technical jargon, and scattered resources on outdated blogs and forums create frustration for newcomers. With no centralized, user-friendly platform catering specifically to beginner fly fishers, I saw an opportunity to bridge this gap.
                     </p>
@@ -218,7 +218,7 @@ function FlyDex() {
 
             {/* Target User Section */}
             <div className="container mx-auto py-16 px-4 sm:px-8" data-aos="fade-up">
-                <h2 className="text-h2 font-syne font-bold text-ink mb-4">Identifying the Problem</h2>
+                <h2 className="text-h2 font-ppSupply font-bold text-ink mb-4">Identifying the Problem</h2>
                 <div className="flex flex-col sm:flex-row gap-8 bg-olivewhite ">
 
                     <div className="sm:w-2/3">
@@ -242,7 +242,7 @@ function FlyDex() {
 
             {/* Target User Section */}
             <div className="container mx-auto py-16 px-4 sm:px-8" data-aos="fade-up">
-                <h2 className="text-h2 font-syne font-bold text-ink mb-4">Target User</h2>
+                <h2 className="text-h2 font-ppSupply font-bold text-ink mb-4">Target User</h2>
                 <div className="flex flex-col sm:flex-row gap-8 bg-olivewhite p-8 rounded-lg border border-sage">
                     <div className="sm:w-1/3">
                         <img
@@ -252,7 +252,7 @@ function FlyDex() {
                         />
                     </div>
                     <div className="sm:w-2/3">
-                        <h3 className="text-h3 font-syne font-bold text-ink mb-2">Meet Justin</h3>
+                        <h3 className="text-h3 font-ppSupply font-bold text-ink mb-2">Meet Justin</h3>
                         <p className="text-body font-workSans text-gray-700 leading-relaxed">
                             Justin, a 34-year-old outdoor enthusiast, exemplifies the challenges faced by beginners. Eager to learn but overwhelmed by the sheer volume of information and technicalities, he needed guidance. FlyDex was conceptualized as a digital companion, simplifying his learning process with structured lessons and intuitive resources, allowing him to progress at his own pace.
                         </p>
@@ -291,7 +291,7 @@ function FlyDex() {
                     />
                 </div>
                 <div className="lg:w-1/2 order-1 lg:order-2">
-                    <h2 className="text-h2 font-syne font-bold text-ink mb-4">Designing the Solution</h2>
+                    <h2 className="text-h2 font-ppSupply font-bold text-ink mb-4">Designing the Solution</h2>
                     <p className="text-body font-workSans text-ink  leading-relaxed">
                         FlyDex provides beginner-friendly tutorials, personalized equipment suggestions, and an
                         interactive map to locate fishing spots. The design process focused on creating an intuitive
@@ -303,7 +303,7 @@ function FlyDex() {
             {/* Features and Iterations Section */}
             <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 py-16 px-4 sm:px-8" data-aos="fade-right">
                 <div className="lg:w-1/2">
-                    <h2 className="text-h2 font-syne font-bold text-ink mb-4">Features & Iterations</h2>
+                    <h2 className="text-h2 font-ppSupply font-bold text-ink mb-4">Features & Iterations</h2>
                     <p className="text-body font-workSans text-ink  leading-relaxed">
                         The iterative process behind FlyDex focused on refining features to cater to both beginner and experienced anglers. Key highlights include:
                     </p>
@@ -344,7 +344,7 @@ function FlyDex() {
                     />
                 </div>
                 <div className="lg:w-1/2 order-1 lg:order-2">
-                    <h2 className="text-h2 font-syne font-bold text-ink mb-4">Reflecting on the Project</h2>
+                    <h2 className="text-h2 font-ppSupply font-bold text-ink mb-4">Reflecting on the Project</h2>
                     <p className="text-body font-workSans text-ink leading-relaxed">
                         FlyDex was an opportunity to create a meaningful, user-focused product. From concept to
                         execution, the project reinforced the importance of empathy in design and demonstrated how
@@ -355,7 +355,7 @@ function FlyDex() {
 
             {/* Conclusion Section */}
             <div className="container mx-auto justify-center flex flex-col items-center gap-12 py-16 px-4 sm:px-8" data-aos="fade-left">
-                <h1 className="text-h1 font-syne font-bold text-ink mb-4">Try out Flydex</h1>
+                <h1 className="text-h1 font-ppSupply font-bold text-ink mb-4">Try out Flydex</h1>
                 <FigmaEmbed />
             </div>
 

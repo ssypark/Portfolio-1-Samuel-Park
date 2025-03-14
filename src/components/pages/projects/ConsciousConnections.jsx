@@ -158,7 +158,7 @@ function ConsciousConnections() {
   {/* Bottom-Left Header */}
   <div className="text-left mb-8 z-10">
     <h1
-      className="text-h1 font-bold font-syne text-offwhite"
+      className="text-h1 font-bold font-ppSupply text-offwhite"
       data-aos="fade-up"
       data-aos-duration="1000"
       data-aos-delay="300"

@@ -65,7 +65,7 @@ function Work() {
                 
                         {/* Header Section */}
                         <div className="text-left  sm:text-center">
-                            <h1 className="text-hmax font-bold font-syne tracking-wide text-ink md:pt-24 sm:pt-4 amalgm-font">
+                            <h1 className="text-hmax font-bold font-ppSupply tracking-wide text-ink md:pt-24 sm:pt-4 amalgm-font">
                                 WORK & PROJECTS
                             </h1>
                         </div>
@@ -100,7 +100,7 @@ function Work() {
                 {/* Projects */}
                 <div id="featuredProjects">
                     <div className="w-full">
-                        <h2 className="text-h2 font-syne font-bold  mb-4 mt-0 text-ink flex pb-4 items-center">Current Projects </h2>
+                        <h2 className="text-h2 font-ppSupply font-bold  mb-4 mt-0 text-ink flex pb-4 items-center">Current Projects </h2>
                     </div>
                     <Portfolio />
                 </div>
