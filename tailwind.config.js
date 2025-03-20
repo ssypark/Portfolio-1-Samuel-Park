@@ -7,6 +7,7 @@ export default {
     extend: {
       colors: {
         olivewhite: '#F3F7F1',
+        neutral: '#E1E8DD',
         ink: '#24261B',
         sage: '#95ABAD',
         redwood: '#A84D1B',
