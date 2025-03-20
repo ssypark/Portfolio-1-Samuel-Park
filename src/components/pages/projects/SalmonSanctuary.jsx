@@ -13,7 +13,7 @@ import Contact from "../../Contact";
 // Image Imports
 import ssiIcon from "../../../assets/salmonsanctuary/ssi-icon.png";
 import ssiLogo from "../../../assets/salmonsanctuary/ssi-logo.png";
-import ssiMockup from "../../../assets/salmonsanctuary/ssi-mockup.png";
+import ssiMockup from "../../../assets/salmonsanctuary/mb-mockup-ssi.png";
 import ssiStyleGuide from "../../../assets/salmonsanctuary/ssi-styleguide.png";
 import ssiCompetitive from "../../../assets/salmonsanctuary/psf-screenshot.png";
 import siteMap from "../../../assets/salmonsanctuary/ssi-sitemap.png";
@@ -206,24 +206,37 @@ function SalmonSanctuary() {
             {/* Header Section */}
 
             <div className="relative min-h-screen p-8 bg-offwhite rounded-md shadow-md flex flex-col justify-between mb-32">
-                {/* Centered Logo and Header */}
-                <div className="flex items-center justify-center flex-grow">
-                    {/* Logo */}
-                    <div className="flex justify-center lg:justify-end p-8" data-aos="fade-left">
+                {/* Hero Section */}
+                <div className="flex flex-col lg:flex-row items-center justify-center text-left flex-grow gap-12">
+                    {/* Left Section: Logo and Mission Statement */}
+                    <div className="max-w-xl">
+                        {/* Logo */}
+                        <div className="mb-6">
+                            <img
+                                src={ssiLogo}
+                                alt="Salmon Sanctuary Logo"
+                                className="w-full h-auto object-contain"
+                            />
+                        </div>
+
+                        {/* Mission Statement */}
+                        <h1 className="text-h2 font-bold font-ppSupply text-ink">
+                            Turning Awareness into Action
+                        </h1>
+                        <p className="text-body text-ink mt-4">
+                            A thoughtfully designed platform that makes conservation accessible—helping users donate, volunteer, and advocate for Pacific salmon preservation.
+                        </p>
+                    </div>
+
+                    {/* Right Section: Mockup Image */}
+                    <div className="w-full max-w-3xl">
                         <img
-                            src={ssiIcon}
-                            alt="Salmon Sanctuary Icon"
-                            className="w-64 h-64 object-contain"
+                            src={ssiMockup}
+                            alt="Salmon Sanctuary Website Mockup"
+                            className="w-full object-contain"
                         />
                     </div>
-                    {/* Header */}
-                    <div data-aos="fade-right" className="text-left">
-                        <h1 className="text-h1 font-bold font-ppSupply text-ink">
-                            The Salmon Sanctuary
-                        </h1>
-                    </div>
                 </div>
-
                 {/* Role, Date, and Visit Website */}
                 <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8 p-8 border-t border-gray-300">
                     {/* Role and Date */}
@@ -273,7 +286,7 @@ function SalmonSanctuary() {
                 {/* Logo */}
                 <div className="lg:w-1/3 flex justify-center mb-8 lg:mb-0">
                     <img
-                        src={ssiLogo}
+                        src={ssiIcon}
                         alt="Salmon Sanctuary Logo"
                         className="rounded-lg mx-auto p-4 max-w-full h-auto"
                     />
@@ -291,11 +304,8 @@ function SalmonSanctuary() {
                 </div>
             </div>
 
-            {/* Mockup */}
-            <div className="mb-32">
-                <img src={ssiMockup} alt="Mockup image" className="rounded-lg shadow-md mx-auto" />
-            </div>
-
+            {/* Divider */}
+            <hr className="my-0 border-t border-gray-300" />
             {/* Add the sidebar and content wrapper */}
             <div className="flex max-w-container mx-auto md:gap-14 px-2 bg-olivewhite">
                 {/* Sidebar Navigation */}
@@ -324,7 +334,7 @@ function SalmonSanctuary() {
 
                 {/* Main Content */}
                 <div className="flex-1 space-y-20">
-                    <div className="relative bg-olivewhite border-l border-gray-500 mx-auto">
+                    <div className="relative bg-olivewhite border-l border-gray-500 mx-auto mt-24">
                         <section id="research">
                             {/* UX Research Section content including personas */}
                             <div className="container mx-auto px-4 sm:px-8 mb-32">
