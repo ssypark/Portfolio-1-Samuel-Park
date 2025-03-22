@@ -1,3 +1,5 @@
+import { p } from 'framer-motion/client';
+
 /** @type {import('tailwindcss').Config} */
 const plugin = require('tailwindcss/plugin');
 
@@ -8,10 +10,12 @@ export default {
       colors: {
         olivewhite: '#F3F7F1',
         neutral: '#E1E8DD',
+        oliveDark: '#6F7E67',
         ink: '#24261B',
         sage: '#95ABAD',
         redwood: '#A84D1B',
         offwhite: '#F3F1EE',
+        redOrange: '#D95F2C',
         florange: '#FF5B03',
         sand: '#ab9778',
       },
@@ -21,6 +25,7 @@ export default {
         tomarik: ['"tomarik-brush"', 'sans-serif'],
         ppObject: ['"PPObjectSans"', 'sans-serif'], 
         ppSupply: ['"PPSupplySans"', 'sans-serif'],
+        ppFraktion: ['"PPFraktionSans"', 'sans-serif'],
       },
       borderWidth: {
         DEFAULT: '2px',

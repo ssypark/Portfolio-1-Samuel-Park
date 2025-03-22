@@ -23,17 +23,17 @@ function ProjectShowcase({ image, title, description, tags, link }) {
                                         {/* Skill Pills */}
                     <div className="flex gap-2 mb-4 mt-2 flex-wrap">
                         {tags.map((tag, index) => (
-                            <span key={index} className="px-2 py-1 text-xs border-[1px] border-ink text-ink opacity-75 font-workSans rounded">
+                            <span key={index} className="px-2 py-1 text-sm border-[1px] border-ink text-ink opacity-90 font-ppFraktion rounded">
                                 {tag}
                             </span>
                         ))}
                     </div>
-                    <p className="mt-2 text-sm sm:text-body text-ink font-workSans opacity-75">{description}</p>
+                    <p className="mt-2 text-sm sm:text-body text-ink font-ppFraktion opacity-75">{description}</p>
 
                 </div>
                 {/* CTA */}
                 <div className="mt-6">
-                    <div className="flex items-center text-body gap-2 px-2 py-1 bg-olivewhite text-ink  font-ppSupply rounded border border-ink hover:bg-florange duration-300 w-max">
+                    <div className="flex items-center btn-grey gap-2 px-2 py-1 bg-olivewhite text-ink  font-ppSupply rounded border border-ink hover:bg-florange duration-300 w-max">
                         View Project <MdArrowOutward />
                     </div>
                 </div>

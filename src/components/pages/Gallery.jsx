@@ -102,7 +102,7 @@ function Gallery() {
                     href="/work"
                     className="btn-default mx-auto sm:mx-0"
                 >
-                    More Projects!
+                    See My Projects!
                 </a>
             </div>
 

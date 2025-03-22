@@ -34,12 +34,12 @@ function Header() {
                 </Link>
 
                 <nav className="relative flex justify-center w-full" aria-label="Primary Navigation">
-                    <ul className="list-none flex gap-8 font-syne font-semibold relative">
+                    <ul className="list-none flex gap-8 font-syne sm:text-xl font-semibold relative">
                         <li className="relative">
                             <NavLink
                                 to="/"
                                 className={({ isActive }) =>
-                                    isActive ? "text-ink px-4 py-1 rounded-full border border-ink relative active" : "text-ink px-4 py-1 rounded-full hover:text-florange"
+                                    isActive ? "text-ink px-4 py-1 rounded-full border border-ink relative active" : "text-ink px-4 py-1 rounded-full hover:text-redOrange"
                                 }
                             >
                                 Home
@@ -49,7 +49,7 @@ function Header() {
                             <NavLink
                                 to="/work"
                                 className={({ isActive }) =>
-                                    isActive ? "text-ink px-4 py-1 rounded-full border border-ink relative active" : "text-ink px-4 py-1 rounded-full hover:text-florange"
+                                    isActive ? "text-ink px-4 py-1 rounded-full border border-ink relative active" : "text-ink px-4 py-1 rounded-full hover:text-redOrange"
                                 }
                             >
                                 Work
@@ -59,7 +59,7 @@ function Header() {
                             <NavLink
                                 to="/art"
                                 className={({ isActive }) =>
-                                    isActive ? "text-ink px-4 py-1 rounded-full border border-ink relative active" : "text-ink px-4 py-1 rounded-full hover:text-florange"
+                                    isActive ? "text-ink px-4 py-1 rounded-full border border-ink relative active" : "text-ink px-4 py-1 rounded-full hover:text-redOrange"
                                 }
                             >
                                 Art
@@ -69,7 +69,7 @@ function Header() {
                             <NavLink
                                 to="/about"
                                 className={({ isActive }) =>
-                                    isActive ? "text-ink px-4 py-1 rounded-full border border-ink relative active" : "text-ink px-4 py-1 rounded-full hover:text-florange"
+                                    isActive ? "text-ink px-4 py-1 rounded-full border border-ink relative active" : "text-ink px-4 py-1 rounded-full hover:text-redOrange"
                                 }
                             >
                                 About

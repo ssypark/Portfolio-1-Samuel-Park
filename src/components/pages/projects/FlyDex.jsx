@@ -210,14 +210,14 @@ function FlyDex() {
                                 {activeSection === topic.id && (
                                     <div
                                         ref={(el) => bulletRefs.current[topic.id] = el}
-                                        className="absolute -left-2 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-redwood border-2 border-redwood origin-center"
+                                        className="absolute -left-2 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-redOrange border-2 border-redOrange origin-center"
                                     ></div>
                                 )}
                                 <a
                                     href={`#${topic.id}`}
                                     onClick={(e) => handleScroll(e, topic.id)}
-                                    className={`sidebar pl-2 text-gray-500 group-hover:text-redwood transition-all duration-300 text-lg relative
-                                        ${activeSection === topic.id ? 'text-redwood font-bold translate-x-2' : 'hover:translate-x-1'}`}
+                                    className={`sidebar pl-2 text-gray-500 group-hover:text-redOrange transition-all duration-300 text-lg relative
+                                        ${activeSection === topic.id ? 'text-redOrange font-bold translate-x-2' : 'hover:translate-x-1'}`}
                                 >
                                     {topic.label}
                                 </a>
@@ -245,19 +245,19 @@ function FlyDex() {
                                         </h3>
                                         <ul className="list-none space-y-3">
                                             <li className="flex items-start gap-2">
-                                                <span className="text-redwood font-bold">•</span>
+                                                <span className="text-redOrange font-bold">•</span>
                                                 <span className="text-body  text-gray-700">
                                                     Overwhelming complexity for beginners
                                                 </span>
                                             </li>
                                             <li className="flex items-start gap-2">
-                                                <span className="text-redwood font-bold">•</span>
+                                                <span className="text-redOrange font-bold">•</span>
                                                 <span className="text-body  text-gray-700">
                                                     Disorganized and outdated online information
                                                 </span>
                                             </li>
                                             <li className="flex items-start gap-2">
-                                                <span className="text-redwood font-bold">•</span>
+                                                <span className="text-redOrange font-bold">•</span>
                                                 <span className="text-body  text-gray-700">
                                                     Lack of beginner-friendly digital resources
                                                 </span>
@@ -293,9 +293,9 @@ function FlyDex() {
                                     <p className="text-body  text-gray-700 leading-relaxed">
                                         Justin, a 34-year-old outdoor enthusiast new to fly fishing, represents FlyDex's primary user group. Enthusiastic but frustrated by scattered online resources and the absence of structured guidance, Justin needed a user-friendly companion to streamline his learning experience and build his confidence in fly fishing.
                                     </p>
-                                    <div className="bg-neutral border-l-4 border-redwood p-6 my-8 rounded-r-lg">
+                                    <div className="bg-neutral border-l-4 border-redOrange p-6 my-8 rounded-r-lg">
                                         <blockquote className="relative">
-                                            <span className="text-redwood text-4xl absolute -top-4 left-0">"</span>
+                                            <span className="text-redOrange text-4xl absolute -top-4 left-0">"</span>
                                             <p className="text-body text-ink italic pl-6 mb-2">
                                                 I love the idea of fly fishing, but I have no clue where to start. Every website I visit confuses me more.
                                             </p>
@@ -351,25 +351,25 @@ function FlyDex() {
                                 </p>
                                 <ul className="list-none space-y-3">
                                     <li className="flex items-start gap-2">
-                                        <span className="text-redwood font-bold">•</span>
+                                        <span className="text-redOrange font-bold">•</span>
                                         <span className="text-body text-ink">
                                             Simplify complex fly fishing techniques and information
                                         </span>
                                     </li>
                                     <li className="flex items-start gap-2">
-                                        <span className="text-redwood font-bold">•</span>
+                                        <span className="text-redOrange font-bold">•</span>
                                         <span className="text-body text-ink">
                                             Support intuitive navigation and exploration
                                         </span>
                                     </li>
                                     <li className="flex items-start gap-2">
-                                        <span className="text-redwood font-bold">•</span>
+                                        <span className="text-redOrange font-bold">•</span>
                                         <span className="text-body text-ink">
                                             Create a serene yet adventurous visual identity
                                         </span>
                                     </li>
                                     <li className="flex items-start gap-2">
-                                        <span className="text-redwood font-bold">•</span>
+                                        <span className="text-redOrange font-bold">•</span>
                                         <span className="text-body text-ink">
                                             Empower users through practical guidance and personalized tools
                                         </span>
@@ -390,7 +390,7 @@ function FlyDex() {
 
                                     <div className="space-y-6">
                                         <div className="flex items-start gap-3">
-                                            <span className="text-redwood font-bold text-xl">•</span>
+                                            <span className="text-redOrange font-bold text-xl">•</span>
                                             <div>
                                                 <h3 className="text-h5 font-bold text-ink mb-2">Calm, Earthy Colors</h3>
                                                 <p className="text-body text-ink">
@@ -400,7 +400,7 @@ function FlyDex() {
                                         </div>
 
                                         <div className="flex items-start gap-3">
-                                            <span className="text-redwood font-bold text-xl">•</span>
+                                            <span className="text-redOrange font-bold text-xl">•</span>
                                             <div>
                                                 <h3 className="text-h5 font-bold text-ink mb-2">Clean Typography</h3>
                                                 <p className="text-body text-ink">
@@ -410,7 +410,7 @@ function FlyDex() {
                                         </div>
 
                                         <div className="flex items-start gap-3">
-                                            <span className="text-redwood font-bold text-xl">•</span>
+                                            <span className="text-redOrange font-bold text-xl">•</span>
                                             <div>
                                                 <h3 className="text-h5 font-bold text-ink mb-2">Minimalistic Icons & Illustrations</h3>
                                                 <p className="text-body text-ink">
@@ -509,7 +509,7 @@ function FlyDex() {
 
                                 <div className="space-y-6 mb-8">
                                     <div className="flex items-start gap-3">
-                                        <span className="text-redwood font-bold text-xl">•</span>
+                                        <span className="text-redOrange font-bold text-xl">•</span>
                                         <div>
                                             <h3 className="text-h5 font-bold text-ink mb-2"><strong>Start with User Pain Points</strong></h3>
                                             <p className="text-body text-ink">
@@ -519,7 +519,7 @@ function FlyDex() {
                                     </div>
 
                                     <div className="flex items-start gap-3">
-                                        <span className="text-redwood font-bold text-xl">•</span>
+                                        <span className="text-redOrange font-bold text-xl">•</span>
                                         <div>
                                             <h3 className="text-h5 font-bold text-ink mb-2"><strong>Clarity is Crucial</strong></h3>
                                             <p className="text-body text-ink">
@@ -529,7 +529,7 @@ function FlyDex() {
                                     </div>
 
                                     <div className="flex items-start gap-3">
-                                        <span className="text-redwood font-bold text-xl">•</span>
+                                        <span className="text-redOrange font-bold text-xl">•</span>
                                         <div>
                                             <h3 className="text-h5 font-bold text-ink mb-2"><strong>Iterate on User Feedback</strong></h3>
                                             <p className="text-body text-ink">

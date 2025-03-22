@@ -73,34 +73,34 @@ function Home() {
                 </Helmet>
                 <div className="absolute inset-0 w-full min-h-screen z-5" >
                             <Particles
-                                particleColors={['#24261B', '#24261B']}
-                                particleCount={500}
+                                particleColors={['#24261B']}
+                                particleCount={200}
                                 particleSpread={10}
                                 speed={0.1}
-                                particleBaseSize={200}
-                                moveParticlesOnHover={true}
+                                particleBaseSize={300}
+                                moveParticlesOnHover={false}
                                 alphaParticles={false}
-                                disableRotation={false}
+                                disableRotation={true}
                             />
                         </div>
                 {/* Main Content */}
                 <div className="container py-24 md:pt-32 mx-auto">
 
-                    {/* Hero Section */}
-                    <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center  text-ink">
-                        <div className="flex flex-col md:flex-row items-center md:items-start text-left space-y-8 md:space-y-0 md:space-x-8 z-0 mb-12" data-aos="zoom-in">
+                {/* Hero Section */}
+                <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center text-ink pointer-events-none" data-aos="zoom-in">
+                        <div className="flex flex-col md:flex-row items-center md:items-start text-left space-y-8 md:space-y-0 md:space-x-8 z-0 mb-12 pointer-events-none" data-aos="zoom-in">
                             {/* <img
                                 className="logo w-36 sm:w-72 mr-8"
                                 src={logo}
                                 alt="Samuel Park Logo"
                             /> */}
 
-                            <div className="text-left">
-                                <p className="sm:text-h3 font-ppSupply max-w-2xl ">
+                            <div className="text-left z-0 pointer-events-none">
+                                <p className="sm:text-h3 font-ppSupply max-w-2xl pointer-events-none">
                                     Hello, I'm
                                 </p>
                                 <img className="w-128 pointer-events-none z-0" src={name} alt="Samuel Park" />
-                                <p className="sm:text-h1 text-right  font-ppSupply" data-aos="fade-up" data-aos-delay="800">
+                                <p className="sm:text-h1 text-right font-ppSupply pointer-events-none" data-aos="fade-up" data-aos-delay="800">
                                     Product Designer & Visual Artist </p>
                                 {/* <p className="sm:text-h5 max-w-2xl font-workSans">
                                     I'm a UI and visual designer with a
@@ -136,7 +136,7 @@ function Home() {
 
                         {/* Hero Frog */}
                         <img
-                            className="hero-frog w-16 h-16 absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10"
+                            className="hero-frog w-16 h-16 absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10 pointer-events-auto"
                             src={arrowDown}
                             alt="Down Arrow"
                             title="Jump to Featured Projects"

@@ -117,7 +117,7 @@ function Work() {
                         src={arrowSide}
                         alt="side arrow"
                     />
-                    <button className="btn-default mx-auto sm:mx-0">
+                    <button className="btn-grey">
                         View My Artwork!
                     </button>
                 </div>
