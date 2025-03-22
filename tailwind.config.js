@@ -77,6 +77,22 @@ export default {
         '.btn-default:hover': {
           backgroundColor: '#FF5B03', /* hover:bg-florange */
         },
+        '.btn-grey': {
+          padding: '0.5rem 1rem', 
+          backgroundColor: '#E1E8DD', 
+          color: '#24261B', 
+          fontFamily: '"PPSupplySans", sans-serif', 
+          fontSize: 'clamp(0.875rem, 2.5vw, 1.25rem)',
+          fontWeight: 'regular',
+          borderWidth: '2px', 
+          borderColor: '#24261B',
+          borderRadius: '8px', 
+          position: 'relative',
+          transition: 'background-color 0.3s ease-in-out', 
+        },
+        '.btn-grey:hover': {
+          backgroundColor: '#FF5B03', /* hover:bg-florange */
+        },
       });
     }),
   ],

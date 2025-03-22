@@ -40,7 +40,7 @@ import wireframe7 from "../../../assets/salmonsanctuary/wireframe7.png";
 import wireframe8 from "../../../assets/salmonsanctuary/wireframe8.png";
 import wireframe9 from "../../../assets/salmonsanctuary/wireframe9.png";
 import wireframe10 from "../../../assets/salmonsanctuary/wireframe10.png";
-import logoBlack from "../../../assets/logo-darkblack.svg";
+
 
 // Animation Imports
 import { initSideFrogAnimation } from "../../animations/animations";
@@ -179,6 +179,10 @@ function SalmonSanctuary() {
         });
     };
 
+
+
+
+    
     return (
         <div className="relative mt-18 px-4 sm:px-8 bg-olivewhite">
             {/* Metadata */}
@@ -205,7 +209,7 @@ function SalmonSanctuary() {
 
             {/* Header Section */}
 
-            <div className="relative min-h-screen p-8 bg-offwhite rounded-md shadow-md flex flex-col justify-between mb-32">
+            <div className="relative min-h-screen p-8 bg-neutral rounded-md border-2 border-ink flex flex-col justify-between mb-32">
                 {/* Hero Section */}
                 <div className="flex flex-col lg:flex-row items-center justify-center text-left flex-grow gap-12">
                     {/* Left Section: Logo and Mission Statement */}
@@ -229,7 +233,7 @@ function SalmonSanctuary() {
                     </div>
 
                     {/* Right Section: Mockup Image */}
-                    <div className="w-full max-w-3xl">
+                    <div className="w-full max-w-6xl" data-aos="fade-up">
                         <img
                             src={ssiMockup}
                             alt="Salmon Sanctuary Website Mockup"
@@ -274,7 +278,7 @@ function SalmonSanctuary() {
                             href="https://salmonsanctuary.sampark.ca/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center text-sm gap-2 px-2 py-1 bg-olivewhite text-ink font-bold font-ppSupply border border-ink rounded hover:shadow-xl hover:bg-florange transition-shadow duration-300 w-max"
+                            className="flex items-center text-body gap-2 px-8 py-4 bg-olivewhite text-ink font-bold font-ppSupply border border-ink rounded hover:shadow-xl hover:bg-florange transition-shadow duration-300 w-max"
                         >
                             VISIT WEBSITE <MdArrowOutward />
                         </a>
@@ -306,6 +310,7 @@ function SalmonSanctuary() {
 
             {/* Divider */}
             <hr className="my-0 border-t border-gray-300" />
+
             {/* Add the sidebar and content wrapper */}
             <div className="flex max-w-container mx-auto md:gap-14 px-2 bg-olivewhite">
                 {/* Sidebar Navigation */}
@@ -333,11 +338,11 @@ function SalmonSanctuary() {
                 </div>
 
                 {/* Main Content */}
-                <div className="flex-1 space-y-20">
-                    <div className="relative bg-olivewhite border-l border-gray-500 mx-auto mt-24">
+                <div className="flex-1 ">
+                    <div className="relative bg-olivewhite  border-gray-500 mx-auto ">
                         <section id="research">
                             {/* UX Research Section content including personas */}
-                            <div className="container mx-auto px-4 sm:px-8 mb-32">
+                            <div className="container mx-auto px-4 sm:px-8 mb-32 mt-24">
                                 {/* UX Research Header */}
                                 <h2 className="text-h1 font-ppSupply font-bold text-ink mb-12">Understanding the Users</h2>
 
@@ -441,14 +446,14 @@ function SalmonSanctuary() {
                                 data-aos-duration="500"
                                 data-aos-easing="ease-in-out"
                             >
-                                <div className="flex items-center gap-6 mb-6">
+                                <div className="flex flex-col md:flex-row items-center gap-6 mb-6">
                                     <img
                                         src={mayaPatel}
                                         alt="Maya Patel"
                                         className="w-72 h-72 rounded-full border-2 border-ink object-cover"
                                     />
                                     <div>
-                                        <h3 className="text-h4 font-ppSupply font-bold mb-2">The Environmental Activist</h3>
+                                        <h3 className="text-h4 font-ppSupply font-bold mb-2">Maya - The Environmental Activist</h3>
                                         <p className="text-body leading-relaxed">
                                             Maya Patel, a 27-year-old environmental activist, is deeply passionate about protecting the planet and advocating for sustainability. She often finds herself seeking ways to make a meaningful impact on environmental issues and inspire others to join her cause.
                                         </p>
@@ -463,7 +468,14 @@ function SalmonSanctuary() {
                                     >
                                         <h4 className="text-h5 font-bold font-ppSupply text-left">Her Journey</h4>
                                         <span className={`transform transition-transform ${openAccordions['journey'] ? 'rotate-180' : ''}`}>
-                                            ▼
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="w-8 h-8"
+                                                viewBox="0 0 20 20"
+                                                fill="currentColor"
+                                            >
+                                                <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                                            </svg>
                                         </span>
                                     </button>
 
@@ -483,9 +495,14 @@ function SalmonSanctuary() {
                                         className="w-full flex justify-between items-center p-4 bg-neutral rounded-lg border-2 hover:border-redwood transition-colors"
                                     >
                                         <h4 className="text-h5 font-bold font-ppSupply text-left">The Result</h4>
-                                        <span className={`transform transition-transform ${openAccordions['result'] ? 'rotate-180' : ''}`}>
-                                            ▼
-                                        </span>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            className="w-8 h-8"
+                                            viewBox="0 0 20 20"
+                                            fill="currentColor"
+                                        >
+                                            <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                                        </svg>
                                     </button>
 
                                     {openAccordions['result'] && (
@@ -510,7 +527,7 @@ function SalmonSanctuary() {
                                 <h3 className="text-h4 font-ppSupply font-bold text-ink mb-4">User Flow & Site Map</h3>
 
                                 {/* Description */}
-                                <p className="text-body  text-ink leading-relaxed mb-24">
+                                <p className="text-body  text-ink leading-relaxed mb-16">
                                     A well-structured website is key to ensuring users find what they need quickly and take action effortlessly. By refining the information architecture, I eliminated friction points that could cause users to drop off before donating, volunteering, or learning more about salmon conservation.
                                 </p>
 
@@ -610,7 +627,9 @@ function SalmonSanctuary() {
                                         />
                                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
                                         <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            <button className="px-6 py-3 bg-redwood text-ink text-lg font-bold rounded border-ink border-2 hover:scale-105 transform transition-transform duration-300">
+                                        <button className="px-6 py-3 bg-florange text-ink text-lg font-bold rounded border-ink border-2 
+                   hover:bg-ink hover:text-florange hover:border-florange 
+                   transform transition-all duration-300 ease-out hover:scale-105">
                                                 View Style Guide
                                             </button>
                                         </div>
@@ -631,7 +650,9 @@ function SalmonSanctuary() {
                                         />
                                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
                                         <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            <button className="px-6 py-3 bg-redwood text-ink text-lg font-bold rounded border-ink border-2 hover:scale-105 transform transition-transform duration-300">
+                                            <button className="px-6 py-3 bg-florange text-ink text-lg font-bold rounded border-ink border-2 
+                   hover:bg-ink hover:text-florange hover:border-florange 
+                   transform transition-all duration-300 ease-out hover:scale-105">
                                                 View Wireframes
                                             </button>
                                         </div>
@@ -641,11 +662,12 @@ function SalmonSanctuary() {
                         </section>
                         {/* Divider */}
                         <hr className="my-16 border-t border-gray-300" />
+
                         <section id="conclusion">
                             {/* Closing Thoughts Section */}
-                            <div className="container mx-auto px-4 sm:px-8 mb-32">
+                            <div className="container mx-auto px-4 sm:px-8 pb-16 ">
                                 <h2 className="text-h1 font-ppSupply font-bold text-ink mb-4">Reflections & Next Steps</h2>
-                                <div className="container mx-auto px-4 pt-8 pb-16 sm:px-8 mb-16  rounded-md border-2 border-ink bg-neutral">
+                                <div className="container mx-auto px-4 pt-8 pb-16 sm:px-8  rounded-md border-2 border-ink bg-neutral">
                                     <h2 className="text-h1 font-ppSupply font-bold text-ink mb-6"></h2>
                                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                                         {/* What I Learned */}

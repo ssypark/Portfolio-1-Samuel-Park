@@ -39,7 +39,7 @@ const topics = [
 ];
 
 function Amalgm() {
-    
+
     useEffect(() => {
         AOS.init({
             duration: 500,
@@ -57,12 +57,12 @@ function Amalgm() {
 
         //HIGHLIGHTING ACTIVE SECTION
         const highlightSection = () => { // then I created a function to highlight the active section
-            sections.forEach((section) => { 
+            sections.forEach((section) => {
                 // rect is the position of each section in the viewport used to check if the section is in the viewport
                 // getBoundingClientRect() returns the size of an element and its position relative to the viewport
-                const rect = section.getBoundingClientRect(); 
+                const rect = section.getBoundingClientRect();
                 // sectionId is set to the id of each section
-                const sectionId = section.getAttribute("id"); 
+                const sectionId = section.getAttribute("id");
                 // here, this checks if the section is in the viewport by comparing the top and bottom of the section with the top and bottom of the viewport
                 if (rect.top <= window.innerHeight * 0.3 && rect.bottom >= window.innerHeight * 0.3) {
                     setActiveSection(sectionId);
@@ -89,12 +89,12 @@ function Amalgm() {
                     gsap.fromTo(
                         bulletEl,
                         {
-                            x: -20, 
+                            x: -20,
                             opacity: 0,
                             scale: 0.5
                         },
                         {
-                            x: 0,   
+                            x: 0,
                             opacity: 1,
                             scale: 1.25,
                             duration: 0.6,
@@ -201,13 +201,14 @@ function Amalgm() {
                     </div>
                     {/* Header */}
                     <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="3000" className="text-center pb-12">
-                        <h1 className="text-h1 font-bold font-tomarik text-ink">
-                            Collaborative Branding & Sustainability
-                        </h1>
+                        <h2 className="text-h1 font-bold font-ppSupply text-ink">
+                        A Collaborative Brand Identity
+                        </h2>
+                        <h2 className="text-h4 font-bold font-ppSupply mt-16 text-ink">
+                        How can branding celebrate individuality while maintaining cohesion?
+                        </h2>
                         <p className="text-lg mt-4 text-gray-700 max-w-3xl mx-auto">
-                            A deep dive into how Amalgm integrates artistic expression and environmental consciousness
-                            into a seamless branding experience. This project highlights collaboration, creativity, and
-                            individuality.
+                        Amalgm was created to explore this challenge—developing a flexible yet structured brand system that balances creative expression, sustainability, and artistic collaboration. The goal was to craft an identity that feels raw yet refined, allowing artists to showcase their work while keeping the brand recognizable across digital, print, and merchandise applications.
                         </p>
                     </div>
                 </div>
@@ -217,19 +218,19 @@ function Amalgm() {
                     {/* Role and Date */}
                     <div className="flex flex-col sm:flex-row gap-8 text-ink">
                         <div>
-                            <h2 className="text-body font-workSans font-bold">Role</h2>
+                            <h2 className="text-body  font-bold">Role</h2>
                             <p className="text-base">Brand Designer<br />Creative Strategist</p>
                         </div>
                         <div>
-                            <h2 className="text-body font-workSans font-bold">Date</h2>
+                            <h2 className="text-body  font-bold">Date</h2>
                             <p className="text-base">2024</p>
                         </div>
                         <div>
-                            <h2 className="text-body font-workSans font-bold">Duration</h2>
+                            <h2 className="text-body  font-bold">Duration</h2>
                             <p className="text-base">44 Hours</p>
                         </div>
                         <div>
-                            <h2 className="text-body font-workSans font-bold">Tools</h2>
+                            <h2 className="text-body  font-bold">Tools</h2>
                             <p className="text-base">
                                 Adobe Photoshop
                                 <br />
@@ -255,14 +256,12 @@ function Amalgm() {
                 </div>
             </div>
 
-            <div className=" mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 px-12 py-16 border-b border-ink">
+            <div className="container max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 px-8 py-16 border-ink">
                 {/* Left Column: Project Overview */}
                 <div className="lg:col-span-1 p-8 bg-olivewhite border border-ink rounded-md" data-aos="fade-left">
-                    <h2 className="text-h2 font-bold font-tomarik text-ink">Project Overview</h2>
-                    <p className="text-body font-workSans text-ink mt-4 leading-relaxed">
-                        Amalgm is a branding project that explores <strong>the intersection of creativity, sustainability, and individuality</strong>.
-                        Designed as a <strong>collaborative and expressive identity</strong>, it embodies a raw yet polished aesthetic, allowing artists
-                        to showcase their work in a way that feels <strong>organic, bold, and adaptive</strong>.
+                    <h2 className="text-h2 font-bold font-ppSupply text-ink">Project Overview</h2>
+                    <p className="text-body text-ink mt-4 leading-relaxed">
+                    Amalgm is a conceptual branding project that merges artistic freedom with a cohesive identity. Inspired by creative collectives and eco-conscious design, it was built to be modular and adaptive, ensuring it could scale across print, digital, and product applications without losing its essence.
                     </p>
                 </div>
 
@@ -270,27 +269,33 @@ function Amalgm() {
                 <div className="lg:col-span-2 space-y-4 rounded-md bg-olivewhite">
                     {/* Challenges Section */}
                     <div className="p-8">
-                        <h2 className="text-h2 font-bold font-tomarik text-ink">Challenges</h2>
-                        <p className="text-body font-workSans text-ink mt-4 leading-relaxed">
-                            Crafting Amalgm's branding identity required solving <strong>key design challenges</strong>:
+                        <h2 className="text-h2 font-bold font-ppSupply text-ink">Challenges & Approach</h2>
+                        <p className="text-h5  text-ink mt-8 leading-relaxed">
+                            <strong>Balancing Structure & Expression</strong>
                         </p>
-                        <ul className="list-disc pl-5 mt-6 space-y-3 text-ink">
-                            <li>
-                                Balancing <strong>artistic freedom with brand cohesion</strong>, ensuring the visual system remained adaptable while still recognizable.
-                            </li>
-                            <li>
-                                Designing a <strong>typography and logo system</strong> that feels expressive yet structured, without overpowering individual artists’ work.
-                            </li>
-                            <li>
-                                Creating branding elements that seamlessly integrate across <strong>digital, print, and merchandise applications</strong>.
-                            </li>
-                        </ul>
+                        <p className="text-body  text-ink mt-2 leading-relaxed">
+                        A key challenge was creating a visual system that adapts to individual artists’ styles while keeping Amalgm’s brand recognizable. I explored modular typography, adaptable layouts, and flexible brand assets to achieve this.
+                        </p>
+
+                        <p className="text-h5  text-ink mt-8 leading-relaxed">
+                            <strong>Creating a Distinct Yet Versatile Logo</strong>
+                        </p>
+                        <p className="text-body  text-ink mt-2 leading-relaxed">
+                        The logo needed to feel bold yet organic, reflecting Amalgm’s identity as both an artistic and sustainable brand. Through hand-drawn iterations and refined vector work, I crafted a mark that represents connection, individuality, and fluidity.
+                        </p>
+
+                        <p className="text-h5  text-ink mt-8 leading-relaxed">
+                            <strong>Seamless Cross-Platform Integration</strong>
+                        </p>
+                        <p className="text-body  text-ink mt-2 leading-relaxed">
+                        A strong brand lives beyond a logo. The system had to be scalable—working across apparel, packaging, and digital media. I tested the identity across real-world applications to ensure consistency and impact across all touchpoints.
+                        </p>
                     </div>
 
                     {/* What I Accomplished Section */}
-                    <div className="p-8">
-                        <h2 className="text-h2 font-bold font-tomarik text-ink">What I Accomplished</h2>
-                        <p className="text-body font-workSans text-ink mt-4 leading-relaxed">
+                    {/* <div className="p-8">
+                        <h2 className="text-h2 font-bold font-ppSupply text-ink">What I Accomplished</h2>
+                        <p className="text-body  text-ink mt-4 leading-relaxed">
                             Through this project, I developed a <strong>brand system</strong> that is both structured and flexible:
                         </p>
                         <ul className="list-disc pl-5 mt-6 space-y-3 text-ink">
@@ -307,9 +312,13 @@ function Amalgm() {
                                 Integrated <strong>sustainable design principles</strong> into branding decisions, ensuring that the brand message aligns with eco-conscious production and ethical practices.
                             </li>
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
             </div>
+
+            {/* Divider */}
+            <hr className="my-0 border-t border-ink" />
+
 
             <div className="flex max-w-container mx-auto md:gap-14 px-8 bg-olivewhite">
 
@@ -362,9 +371,11 @@ function Amalgm() {
 
                     <div className="relative bg-olivewhite border-l border-gray-500 mx-auto">
 
-
+                    <h3 className="p-8 text-hmax font-ppSupply text-gray-900 mb-4 text-left">
+                                            Design Process
+                                        </h3>
                         {/* Inspiration and Ideation */}
-                        <section id="ideation" className="min-h-screen pt-24">
+                        <section id="ideation" className="min-h-screen pt-16">
                             <div className="mb-16 px-8">
                                 {/* Content Wrapper */}
 
@@ -373,18 +384,18 @@ function Amalgm() {
 
                                     <div className="">
                                         {/* Header */}
-                                        <h3 className="text-h2 font-tomarik text-gray-900 mb-4 text-left">
+                                        <h3 className="text-h1 font-ppSupply text-gray-900 mb-4 text-left">
                                             1. Inspiration and Ideation
                                         </h3>
-                                        <p className="text-gray-800 text-body font-workSans leading-relaxed mb-8">
+                                        <p className="text-gray-800 text-body  leading-relaxed mb-8">
                                             Amalgm was conceived as a personal project to explore branding at the intersection of creativity and sustainability. During the brainstorming phase, I imagined a brand that celebrates individuality while fostering collaboration between artists and eco-conscious consumers. Concepts were sketched, and mood boards were created to envision a cohesive story and aesthetic for the brand.
                                         </p>
                                     </div>
 
                                     {/* Slider Section */}
                                     <div className="">
-                                        <div className="p-4 flex justify-center">
-                                            <div className="w-full max-w-screen-md mt-16 h-256">
+                                        <div className="p-0 flex justify-center">
+                                            <div className="w-full max-w-screen-xl mt-16 h-256">
                                                 <Slider {...sliderSettings}>
                                                     {/* Slide 1 */}
                                                     <div className="h-full flex items-center justify-center">
@@ -427,24 +438,24 @@ function Amalgm() {
 
                         {/* Crafting the Visual Identity */}
                         <section id="crafting" className="">
-                            <div className="mb-2 px-8">
+                            <div className="mb-16 px-8">
                                 {/* Content Wrapper */}
-                                <div className="  mx-auto">
+                                <div className="max-w-screen-2xl mx-auto">
                                     {/* Text Section */}
                                     <div className="">
                                         {/* Header */}
-                                        <h3 className="text-h2 font-tomarik text-gray-900 mb-4 text-left">
+                                        <h3 className="text-h1 font-ppSupply text-gray-900 mb-4 text-left">
                                             2. Crafting the Visual Identity
                                         </h3>
-                                        <p className="text-gray-800 text-body font-workSans leading-relaxed mb-8">
+                                        <p className="text-gray-800 text-body leading-relaxed mb-8">
                                             The logo design was inspired by themes of connection and collaboration. Typography choices balanced boldness and elegance, reflecting the brand's vision of individuality and professionalism. The earthy yet vibrant color palette symbolized the intersection of sustainability and creative energy, resulting in a unified and distinctive visual identity.
                                         </p>
                                     </div>
 
                                     {/* Slider Section */}
                                     <div className="">
-                                        <div className="p-4  justify-center">
-                                            <div className="w-full max-w-screen-md mx-auto pt-16 h-256">
+                                        <div className="p-4 justify-center">
+                                        <div className="w-full mx-auto max-w-screen-xl mt-16 h-256">
                                                 <Slider {...sliderSettings}>
                                                     {/* Slide 1 */}
                                                     <div className="h-full flex items-center justify-center">
@@ -491,8 +502,8 @@ function Amalgm() {
                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-screen-2xl mx-auto">
                                     {/* Text Section */}
                                     <div className="lg:col-span-2 lg:mb-0">
-                                        <h3 className="text-h1 font-tomarik text-gray-900 mb-4">3. Prototyping and Mockups</h3>
-                                        <p className="text-gray-800 text-body font-workSans leading-relaxed mb-8">
+                                        <h3 className="text-h1 font-ppSupply text-gray-900 mb-4">3. Prototyping and Mockups</h3>
+                                        <p className="text-gray-800 text-body  leading-relaxed mb-8">
                                             To bring the concept to life, I developed mockups showcasing how Amalgm's branding could translate across various applications. From product labels and apparel tags to digital advertisements, these prototypes demonstrated the flexibility and cohesiveness of the brand's visual identity.
                                         </p>
                                     </div>
@@ -522,9 +533,9 @@ function Amalgm() {
                             {/* Reflecting on the Project */}
                             <div className="flex flex-col gap-4 mb-24 items-center">
                                 <div className="max-w-screen-md text-center lg:text-left">
-                                    <h3 className="text-h1 font-tomarik text-gray-900 mb-4">4. Reflecting on the Project</h3>
-                                    <p className="text-gray-800 text-body font-workSans leading-relaxed">
-                                        Although Amalgm is a conceptual project, it allowed me to explore the complete branding process—from ideation to execution. Through this experience, I gained valuable insights into creating a cohesive brand narrative and visual identity while enhancing my skills in storytelling, design, and mockup creation.
+                                    <h3 className="text-h1 font-ppSupply text-gray-900 mb-4">4. Reflecting on the Project</h3>
+                                    <p className="text-gray-800 text-body  leading-relaxed">
+                                    Amalgm challenged me to think beyond just aesthetics—to design for flexibility, cohesion, and real-world application. This project reinforced the importance of modular brand systems, scalable identity design, and storytelling through visuals.
                                     </p>
                                 </div>
                                 <img
@@ -532,7 +543,7 @@ function Amalgm() {
                                     alt="Reflection and Learnings"
                                     className="animate-wiggle w-[30%] mx-auto"
                                 />
-                                <p className="text-center mt-4 text-body font-workSans">Thank you for reading!</p>
+                                <p className="text-center mt-4 text-body ">Thank you for reading!</p>
                             </div>
                         </section>
                     </div>
