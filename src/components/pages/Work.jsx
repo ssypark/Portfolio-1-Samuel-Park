@@ -117,9 +117,12 @@ function Work() {
                         src={arrowSide}
                         alt="side arrow"
                     />
-                    <button className="btn-grey">
-                        View My Artwork!
-                    </button>
+                    <a
+                    href="/art"
+                    className="btn-grey mx-auto sm:mx-0"
+                >
+                    See My Artwork!
+                </a>
                 </div>
 
                 {/* Contact Section */}

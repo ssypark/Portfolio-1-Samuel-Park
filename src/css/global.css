@@ -1,14 +1,28 @@
-:root {
-    --header-font: 'PPSupplySans', sans-serif;
-    --header-font-weight: 800;
-    --body-font-family: 'PPFraktionSans', sans-serif;
-    --body-font-weight: 400;
-}
 /* Font Imports */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Teko:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Teko:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url("https://use.typekit.net/brb8uki.css");
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Syne+Mono&display=swap');
+
+
+:root {
+    --header-font: 'PPSupplySans', sans-serif;
+    --header-font-weight: 800;
+    --body-font-family: 'PPFraktionSans', sans-serif;
+    --body-font-weight: 400;
+
+     /* Color Variables */
+  --olivewhite: #F3F7F1;
+  --neutral: #E1E8DD;
+  --oliveDark: #6F7E67;
+  --ink: #24261B;
+  --sage: #95ABAD;
+  --redwood: #A84D1B;
+  --offwhite: #F3F1EE;
+  --redOrange: #D95F2C;
+  --florange: #FF5B03;
+  --sand: #ab9778;
+}
 
 
 
@@ -53,10 +67,6 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: var(--header-font-weight);
 }
 
-.font-tomarik {
-    font-family: "tomarik-brush", sans-serif;
-}
-
 .custom-thumbnail {
     width: 100px; /* Adjust the width as needed */
     height: auto; /* Maintain the aspect ratio */
@@ -66,5 +76,5 @@ h1,h2,h3,h4,h5,h6 {
     content: "-";
     position: absolute;
     left: -20px;
-    color: var(--redwood);
+    color: var(--redOrange);
   }

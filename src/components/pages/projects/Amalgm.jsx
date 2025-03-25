@@ -4,9 +4,10 @@ import { gsap } from "gsap";
 import { ScrollTrigger, ScrollToPlugin } from "gsap/all";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css'; // Import the Lightbox CSS
+import 'yet-another-react-lightbox/plugins/captions.css'; // Import the Captions plugin CSS
+import '../../../css/lightbox.css'; // Import your custom CSS
 import { MdArrowOutward } from "react-icons/md";
 import Contact from "../../Contact";
 
@@ -47,6 +48,29 @@ function Amalgm() {
             once: true,
         });
     }, []);
+
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [lightboxImages, setLightboxImages] = useState([]);
+
+    const ideationImages = [
+        { src: mindMap, alt: 'Initial Mind Map' },
+        { src: moodBoard, alt: 'Brand Mood Board' },
+        { src: logoSketch, alt: 'Iterating on logo concepts' },
+    ];
+
+    const craftingImages = [
+        { src: logoFinal, alt: 'Finalized Logo' },
+        { src: typography, alt: 'Brand Typography' },
+        { src: colorGuide, alt: 'Color Guide' },
+    ];
+
+    const openLightbox = (images, index) => {
+        setLightboxImages(images);
+        setCurrentImageIndex(index);
+        setLightboxOpen(true);
+    };
+
 
     // SIDEBAR FEATURE
     // bulletRefs is a reference to the bullet elements in addition to activeSection
@@ -202,13 +226,13 @@ function Amalgm() {
                     {/* Header */}
                     <div data-aos="fade-up" data-aos-duration="2000" data-aos-delay="3000" className="text-center pb-12">
                         <h2 className="text-h1 font-bold font-ppSupply text-ink">
-                        A Collaborative Brand Identity
+                            A Collaborative Brand Identity
                         </h2>
                         <h2 className="text-h4 font-bold font-ppSupply mt-16 text-ink">
-                        How can branding celebrate individuality while maintaining cohesion?
+                            How can branding celebrate individuality while maintaining cohesion?
                         </h2>
                         <p className="text-lg mt-4 text-gray-700 max-w-3xl mx-auto">
-                        Amalgm was created to explore this challenge—developing a flexible yet structured brand system that balances creative expression, sustainability, and artistic collaboration. The goal was to craft an identity that feels raw yet refined, allowing artists to showcase their work while keeping the brand recognizable across digital, print, and merchandise applications.
+                            Amalgm was created to explore this challenge—developing a flexible yet structured brand system that balances creative expression, sustainability, and artistic collaboration. The goal was to craft an identity that feels raw yet refined, allowing artists to showcase their work while keeping the brand recognizable across digital, print, and merchandise applications.
                         </p>
                     </div>
                 </div>
@@ -248,7 +272,7 @@ function Amalgm() {
                             href="https://assets.adobe.com/id/urn:aaid:sc:US:a81bada4-4b4e-418e-9620-de905fb16f5e?view=published"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block px-6 py-3 bg-redwood text-offwhite text-lg rounded shadow-md hover:shadow-lg transition duration-300"
+                            className="inline-block px-6 py-3 bg-redwood text-offwhite text-lg rounded  hover:shadow-lg transition duration-300"
                         >
                             → VIEW BRAND BOOK
                         </a>
@@ -256,17 +280,17 @@ function Amalgm() {
                 </div>
             </div>
 
-            <div className="container max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 px-8 py-16 border-ink">
+            <div className="container max-w-full md:max-w-8xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 px-8 py-16 border-ink">
                 {/* Left Column: Project Overview */}
-                <div className="lg:col-span-1 p-8 bg-olivewhite border border-ink rounded-md" data-aos="fade-left">
+                <div className="lg:col-span-1 p-8 bg-olivewhite border border-ink rounded-sm" data-aos="fade-left">
                     <h2 className="text-h2 font-bold font-ppSupply text-ink">Project Overview</h2>
                     <p className="text-body text-ink mt-4 leading-relaxed">
-                    Amalgm is a conceptual branding project that merges artistic freedom with a cohesive identity. Inspired by creative collectives and eco-conscious design, it was built to be modular and adaptive, ensuring it could scale across print, digital, and product applications without losing its essence.
+                        Amalgm is a conceptual branding project that merges artistic freedom with a cohesive identity. Inspired by creative collectives and eco-conscious design, it was built to be modular and adaptive, ensuring it could scale across print, digital, and product applications without losing its essence.
                     </p>
                 </div>
 
                 {/* Right Column: Challenges & Accomplishments */}
-                <div className="lg:col-span-2 space-y-4 rounded-md bg-olivewhite">
+                <div className="lg:col-span-2 space-y-4 rounded-sm bg-olivewhite">
                     {/* Challenges Section */}
                     <div className="p-8">
                         <h2 className="text-h2 font-bold font-ppSupply text-ink">Challenges & Approach</h2>
@@ -274,21 +298,21 @@ function Amalgm() {
                             <strong>Balancing Structure & Expression</strong>
                         </p>
                         <p className="text-body  text-ink mt-2 leading-relaxed">
-                        A key challenge was creating a visual system that adapts to individual artists’ styles while keeping Amalgm’s brand recognizable. I explored modular typography, adaptable layouts, and flexible brand assets to achieve this.
+                            A key challenge was creating a visual system that adapts to individual artists’ styles while keeping Amalgm’s brand recognizable. I explored modular typography, adaptable layouts, and flexible brand assets to achieve this.
                         </p>
 
                         <p className="text-h5  text-ink mt-8 leading-relaxed">
                             <strong>Creating a Distinct Yet Versatile Logo</strong>
                         </p>
                         <p className="text-body  text-ink mt-2 leading-relaxed">
-                        The logo needed to feel bold yet organic, reflecting Amalgm’s identity as both an artistic and sustainable brand. Through hand-drawn iterations and refined vector work, I crafted a mark that represents connection, individuality, and fluidity.
+                            The logo needed to feel bold yet organic, reflecting Amalgm’s identity as both an artistic and sustainable brand. Through hand-drawn iterations and refined vector work, I crafted a mark that represents connection, individuality, and fluidity.
                         </p>
 
                         <p className="text-h5  text-ink mt-8 leading-relaxed">
                             <strong>Seamless Cross-Platform Integration</strong>
                         </p>
                         <p className="text-body  text-ink mt-2 leading-relaxed">
-                        A strong brand lives beyond a logo. The system had to be scalable—working across apparel, packaging, and digital media. I tested the identity across real-world applications to ensure consistency and impact across all touchpoints.
+                            A strong brand lives beyond a logo. The system had to be scalable—working across apparel, packaging, and digital media. I tested the identity across real-world applications to ensure consistency and impact across all touchpoints.
                         </p>
                     </div>
 
@@ -371,15 +395,15 @@ function Amalgm() {
 
                     <div className="relative bg-olivewhite border-l border-gray-500 mx-auto">
 
-                    <h3 className="p-8 text-hmax font-ppSupply text-gray-900 mb-4 text-left">
-                                            Design Process
-                                        </h3>
+                        <h3 className="p-8 text-hmax font-ppSupply text-gray-900 mb-4 text-left">
+                            Design Process
+                        </h3>
                         {/* Inspiration and Ideation */}
                         <section id="ideation" className="min-h-screen pt-16">
                             <div className="mb-16 px-8">
                                 {/* Content Wrapper */}
 
-                                <div className=" max-w-screen-2xl mx-auto">
+                                <div className="max-w-full md:max-w-screen-2xl mx-auto">
                                     {/* Text Section */}
 
                                     <div className="">
@@ -393,41 +417,22 @@ function Amalgm() {
                                     </div>
 
                                     {/* Slider Section */}
-                                    <div className="">
-                                        <div className="p-0 flex justify-center">
-                                            <div className="w-full max-w-screen-xl mt-16 h-256">
-                                                <Slider {...sliderSettings}>
-                                                    {/* Slide 1 */}
-                                                    <div className="h-full flex items-center justify-center">
-                                                        <img
-                                                            src={mindMap}
-                                                            alt="Sketches and Mood Boards"
-                                                            className="rounded-lg shadow-md object-contain max-h-full mx-auto"
-                                                        />
-                                                        <p className="text-center mt-4 text-lg">Initial Mind Map</p>
-                                                    </div>
-                                                    {/* Slide 2 */}
-                                                    <div className="h-full flex items-center justify-center">
-                                                        <img
-                                                            src={moodBoard}
-                                                            alt="Brand Mood Board"
-                                                            className="rounded-lg shadow-md object-contain max-h-full mx-auto"
-                                                        />
-                                                        <p className="text-center mt-4 text-lg">Brand Mood Board</p>
-                                                    </div>
-                                                    {/* Slide 3 */}
-                                                    <div className="h-full flex items-center justify-center">
-                                                        <img
-                                                            src={logoSketch}
-                                                            alt="Early Logo Concepts"
-                                                            className="rounded-lg shadow-md object-contain max-h-full mx-auto"
-                                                        />
-                                                        <p className="text-center mt-4 text-lg">Iterating on logo concepts</p>
-                                                    </div>
-                                                </Slider>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+  {ideationImages.map((image, index) => (
+    <div
+      key={index}
+      className="cursor-pointer flex flex-col items-center"
+      onClick={() => openLightbox(ideationImages, index)}
+    >
+      <img
+        src={image.src}
+        alt={image.alt}
+        className="rounded-sm object-contain max-h-full mx-auto"
+      />
+      <p className="text-center mt-4 text-lg">{image.alt}</p>
+    </div>
+  ))}
+</div>
                                 </div>
 
                             </div>
@@ -440,7 +445,7 @@ function Amalgm() {
                         <section id="crafting" className="">
                             <div className="mb-16 px-8">
                                 {/* Content Wrapper */}
-                                <div className="max-w-screen-2xl mx-auto">
+                                <div className="max-w-full md:max-w-screen-2xl mx-auto">
                                     {/* Text Section */}
                                     <div className="">
                                         {/* Header */}
@@ -453,41 +458,22 @@ function Amalgm() {
                                     </div>
 
                                     {/* Slider Section */}
-                                    <div className="">
-                                        <div className="p-4 justify-center">
-                                        <div className="w-full mx-auto max-w-screen-xl mt-16 h-256">
-                                                <Slider {...sliderSettings}>
-                                                    {/* Slide 1 */}
-                                                    <div className="h-full flex items-center justify-center">
-                                                        <img
-                                                            src={logoFinal}
-                                                            alt="Finalized Logo"
-                                                            className="rounded-lg shadow-md object-contain max-h-full mx-auto"
-                                                        />
-                                                        <p className="text-center mt-4 text-lg">Finalized Logo</p>
-                                                    </div>
-                                                    {/* Slide 2 */}
-                                                    <div className="h-full flex items-center justify-center">
-                                                        <img
-                                                            src={typography}
-                                                            alt="Brand Typography"
-                                                            className="rounded-lg shadow-md object-contain max-h-full mx-auto"
-                                                        />
-                                                        <p className="text-center mt-4 text-lg">Brand Typography</p>
-                                                    </div>
-                                                    {/* Slide 3 */}
-                                                    <div className="h-full flex items-center justify-center">
-                                                        <img
-                                                            src={colorGuide}
-                                                            alt="Brand Color Guide"
-                                                            className="rounded-lg shadow-md object-contain max-h-full mx-auto"
-                                                        />
-                                                        <p className="text-center mt-4 text-lg">Color Guide</p>
-                                                    </div>
-                                                </Slider>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
+  {craftingImages.map((image, index) => (
+    <div
+      key={index}
+      className="cursor-pointer flex flex-col items-center"
+      onClick={() => openLightbox(craftingImages, index)}
+    >
+      <img
+        src={image.src}
+        alt={image.alt}
+        className="rounded-sm object-contain max-h-full mx-auto"
+      />
+      <p className="text-center mt-4 text-lg">{image.alt}</p>
+    </div>
+  ))}
+</div>
                                 </div>
                             </div>
                         </section>
@@ -511,12 +497,12 @@ function Amalgm() {
                                     <img
                                         src={tagMockup}
                                         alt="Product Labels and Tags"
-                                        className="rounded-lg shadow-md w-full object-contain"
+                                        className="rounded-sm  w-full object-contain"
                                     />
                                     <img
                                         src={sketchBook}
                                         alt="Sketchbooks and Concepts"
-                                        className="rounded-lg shadow-md w-full object-contain"
+                                        className="rounded-sm  w-full object-contain"
                                     />
                                     <img
                                         src={shirtMockup}
@@ -535,7 +521,7 @@ function Amalgm() {
                                 <div className="max-w-screen-md text-center lg:text-left">
                                     <h3 className="text-h1 font-ppSupply text-gray-900 mb-4">4. Reflecting on the Project</h3>
                                     <p className="text-gray-800 text-body  leading-relaxed">
-                                    Amalgm challenged me to think beyond just aesthetics—to design for flexibility, cohesion, and real-world application. This project reinforced the importance of modular brand systems, scalable identity design, and storytelling through visuals.
+                                        Amalgm challenged me to think beyond just aesthetics—to design for flexibility, cohesion, and real-world application. This project reinforced the importance of modular brand systems, scalable identity design, and storytelling through visuals.
                                     </p>
                                 </div>
                                 <img
@@ -550,7 +536,7 @@ function Amalgm() {
                 </div>
             </div>
             {/* More Projects Section */}
-            <div className="mx-auto container px-8">
+            <div className="mx-auto container px-8 max-w-full md:max-w-8xl">
                 <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
                     style={{
 
@@ -576,6 +562,14 @@ function Amalgm() {
                     <Contact />
                 </div>
             </div>
+            {lightboxOpen && (
+  <Lightbox
+    slides={lightboxImages}
+    open={lightboxOpen}
+    index={currentImageIndex}
+    close={() => setLightboxOpen(false)}
+  />
+)}
         </div>
 
     );

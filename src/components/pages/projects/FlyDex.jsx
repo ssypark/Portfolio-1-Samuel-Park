@@ -10,8 +10,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // Components
 import Contact from "../../Contact";
-import FigmaEmbed from "../../FlyDexEmbed";
 import FlyDexTable from "../../FlydexTable";
+import FlyDexSWOT from "../../FlydexSWOT";
 
 // FlyDex Image Imports
 import flyDexLogo from "../../../assets/flydex/flydex-logo.png";
@@ -40,9 +40,9 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 // Define navigation topics
 const topics = [
     { id: "challenge", label: "The Challenge" },
-    { id: "vision", label: "Design Vision" },
-    { id: "features", label: "Core Features" },
-    { id: "results", label: "Impact & Future Directions" }
+    { id: "Approach", label: "Approach" },
+    { id: "outcome", label: "Outcome" },
+    { id: "takeaways", label: "Takeaways" }
 ];
 
 function FlyDex() {
@@ -201,9 +201,9 @@ function FlyDex() {
             </div>
 
             {/* Content Section with Sidebar */}
-            <div className="flex max-w-container mx-auto md:gap-14 px-2 bg-olivewhite">
+            <div className="flex max-w-container mx-auto md:gap-8 px-2 bg-olivewhite">
                 {/* Sidebar Navigation */}
-                <div className="hidden md:block md:sticky md:top-10 md:h-fit md:py-12">
+                <div className="hidden md:block md:sticky md:top-10 md:h-fit md:py-12 pl-8">
                     <ul className="flex flex-col space-y-4 pl-4 pt-16">
                         {topics.map((topic) => (
                             <li key={topic.id} className="relative group flex items-center">
@@ -227,21 +227,21 @@ function FlyDex() {
                 </div>
 
                 {/* Main Content */}
-                <div className="flex-1 mt-12">
-                    <section id="challenge">
+                <div className="flex-1 mt-12 max-w-full">
+                    <section id="challenge" className="min-h-screen">
                         {/* Challenge */}
                         <div className="container mx-auto py-16 px-4 sm:px-8" data-aos="fade-up">
-                            <h2 className="text-h2 font-ppSupply font-bold text-ink mb-4">The Challenge</h2>
-                            <div className="flex flex-col sm:flex-row gap-8 bg-olivewhite ">
+                            <h2 className="text-hmax font-ppSupply font-bold text-ink mb-12">The Challenge</h2>
+                            <div className="flex flex-col sm:flex-row gap-24 bg-olivewhite ">
 
-                                <div className="sm:w-2/3">
-                                    <p className="text-body  text-gray-700 leading-relaxed mb-6">
+                                <div className="sm:w-1/2">
+                                    <p className="text-body  text-gray-700 leading-relaxed mb-24">
                                         Fly fishing is rewarding, serene, and adventurous—but daunting for newcomers. The steep learning curve, confusing jargon, and fragmented online resources leave many aspiring anglers overwhelmed. No centralized, user-friendly app existed to simplify this learning journey, creating frustration and discouraging beginners from fully embracing the sport.
                                     </p>
 
                                     <div className="bg-neutral border-2 border-ink rounded-lg p-6 mt-12">
                                         <h3 className="text-h4 font-ppSupply font-bold text-ink mb-4">
-                                            Problem at a Glance:
+                                            The Problem at a Glance:
                                         </h3>
                                         <ul className="list-none space-y-3">
                                             <li className="flex items-start gap-2">
@@ -265,22 +265,25 @@ function FlyDex() {
                                         </ul>
                                     </div>
                                 </div>
-                                <div className="sm:w-1/3">
+                                <div className="sm:w-1/2">
                                     <img
                                         src={tangled}
-                                        alt="Target User"
+                                        alt="Frustrated Fisherman"
                                         className="rounded-md border border-ink"
                                     />
                                 </div>
                             </div>
                         </div>
 
-
-                        {/* understanding the user */}
-
+                    </section>
+                    {/* understanding the user */}
+                    <section id="Approach">
                         <div className="container mx-auto py-16 px-4 sm:px-8" data-aos="fade-up">
-                            <h2 className="text-h2 font-ppSupply font-bold text-ink mb-4">Understanding the User</h2>
-                            <div className="flex flex-col sm:flex-row gap-8 bg-olivewhite p-8 rounded-lg border border-sage">
+                            <h2 className="text-hmax font-ppSupply font-bold text-ink mb-12">Approach</h2>
+                            <p className="text-body  text-gray-700 leading-relaxed mb-24">For me, design is about turning complex challenges into clear, engaging experiences that empower users—a principle I learned from my years of teaching. My process always begins with user research, pinpointing real-world pain points and transforming them into intuitive solutions that build confidence and inspire action.</p>
+
+                            <h3 className="text-h1 font-ppSupply font-bold text-ink mb-2">The Target User</h3>
+                            <div className="flex flex-col sm:flex-row gap-8 bg-olivewhite p-8 rounded-lg border border-sage mb-24">
                                 <div className="sm:w-1/3">
                                     <img
                                         src={justin}
@@ -290,9 +293,6 @@ function FlyDex() {
                                 </div>
                                 <div className="sm:w-2/3">
                                     <h3 className="text-h3 font-ppSupply font-bold text-ink mb-2">Meet Justin</h3>
-                                    <p className="text-body  text-gray-700 leading-relaxed">
-                                        Justin, a 34-year-old outdoor enthusiast new to fly fishing, represents FlyDex's primary user group. Enthusiastic but frustrated by scattered online resources and the absence of structured guidance, Justin needed a user-friendly companion to streamline his learning experience and build his confidence in fly fishing.
-                                    </p>
                                     <div className="bg-neutral border-l-4 border-redOrange p-6 my-8 rounded-r-lg">
                                         <blockquote className="relative">
                                             <span className="text-redOrange text-4xl absolute -top-4 left-0">"</span>
@@ -306,8 +306,12 @@ function FlyDex() {
                                             </footer>
                                         </blockquote>
                                     </div>
+                                    <p className="text-body  text-gray-700 leading-relaxed">
+                                        Justin, a 34-year-old outdoor enthusiast new to fly fishing, represents FlyDex's primary user group. Enthusiastic but frustrated by scattered online resources and the absence of structured guidance, Justin needed a user-friendly companion to streamline his learning experience and build his confidence in fly fishing.
+                                    </p>
+
                                     {/* CTAs */}
-                                    <div className="mt-6 flex gap-4">
+                                    <div className="mt-6 flex flex-col sm:flex-row gap-4">
                                         <button
                                             className="btn-grey"
                                             onClick={() => openJustinModal(persona)}
@@ -329,14 +333,29 @@ function FlyDex() {
                                     </div>
                                 </div>
                             </div>
+                            <div className="py-16">
+                                <h2 className="text-h1 font-bold text-ink mb-4">Gaining Insight Through Competitive Analysis</h2>
+                                <p className="text-body text-gray-700 leading-relaxed">
+                                    To refine my design strategy, I began by diving deep into the competitive landscape. By comparing industry leaders, I identified key gaps and opportunities that would directly inform the improvements needed for FlyDex. The insights I gathered—ranging from user engagement hurdles to underutilized educational features—became the foundation for a design that not only simplifies fly fishing for beginners but also drives meaningful action.
+                                </p>
+                                <p className="text-body text-gray-700 leading-relaxed mt-4 mb-16">
+                                    The SWOT charts below summarize the strengths, weaknesses, opportunities, and threats of two major players. These analyses played a critical role in shaping a user-centric solution that addresses real-world challenges and delivers a truly engaging experience.
+                                </p>
+                                <FlyDexSWOT />
+                            </div>
+
                         </div>
+
                     </section>
+                    {/* New Competitive Analysis Section */}
 
 
 
                     {/* Design Vision and goals */}
-                    <section id="vision">
-                        <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 py-16 px-4 sm:px-8" data-aos="fade-left">
+                    <section id="outcome">
+                        <h2 className="container mx-auto py-16 px-4 sm:px-8 text-hmax font-ppSupply font-bold text-ink mb-12">Outcome</h2>
+                        <div className="container mx-auto flex flex-col lg:flex-row  gap-24 pb-16 px-4 sm:px-8" data-aos="fade-left">
+
                             <div className="lg:w-1/2 order-2 lg:order-1">
                                 <img
                                     src={lesson}
@@ -380,7 +399,7 @@ function FlyDex() {
 
                         {/* Visual Identity Section */}
                         <div className="container mx-auto py-16 px-4 sm:px-8">
-                            <div className="flex flex-col lg:flex-row items-center gap-12">
+                            <div className="flex flex-col lg:flex-row gap-12">
                                 {/* Text Content */}
                                 <div className="lg:w-1/2">
                                     <h2 className="text-h2 font-ppSupply font-bold text-ink mb-4">Visual Identity & System Design</h2>
@@ -438,12 +457,12 @@ function FlyDex() {
 
 
                         </div>
-                    </section>
+             
 
 
 
                     {/* Features and Iterations Section */}
-                    <section id="features" className="container mx-auto py-16 px-4 sm:px-8">
+                    <div className="container mx-auto py-16 px-4 sm:px-8">
                         <h2 className="text-h2 font-ppSupply font-bold text-ink mb-4">Core Features</h2>
                         <p className="text-body text-ink mb-8">
                             Throughout the iterative process, user feedback shaped several impactful features designed specifically to enhance ease of use and accessibility:
@@ -494,13 +513,22 @@ function FlyDex() {
                 max-w-[390px] md:max-w-[600px] lg:max-w-[900px]"
                             data-aos="fade-left">
                             <h1 className="text-h1 font-ppSupply font-bold text-ink text-center">Try out Flydex</h1>
-                            <FigmaEmbed />
+                            <div className="relative w-full max-w-[500px] mx-auto" style={{ paddingBottom: "100%" }}>
+                                <iframe
+                                    src="https://embed.figma.com/proto/gCVW1snYrr66F7o51z2MCb/Flydex?node-id=1237-1002&embed-host=share"
+                                    className="absolute top-0 left-0 w-full h-full"
+                                    style={{ border: "none", backgroundColor: "transparent" }}
+                                    allowFullScreen
+                                />
+                            </div>
                         </div>
+                    </div>
                     </section>
 
 
-                    <section id="results" className="container mx-auto pb-16 px-4 sm:px-8">
-                        <div className="container mx-auto py-16 px-4 sm:px-8">
+                    <section id="takeaways" className="container mx-auto pb-16 px-4 sm:px-8">
+                        <h2 className="container mx-auto py-16 px-4 sm:px-8 text-hmax font-ppSupply font-bold text-ink mb-12">Takeaways</h2>
+                        <div className="container mx-auto pb-16 px-4 sm:px-8">
                             <div className="bg-neutral border-2 border-ink rounded-lg p-8">
                                 <h2 className="text-h2 font-ppSupply font-bold text-ink mb-4">Impact & Future Directions</h2>
                                 <p className="text-body text-ink mb-8">
