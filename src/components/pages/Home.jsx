@@ -46,6 +46,20 @@ function Home() {
             fishAnimationCleanup();
         };
     }, []);
+    const handleScrollToFeatured = () => {
+        const targetElement = document.getElementById("featuredProjects");
+        if (targetElement) {
+          const headerOffset = 60; // Adjust this value to match your header's height
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          
+          gsap.to(window, {
+            duration: 1,
+            scrollTo: { y: offsetPosition },
+            ease: "power2.out",
+          });
+        }
+      };
 
     return (
         <HelmetProvider>
@@ -136,26 +150,12 @@ function Home() {
 
                         {/* Hero Frog */}
                         <img
-                            className="hero-frog w-16 h-16 absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10 pointer-events-auto"
-                            src={arrowDown}
-                            alt="Down Arrow"
-                            title="Jump to Featured Projects"
-                            // This is to scroll to the "Featured Projects" section when the frog is clicked
-                            onClick={() => {
-                                document.getElementById("featuredProjects").scrollIntoView({ // This targets the "Featured Projects" section by its ID
-                                    behavior: "smooth", // Smooth scrolling animation
-                                    block: "start", // Scroll to the top of the section "featuredProjects"
-                                });
-                                //However, it scrolled too far down that it would hide the header by the nav bar.
-                                // To fix this, we add a slight offset for after the scroll and a bounce effect
-                                setTimeout(() => {
-                                    window.scrollBy({
-                                        top: -60, //offset value for the scroll to show the header of "featuredProjects"
-                                        behavior: "smooth",
-                                    });
-                                }, 400); // Delay the scroll by 400ms
-                            }}
-                        />
+  className="hero-frog w-16 h-16 absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10 pointer-events-auto"
+  src={arrowDown}
+  alt="Down Arrow"
+  title="Jump to Featured Projects"
+  onClick={handleScrollToFeatured}
+/>
 
                         {/* Fish */}
                         {/* pointer events none ensures that the fish don't interfere with user click events */}
