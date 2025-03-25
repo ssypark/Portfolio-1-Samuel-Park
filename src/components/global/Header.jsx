@@ -5,20 +5,18 @@ import '../../css/header.css';
 
 function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
-
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
+          if (window.scrollY > 50) {
+            setIsScrolled(true);
+          } else {
+            setIsScrolled(false);
+          }
         };
         window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+        handleScroll(); // Set initial state on mount
+        return () => window.removeEventListener("scroll", handleScroll);
+      }, []);
 
     return (
         <header
