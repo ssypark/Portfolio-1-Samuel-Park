@@ -7,14 +7,11 @@ function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     useEffect(() => {
         const handleScroll = () => {
-          if (window.scrollY > 50) {
-            setIsScrolled(true);
-          } else {
-            setIsScrolled(false);
-          }
+          const threshold = window.innerWidth < 768 ? 30 : 50;
+          setIsScrolled(window.scrollY > threshold);
         };
         window.addEventListener("scroll", handleScroll);
-        handleScroll(); // Set initial state on mount
+        handleScroll();
         return () => window.removeEventListener("scroll", handleScroll);
       }, []);
 

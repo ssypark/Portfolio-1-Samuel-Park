@@ -24,6 +24,7 @@ import {
     initSideFrogAnimation,
     initHeroFrogAnimation,
 } from "../animations/animations";
+import { section } from "framer-motion/client";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,10 +67,24 @@ function About() {
         initSideFrogAnimation();
         initHeroFrogAnimation();
     }, []);
+    const handleScrollToFeatured = () => {
+        const targetElement = document.getElementById("philosophy");
+        if (targetElement) {
+            const headerOffset = 60; // Adjust this value to match your header's height
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            gsap.to(window, {
+                duration: 1,
+                scrollTo: { y: offsetPosition },
+                ease: "power2.out",
+            });
+        }
+    };
 
     return (
-
-        <div className="bg-olivewhite pb-32 relative">
+    <div>
+        <div className="bg-olivewhite  relative ">
             <Helmet>
                 {/* General Meta Tags */}
                 <title>About Samuel Park - UX/UI Designer & Fine Artist</title>
@@ -85,28 +100,9 @@ function About() {
                 <meta property="og:url" content="https://sampark.ca/about" />
                 <meta property="og:site_name" content="Samuel Park Portfolio" />
             </Helmet>
-            {/* Header Introduction */}
-            {/* <div className="container min-h-screen mx-auto p-16 flex flex-col lg:flex-row md:-mt-32 sm:-mt-64 items-center gap-8 mb-12 justify-between bg-olivewhite rounded-md border border-ink">
-                <div data-aos="fade-right" className="lg:w-2/3 text-ink">
-                    <h1 className="text-h1 font-bold  mb-6">Nice to meet you</h1>
-                    <p className="text-body leading-relaxed mb-4 ">Hi, I'm Samuel. I'm a UX/UI designer with a background in fine arts, driven by a
-                        passion for creating meaningful, user-centered designs.</p>
-                    <p className="text-body leading-relaxed ">
-                    Samuel Park is a multidisciplinary artist and digital designer based in Vancouver, BC, currently studying New Media and Web Development at BCIT. With a Bachelor of Fine Arts from UBC in painting and illustration, Samuel brings a strong creative foundation to crafting user-centered digital experiences. His artwork has been featured in exhibitions across Canada, South Korea, and Mexico, and is part of permanent collections at UBC and Kwantlen Polytechnic University. Proficient in Adobe Creative Suite and Figma, Samuel is expanding his technical skills with React and Tailwind to create intuitive designs that foster connection and innovation.
-                    </p>
-                </div> */}
-            {/* Avatar Image */}
-            {/* <div data-aos="fade-left" className="lg:w-1/3 flex justify-center mb-8 mt-8">
-                    <img
-                        src={avatar}
-                        alt="Profile Photo"
-                        className="rounded-full w-64 h-64 object-cover shadow-md"
-                    />
-                </div>
-            </div> */}
-            {/* Header Introduction */}
+
             {/* Hero Section */}
-            <div className="relative w-full h-screen bg-cover bg-[right_-14rem_center] sm:bg-center flex items-center rounded-b-3xl" style={{ backgroundImage: `url(${heroImage})` }}>
+            <div className="relative w-full h-screen bg-cover bg-[right_-14rem_center] sm:bg-center flex items-center rounded-b-2xl" style={{ backgroundImage: `url(${heroImage})` }}>
                 {/* <div className="relative w-full h-screen bg-cover bg-[right_-14rem_center] sm:bg-[right_48px_center] flex items-center rounded-b-3xl" style={{ backgroundImage: `url(${heroImage})` }}> */}
                 {/* Gradient Overlay covering the entire bg image */}
                 <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-ink to-transparent opacity-90 rounded-b-3xl z-0"></div>
@@ -123,40 +119,27 @@ function About() {
                 </div>
                 {/* Hero Frog */}
                 <img
-                    className="hero-frog w-16 h-16 absolute bottom-20 left-1/2 transform -translate-x-1/2 z-1000 invert cursor-pointer"
+                    className="hero-frog w-16 h-16 absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10 pointer-events-auto invert"
                     src={arrowDown}
                     alt="Down Arrow"
-                    title="Jump to About Details"
-                    // This is to scroll to the "Featured Projects" section when the arrow is clicked
-                    onClick={() => {
-                        document.getElementById("philosophy").scrollIntoView({ // This targets the "Featured Projects" section by its ID
-                            behavior: "smooth", // Smooth scrolling animation
-                            block: "start", // Scroll to the top of the section "featuredProjects"
-                        });
-                        //However, it scrolled too far down that it would hide the header by the nav bar.
-                        // To fix this, we add a slight offset for after the scroll and a bounce effect
-                        setTimeout(() => {
-                            window.scrollBy({
-                                top: -60, //offset value for the scroll to show the header of "featuredProjects"
-                                behavior: "smooth",
-                            });
-                        }, 400); // Delay the scroll by 400ms
-                    }}
+                    title="Jump to Featured Projects"
+                    onClick={handleScrollToFeatured}
                 />
             </div>
+        </div>
 
-
+        <div className="bg-olivewhite pb-32 relative px-4 sm:px-8">
 
             {/* Philosophy */}
-            <div id="philosophy" data-aos="fade-left" className="bg-olivewhite container flex justify-center items-center px-16 my-16 py-8 mx-auto  hover:scale-105 transition-transform duration-300">
+            <div id="philosophy" data-aos="fade-left" className="bg-olivewhite container flex justify-center items-center px-8 sm:px-12 md:px-16  sm:pt-36 sm:pb-24 mx-auto  hover:scale-105 transition-transform duration-300">
                 <div className="container mx-auto">
                     <h2 className="text-h2 font-ppSupply mb-6 text-ink">How I Approach Design</h2>
                     <p className="text-body leading-relaxed mb-4 ">I often compare my design process to a day on the water: every lake has its own type of fish, much like each target audience has unique needs. When a fish bites, it confirms that my casting technique, interactive flow, and visual presentation are on point. That moment of feedback prompts me to fine-tune my approach—adjusting my lure and strategy—to craft designs that capture attention and deliver real value. By listening to every “bite,” I continuously refine my process to create engaging, user-centered experiences.</p>
                 </div>
             </div>
-
+       
             {/* Hobbies */}
-            <div data-aos="fade-right" className="group container relative mx-auto px-16 flex flex-col lg:flex-row items-center gap-8 mb-16 mt-12 justify-between bg-olivewhite py-12 rounded-lg border border-ink">
+            <div data-aos="fade-right" className="group container relative mx-auto px-8 sm:px-12 md:px-16 flex flex-col lg:flex-row items-center gap-8 mb-16 mt-12 justify-between bg-olivewhite py-12 rounded-lg border border-ink">
                 {/* Background Image */}
                 <div
                     className=" absolute inset-0 bg-no-repeat bg-cover bg-center rounded-lg opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-70"
@@ -183,7 +166,7 @@ function About() {
             </div>
 
             {/* Skill Marquee */}
-            <div className="container mx-auto px-8 flex flex-col lg:flex-row items-center gap-8 mb-24 justify-between">
+            <div className="container mx-auto px-6 sm:px-12 md:px-16  flex flex-col lg:flex-row items-center gap-8 mb-24 justify-between">
                 <div className="w-full lg:w-1/2 text-ink">
                     <h2 className="text-h2 font-ppSupply mb-6">My Tacklebox</h2>
                     <p className="text-h5 leading-relaxed font-bold mb-4">Design tools:</p>
@@ -239,7 +222,10 @@ function About() {
                 </div>
             </div>
         </div>
+       
 
+    
+     </div>                  
     )
 }
 

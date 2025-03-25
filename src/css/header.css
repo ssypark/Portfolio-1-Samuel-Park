@@ -1,8 +1,11 @@
 
-/* Header.css */
 @media (max-width: 768px) {
     header {
+        position: fixed;
+        left: 0;
+        right: 0;
         bottom: 0;
         top: auto;
+        z-index: 1000; /* Ensure it's above other content */
     }
 }
