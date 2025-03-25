@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 // Components
 import Contact from "../../Contact";
 import FlyDexTable from "../../FlydexTable";
-import FlyDexSWOT from "../../FlydexSWOT";
+import FlyDexSWOT from "../../FlyDexSWOT";
 
 // FlyDex Image Imports
 import flyDexLogo from "../../../assets/flydex/flydex-logo.png";
