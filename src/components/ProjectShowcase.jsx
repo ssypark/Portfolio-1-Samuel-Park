@@ -33,7 +33,7 @@ function ProjectShowcase({ image, title, description, tags, link }) {
                 </div>
                 {/* CTA */}
                 <div className="mt-6">
-                    <div className="flex items-center btn-grey gap-2 px-2 py-1 bg-olivewhite text-ink  font-ppSupply rounded border border-ink hover:bg-florange duration-300 w-max">
+                    <div className="flex items-center btn-grey gap-2 px-2 py-1 bg-olivewhite text-ink  font-ppSupply rounded border border-ink hover:bg-florange duration-300 w-max" aria-label="View Project">
                         View Project <MdArrowOutward />
                     </div>
                 </div>

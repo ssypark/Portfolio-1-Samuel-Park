@@ -58,6 +58,7 @@ function Gallery() {
                     <p className="text-body font-workSans text-ink mt-8 max-w-4xl mx-auto">My artwork has become a way for me to liberate my ideas and thoughts; to express myself freely, without limits or restraints. It has become a way for me to portray events and issues that are personal to me and affect me, whether it be social, internal, on-going occurrences </p>
                 </div>
             </div>
+
             {/* PAINTING SECTION */}
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 px-8 sm:px-24">
                 <div className="lg:col-span-1">
@@ -101,11 +102,11 @@ function Gallery() {
                 <a
                     href="/work"
                     className="btn-default mx-auto sm:mx-0"
+                    aria-label="View My Projects"
                 >
                     See My Projects!
                 </a>
             </div>
-
             {/* Contact Section */}
             <div className="pb-28 z-10">
                 <Contact />

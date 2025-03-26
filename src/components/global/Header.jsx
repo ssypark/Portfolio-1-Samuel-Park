@@ -6,13 +6,13 @@ import '../../css/header.css';
 function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     useEffect(() => {
-        const handleScroll = () => {
-          const threshold = window.innerWidth < 768 ? 30 : 50;
-          setIsScrolled(window.scrollY > threshold);
-        };
-        window.addEventListener("scroll", handleScroll);
-        handleScroll();
-        return () => window.removeEventListener("scroll", handleScroll);
+        // const handleScroll = () => {
+        //   const threshold = window.innerWidth < 768 ? 30 : 50;
+        //   setIsScrolled(window.scrollY > threshold);
+        // };
+        // window.addEventListener("scroll", handleScroll);
+        // handleScroll();
+        // return () => window.removeEventListener("scroll", handleScroll);
       }, []);
 
     return (

@@ -140,85 +140,86 @@ function ConsciousConnections() {
   return (
     <div>
       {/* HERO SECTION */}
-<div style={{ backgroundColor: '#8F1523' }}
-  className="relative pt-24 p-8 bg-no-repeat border-b border-ink flex flex-col justify-end">
-  
-  {/* Hero Image */}
-  <div className="mt-8 w-full flex justify-center">
-    <img
-      src={mbMockup}
-      alt="Conscious Connections Mockup"
-      className="w-[50%] mb-8"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-delay="500"
-    />
-  </div>
+      <div style={{ backgroundColor: '#8F1523' }}
+        className="relative pt-24 p-8 bg-no-repeat border-b border-ink flex flex-col justify-end">
 
-  {/* Bottom-Left Header */}
-  <div className="text-left mb-8 z-10">
-    <h1
-      className="text-h1 font-bold font-ppSupply text-offwhite"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-      data-aos-delay="300"
-    >
-      Reimagining Digital Dating
-    </h1>
-  </div>
+        {/* Hero Image */}
+        <div className="mt-8 w-full flex justify-center">
+          <img
+            src={mbMockup}
+            alt="Conscious Connections Mockup"
+            className="w-[50%] mb-8"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="500"
+          />
+        </div>
 
-  {/* Role, Date, and Project Details */}
-  <div className="flex sm:flex-row items-center sm:items-start justify-between gap-8 pb-8 rounded-md">
-    {/* Role and Date */}
-    <div className="flex flex-col sm:flex-row gap-1 sm:gap-8">
-      <div className="mb-4 sm:mb-0">
-        <h2 className="text-body   font-bold text-offwhite">Goal</h2>
-        <p className="text-base   text-offwhite">
-          Website Redesign <br />for Conscious Connections
-        </p>
-      </div>
-      <div className="mb-4 sm:mb-0">
-        <h2 className="text-body   font-bold text-offwhite">Role</h2>
-        <p className="text-base   text-offwhite">
-          Product Designer
-          <br />
-          UI/UX Designer
-        </p>
-      </div>
-      <div className="mb-4 sm:mb-0">
-        <h2 className="text-body   font-bold text-offwhite">Date</h2>
-        <p className="text-base text-offwhite">2025</p>
-      </div>
-      <div className="mb-4 sm:mb-0">
-        <h2 className="text-body   font-bold text-offwhite">Duration</h2>
-        <p className="text-base   text-offwhite">3 Days</p>
-      </div>
-      <div className="mb-4 sm:mb-0">
-        <h2 className="text-body   font-bold text-offwhite">Tools</h2>
-        <p className="text-base   text-offwhite">
-          Figma
-          <br />
-          Adobe Illustrator
-          <br />
-          Procreate
-        </p>
-      </div>
-    </div>
+        {/* Bottom-Left Header */}
+        <div className="text-left mb-8 z-10">
+          <h1
+            className="text-h1 font-bold font-ppSupply text-offwhite"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+          >
+            Reimagining Digital Dating
+          </h1>
+        </div>
 
-    {/* View Prototype CTA */}
-    <div className="mt-4 sm:mt-0">
-      <a
-        href="https://www.figma.com/proto/IltuxfmJxR7Ox5LduXSGmu/FLUI-Hackathon---Conscious-Connections?page-id=418%3A12564&node-id=418-15554&p=f&viewport=446%2C605%2C0.05&scaling=scale-down&content-scaling=fixed&starting-point-node-id=418%3A15554&embed-host=share"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 px-6 py-3  text-ink bg-offwhite font-bold text-body rounded border border-ink hover:bg-florange transition duration-300"
-      >
-        View Prototype <MdArrowOutward size={18} />
-      </a>
-    </div>
+        {/* Role, Date, and Project Details */}
+        <div className="flex sm:flex-row items-center sm:items-start justify-between gap-8 pb-8 rounded-md">
+          {/* Role and Date */}
+          <div className="flex flex-col sm:flex-row gap-1 sm:gap-8">
+            <div className="mb-4 sm:mb-0">
+              <h2 className="text-body   font-bold text-offwhite">Goal</h2>
+              <p className="text-base   text-offwhite">
+                Website Redesign <br />for Conscious Connections
+              </p>
+            </div>
+            <div className="mb-4 sm:mb-0">
+              <h2 className="text-body   font-bold text-offwhite">Role</h2>
+              <p className="text-base   text-offwhite">
+                Product Designer
+                <br />
+                UI/UX Designer
+              </p>
+            </div>
+            <div className="mb-4 sm:mb-0">
+              <h2 className="text-body   font-bold text-offwhite">Date</h2>
+              <p className="text-base text-offwhite">2025</p>
+            </div>
+            <div className="mb-4 sm:mb-0">
+              <h2 className="text-body   font-bold text-offwhite">Duration</h2>
+              <p className="text-base   text-offwhite">3 Days</p>
+            </div>
+            <div className="mb-4 sm:mb-0">
+              <h2 className="text-body   font-bold text-offwhite">Tools</h2>
+              <p className="text-base   text-offwhite">
+                Figma
+                <br />
+                Adobe Illustrator
+                <br />
+                Procreate
+              </p>
+            </div>
+          </div>
 
-  </div>
-</div>
+          {/* View Prototype CTA */}
+          <div className="mt-4 sm:mt-0">
+            <a
+              href="https://www.figma.com/proto/IltuxfmJxR7Ox5LduXSGmu/FLUI-Hackathon---Conscious-Connections?page-id=418%3A12564&node-id=418-15554&p=f&viewport=446%2C605%2C0.05&scaling=scale-down&content-scaling=fixed&starting-point-node-id=418%3A15554&embed-host=share"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3  text-ink bg-offwhite font-bold text-body rounded border border-ink hover:bg-florange transition duration-300"
+              aria-label="View Prototype" 
+            >
+              View Prototype <MdArrowOutward size={18} />
+            </a>
+          </div>
+
+        </div>
+      </div>
 
       <div className="flex max-w-container mx-auto md:gap-14 p-4 bg-olivewhite ">
         {/* Sidebar Navigation */}
@@ -308,7 +309,7 @@ function ConsciousConnections() {
                 <div className="w-full text-right justify-center py-8">
                   <img src={datingApp} alt="A Person Lying on Sofa Holding a Smartphone with a Person's Profile on Screen" className="" />
                   <figcaption className="text-sm text-gray-500 mt-2">
-                    Photo by <a href="https://www.pexels.com/@cottonbro/" target="_blank" className="underline">Cottonbro Studio</a> on Pexels.
+                    Photo by <a href="https://www.pexels.com/@cottonbro/" target="_blank" className="underline" aria-label="Cottonbro Studio" >Cottonbro Studio</a> on Pexels.
                   </figcaption>
                 </div>
               </div>
@@ -710,31 +711,31 @@ function ConsciousConnections() {
               </div>
             </div>
             {/* Prototype Embed Section */}
-<div className="w-full flex flex-col items-center py-16 ">
-  <h2 className="text-h2 font-bold text-ink text-center mb-6">
-    Interactive Prototype
-  </h2>
-  <p className="text-body text-gray-700 text-center max-w-2xl">
-    Explore the final <strong>high-fidelity prototype</strong>, designed to create a 
-    <strong> seamless, intuitive, and engaging user experience</strong>.
-  </p>
+            <div className="w-full flex flex-col items-center py-16 ">
+              <h2 className="text-h2 font-bold text-ink text-center mb-6">
+                Interactive Prototype
+              </h2>
+              <p className="text-body text-gray-700 text-center max-w-2xl">
+                Explore the final <strong>high-fidelity prototype</strong>, designed to create a
+                <strong> seamless, intuitive, and engaging user experience</strong>.
+              </p>
 
-  {/* Embedded Figma Prototype */}
-  <div className="w-full flex justify-center mt-8">
-    <iframe
-      style={{ border: "1px solid rgba(0, 0, 0, 0.1)", borderRadius: "8px" }}
-      width="800"
-      height="450"
-      src="https://embed.figma.com/proto/IltuxfmJxR7Ox5LduXSGmu/FLUI-Hackathon---Conscious-Connections?page-id=418%3A12564&node-id=418-15554&p=f&viewport=446%2C605%2C0.05&scaling=scale-down&content-scaling=fixed&starting-point-node-id=418%3A15554&embed-host=share"
-      allowFullScreen
-      className="w-full max-w-[900px] rounded-lg shadow-md"
-    ></iframe>
-  </div>
-</div>
+              {/* Embedded Figma Prototype */}
+              <div className="w-full flex justify-center mt-8">
+                <iframe
+                  style={{ border: "1px solid rgba(0, 0, 0, 0.1)", borderRadius: "8px" }}
+                  width="800"
+                  height="450"
+                  src="https://embed.figma.com/proto/IltuxfmJxR7Ox5LduXSGmu/FLUI-Hackathon---Conscious-Connections?page-id=418%3A12564&node-id=418-15554&p=f&viewport=446%2C605%2C0.05&scaling=scale-down&content-scaling=fixed&starting-point-node-id=418%3A15554&embed-host=share"
+                  allowFullScreen
+                  className="w-full max-w-[900px] rounded-lg shadow-md"
+                ></iframe>
+              </div>
+            </div>
           </section>
         </div>
       </div>
-            
+
       {/* Lightbox Component */}
       {lightboxOpen && (
         <Lightbox

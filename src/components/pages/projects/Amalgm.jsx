@@ -162,7 +162,7 @@ function Amalgm() {
         });
         // GSAP Animation for Logo
         gsap.fromTo(
-            ".amalgm-logo", // Target logo by class
+            ".amalgm-logo",
             {
                 scale: 0, // Start at 0 scale
                 rotation: 0, // Start with no rotation
@@ -266,6 +266,7 @@ function Amalgm() {
                             </p>
                         </div>
                     </div>
+
                     {/* View CTA*/}
                     <div>
                         <a
@@ -273,6 +274,7 @@ function Amalgm() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-block px-6 py-3 bg-redwood text-offwhite text-lg rounded  hover:shadow-lg transition duration-300"
+                            aria-label="View Brand Book" 
                         >
                             → VIEW BRAND BOOK
                         </a>
@@ -316,27 +318,7 @@ function Amalgm() {
                         </p>
                     </div>
 
-                    {/* What I Accomplished Section */}
-                    {/* <div className="p-8">
-                        <h2 className="text-h2 font-bold font-ppSupply text-ink">What I Accomplished</h2>
-                        <p className="text-body  text-ink mt-4 leading-relaxed">
-                            Through this project, I developed a <strong>brand system</strong> that is both structured and flexible:
-                        </p>
-                        <ul className="list-disc pl-5 mt-6 space-y-3 text-ink">
-                            <li>
-                                Created a <strong>dynamic visual identity</strong> that blends individuality with cohesion, ensuring Amalgm remains adaptable while maintaining brand integrity.
-                            </li>
-                            <li>
-                                Developed a <strong>refined typography system</strong>, balancing the expressive energy of <strong>Tomarik Brush</strong> with the structured clarity of <strong>LFT Etica</strong>.
-                            </li>
-                            <li>
-                                Designed <strong>real-world mockups</strong>, including apparel, product packaging, and digital assets, showcasing how the brand translates across multiple touchpoints.
-                            </li>
-                            <li>
-                                Integrated <strong>sustainable design principles</strong> into branding decisions, ensuring that the brand message aligns with eco-conscious production and ethical practices.
-                            </li>
-                        </ul>
-                    </div> */}
+
                 </div>
             </div>
 
@@ -356,12 +338,12 @@ function Amalgm() {
                                     <div
                                         ref={(el) => bulletRefs.current[topic.id] = el}
                                         className="
-                    absolute -left-2 top-1/2 -translate-y-1/2 
-                    w-2 h-2 rounded-full 
-                    bg-redwood 
-                    border-2 border-redwood
-                    origin-center
-                  "
+                                            absolute -left-2 top-1/2 -translate-y-1/2 
+                                            w-2 h-2 rounded-full 
+                                            bg-redwood 
+                                            border-2 border-redwood
+                                            origin-center
+                                        "
                                     ></div>
                                 )}
 
@@ -369,19 +351,19 @@ function Amalgm() {
                                     href={`#${topic.id}`}
                                     onClick={(e) => handleScroll(e, topic.id)}
                                     className={`
-                  sidebar 
-                  pl-2 
-                  text-gray-500 
-                  group-hover:text-redwood 
-                  transition-all 
-                  duration-300 
-                  text-lg 
-                  relative
-                  ${activeSection === topic.id
+                                                sidebar 
+                                                pl-2 
+                                                text-gray-500 
+                                                group-hover:text-redwood 
+                                                transition-all 
+                                                duration-300 
+                                                text-lg 
+                                                relative
+                                                ${activeSection === topic.id
                                             ? 'text-redwood font-bold translate-x-2'
                                             : 'hover:translate-x-1'
                                         }
-                `}
+                                    `}
                                 >
                                     {topic.label}
                                 </a>
@@ -418,21 +400,21 @@ function Amalgm() {
 
                                     {/* Slider Section */}
                                     <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
-  {ideationImages.map((image, index) => (
-    <div
-      key={index}
-      className="cursor-pointer flex flex-col items-center"
-      onClick={() => openLightbox(ideationImages, index)}
-    >
-      <img
-        src={image.src}
-        alt={image.alt}
-        className="rounded-sm object-contain max-h-full mx-auto"
-      />
-      <p className="text-center mt-4 text-lg">{image.alt}</p>
-    </div>
-  ))}
-</div>
+                                        {ideationImages.map((image, index) => (
+                                            <div
+                                                key={index}
+                                                className="cursor-pointer flex flex-col items-center"
+                                                onClick={() => openLightbox(ideationImages, index)}
+                                            >
+                                                <img
+                                                    src={image.src}
+                                                    alt={image.alt}
+                                                    className="rounded-sm object-contain max-h-full mx-auto"
+                                                />
+                                                <p className="text-center mt-4 text-lg">{image.alt}</p>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
 
                             </div>
@@ -459,21 +441,21 @@ function Amalgm() {
 
                                     {/* Slider Section */}
                                     <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
-  {craftingImages.map((image, index) => (
-    <div
-      key={index}
-      className="cursor-pointer flex flex-col items-center"
-      onClick={() => openLightbox(craftingImages, index)}
-    >
-      <img
-        src={image.src}
-        alt={image.alt}
-        className="rounded-sm object-contain max-h-full mx-auto"
-      />
-      <p className="text-center mt-4 text-lg">{image.alt}</p>
-    </div>
-  ))}
-</div>
+                                        {craftingImages.map((image, index) => (
+                                            <div
+                                                key={index}
+                                                className="cursor-pointer flex flex-col items-center"
+                                                onClick={() => openLightbox(craftingImages, index)}
+                                            >
+                                                <img
+                                                    src={image.src}
+                                                    alt={image.alt}
+                                                    className="rounded-sm object-contain max-h-full mx-auto"
+                                                />
+                                                <p className="text-center mt-4 text-lg">{image.alt}</p>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </section>
@@ -535,6 +517,7 @@ function Amalgm() {
                     </div>
                 </div>
             </div>
+
             {/* More Projects Section */}
             <div className="mx-auto container px-8 max-w-full md:max-w-8xl">
                 <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
@@ -553,6 +536,7 @@ function Amalgm() {
                     <a
                         href="/work"
                         className="btn-default"
+                        aria-label="View more projects" 
                     >
                         More Projects!
                     </a>
@@ -562,16 +546,17 @@ function Amalgm() {
                     <Contact />
                 </div>
             </div>
-            {lightboxOpen && (
-  <Lightbox
-    slides={lightboxImages}
-    open={lightboxOpen}
-    index={currentImageIndex}
-    close={() => setLightboxOpen(false)}
-  />
-)}
-        </div>
 
+            {lightboxOpen && (
+                <Lightbox
+                    slides={lightboxImages}
+                    open={lightboxOpen}
+                    index={currentImageIndex}
+                    close={() => setLightboxOpen(false)}
+                />
+            )}
+
+        </div>
     );
 }
 

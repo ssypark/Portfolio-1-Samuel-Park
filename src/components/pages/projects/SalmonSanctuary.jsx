@@ -182,7 +182,7 @@ function SalmonSanctuary() {
 
 
 
-    
+
     return (
         <div className="relative mt-18 px-4 sm:px-8 bg-olivewhite">
             {/* Metadata */}
@@ -279,6 +279,7 @@ function SalmonSanctuary() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center text-body gap-2 px-8 py-4 bg-olivewhite text-ink font-bold font-ppSupply border border-ink rounded hover:shadow-xl hover:bg-florange transition-shadow duration-300 w-max"
+                            aria-label="Visit Salmon Sanctuary Website"
                         >
                             VISIT WEBSITE <MdArrowOutward />
                         </a>
@@ -382,7 +383,7 @@ function SalmonSanctuary() {
                                     </div>
 
                                     {/* Competitive Analysis */}
-                                    <div className="lg:w-1/3 flex flex-col border-solid border-2 border-redwood bg-olivewhite rounded-lg p-8" data-aos="fade-left" data-aos-easing="ease-in-out">
+                                    <div className="lg:w-1/3 flex flex-col border-solid border-2 border-redwood bg-olivewhite rounded-lg p-8">
                                         <h3 className="text-h2 font-bold font-ppSupply text-ink mb-6">Key Insights from Competitive Analysis</h3>
 
                                         <p className="text-h6 font-bold text-ink mb-4">Reviewing PSF.ca revealed barriers that limited engagement:</p>
@@ -421,9 +422,7 @@ function SalmonSanctuary() {
                         {/* Personas & Scenarios Section */}
                         <div
                             className="container mx-auto px-4 sm:px-8 mb-32"
-                            data-aos="fade-up"
-                            data-aos-duration="500"
-                            data-aos-easing="ease-in-out"
+
                         >
                             <h2 className="text-h3 font-ppSupply font-bold text-ink mb-2">Building for Real Users</h2>
                             <p className="text-body  text-ink leading-relaxed mb-2">
@@ -442,9 +441,7 @@ function SalmonSanctuary() {
                             </p>
                             <div
                                 className="p-8 rounded-lg border-ink border-2"
-                                data-aos="fade-right"
-                                data-aos-duration="500"
-                                data-aos-easing="ease-in-out"
+
                             >
                                 <div className="flex flex-col md:flex-row items-center gap-6 mb-6">
                                     <img
@@ -521,7 +518,7 @@ function SalmonSanctuary() {
 
                         <section id="design">
                             {/* Web Design Section content */}
-                            <div className="container mx-auto px-4 sm:px-8 mb-32" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-out">
+                            <div className="container mx-auto px-4 sm:px-8 mb-32" >
                                 {/* Section Header */}
                                 <h2 className="text-h1 font-ppSupply font-bold text-ink mb-6">Structuring a Seamless Experience</h2>
                                 <h3 className="text-h4 font-ppSupply font-bold text-ink mb-4">User Flow & Site Map</h3>
@@ -544,8 +541,6 @@ function SalmonSanctuary() {
                                         className="rounded-lg border-ink border-2 mx-auto mb-24"
                                     />
                                 </div>
-
-
 
                                 {/* User Flow Section */}
                                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mx-auto mb-48">
@@ -589,20 +584,19 @@ function SalmonSanctuary() {
                                             src={userFlow}
                                             alt="Salmon Sanctuary User Flow"
                                             className="mx-auto min-w-full p-4 bg-white rounded-md border-ink border-2"
-                                            data-aos="fade-left"
                                         />
                                     </div>
-
                                 </div>
-
-
                             </div>
                         </section>
+
+
                         {/* Divider */}
                         <hr className="my-16 border-t border-gray-300" />
+
+                        {/* Style Guide & Wireframes */}
                         <section id="styleguide-wireframes">
-                            {/* Combined Style Guide & Wireframes Section */}
-                            <div className="container mx-auto px-4 sm:px-8 mb-32" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                            <div className="container mx-auto px-4 sm:px-8 mb-32">
                                 <h2 className="text-h1 font-ppSupply font-bold text-ink mb-2">Crafting a Cohesive Visual Identity</h2>
                                 <p className="text-body  text-ink leading-relaxed mb-8">
                                     To create a sense of trust and authenticity, I established a style guide that balanced professionalism with warmth, using a natural, conservation-inspired color palette. Typography choices were made to ensure readability across all devices, and UI elements were designed to feel approachable yet structured.
@@ -611,11 +605,9 @@ function SalmonSanctuary() {
                                     Wireframes were developed and tested to refine interactions before moving into high-fidelity designs. This iterative approach ensured that the final product was not only visually compelling but also highly functional, with a seamless flow that kept users engaged.
                                 </p>
 
-
                                 {/* Style Guide */}
                                 <div className="mt-16">
                                     <h3 className="text-h3 font-ppSupply font-bold text-ink mb-2">Style Guide</h3>
-
                                     <div
                                         className="relative group cursor-pointer"
                                         onClick={() => handleOpenModal("styleGuide", 0)}
@@ -627,9 +619,9 @@ function SalmonSanctuary() {
                                         />
                                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
                                         <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                        <button className="px-6 py-3 bg-florange text-ink text-lg font-bold rounded border-ink border-2 
-                   hover:bg-ink hover:text-florange hover:border-florange 
-                   transform transition-all duration-300 ease-out hover:scale-105">
+                                            <button className="px-6 py-3 bg-florange text-ink text-lg font-bold rounded border-ink border-2 
+                                                            hover:bg-ink hover:text-florange hover:border-florange 
+                                                            transform transition-all duration-300 ease-out hover:scale-105">
                                                 View Style Guide
                                             </button>
                                         </div>
@@ -651,8 +643,8 @@ function SalmonSanctuary() {
                                         <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg"></div>
                                         <div className="absolute inset-0 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                             <button className="px-6 py-3 bg-florange text-ink text-lg font-bold rounded border-ink border-2 
-                   hover:bg-ink hover:text-florange hover:border-florange 
-                   transform transition-all duration-300 ease-out hover:scale-105">
+                                                                hover:bg-ink hover:text-florange hover:border-florange 
+                                                                transform transition-all duration-300 ease-out hover:scale-105">
                                                 View Wireframes
                                             </button>
                                         </div>
@@ -660,11 +652,12 @@ function SalmonSanctuary() {
                                 </div>
                             </div>
                         </section>
+
                         {/* Divider */}
                         <hr className="my-16 border-t border-gray-300" />
-
+                        
+                        {/* Reflections & Next Steps */}
                         <section id="conclusion">
-                            {/* Closing Thoughts Section */}
                             <div className="container mx-auto px-4 sm:px-8 pb-16 ">
                                 <h2 className="text-h1 font-ppSupply font-bold text-ink mb-4">Reflections & Next Steps</h2>
                                 <div className="container mx-auto px-4 pt-8 pb-16 sm:px-8  rounded-md border-2 border-ink bg-neutral">
@@ -704,6 +697,7 @@ function SalmonSanctuary() {
                     </div>
                 </div>
             </div>
+
             {/* More Projects Section */}
             <div className="mx-auto container">
                 <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
@@ -722,6 +716,7 @@ function SalmonSanctuary() {
                     <a
                         href="/work"
                         className="btn-default"
+                        aria-label="View More Projects"
                     >
                         More Projects!
                     </a>
@@ -731,6 +726,7 @@ function SalmonSanctuary() {
                     <Contact />
                 </div>
             </div>
+
             {/* Modal Carousel */}
             {(isWireframeModalOpen || isStyleGuideModalOpen) && (
                 <div
@@ -772,5 +768,5 @@ function SalmonSanctuary() {
         </div>
     );
 }
-// test
+
 export default SalmonSanctuary;

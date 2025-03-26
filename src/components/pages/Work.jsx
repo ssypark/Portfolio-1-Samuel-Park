@@ -71,7 +71,6 @@ function Work() {
                         </div>
                     </div>
 
-
                     {/* Fish */}
                     {[...Array(1)].map((_, i) => {
                     const size = 25;
@@ -92,9 +91,6 @@ function Work() {
                         />
                     );
                 })}
-
-
-
                 </div>
 
                 {/* Projects */}
@@ -120,6 +116,7 @@ function Work() {
                     <a
                     href="/art"
                     className="btn-grey mx-auto sm:mx-0"
+                    aria-label="View My Artwork"
                 >
                     See My Artwork!
                 </a>

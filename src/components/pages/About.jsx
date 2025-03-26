@@ -103,8 +103,8 @@ function About() {
 
             {/* Hero Section */}
             <div className="relative w-full h-screen bg-cover bg-[right_-14rem_center] sm:bg-center flex items-center rounded-b-2xl" style={{ backgroundImage: `url(${heroImage})` }}>
-                {/* <div className="relative w-full h-screen bg-cover bg-[right_-14rem_center] sm:bg-[right_48px_center] flex items-center rounded-b-3xl" style={{ backgroundImage: `url(${heroImage})` }}> */}
-                {/* Gradient Overlay covering the entire bg image */}
+
+                {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-b lg:bg-gradient-to-r from-ink to-transparent opacity-90 rounded-b-3xl z-0"></div>
 
                 <div className="relative z-0 flex flex-col lg:flex-row items-center justify-between w-full h-full md:pl-24 p-12">
@@ -212,6 +212,7 @@ function About() {
                     <a
                         href="/work"
                         className="btn-grey"
+                        aria-label="View More Projects"
                     >
                         More Projects!
                     </a>

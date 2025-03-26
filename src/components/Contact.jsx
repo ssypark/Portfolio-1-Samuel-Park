@@ -22,13 +22,13 @@ function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full mt-auto">
                     {/* Links */}
                     <div className="flex flex-col font-workSans space-y-4">
-                        <a href="mailto:hello@sampark.ca" className="text-ink hover:text-redOrange duration-300 text-h6">
+                        <a href="mailto:hello@sampark.ca" className="text-ink hover:text-redOrange duration-300 text-h6" aria-label="Email Me">
                             → EMAIL
                         </a>
-                        <a href="/park_samuel_resume.pdf" className="text-ink hover:text-redOrange duration-300 text-h6">
+                        <a href="/park_samuel_resume.pdf" className="text-ink hover:text-redOrange duration-300 text-h6" aria-label="Resume">
                             → RESUME
                         </a>
-                        <a href="/park_samuel_artist_cv.pdf" className="text-ink hover:text-redOrange duration-300 text-h6">
+                        <a href="/park_samuel_artist_cv.pdf" className="text-ink hover:text-redOrange duration-300 text-h6" aria-label="Artist CV">
                             → ARTIST CV
                         </a>
                     </div>

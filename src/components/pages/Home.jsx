@@ -49,17 +49,17 @@ function Home() {
     const handleScrollToFeatured = () => {
         const targetElement = document.getElementById("featuredProjects");
         if (targetElement) {
-          const headerOffset = 60; // Adjust this value to match your header's height
-          const elementPosition = targetElement.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-          
-          gsap.to(window, {
-            duration: 1,
-            scrollTo: { y: offsetPosition },
-            ease: "power2.out",
-          });
+            const headerOffset = 60; // Adjust this value to match your header's height
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            gsap.to(window, {
+                duration: 1,
+                scrollTo: { y: offsetPosition },
+                ease: "power2.out",
+            });
         }
-      };
+    };
 
     return (
         <HelmetProvider>
@@ -86,29 +86,23 @@ function Home() {
 
                 </Helmet>
                 <div className="absolute inset-0 w-full min-h-screen z-5" >
-                            <Particles
-                                particleColors={['#24261B']}
-                                particleCount={200}
-                                particleSpread={10}
-                                speed={0.1}
-                                particleBaseSize={300}
-                                moveParticlesOnHover={false}
-                                alphaParticles={false}
-                                disableRotation={true}
-                            />
-                        </div>
+                    <Particles
+                        particleColors={['#24261B']}
+                        particleCount={200}
+                        particleSpread={10}
+                        speed={0.1}
+                        particleBaseSize={300}
+                        moveParticlesOnHover={false}
+                        alphaParticles={false}
+                        disableRotation={true}
+                    />
+                </div>
                 {/* Main Content */}
                 <div className="container py-24 md:pt-32 mx-auto">
 
-                {/* Hero Section */}
-                <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center text-ink pointer-events-none" data-aos="zoom-in">
+                    {/* Hero Section */}
+                    <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center text-ink pointer-events-none" data-aos="zoom-in">
                         <div className="flex flex-col md:flex-row items-center md:items-start text-left space-y-8 md:space-y-0 md:space-x-8 z-0 mb-12 pointer-events-none" data-aos="zoom-in">
-                            {/* <img
-                                className="logo w-36 sm:w-72 mr-8"
-                                src={logo}
-                                alt="Samuel Park Logo"
-                            /> */}
-
                             <div className="text-left z-0 pointer-events-none">
                                 <p className="sm:text-h3 font-ppSupply max-w-2xl pointer-events-none">
                                     Hello, I'm
@@ -116,70 +110,18 @@ function Home() {
                                 <img className="w-128 pointer-events-none z-0" src={name} alt="Samuel Park" />
                                 <p className="sm:text-h1 text-right font-ppSupply pointer-events-none" data-aos="fade-up" data-aos-delay="800">
                                     Product Designer & Visual Artist </p>
-                                {/* <p className="sm:text-h5 max-w-2xl font-workSans">
-                                    I'm a UI and visual designer with a
-                                    background in fine arts, blending creativity
-                                    with digital innovation to create impactful designs.
-                                </p> */}
                             </div>
                         </div>
 
-                        {/* Hero Frog Bar*/}
-                        {/* Decorative borders */}
-                        {/* <img
-                        className="absolute bottom-9 left-0 w-72 z-20" // Bottom-left plant
-                        src={borderL}
-                        alt="left border"
-                    />
-                    <img
-                        className="absolute bottom-9 right-0 w-64 z-20" // Bottom-right plant
-                        src={borderR}
-                        alt="Right Border"
-                    /> */}
-                        {/* Plants */}
-                        {/* <img
-                        className="absolute bottom-8 left-14 w-36 z-20" // Bottom-left plant
-                        src={plantSm}
-                        alt="Small Plant"
-                    />
-                    <img
-                        className="absolute bottom-8 right-14 w-36 z-20" // Bottom-right plant
-                        src={plantMd}
-                        alt="Medium Plant"
-                    /> */}
 
                         {/* Hero Frog */}
                         <img
-  className="hero-frog w-16 h-16 absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10 pointer-events-auto"
-  src={arrowDown}
-  alt="Down Arrow"
-  title="Jump to Featured Projects"
-  onClick={handleScrollToFeatured}
-/>
-
-                        {/* Fish */}
-                        {/* pointer events none ensures that the fish don't interfere with user click events */}
-                        {/* <div className="absolute inset-0 z-0 pointer-events-none">
-                            {[...Array(80)].map((_, i) => {
-                                const size = Math.random() * 10 + 5; // Random size between 20 and 50
-                                return (
-                                    <img
-                                        key={i}
-                                        className="fish absolute text-ink opacity-80"
-                                        data-speed={Math.random() * 1 + 0.8}
-                                        style={{
-                                            top: `${Math.random() * 60 + 20}%`,
-                                            left: `${Math.random() * 80 + 10}%`,
-                                            transform: "rotate(0deg)",
-                                        }}
-                                        width={size}
-                                        height={size}
-                                        src={dot}
-                                        alt="dot" />
-                                );
-                            })}
-                        </div> */}
-
+                            className="hero-frog w-16 h-16 absolute bottom-20 left-1/2 transform -translate-x-1/2 z-10 pointer-events-auto"
+                            src={arrowDown}
+                            alt="Down Arrow"
+                            title="Jump to Featured Projects"
+                            onClick={handleScrollToFeatured}
+                        />
                     </div>
 
 
@@ -193,11 +135,11 @@ function Home() {
                             <Portfolio limit={3} />
                         </div>
                     </div>
+
                     {/* More Projects Section */}
                     <div className="mx-auto container">
                         <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
                             style={{
-
                                 backgroundImage: `url(${logo})`,
                                 backgroundSize: "400px",
                                 backgroundPosition: "right center",
@@ -211,6 +153,7 @@ function Home() {
                             <a
                                 href="/work"
                                 className="btn-default mx-auto sm:mx-0"
+                                aria-label="View More Projects"
                             >
                                 More Projects!
                             </a>
@@ -220,7 +163,6 @@ function Home() {
                             <Contact />
                         </div>
                     </div>
-
                 </div>
             </div>
         </HelmetProvider>

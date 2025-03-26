@@ -157,7 +157,7 @@ function FlyDex() {
                 {/* Role, Date, and Project Link */}
                 <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8 p-8 bg-black bg-opacity-70 rounded-md">
                     {/* Role and Date */}
-                    <div className="flex flex-col sm:flex-row gap-8">
+                    <div className="flex flex-row gap-8">
                         <div>
                             <h2 className="text-body  font-bold text-olivewhite">Role</h2>
                             <p className="text-base  text-olivewhite">
@@ -193,6 +193,7 @@ function FlyDex() {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-default"
+                            aria-label="View Prototype" 
                         >
                             View Prototype <MdArrowOutward className="inline-block ml-1" />
                         </a>
@@ -233,12 +234,10 @@ function FlyDex() {
                         <div className="container mx-auto py-16 px-4 sm:px-8" data-aos="fade-up">
                             <h2 className="text-hmax font-ppSupply font-bold text-ink mb-12">The Challenge</h2>
                             <div className="flex flex-col sm:flex-row gap-24 bg-olivewhite ">
-
                                 <div className="sm:w-1/2">
                                     <p className="text-body  text-gray-700 leading-relaxed mb-24">
                                         Fly fishing is rewarding, serene, and adventurous—but daunting for newcomers. The steep learning curve, confusing jargon, and fragmented online resources leave many aspiring anglers overwhelmed. No centralized, user-friendly app existed to simplify this learning journey, creating frustration and discouraging beginners from fully embracing the sport.
                                     </p>
-
                                     <div className="bg-neutral border-2 border-ink rounded-lg p-6 mt-12">
                                         <h3 className="text-h4 font-ppSupply font-bold text-ink mb-4">
                                             The Problem at a Glance:
@@ -274,8 +273,8 @@ function FlyDex() {
                                 </div>
                             </div>
                         </div>
-
                     </section>
+
                     {/* understanding the user */}
                     <section id="Approach">
                         <div className="container mx-auto py-16 px-4 sm:px-8" data-aos="fade-up">
@@ -343,18 +342,13 @@ function FlyDex() {
                                 </p>
                                 <FlyDexSWOT />
                             </div>
-
                         </div>
-
                     </section>
-                    {/* New Competitive Analysis Section */}
-
-
 
                     {/* Design Vision and goals */}
                     <section id="outcome">
                         <h2 className="container mx-auto py-16 px-4 sm:px-8 text-hmax font-ppSupply font-bold text-ink mb-12">Outcome</h2>
-                        <div className="container mx-auto flex flex-col lg:flex-row  gap-24 pb-16 px-4 sm:px-8" data-aos="fade-left">
+                        <div className="container mx-auto flex flex-col lg:flex-row  gap-24 pb-16 px-4 sm:px-8">
 
                             <div className="lg:w-1/2 order-2 lg:order-1">
                                 <img
@@ -450,81 +444,42 @@ function FlyDex() {
                                         src={lessonVideo}
                                         alt="FlyDex Visual Design System"
                                         className="w-full h-auto rounded-lg border-2 border-ink"
-                                        data-aos="fade-left"
                                     />
                                 </div>
                             </div>
-
-
                         </div>
-             
 
 
+                        {/* Features and Iterations Section */}
+                        <div className="container mx-auto py-16 px-4 sm:px-8">
+                            <h2 className="text-h2 font-ppSupply font-bold text-ink mb-4">Core Features</h2>
+                            <p className="text-body text-ink mb-8">
+                                Throughout the iterative process, user feedback shaped several impactful features designed specifically to enhance ease of use and accessibility:
+                            </p>
 
-                    {/* Features and Iterations Section */}
-                    <div className="container mx-auto py-16 px-4 sm:px-8">
-                        <h2 className="text-h2 font-ppSupply font-bold text-ink mb-4">Core Features</h2>
-                        <p className="text-body text-ink mb-8">
-                            Throughout the iterative process, user feedback shaped several impactful features designed specifically to enhance ease of use and accessibility:
-                        </p>
+                            {/* Features Table */}
+                            <FlyDexTable />
+                            
+                            <p className="text-body text-ink mt-6">
+                                These iterations continuously refined FlyDex, creating a clear, engaging, and supportive user experience tailored precisely to beginners' needs.
+                            </p>
 
-                        {/* Features Table */}
-                        <FlyDexTable />
-                        {/* <div className="overflow-x-auto rounded-lg border-2 border-ink">
-                            <table className="w-full border-collapse mb-0">
-                                <thead>
-                                    <tr className="bg-neutral">
-                                        <th className="text-left p-4 text-h5 font-ppSupply font-bold text-ink border-b-2 border-ink">Feature</th>
-                                        <th className="text-left p-4 text-h5 font-ppSupply font-bold text-ink border-b-2 border-ink">Design Goal</th>
-                                        <th className="text-left p-4 text-h5 font-ppSupply font-bold text-ink border-b-2 border-ink">User Benefit</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr className="border-b border-gray-200 hover:bg-neutral transition-colors">
-                                        <td className="p-4 font-bold text-ink">Offline Tutorials</td>
-                                        <td className="p-4 text-ink">Structured, interactive lessons available offline to support users directly in the field.</td>
-                                        <td className="p-4 text-ink">Reduces anxiety and boosts confidence during actual fishing trips.</td>
-                                    </tr>
-                                    <tr className="border-b border-gray-200 hover:bg-neutral transition-colors">
-                                        <td className="p-4 font-bold text-ink">Dynamic Checklists</td>
-                                        <td className="p-4 text-ink">Customizable preparation checklists tailored to location, weather, and species targeted.</td>
-                                        <td className="p-4 text-ink">Ensures users feel fully prepared, eliminating guesswork.</td>
-                                    </tr>
-                                    <tr className="border-b border-gray-200 hover:bg-neutral transition-colors">
-                                        <td className="p-4 font-bold text-ink">Location-Based Spot Finder</td>
-                                        <td className="p-4 text-ink">Interactive maps using GPS, reviews, and filtering options for ideal fishing locations.</td>
-                                        <td className="p-4 text-ink">Saves users time and encourages exploration of new fishing spots.</td>
-                                    </tr>
-                                    <tr className="hover:bg-neutral transition-colors">
-                                        <td className="p-4 font-bold text-ink">Personal Catch Log</td>
-                                        <td className="p-4 text-ink">Visual diary allowing photo uploads, tagging catches, tracking progress, and community sharing.</td>
-                                        <td className="p-4 text-ink">Fosters engagement, community-building, and personalized progression tracking.</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div> */}
-
-                        <p className="text-body text-ink mt-6">
-                            These iterations continuously refined FlyDex, creating a clear, engaging, and supportive user experience tailored precisely to beginners' needs.
-                        </p>
-
-                        {/* Conclusion Section */}
-                        <div className="w-full mx-auto overflow-hidden flex flex-col items-center gap-12 pt-16 px-4 sm:px-8 
-                max-w-[390px] md:max-w-[600px] lg:max-w-[900px]"
-                            data-aos="fade-left">
-                            <h1 className="text-h1 font-ppSupply font-bold text-ink text-center">Try out Flydex</h1>
-                            <div className="relative w-full max-w-[500px] mx-auto" style={{ paddingBottom: "100%" }}>
-                                <iframe
-                                    src="https://embed.figma.com/proto/gCVW1snYrr66F7o51z2MCb/Flydex?node-id=1237-1002&embed-host=share"
-                                    className="absolute top-0 left-0 w-full h-full"
-                                    style={{ border: "none", backgroundColor: "transparent" }}
-                                    allowFullScreen
-                                />
+                            {/* Conclusion Section */}
+                            <div className="w-full mx-auto overflow-hidden flex flex-col items-center gap-12 pt-16 px-4 sm:px-8 
+                    max-w-[390px] md:max-w-[600px] lg:max-w-[900px]"
+                                >
+                                <h1 className="text-h1 font-ppSupply font-bold text-ink text-center">Try out Flydex</h1>
+                                <div className="relative w-full max-w-[500px] mx-auto" style={{ paddingBottom: "100%" }}>
+                                    <iframe
+                                        src="https://embed.figma.com/proto/gCVW1snYrr66F7o51z2MCb/Flydex?node-id=1237-1002&embed-host=share"
+                                        className="absolute top-0 left-0 w-full h-full"
+                                        style={{ border: "none", backgroundColor: "transparent" }}
+                                        allowFullScreen
+                                    />
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </section>
-
 
                     <section id="takeaways" className="container mx-auto pb-16 px-4 sm:px-8">
                         <h2 className="container mx-auto py-16 px-4 sm:px-8 text-hmax font-ppSupply font-bold text-ink mb-12">Takeaways</h2>
@@ -535,75 +490,55 @@ function FlyDex() {
                                     Designing FlyDex was a meaningful exploration into how empathetic, user-centered design can effectively address complex challenges. Key lessons include:
                                 </p>
 
-                                <div className="space-y-6 mb-8">
-                                    <div className="flex items-start gap-3">
-                                        <span className="text-redOrange font-bold text-xl">•</span>
-                                        <div>
-                                            <h3 className="text-h5 font-bold text-ink mb-2"><strong>Start with User Pain Points</strong></h3>
-                                            <p className="text-body text-ink">
-                                                Deep user understanding reveals subtle opportunities for meaningful interventions.
-                                            </p>
+                                    <div className="space-y-6 mb-8">
+                                        <div className="flex items-start gap-3">
+                                            <span className="text-redOrange font-bold text-xl">•</span>
+                                            <div>
+                                                <h3 className="text-h5 font-bold text-ink mb-2"><strong>Start with User Pain Points</strong></h3>
+                                                <p className="text-body text-ink">
+                                                    Deep user understanding reveals subtle opportunities for meaningful interventions.
+                                                </p>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div className="flex items-start gap-3">
-                                        <span className="text-redOrange font-bold text-xl">•</span>
-                                        <div>
-                                            <h3 className="text-h5 font-bold text-ink mb-2"><strong>Clarity is Crucial</strong></h3>
-                                            <p className="text-body text-ink">
-                                                A clear visual hierarchy and intuitive interfaces significantly improve engagement and reduce user frustration.
-                                            </p>
+                                        <div className="flex items-start gap-3">
+                                            <span className="text-redOrange font-bold text-xl">•</span>
+                                            <div>
+                                                <h3 className="text-h5 font-bold text-ink mb-2"><strong>Clarity is Crucial</strong></h3>
+                                                <p className="text-body text-ink">
+                                                    A clear visual hierarchy and intuitive interfaces significantly improve engagement and reduce user frustration.
+                                                </p>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div className="flex items-start gap-3">
-                                        <span className="text-redOrange font-bold text-xl">•</span>
-                                        <div>
-                                            <h3 className="text-h5 font-bold text-ink mb-2"><strong>Iterate on User Feedback</strong></h3>
-                                            <p className="text-body text-ink">
-                                                Continuous user input throughout the design process creates truly valuable, user-friendly outcomes.
-                                            </p>
+                                        <div className="flex items-start gap-3">
+                                            <span className="text-redOrange font-bold text-xl">•</span>
+                                            <div>
+                                                <h3 className="text-h5 font-bold text-ink mb-2"><strong>Iterate on User Feedback</strong></h3>
+                                                <p className="text-body text-ink">
+                                                    Continuous user input throughout the design process creates truly valuable, user-friendly outcomes.
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
                                 <p className="text-body text-ink italic mb-8">
                                     FlyDex reinforced my passion for creating inclusive, intuitive digital experiences that empower and inspire users.
                                 </p>
+
                                 <h3 className="text-h3 font-ppSupply font-bold text-ink mb-2">Looking Ahead</h3>
                                 <p className="text-body text-ink">
                                     Moving forward, I plan to explore advanced features like a fly-casting coach using gyroscope data for real-time casting feedback and implementing smart recommendations based on users’ logged catches and fishing habits. These enhancements will further transform FlyDex into a comprehensive companion for anglers.
                                 </p>
+
                             </div>
                         </div>
                     </section>
-
-                    {/* Reflecting on the Project Section */}
-                    {/* <div className="container mx-auto flex flex-col lg:flex-row items-center gap-12 py-16 px-4 sm:px-8" data-aos="fade-up">
-                        <div className="lg:w-1/2 order-2 lg:order-1">
-                            <img
-                                src={coho}
-                                alt="Reflection"
-                                className="rounded-lg border border-ink"
-                            />
-                        </div>
-                        <div className="lg:w-1/2 order-1 lg:order-2">
-                            <h2 className="text-h2 font-ppSupply font-bold text-ink mb-4">Reflecting on the Project</h2>
-                            <p className="text-body  text-ink leading-relaxed">
-                                FlyDex was an opportunity to create a meaningful, user-focused product. From concept to
-                                execution, the project reinforced the importance of empathy in design and demonstrated how
-                                thoughtful features can empower users to overcome challenges.
-                            </p>
-                        </div>
-                    </div> */}
-
-
 
                     {/* More Projects Section */}
                     <div className="mx-auto container">
                         <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
                             style={{
-
                                 backgroundImage: `url(${logoBlack})`,
                                 backgroundSize: "400px",
                                 backgroundPosition: "right center",
@@ -617,6 +552,7 @@ function FlyDex() {
                             <a
                                 href="/work"
                                 className="btn-default"
+                                aria-label="View More Projects"
                             >
                                 More Projects!
                             </a>
