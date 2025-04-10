@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 
 // Animation Imports
@@ -22,7 +21,9 @@ import arrowSide from "../../assets/arrow-side.png";
 // Component Imports
 import Portfolio from "../Portfolio";
 import Contact from "../Contact";
-import name from "../../assets/myname.png";
+import nameVideoWebm from "../../assets/name-animation.webm";
+import nameVideoMp4 from "../../assets/name-animation.mp4";
+import nameStatic from "../../assets/myname.png";
 import dot from "../../assets/dot.svg";
 import Particles from "../animations/react-bits/Particles";
 import { HelmetProvider } from "react-helmet-async";
@@ -31,6 +32,8 @@ import { HelmetProvider } from "react-helmet-async";
 gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger for GSAP
 
 function Home() {
+    const videoRef = useRef(null);
+
     // To see the animation code, refer to animations.js
     useEffect(() => {
         AOS.init({
@@ -40,6 +43,18 @@ function Home() {
         initSideFrogAnimation();
         initHeroFrogAnimation();
         const fishAnimationCleanup = initFishAnimation();
+
+        const video = videoRef.current;
+        if (video) {
+            // Don't autoplay immediately
+            video.autoplay = false;
+
+            // Delay playback by 800ms (adjust as needed)
+            setTimeout(() => {
+                video.play()
+                    .catch(e => console.error("Video play failed:", e));
+            }, 1000);
+        }
 
         //Cleanup function for the fish animation
         return () => {
@@ -101,15 +116,32 @@ function Home() {
                 <div className="container py-24 md:pt-32 mx-auto">
 
                     {/* Hero Section */}
-                    <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center text-ink pointer-events-none" data-aos="zoom-in">
-                        <div className="flex flex-col md:flex-row items-center md:items-start text-left space-y-8 md:space-y-0 md:space-x-8 z-0 mb-12 pointer-events-none" data-aos="zoom-in">
+                    <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center text-ink pointer-events-none" >
+                        <div className="flex flex-col md:flex-row items-center md:items-start text-left space-y-8 md:space-y-0 md:space-x-8 z-0 mb-12 pointer-events-none" >
                             <div className="text-left z-0 pointer-events-none">
-                                <p className="sm:text-h3 font-ppSupply max-w-2xl pointer-events-none">
+                                <p className="sm:text-h3 font-ppSupply max-w-2xl pointer-events-none" data-aos="fade-right" >
                                     Hello, I'm
                                 </p>
-                                <img className="w-128 pointer-events-none z-0" src={name} alt="Samuel Park" />
-                                <p className="sm:text-h1 text-right font-ppSupply pointer-events-none" data-aos="fade-up" data-aos-delay="800">
-                                    Experience Designer & Visual Artist </p>
+
+                                {/* Video with WebM and MP4 fallback */}
+                                <div className="w-[900px] md:w-[1000px] lg:w-[1100px]">
+                                    <video
+                                        ref={videoRef}
+                                        muted
+
+                                        playsInline
+                                        className="w-full pointer-events-none animated-name"
+                                        aria-label="Samuel Park"
+                                    >
+                                        <source src={nameVideoWebm} type="video/webm" />
+                                        <source src={nameVideoMp4} type="video/mp4" />
+                                        <img src={nameStatic} alt="Samuel Park" className="w-full" />
+                                    </video>
+                                </div>
+
+                                <p className="sm:text-h1 text-right font-ppSupply pointer-events-none" data-aos="fade-up" data-aos-delay="2000">
+                                    Experience Designer & Visual Artist
+                                </p>
                             </div>
                         </div>
 
@@ -136,35 +168,35 @@ function Home() {
                         </div>
                     </div>
 
-                    
+
                 </div>
                 {/* More Projects Section */}
                 <div className="mx-4 sm:mx-8 mb-16">
-                        <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
-                            style={{
-                                backgroundImage: `url(${logo})`,
-                                backgroundSize: "400px",
-                                backgroundPosition: "right center",
-                                backgroundRepeat: "no-repeat",
-                            }}>
-                            <img
-                                className="side-frog w-24 h-24 absolute top-1/2 -translate-y-1/2 -left-8 z-10"
-                                src={arrowSide}
-                                alt="side arrow"
-                            />
-                            <a
-                                href="/work"
-                                className="btn-default mx-auto sm:mx-0"
-                                aria-label="View More Projects"
-                            >
-                                More Projects!
-                            </a>
-                        </div>
-                        {/* Contact Section */}
-                        <div>
-                            <Contact />
-                        </div>
+                    <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
+                        style={{
+                            backgroundImage: `url(${logo})`,
+                            backgroundSize: "400px",
+                            backgroundPosition: "right center",
+                            backgroundRepeat: "no-repeat",
+                        }}>
+                        <img
+                            className="side-frog w-24 h-24 absolute top-1/2 -translate-y-1/2 -left-8 z-10"
+                            src={arrowSide}
+                            alt="side arrow"
+                        />
+                        <a
+                            href="/work"
+                            className="btn-default mx-auto sm:mx-0"
+                            aria-label="View More Projects"
+                        >
+                            More Projects!
+                        </a>
                     </div>
+                    {/* Contact Section */}
+                    <div>
+                        <Contact />
+                    </div>
+                </div>
             </div>
         </HelmetProvider>
     );

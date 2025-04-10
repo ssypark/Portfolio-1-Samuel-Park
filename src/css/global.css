@@ -78,4 +78,11 @@ h1,h2,h3,h4,h5,h6 {
     color: var(--redOrange);
   }
 
-
+  .animated-name {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* Improve rendering quality */
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
