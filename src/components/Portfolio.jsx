@@ -6,10 +6,8 @@ import "aos/dist/aos.css";
 //Image Imports
 import ssImage from '../assets/ssi.png';
 import amalgmImage from '../assets/amalgm.png';
-import interactiveImage from '../assets/interactive.png';
 import flyDexImage from '../assets/flydex/flydex-login-mockup.jpg';
-import introBumperImage from '../assets/intro-bumper.png';
-import ccMockup from '../assets/conscious-connections/full-mockup.png';
+import ccMockup from '../assets/cc-mockup.png';
 import ldHero from '../assets/ld-hero-showcase.png';
 
 // destructuring is used to include the limit prop that is passed from the parent component. This is used to limit the number of projects to display on the page.
@@ -48,7 +46,7 @@ function Portfolio({ limit}) {
         {
             image: ccMockup,
             title: 'Conscious Connections',
-            description: 'Instead of designing just another dating app, we aimed to craft an immersive relationship experience that fosters meaningful connections.',
+            description: 'Conscious Connections was designed during a weekend hackathon, where we aimed to create an immersive relationship experience that fosters meaningful connections beyond swipes and shallow matches.',
             tags: ['Product Design', 'Graphic Design', 'Interaction Design', 'UX/UI'],
             link: '/work/conscious-connections',
         },
@@ -56,24 +54,24 @@ function Portfolio({ limit}) {
             image: ldHero,
             title: 'London Drugs Website Redesign',
             description: 'A UX overhaul of London Drugs website aimed at reducing friction in key user flows and increasing user confidence through more intuitive interfaces.',
-            tags: ['UX Research', 'UX/UI', 'Wireframing', 'User Testing'],
+            tags: ['UX Research', 'UX/UI', 'Wireframing', 'User Testing', 'Case Study'],
             link: '/work/london-drugs',
         },
         
-        {
-            image: introBumperImage,
-            title: 'Intro Bumper Video',
-            description: 'Utilizing After Effects, I animated an intro bumper that showcases the different aspects of myself as a visual artist.',
-            tags: ['Animation', 'Video Editing', 'Graphic Design'],
-            link: '/work/intro-bumper-video',
-        },
+        // {
+        //     image: introBumperImage,
+        //     title: 'Intro Bumper Video',
+        //     description: 'Utilizing After Effects, I animated an intro bumper that showcases the different aspects of myself as a visual artist.',
+        //     tags: ['Animation', 'Video Editing', 'Graphic Design'],
+        //     link: '/work/intro-bumper-video',
+        // },
     ]);
 
     //In order to limit the number of projects displayed on the home page vs projects page, we need to add a limit prop and use that to slice the projects array. 
     const displayProjects = limit ? projects.slice(0, limit) : projects;
 
     return (
-        <div className="container mx-auto px-0 py-0 mb-8">
+        <div className="container mx-auto px-0 py-0 mb-48">
             <div className="grid gap-12 text-left">
                 {/* This maps over the projects array and displays each project in a ProjectShowcase component */}
                 {displayProjects.map((project, index) => (

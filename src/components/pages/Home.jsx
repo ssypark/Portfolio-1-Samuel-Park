@@ -179,13 +179,27 @@ function Home() {
 
 
                     {/* Projects */}
-                    <div id="featuredProjects" className="z-2000">
+                    <div id="featuredProjects" className="z-2000 mb-24">
                         <div className="w-full" data-aos="fade-right">
                             <h2 className="text-h1 font-ppSupply  p-4 mb-4 mt-0 text-ink flex items-center">Featured Projects</h2>
                         </div>
                         {/* with the limit prop (see Portfolio.jsx), we can limit the number of projects displayed */}
-                        <div className="z-100 mx-8">
+                        <div className="z-100 mx-8 -mb-40">
                             <Portfolio limit={3} />
+                        </div>
+
+                        {/* View All Projects CTA */}
+                        <div className="flex justify-end mt-0 mr-8">
+                            <a
+                                href="/work"
+                                className="btn-default inline-flex items-center transition-all duration-300 hover:translate-x-2"
+                                aria-label="View All Projects"
+                            >
+                                View All Projects
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                                </svg>
+                            </a>
                         </div>
                     </div>
 
