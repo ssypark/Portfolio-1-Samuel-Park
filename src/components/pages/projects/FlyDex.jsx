@@ -205,7 +205,7 @@ function FlyDex() {
             </div>
 
             {/* Content Section with Sidebar */}
-            <div className="flex max-w-container mx-auto md:gap-8 px-2 bg-olivewhite">
+            <div className="flex container mx-auto md:gap-8 px-2 bg-olivewhite">
                 {/* Sidebar Navigation */}
                 <div className="hidden md:block md:sticky md:top-10 md:h-fit md:py-12 pl-8">
                     <ul className="flex flex-col space-y-4 pl-4 pt-16">
@@ -220,8 +220,8 @@ function FlyDex() {
                                 <a
                                     href={`#${topic.id}`}
                                     onClick={(e) => handleScroll(e, topic.id)}
-                                    className={`sidebar pl-2 text-gray-500 group-hover:text-redOrange transition-all duration-300 text-lg relative
-                                        ${activeSection === topic.id ? 'text-redOrange font-bold translate-x-2' : 'hover:translate-x-1'}`}
+                                    className={`sidebar pl-2 text-gray-500 group-hover:text-redOrange transition-all duration-300 text-h5 relative
+                                        ${activeSection === topic.id ? 'text-redOrange font-bold  translate-x-2' : 'hover:translate-x-1'}`}
                                 >
                                     {topic.label}
                                 </a>
@@ -549,8 +549,11 @@ function FlyDex() {
                         </div>
                     </section>
 
-                    {/* More Projects Section */}
-                    <div className="mx-auto container">
+                    
+                </div>
+            </div>
+                        {/* More Projects Section */}
+                    <div className="mx-12 mb-16">
                         <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
                             style={{
                                 backgroundImage: `url(${logoBlack})`,
@@ -576,9 +579,6 @@ function FlyDex() {
                             <Contact />
                         </div>
                     </div>
-                </div>
-            </div>
-
             {justinModalOpen && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"

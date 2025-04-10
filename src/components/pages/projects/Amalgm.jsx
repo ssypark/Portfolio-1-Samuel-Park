@@ -705,7 +705,7 @@ function Amalgm() {
             </div>
 
             {/* More Projects Section */}
-            <div className="mx-auto mt-24 container px-8 max-w-full md:max-w-8xl">
+            <div className="mx-12 mb-16">
                 <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
                     style={{
 

@@ -192,7 +192,7 @@ function Home() {
 
                 </div>
                 {/* More Projects Section */}
-                <div className="mx-4 sm:mx-8 mb-16">
+                <div className="mx-12 mb-16">
                     <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
                         style={{
                             backgroundImage: `url(${logo})`,

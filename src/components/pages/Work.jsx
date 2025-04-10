@@ -107,7 +107,7 @@ function Work() {
 
             </div>
              {/* More Projects Section */}
-             <div className="w-full">
+             <div className="mx-12 mb-16">
                 <div className="more-projects relative bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-50 border border-b-0 border-ink"
                     style={{
                         backgroundImage: `url(${logo})`,

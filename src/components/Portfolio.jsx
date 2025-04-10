@@ -10,6 +10,7 @@ import interactiveImage from '../assets/interactive.png';
 import flyDexImage from '../assets/flydex/flydex-login-mockup.jpg';
 import introBumperImage from '../assets/intro-bumper.png';
 import ccMockup from '../assets/conscious-connections/full-mockup.png';
+import ldHero from '../assets/ld-hero-showcase.png';
 
 // destructuring is used to include the limit prop that is passed from the parent component. This is used to limit the number of projects to display on the page.
 // This is done to allow us to limit the number of projects displayed on the home page vs projects page.
@@ -52,11 +53,11 @@ function Portfolio({ limit}) {
             link: '/work/conscious-connections',
         },
         {
-            image: interactiveImage,
-            title: 'Interactive Document',
-            description: 'An interactive document designed to educate readers about the diverse species of the Thompson River through engaging visuals and intuitive navigation.',
-            tags: ['Interaction Design', 'Graphic Design'],
-            link: '/work/interactive-document',
+            image: ldHero,
+            title: 'London Drugs Website Redesign',
+            description: 'A UX overhaul of London Drugs website aimed at reducing friction in key user flows and increasing user confidence through more intuitive interfaces.',
+            tags: ['UX Research', 'UX/UI', 'Wireframing', 'User Testing'],
+            link: '/work/london-drugs',
         },
         
         {

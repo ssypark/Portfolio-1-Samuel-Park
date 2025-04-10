@@ -86,7 +86,8 @@ function Gallery() {
             </div>
 
             {/* More Projects Section */}
-            <div className="more-projects relative border border-ink border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
+            <div className="mx-12 mb-16">
+            <div className="more-projects relative border border-ink border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10 "
                 style={{
                     backgroundImage: `url(${logo})`,
                     backgroundSize: "400px",
@@ -110,6 +111,7 @@ function Gallery() {
             {/* Contact Section */}
             <div className="pb-28 z-10">
                 <Contact />
+            </div>
             </div>
         </div>
     );
