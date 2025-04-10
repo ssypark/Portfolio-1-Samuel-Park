@@ -119,18 +119,18 @@ function Home() {
                     <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center text-ink pointer-events-none" >
                         <div className="flex flex-col md:flex-row items-center md:items-start text-left space-y-8 md:space-y-0 md:space-x-8 z-0 mb-12 pointer-events-none" >
                             <div className="text-left z-0 pointer-events-none">
-                                <p className="sm:text-h3 font-ppSupply max-w-2xl pointer-events-none" data-aos="fade-right" >
+                                {/* <p className="sm:text-h3 font-ppSupply max-w-2xl pointer-events-none" data-aos="fade-right">
                                     Hello, I'm
-                                </p>
+                                </p> */}
 
-                                {/* Video with WebM and MP4 fallback */}
-                                <div className="w-[900px] md:w-[1000px] lg:w-[1100px]">
+                                {/* Responsive container for the video */}
+                                <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-3xl xl:max-w-4xl mx-auto">
                                     <video
                                         ref={videoRef}
                                         muted
-
+                                     
                                         playsInline
-                                        className="w-full pointer-events-none animated-name"
+                                        className="w-full h-auto pointer-events-none animated-name"
                                         aria-label="Samuel Park"
                                     >
                                         <source src={nameVideoWebm} type="video/webm" />
