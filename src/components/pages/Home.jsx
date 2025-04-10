@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Helmet } from "react-helmet";
 
 // Animation Imports
@@ -23,7 +23,7 @@ import Portfolio from "../Portfolio";
 import Contact from "../Contact";
 import nameVideoWebm from "../../assets/name-animation.webm";
 import nameVideoMp4 from "../../assets/name-animation.mp4";
-import nameStatic from "../../assets/myname.png";
+import nameStatic from "../../assets/name-mobile.png";
 import dot from "../../assets/dot.svg";
 import Particles from "../animations/react-bits/Particles";
 import { HelmetProvider } from "react-helmet-async";
@@ -33,6 +33,7 @@ gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger for GSAP
 
 function Home() {
     const videoRef = useRef(null);
+    const [isMobileWidth, setIsMobileWidth] = useState(false);
 
     // To see the animation code, refer to animations.js
     useEffect(() => {
@@ -44,12 +45,20 @@ function Home() {
         initHeroFrogAnimation();
         const fishAnimationCleanup = initFishAnimation();
 
-        const video = videoRef.current;
-        if (video) {
-            // Don't autoplay immediately
+        // Check if the screen is mobile width
+        const checkWidth = () => {
+            setIsMobileWidth(window.innerWidth < 768);
+        };
+
+        // Run on mount and when window resizes
+        checkWidth();
+        window.addEventListener('resize', checkWidth);
+
+        // Only handle video if we're on desktop width
+        if (!isMobileWidth && videoRef.current) {
+            const video = videoRef.current;
             video.autoplay = false;
 
-            // Delay playback by 800ms (adjust as needed)
             setTimeout(() => {
                 video.play()
                     .catch(e => console.error("Video play failed:", e));
@@ -59,8 +68,10 @@ function Home() {
         //Cleanup function for the fish animation
         return () => {
             fishAnimationCleanup();
+            window.removeEventListener('resize', checkWidth);
         };
-    }, []);
+    }, [isMobileWidth]);
+
     const handleScrollToFeatured = () => {
         const targetElement = document.getElementById("featuredProjects");
         if (targetElement) {
@@ -119,24 +130,34 @@ function Home() {
                     <div className="relative w-full min-h-screen -mt-16 flex items-center justify-center text-ink pointer-events-none" >
                         <div className="flex flex-col md:flex-row items-center md:items-start text-left space-y-8 md:space-y-0 md:space-x-8 z-0 mb-12 pointer-events-none" >
                             <div className="text-left z-0 pointer-events-none">
-                                {/* <p className="sm:text-h3 font-ppSupply max-w-2xl pointer-events-none" data-aos="fade-right">
+                                <p className="sm:text-h3 font-ppSupply max-w-2xl pointer-events-none" data-aos="fade-right">
                                     Hello, I'm
-                                </p> */}
+                                </p>
 
-                                {/* Responsive container for the video */}
+                                {/* Responsive container with conditional rendering based on width */}
                                 <div className="w-full max-w-[95%] sm:max-w-[90%] md:max-w-[85%] lg:max-w-3xl xl:max-w-4xl mx-auto">
-                                    <video
-                                        ref={videoRef}
-                                        muted
-                                     
-                                        playsInline
-                                        className="w-full h-auto pointer-events-none animated-name"
-                                        aria-label="Samuel Park"
-                                    >
-                                        <source src={nameVideoWebm} type="video/webm" />
-                                        <source src={nameVideoMp4} type="video/mp4" />
-                                        <img src={nameStatic} alt="Samuel Park" className="w-full" />
-                                    </video>
+                                    {isMobileWidth ? (
+                                        // Static image for mobile widths
+                                        <img
+                                            src={nameStatic}
+                                            alt="Samuel Park"
+                                            className="w-full h-auto pointer-events-none"
+                                            data-aos="fade-up"
+                                        />
+                                    ) : (
+                                        // Video for desktop widths
+                                        <video
+                                            ref={videoRef}
+                                            muted
+                                            playsInline
+                                            className="w-full h-auto pointer-events-none animated-name"
+                                            aria-label="Samuel Park"
+                                        >
+                                            <source src={nameVideoWebm} type="video/webm" />
+                                            <source src={nameVideoMp4} type="video/mp4" />
+                                            <img src={nameStatic} alt="Samuel Park" className="w-full" />
+                                        </video>
+                                    )}
                                 </div>
 
                                 <p className="sm:text-h1 text-right font-ppSupply pointer-events-none" data-aos="fade-up" data-aos-delay="2000">

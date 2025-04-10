@@ -113,7 +113,7 @@ function About() {
                             Hello, I'm Samuel
                         </h2>
                         <p className="text-xl md:text-h4 font-ppFraktion pt-1" data-aos="fade-up" data-aos-delay="600">
-                            I’m a product designer with a fine arts background who loves mixing creativity with practicality. I believe design should solve problems and bring a smile, so I strive to create experiences that are both meaningful and a little fun.
+                            I’m a experience designer with a fine arts background who loves mixing creativity with practicality. I believe design should solve problems and bring a smile, so I strive to create experiences that are both meaningful and a little fun.
                         </p>
                     </div>
                 </div>
