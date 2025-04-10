@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore a virtual art gallery showcasing 3D artwork and interactive experiences">
+  <title>Sam & Vahan || Virtual Art Gallery</title>
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script
+    src="https://unpkg.com/@c-frame/aframe-particle-system-component@1.2.x/dist/aframe-particle-system-component.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.0/dist/aframe-extras.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@fern-solutions/aframe-sky-background/dist/sky-background.umd.min.js"></script>
+
+<link rel="icon" type="image/svg+xml" href="src/favicon.svg">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <a-scene fog="type: exponential; color: #12031a; density: 0.05">
+    <!-- Snow -->
+    <a-entity id="snow"
+      particle-system="preset: snow; color: #ff002b; particleCount: 5500; velocityValue: 0 -0.8 0; velocitySpread: 0.5 0.2 0.5"></a-entity>
+    <!-- Sky -->
+    <a-sky-background top-color="#000000" bottom-color="#19004d"></a-sky-background>
+    <!-- Ocean -->
+    <a-entity id="ocean" ocean="density: 20; width: 50; depth: 50; speed: 4"
+      material="color: #9CE3F9; opacity: 0.75; metalness: 0; roughness: 1" rotation="-90 0 0"></a-entity>
+    <!-- Lights -->
+    <a-entity light="type: directional; color: #ffffff; intensity: 1.0" position="0 5 5"></a-entity>
+    <a-entity light="type: ambient; color: #555555"></a-entity>
+
+    <!-- Door to Vahan's Room -->
+    <a-entity id="vahan-door" geometry="primitive: box; height: 4; width: 2; depth: 0.1"
+      material="color: #000000; shader: flat" position="-2.3 1 -7">
+      <a-entity id="vahan-border" geometry="primitive: box; height: 4.2; width: 2.2; depth: 0.15"
+        material="color: #FF4500; opacity: 0; transparent: true; emissive: #910000"></a-entity>
+      <a-text value="Vahan's Room" align="center" color="#FFFFFF" position="0 0.6 0.1"></a-text>
+    </a-entity>
+    <!-- Floating Sphere for Vahan's Room -->
+    <a-entity id="vahan-sphere" geometry="primitive: sphere; radius: 0.5"
+      material="color: #000000; emissive: #910000; emissiveIntensity: 0; opacity: 0.8" position="-6 2 -7"
+      animation="property: position; to: -6 2.2 -7; dir: alternate; dur: 2000; easing: easeInOutSine; loop: true">
+    </a-entity>
+    <a-text value="Vahan's Website" align="center" color="#ffffff" position="-6 1.3 -7" width="3"></a-text>
+
+    <!-- Door to Sam's Room -->
+    <a-entity id="sam-door" geometry="primitive: box; height: 4; width: 2; depth: 0.1"
+      material="color: #000000; shader: flat" position="2.3 1 -7">
+      <a-entity id="sam-border" geometry="primitive: box; height: 4.2; width: 2.2; depth: 0.15"
+        material="color: #0008FF; opacity: 0; transparent: true; emissive: #0008ff"></a-entity>
+      <a-text value="Sam's Room" align="center" color="#FFFFFF" position="0 0.6 0.1"></a-text>
+    </a-entity>
+
+    <!-- Floating Sphere for Sam's Room -->
+    <a-entity id="sam-sphere" geometry="primitive: sphere; radius: 0.5"
+      material="color: #000000; emissive: #0008FF; emissiveIntensity: 0; opacity: 0.8" position="6 2 -7"
+      animation="property: position; to: 6 2.2 -7; dir: alternate; dur: 2000; easing: easeInOutSine; loop: true">
+    </a-entity>
+    <a-text value="Sam's Website" align="center" color="#ffffff" position="6 1.3 -7" width="3"></a-text>
+    <!-- Camera -->
+    <a-camera position="0 2 14" look-controls="pointerlockEnabled: true">
+      <a-cursor fuse="false" color="white" position="0 0 -1"
+        geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+        material="color: white; shader: flat"></a-cursor>
+    </a-camera>
+
+    <!-- Description Overlay -->
+    <div class="description-overlay hidden">
+      <div class="overlay-content">
+        <p>This is a unique digital space where two creative visions come together. This collaborative project between
+          Vahan Vartanian and Sam Park offers the opportunity to explore distinct gallery rooms, each reflecting the
+          individual artistic styles of our creations. Immerse yourself in this interactive experience.</p>
+        <button id="close-description">Close</button>
+      </div>
+    </div>
+
+    <!-- Orb between the doors -->
+    <a-entity id="info-orb" geometry="primitive: sphere; radius: 0.2"
+      material="color: #000000; emissive: #FFD700; emissiveIntensity: 0.1; opacity: 0.9" position="0 2 -7"
+      animation="property: position; to: 0 2.2 -7; dir: alternate; dur: 2000; easing: easeInOutSine; loop: true">
+    </a-entity>
+    <a-text value="Info" align="center" color="#ffffff" position="0 1.6 -7" width="3"></a-text>
+  </a-scene>
+
+  <!-- Instructions -->
+  <div class="instructions">
+    <h2>Instructions</h2>
+    <p>Use WASD or arrow keys to move, and hold down your mouse button to look around. <br>
+      Hover over a door to see it glow, and click to enter the room.</p>
+  </div>
+
+  <!-- Welcome Overlay -->
+  <div class="welcome">
+    <h1>WELCOME</h1>
+  </div>
+
+  <script>
+    // Overlay Animations
+    window.addEventListener('load', () => {
+      const welcomeOverlay = document.querySelector('.welcome');
+      const containerOverlay = document.querySelector('.instructions');
+      const descriptionOverlay = document.querySelector('.description');
+
+      if (welcomeOverlay) {
+        setTimeout(() => {
+          welcomeOverlay.classList.add('hidden');
+        }, 2000);
+      }
+
+      if (descriptionOverlay) {
+        setTimeout(() => {
+          descriptionOverlay.classList.add('hidden');
+        }, 2000);
+      }
+
+      if (containerOverlay) {
+        setTimeout(() => {
+          containerOverlay.classList.add('hidden');
+        }, 6000);
+      }
+    });
+
+    // Vahan's Room Door
+    const vahanDoor = document.querySelector('#vahan-door');
+    const vahanBorder = document.querySelector('#vahan-border');
+    vahanDoor.addEventListener('mouseenter', () => {
+      vahanBorder.setAttribute('material', 'opacity: 0.5; emissiveIntensity: 0.7');
+    });
+    vahanDoor.addEventListener('mouseleave', () => {
+      vahanBorder.setAttribute('material', 'opacity: 0; emissiveIntensity: 0');
+    });
+    vahanDoor.addEventListener('click', () => {
+      window.location.href = 'vahanroom.html';
+    });
+
+    // Sam's Room Door
+    const samDoor = document.querySelector('#sam-door');
+    const samBorder = document.querySelector('#sam-border');
+    samDoor.addEventListener('mouseenter', () => {
+      samBorder.setAttribute('material', 'opacity: 0.5; emissiveIntensity: 0.7');
+    });
+    samDoor.addEventListener('mouseleave', () => {
+      samBorder.setAttribute('material', 'opacity: 0; emissiveIntensity: 0');
+    });
+    samDoor.addEventListener('click', () => {
+      window.location.href = 'samroom.html';
+    });
+
+    // Glow Effect for Vahan's Sphere
+    const vahanSphere = document.querySelector('#vahan-sphere');
+    vahanSphere.addEventListener('mouseenter', () => {
+      vahanSphere.setAttribute('material', 'emissiveIntensity: 1');
+    });
+    vahanSphere.addEventListener('mouseleave', () => {
+      vahanSphere.setAttribute('material', 'emissiveIntensity: 0');
+    });
+    vahanSphere.addEventListener('click', () => {
+      window.open('https://www.vahanvartanian.com', '_blank');
+    });
+
+    // Glow Effect for Sam's Sphere
+    const samSphere = document.querySelector('#sam-sphere');
+    samSphere.addEventListener('mouseenter', () => {
+      samSphere.setAttribute('material', 'emissiveIntensity: 1');
+    });
+    samSphere.addEventListener('mouseleave', () => {
+      samSphere.setAttribute('material', 'emissiveIntensity: 0');
+    });
+    samSphere.addEventListener('click', () => {
+      window.open('https://www.sampark.ca', '_blank');
+    });
+
+    // Get elements
+    const infoOrb = document.querySelector('#info-orb');
+    const descriptionOverlay = document.querySelector('.description-overlay');
+    const closeDescriptionButton = document.querySelector('#close-description');
+
+    // Show Overlay
+    infoOrb.addEventListener('click', () => {
+      descriptionOverlay.classList.remove('hidden');
+    });
+
+    // Hide Overlay
+    closeDescriptionButton.addEventListener('click', () => {
+      descriptionOverlay.classList.add('hidden');
+    });
+
+    // Orb Glow
+    infoOrb.addEventListener('mouseenter', () => {
+      infoOrb.setAttribute('material', 'emissiveIntensity: 0.8');
+    });
+
+    infoOrb.addEventListener('mouseleave', () => {
+      infoOrb.setAttribute('material', 'emissiveIntensity: 0.2');
+    });
+  </script>
+</body>
+
+</html>
+``` 

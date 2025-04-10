@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vahan's Room</title>
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script
+    src="https://unpkg.com/@c-frame/aframe-particle-system-component@1.2.x/dist/aframe-particle-system-component.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.0/dist/aframe-extras.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@fern-solutions/aframe-sky-background/dist/sky-background.umd.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <div class="overlay">
+    <h2>Welcome to Vahan's Gallery.</h2> <br> Explore the 3D space and enjoy the art. <br> Right this way -></p>
+  </div>
+  
+  <a-scene>
+    <!-- Sky -->
+    <a-sky-background top-color="#000000" bottom-color="#060078"></a-sky-background>
+
+    <!-- Vahan's Room -->
+    <a-entity gltf-model="src/v-room.glb" position="0 0 0" scale="2 2 2"></a-entity>
+
+    <!-- Navigation Button Back to Main -->
+    <a-entity id="exit-door" geometry="primitive: box; height: 4; width: 2; depth: 0.1"
+      material="color: #000000; shader: flat" position="-16.78 2 4.2" rotation="0 90 0">
+      <a-entity id="exit-border" geometry="primitive: box; height: 4.2; width: 2.2; depth: 0.15"
+        material="color: #0008ff; opacity: 0; transparent: true; emissive: #0008ff"></a-entity>
+      <a-text value="EXIT" align="center" color="#FFF" position="0 0.6 0.1"></a-text>
+    </a-entity>
+
+    <!-- Camera -->
+    <a-camera position="0 1.6 0" wasd-controls look-controls>
+      <a-cursor color="#ffffff" fuse="true" timeout="1500"></a-cursor>
+    </a-camera>
+  </a-scene>
+
+  <script>
+    // See index.html for JS logic
+    const overlay = document.querySelector('.overlay');
+    setTimeout(() => {
+      overlay.classList.add('hidden');
+    }, 3000);
+
+    document.querySelector('a-scene').addEventListener('loaded', () => {
+      const exitButton = document.querySelector('#exit-door');
+      const exitBorder = document.querySelector('#exit-border');
+
+      exitButton.addEventListener('mouseenter', () => {
+        exitBorder.setAttribute('material', 'opacity: 0.5; emissiveIntensity: 0.7');
+      });
+
+      exitButton.addEventListener('mouseleave', () => {
+        exitBorder.setAttribute('material', 'opacity: 0; emissiveIntensity: 0');
+      });
+
+      exitButton.addEventListener('click', () => {
+        window.location.href = 'index.html'; 
+      });
+    });
+  </script>
+</body>
+
+</html>

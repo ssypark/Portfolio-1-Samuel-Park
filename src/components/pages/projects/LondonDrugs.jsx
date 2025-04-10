@@ -13,7 +13,7 @@ import Contact from "../../Contact";
 import ldHero from "../../../assets/london-drugs/ld-hero.png"; // Placeholder - replace with actual image
 import ldMockup from "../../../assets/london-drugs/ld-mb-mockup.png"; // Placeholder
 import userTesting from "../../../assets/london-drugs/user-testing.png"; // Placeholder
-import heuristicAudit from "../../../assets/london-drugs/heuristic-audit.png"; // Placeholder
+import heuristicAudit from "../../../assets/london-drugs/heuristic-audit.jpg"; // Placeholder
 import wireframes from "../../../assets/london-drugs/wireframes.png"; // Placeholder
 import teamPhoto from "../../../assets/london-drugs/team-photo.png"; // Placeholder
 import flowDiagram from "../../../assets/london-drugs/flow-diagram.png"; // Placeholder

@@ -321,7 +321,7 @@ function SalmonSanctuary() {
                                 <a
                                     href={`#${topic.id}`}
                                     onClick={(e) => handleScroll(e, topic.id)}
-                                    className={`sidebar pl-2 text-gray-500 group-hover:text-redOrange transition-all duration-300 text-h6 relative
+                                    className={`sidebar pl-2 text-gray-500 group-hover:text-redOrange transition-all duration-300 text-h5 relative
                                         ${activeSection === topic.id ? 'text-redOrange font-bold translate-x-2' : 'hover:translate-x-1'}`}
                                 >
                                     {topic.label}

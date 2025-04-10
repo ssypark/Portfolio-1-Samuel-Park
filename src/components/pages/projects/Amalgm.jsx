@@ -290,9 +290,9 @@ function Amalgm() {
                     </div>
                 </div>
             </div>
-            <div>
-                <img src={history} alt="brand history" className="items-center w-full border-b border-ink" />
-            </div>
+            <div className="hidden md:block">
+    <img src={history} alt="brand history" className="items-center w-full border-b border-ink" />
+</div>
             <div className="flex container mx-auto gap-14 px-8 bg-olivewhite">
 
                 {/* Sidebar Navigation */}
@@ -324,7 +324,7 @@ function Amalgm() {
                                                 group-hover:text-redOrange 
                                                 transition-all 
                                                 duration-300 
-                                                text-lg 
+                                                text-h5 
                                                 relative
                                                 ${activeSection === topic.id
                                             ? 'text-redOrange font-bold translate-x-2'
