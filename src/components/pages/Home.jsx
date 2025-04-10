@@ -66,7 +66,7 @@ function Home() {
             <div className="relative px-4 sm:px-8 bg-olivewhite">
                 {/* Metadata */}
                 <Helmet>
-                    <title>Samuel Park - UX/UI & Visual Designer Portfolio</title>
+                    <title>Samuel Park - Experience & Visual Designer Portfolio</title>
                     <meta
                         name="description"
                         content="Welcome to Samuel Park's portfolio! Explore a blend of UX/UI design, fine arts, and digital innovation. Check out featured projects and learn more about Samuel's work."
@@ -109,7 +109,7 @@ function Home() {
                                 </p>
                                 <img className="w-128 pointer-events-none z-0" src={name} alt="Samuel Park" />
                                 <p className="sm:text-h1 text-right font-ppSupply pointer-events-none" data-aos="fade-up" data-aos-delay="800">
-                                    Product Designer & Visual Artist </p>
+                                    Experience Designer & Visual Artist </p>
                             </div>
                         </div>
 
@@ -131,13 +131,15 @@ function Home() {
                             <h2 className="text-h1 font-ppSupply  p-4 mb-4 mt-0 text-ink flex items-center">Featured Projects</h2>
                         </div>
                         {/* with the limit prop (see Portfolio.jsx), we can limit the number of projects displayed */}
-                        <div className="z-100">
+                        <div className="z-100 mx-8">
                             <Portfolio limit={3} />
                         </div>
                     </div>
 
-                    {/* More Projects Section */}
-                    <div className="mx-auto container">
+                    
+                </div>
+                {/* More Projects Section */}
+                <div className="mx-4 sm:mx-8 mb-16">
                         <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
                             style={{
                                 backgroundImage: `url(${logo})`,
@@ -163,7 +165,6 @@ function Home() {
                             <Contact />
                         </div>
                     </div>
-                </div>
             </div>
         </HelmetProvider>
     );

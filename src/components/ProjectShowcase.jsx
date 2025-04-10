@@ -17,7 +17,7 @@ function ProjectShowcase({ image, title, description, tags, link }) {
             </div>
 
             {/* Text and CTA Section */}
-            <div className="w-full md:w-1/3 bg-olivewhite p-8 flex flex-col justify-between">
+            <div className="w-full py-12 md:w-1/3 bg-olivewhite p-8 flex flex-col justify-between">
                 <div>
                     <h2 className="text-2xl sm:text-h3 font-ppSupply  text-ink">{title}</h2>
                                         {/* Skill Pills */}
@@ -32,7 +32,7 @@ function ProjectShowcase({ image, title, description, tags, link }) {
 
                 </div>
                 {/* CTA */}
-                <div className="mt-6">
+                <div className="mt-12">
                     <div className="flex items-center btn-grey gap-2 px-2 py-1 bg-olivewhite text-ink  font-ppSupply rounded border border-ink hover:bg-florange duration-300 w-max" aria-label="View Project">
                         View Project <MdArrowOutward />
                     </div>

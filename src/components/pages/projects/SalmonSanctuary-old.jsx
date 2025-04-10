@@ -151,7 +151,7 @@ function SalmonSanctuary() {
                     <div className="flex flex-col sm:flex-row gap-8 text-ink">
                         <div>
                             <h2 className="text-md font-bold">Role</h2>
-                            <p className="text-sm font-workSans">Lead UX/UI Designer<br />Information Architect</p>
+                            <p className="text-sm font-workSans">UX/UI Design<br />Information Architect</p>
                         </div>
                         <div>
                             <h2 className="text-md font-bold font-workSans">Date</h2>

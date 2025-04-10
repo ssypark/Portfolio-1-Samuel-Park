@@ -4,3 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html, body {
+      @apply bg-olivewhite;
+    }
+    
+    #root {
+      @apply bg-olivewhite;
+    }
+  }
+
+  /* Remove border from active links since the indicator will handle that */
+.active {
+    border: none !important;
+  }

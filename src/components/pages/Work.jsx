@@ -96,11 +96,18 @@ function Work() {
                 {/* Projects */}
                 <div id="featuredProjects">
                     <div className="w-full">
-                        <h2 className="text-h2 font-ppSupply font-bold  mb-4 mt-0 text-ink flex pb-4 items-center">Current Projects </h2>
+                        <h2 className="text-h2 font-ppSupply font-bold px-8 mb-4 mt-0 text-ink flex pb-4 items-center">Current Projects </h2>
                     </div>
+                    <div className="container mx-auto px-8">
                     <Portfolio />
+                    </div>
                 </div>
-                {/* More Projects Section */}
+                
+               
+
+            </div>
+             {/* More Projects Section */}
+             <div className="w-full">
                 <div className="more-projects relative bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-50 border border-b-0 border-ink"
                     style={{
                         backgroundImage: `url(${logo})`,
@@ -126,8 +133,7 @@ function Work() {
                 <div className="pb-28">
                     <Contact />
                 </div>
-
-            </div>
+                </div>
         </div>
     );
 }

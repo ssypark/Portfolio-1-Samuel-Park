@@ -2,18 +2,9 @@ import React from "react";
 import fishbrain from "../assets/flydex/fishbrain.png";
 import identafly from "../assets/flydex/identafly.png";
 
-const SWOTChartWithImage = ({ title, data, image, imagePosition = "right" }) => {
+const SWOTChartWithImage = ({ title, data, image }) => {
   return (
     <div className="flex flex-col lg:flex-row items-center gap-8">
-      {imagePosition === "left" && (
-        <div className="lg:w-1/3 p-4 flex-shrink-0">
-          <img
-            src={image}
-            alt={`${title} Screenshot`}
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
-      )}
       <div className="lg:w-2/3 p-4">
         <h2 className="text-2xl font-bold text-ink mb-4 text-center lg:text-left">
           {title}
@@ -70,15 +61,13 @@ const SWOTChartWithImage = ({ title, data, image, imagePosition = "right" }) => 
           </table>
         </div>
       </div>
-      {imagePosition === "right" && (
-        <div className="lg:w-1/3 p-4 flex-shrink-0">
-          <img
-            src={image}
-            alt={`${title} Screenshot`}
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
-      )}
+      <div className="lg:w-1/3 p-4 flex-shrink-0">
+        <img
+          src={image}
+          alt={`${title} Screenshot`}
+          className="w-full h-auto rounded-lg"
+        />
+      </div>
     </div>
   );
 };
@@ -142,19 +131,17 @@ const FlyDexSWOTCharts = () => {
 
   return (
     <div className="space-y-12">
-      {/* Top Chart: Text on left, image on right */}
+      {/* First Chart: Text on left, image on right */}
       <SWOTChartWithImage
         title="FishBrain SWOT"
         data={fishBrainSWOT}
         image={fishbrain}
-        imagePosition="right"
       />
-      {/* Bottom Chart: Image on left, text on right */}
+      {/* Second Chart: Text on left, image on right */}
       <SWOTChartWithImage
         title="IdentaFly SWOT"
         data={identaFlySWOT}
         image={identafly}
-        imagePosition="left"
       />
     </div>
   );

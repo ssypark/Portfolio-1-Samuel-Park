@@ -134,7 +134,8 @@ function About() {
             <div id="philosophy" data-aos="fade-left" className="bg-olivewhite container flex justify-center items-center px-8 sm:px-12 md:px-16  sm:pt-36 sm:pb-24 mx-auto  hover:scale-105 transition-transform duration-300">
                 <div className="container mx-auto">
                     <h2 className="text-h2 font-ppSupply mb-6 text-ink">How I Approach Design</h2>
-                    <p className="text-body leading-relaxed mb-4 ">I often compare my design process to a day on the water: every lake has its own type of fish, much like each target audience has unique needs. When a fish bites, it confirms that my casting technique, interactive flow, and visual presentation are on point. That moment of feedback prompts me to fine-tune my approach—adjusting my lure and strategy—to craft designs that capture attention and deliver real value. By listening to every “bite,” I continuously refine my process to create engaging, user-centered experiences.</p>
+                    <p className="text-body leading-relaxed mb-8 ">I often compare my design process to a day on the water: every lake has its own type of fish, much like each target audience has unique needs. When a fish bites, it confirms that my casting technique, interactive flow, and visual presentation are on point. That moment of feedback prompts me to fine-tune my approach—adjusting my lure and strategy—to craft designs that capture attention and deliver real value. By listening to every “bite,” I continuously refine my process to create engaging, user-centered experiences.</p>
+                    <p className="text-body leading-relaxed mb-4">This feedback‑driven cycle ensures each iteration of my designs not only resonates with its audience but also evolves to meet their changing needs—turning insights into impactful, lasting solutions.</p>
                 </div>
             </div>
        
@@ -142,7 +143,7 @@ function About() {
             <div data-aos="fade-right" className="group container relative mx-auto px-8 sm:px-12 md:px-16 flex flex-col lg:flex-row items-center gap-8 mb-16 mt-12 justify-between bg-olivewhite py-12 rounded-lg border border-ink">
                 {/* Background Image */}
                 <div
-                    className=" absolute inset-0 bg-no-repeat bg-cover bg-center rounded-lg opacity-0 transition-opacity duration-300 ease-in-out group-hover:opacity-70"
+                    className=" absolute inset-0 bg-no-repeat bg-cover bg-center rounded-lg opacity-20 transition-opacity duration-300 ease-in-out group-hover:opacity-70"
                     style={{ backgroundImage: `url(${tempest})` }}
                 ></div>
 
@@ -151,12 +152,12 @@ function About() {
                     <img
                         src={painting}
                         alt="Profile Photo"
-                        className="rounded-md w-72 h-72 object-cover shadow-md"
+                        className="rounded-md w-72 h-72 object-cover "
                     />
                 </div>
                 <div className="lg:w-2/3 text-ink z-10">
                     <h2 className="text-h2 font-ppSupply mb-2">As an Artist</h2>
-                    <p className="text-body leading-relaxed  mb-8">My artistic roots are firmly planted in fine arts, where I specialized in painting and illustration and earned a BFA from UBC. Throughout that time, feedback and critiques were invaluable in shaping my creative process, teaching me to embrace both the beauty and the challenges of art. As I moved into digital design, I carried that same openness to critique, merging traditional techniques with modern digital strategies. This dual perspective lets me approach each project with creativity, precision, and a keen understanding of how to refine my work.</p>
+                    <p className="text-body leading-relaxed  mb-8">I believe my journey as an artist—earning my BFA from UBC, hanging nervously at my first critique, learning resilience through every exhibition, and refining raw emotion into purposeful brushstrokes—taught me to embrace feedback, iterate boldly, and distill complexity into clarity; today, I channel that same creative energy into problem‑solving, treating each challenge as a blank canvas where empathy, experimentation, and continual refinement transform ideas into elegant, user‑centered solutions.</p>
                     <Link to="/art">
                         <button className="btn-grey">
                             View My Art!
@@ -166,22 +167,22 @@ function About() {
             </div>
 
             {/* Skill Marquee */}
-            <div className="container mx-auto px-6 sm:px-12 md:px-16  flex flex-col lg:flex-row items-center gap-8 mb-24 justify-between">
+            <div className="container mx-auto px-6 sm:px-12 md:px-16  flex flex-col lg:flex-row items-center gap-8 mt-24 mb-24 justify-between">
                 <div className="w-full lg:w-1/2 text-ink">
                     <h2 className="text-h2 font-ppSupply mb-6">My Tacklebox</h2>
                     <p className="text-h5 leading-relaxed font-bold mb-4">Design tools:</p>
                     <div className="gap-6 mb-8 flex flex-row tackle-box">
-                        <SiFigma className="text-8xl md:text-5xl lg:text-6xl xl:text-7xl" />
-                        <SiAdobeillustrator className="text-8xl md:text-5xl lg:text-6xl xl:text-7xl" />
-                        <SiAdobephotoshop className="text-8xl md:text-5xl lg:text-6xl xl:text-7xl" />
-                        <SiAdobeaftereffects className="text-8xl md:text-5xl lg:text-6xl xl:text-7xl" />
+                        <SiFigma className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl" />
+                        <SiAdobeillustrator className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl" />
+                        <SiAdobephotoshop className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl" />
+                        <SiAdobeaftereffects className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl" />
                     </div>
                     <p className="text-h5 leading-relaxed font-bold mb-4">Languages:</p>
                     <div className="gap-6 mb-8 flex flex-row tackle-box">
-                        <SiHtml5 className="text-8xl md:text-5xl lg:text-6xl xl:text-7xl" />
-                        <SiCss3 className="text-8xl md:text-5xl lg:text-6xl xl:text-7xl" />
-                        <SiReact className="text-8xl md:text-5xl lg:text-6xl xl:text-7xl" />
-                        <SiTailwindcss className="text-8xl md:text-5xl lg:text-6xl xl:text-7xl" />
+                        <SiHtml5 className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl" />
+                        <SiCss3 className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl" />
+                        <SiReact className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl" />
+                        <SiTailwindcss className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl" />
                     </div>
                 </div>
                 <div className="w-full lg:w-1/2 flex justify-center">
@@ -195,7 +196,7 @@ function About() {
             </div>
 
             {/* More Projects Section */}
-            <div className="mx-auto container">
+            <div className="mx-auto ">
                 <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
                     style={{
 

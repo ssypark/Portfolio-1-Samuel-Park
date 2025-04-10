@@ -11,6 +11,8 @@ import { MdArrowOutward } from "react-icons/md";
 
 import { use } from "react";
 
+import Contact from "../../Contact";
+
 // IMAGE IMPORTS
 import fullMockup from "../../../assets/conscious-connections/full-mockup.png";
 import phoneMockup from "../../../assets/conscious-connections/phone-mockup.png";
@@ -29,6 +31,11 @@ import sitemap from "../../../assets/conscious-connections/site-map.png";
 import userflow from "../../../assets/conscious-connections/userflow.png";
 import crazy8 from "../../../assets/conscious-connections/crazy-8.png";
 import prototype from "../../../assets/conscious-connections/hifi-wireframes.png";
+
+// Logo Imports
+import logoBlack from "../../../assets/logo-black.svg";
+import arrowSide from "../../../assets/arrow-side.png";
+
 
 const topics = [
 
@@ -144,84 +151,105 @@ function ConsciousConnections() {
         className="relative pt-24 p-8 bg-no-repeat border-b border-ink flex flex-col justify-end">
 
         {/* Hero Image */}
-        <div className="mt-8 w-full flex justify-center">
+        <div className="mt-2 w-full flex justify-center">
           <img
             src={mbMockup}
             alt="Conscious Connections Mockup"
             className="w-[50%] mb-8"
             data-aos="fade-up"
             data-aos-duration="1000"
-            data-aos-delay="500"
+            data-aos-delay="100"
           />
         </div>
 
-        {/* Bottom-Left Header */}
-        <div className="text-left mb-8 z-10">
-          <h1
-            className="text-h1 font-bold font-ppSupply text-offwhite"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="300"
-          >
-            Reimagining Digital Dating
-          </h1>
-        </div>
-
-        {/* Role, Date, and Project Details */}
-        <div className="flex sm:flex-row items-center sm:items-start justify-between gap-8 pb-8 rounded-md">
-          {/* Role and Date */}
-          <div className="flex flex-col sm:flex-row gap-1 sm:gap-8">
-            <div className="mb-4 sm:mb-0">
-              <h2 className="text-body   font-bold text-offwhite">Goal</h2>
-              <p className="text-base   text-offwhite">
-                Website Redesign <br />for Conscious Connections
-              </p>
-            </div>
-            <div className="mb-4 sm:mb-0">
-              <h2 className="text-body   font-bold text-offwhite">Role</h2>
-              <p className="text-base   text-offwhite">
-                Product Designer
-                <br />
-                UI/UX Designer
-              </p>
-            </div>
-            <div className="mb-4 sm:mb-0">
-              <h2 className="text-body   font-bold text-offwhite">Date</h2>
-              <p className="text-base text-offwhite">2025</p>
-            </div>
-            <div className="mb-4 sm:mb-0">
-              <h2 className="text-body   font-bold text-offwhite">Duration</h2>
-              <p className="text-base   text-offwhite">3 Days</p>
-            </div>
-            <div className="mb-4 sm:mb-0">
-              <h2 className="text-body   font-bold text-offwhite">Tools</h2>
-              <p className="text-base   text-offwhite">
-                Figma
-                <br />
-                Adobe Illustrator
-                <br />
-                Procreate
-              </p>
-            </div>
-          </div>
-
-          {/* View Prototype CTA */}
-          <div className="mt-4 sm:mt-0">
-            <a
-              href="https://www.figma.com/proto/IltuxfmJxR7Ox5LduXSGmu/FLUI-Hackathon---Conscious-Connections?page-id=418%3A12564&node-id=418-15554&p=f&viewport=446%2C605%2C0.05&scaling=scale-down&content-scaling=fixed&starting-point-node-id=418%3A15554&embed-host=share"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3  text-ink bg-offwhite font-bold text-body rounded border border-ink hover:bg-florange transition duration-300"
-              aria-label="View Prototype" 
+        {/* Header and Details Section - Two Column Layout */}
+        <div className="container mx-auto  flex flex-col md:flex-row justify-between items-start gap-8 z-10 mb-8">
+          {/* Left Column - Header */}
+          <div className="md:w-2/3 text-left">
+            <h1
+              className="text-hmax font-bold font-ppSupply text-offwhite"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="100"
             >
-              View Prototype <MdArrowOutward size={18} />
-            </a>
+              Conscious Connections
+            </h1>
+            <h2 className="text-h1 font-bold font-ppSupply text-offwhite"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="200">
+              Reimagining Digital Dating
+            </h2>
           </div>
 
+          {/* Right Column - Project Details */}
+          <div className="md:w-1/3" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="500">
+            {/* Role, Date, and Project Details */}
+            <div className="flex flex-col gap-8 pb-8 rounded-md">
+              {/* Info Grid */}
+              <div className="grid grid-cols-3 sm:grid-cols-3 gap-x-8 gap-y-4">
+                <div>
+                  <h2 className="text-body font-bold text-offwhite">Goal</h2>
+                  <p className="text-base text-offwhite">
+                    Website Redesign <br />for Conscious Connections
+                  </p>
+                </div>
+                <div>
+                  <h2 className="text-body font-bold text-offwhite">Role</h2>
+                  <p className="text-base text-offwhite">
+                    Product Designer
+                    <br />
+                    UI/UX Designer
+                  </p>
+                </div>
+                <div>
+                  <h2 className="text-body font-bold text-offwhite">Team</h2>
+                  <p className="text-base text-offwhite">
+                    <a href="https://www.linkedin.com/in/jso-c/" target="_blank" rel="noopener noreferrer" className="hover:underline">Johann C</a>
+                    <br />
+                    <a href="https://www.linkedin.com/in/aghfong/" target="_blank" rel="noopener noreferrer" className="hover:underline">Angus F</a>
+                    <br />
+                    <a href="https://www.linkedin.com/in/fenil-padhiar-4b7077351/" target="_blank" rel="noopener noreferrer" className="hover:underline">Fenil P</a>
+                  </p>
+                </div>
+                <div>
+                  <h2 className="text-body font-bold text-offwhite">Date</h2>
+                  <p className="text-base text-offwhite">2025</p>
+                </div>
+                <div>
+                  <h2 className="text-body font-bold text-offwhite">Duration</h2>
+                  <p className="text-base text-offwhite">3 Day Hackathon</p>
+                </div>
+                <div>
+                  <h2 className="text-body font-bold text-offwhite">Tools</h2>
+                  <p className="text-base text-offwhite">
+                    Figma
+                    <br />
+                    Adobe Illustrator
+                    <br />
+                    Procreate
+                  </p>
+                </div>
+              </div>
+
+              {/* View Prototype CTA */}
+              {/* <div className="mt-4">
+                <a
+                  href="https://www.figma.com/proto/IltuxfmJxR7Ox5LduXSGmu/FLUI-Hackathon---Conscious-Connections?page-id=418%3A12564&node-id=418-15554&p=f&viewport=446%2C605%2C0.05&scaling=scale-down&content-scaling=fixed&starting-point-node-id=418%3A15554&embed-host=share"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 text-ink bg-offwhite font-bold text-body rounded border border-ink hover:bg-florange transition duration-300"
+                  aria-label="View Prototype"
+                >
+                  View Prototype <MdArrowOutward size={18} />
+                </a>
+              </div> */}
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="flex max-w-container mx-auto md:gap-14 p-4 bg-olivewhite ">
+      <div className="flex container mx-auto md:gap-14 p-4 bg-olivewhite ">
         {/* Sidebar Navigation */}
         <div className="hidden md:block md:sticky md:top-10 md:h-fit md:py-12 md:pr-10 ">
           <ul className="flex flex-col space-y-4 pl-4 pt-16">
@@ -267,7 +295,7 @@ function ConsciousConnections() {
         </div>
         {/* Content Sections */}
         <div className="flex-1 space-y-20  border-ink p-8 pt-16">
-          <div className="max-w-4xl text-left col-span-3 border p-8 rounded-md">
+          <div className="max-w-4xl text-left col-span-3 border p-8 mt-12 rounded-md">
             <h2 className="text-h2 font-bold text-ink mb-4">
               Overview
             </h2>
@@ -285,148 +313,165 @@ function ConsciousConnections() {
             </p>
           </div>
           {/* THE CHALLENGE */}
-          <section id="challenge" className=" pt-16">
+          <section id="challenge" className="pt-16">
             <h2 className="text-h2 font-bold text-redwood">The Challenge</h2>
-            <div className="flex flex-col items-center gap-8 mt-8 lg:flex-row">
-              {/* Text Block */}
-              <div className="">
-                <p className="mt-2 text-body">
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-8">
+              {/* Text Block - 1/3 width on large screens */}
+              <div className="lg:col-span-1">
+                <p className="text-body">
                   Modern dating apps focus on <strong>quantity over quality</strong>, leading to
                   <strong> superficial interactions</strong> and fleeting connections. Conscious Connections aimed to
                   <strong> redefine the dating experience</strong>, prioritizing <strong>emotional intelligence, shared values,
                     and deep compatibility</strong>.
                 </p>
+
                 <p className="my-8 font-bold text-h6">
                   How do we create a platform that fosters intentional, meaningful relationships instead of fast-paced,
                   swipe-based connections?
                 </p>
-                <p className="mt-4 text-body">
+
+                <p className="text-body">
                   Our team was tasked with designing an experience that <strong> inspires trust </strong> while balancing
                   <strong> luxury, accessibility, and usability</strong>. The goal was to create a premium dating platform
                   that <strong>resonates emotionally</strong> while being approachable and intuitive.
                 </p>
-                {/* Image Below */}
-                <div className="w-full text-right justify-center py-8">
-                  <img src={datingApp} alt="A Person Lying on Sofa Holding a Smartphone with a Person's Profile on Screen" className="" />
+              </div>
+
+              {/* Image Block - 2/3 width on large screens */}
+              <div className="lg:col-span-1 flex items-center">
+                <div className="w-full">
+                  <img
+                    src={datingApp}
+                    alt="A Person Lying on Sofa Holding a Smartphone with a Person's Profile on Screen"
+                    className="w-full h-auto rounded-md "
+                  />
                   <figcaption className="text-sm text-gray-500 mt-2">
-                    Photo by <a href="https://www.pexels.com/@cottonbro/" target="_blank" className="underline" aria-label="Cottonbro Studio" >Cottonbro Studio</a> on Pexels.
+                    Photo by <a href="https://www.pexels.com/@cottonbro/" target="_blank" rel="noopener noreferrer" className="underline" aria-label="Cottonbro Studio">Cottonbro Studio</a> on Pexels.
                   </figcaption>
                 </div>
               </div>
-
             </div>
-
           </section>
 
           {/* RESEARCH & STRATEGY */}
           <section id="research" className="pt-16">
             <h2 className="text-h2 font-bold text-redwood">Research & Strategy</h2>
-            <div className="flex flex-col gap-8">
+            <div className="gap-8">
               {/* Text Content */}
-              <div className="w-full">
-                <p className="mt-2 text-body">
+              <div className="w-full mt-4">
+                <p className="text-body  ">
                   Our team started by analyzing the biggest problem in online dating:
                   <strong> superficial connections</strong>. We conducted competitive analysis, user research,
                   and persona mapping to uncover the pain points that Conscious Connections aimed to solve.
                 </p>
-                <p className="my-8 font-bold text-h6">
+                <p className="my-8 font-bold text-h5">
                   How do you transform a dating app from a swipe-and-forget experience
                   to a platform for deep, intentional relationships?
                 </p>
-                <p className="mt-4 text-body">
+                <p className="text-body">
                   Our goal was to rethink the experience from the ground up,
                   designing for <strong>meaningful engagement</strong>, not just attraction.
                 </p>
               </div>
-
-              {/* Image Section */}
-              {/* Combined Caption */}
-              <div className="w-full text-left text-ink mt-4">
-                <p className="text-body leading-relaxed">
-                  The <strong>How Might We (HMW) statements</strong> guided our design process by framing key challenges in a way that encouraged
-                  innovative problem-solving. These helped us refine our approach to <strong>onboarding, branding, and long-term engagement</strong>,
-                  ensuring the platform fosters <strong>intentional, meaningful connections</strong>.
-                </p>
-                <p className="text-body leading-relaxed mt-4">
-                  Meanwhile, the <strong>SWOT analysis</strong> provided a strategic foundation by evaluating <strong>strengths, weaknesses,
-                    opportunities, and threats</strong>. This allowed us to position <strong>Conscious Connections</strong> as a
-                  <strong> premium yet accessible dating platform</strong> while addressing core user pain points and competitive challenges.
-                </p>
-              </div>
-
-              {/* Image Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-8 place-items-center">
-
-                {/* HMW Statements */}
-                <div className="w-full max-w-[500px] md:max-w-[600px] flex flex-col items-end">
-                  <img
-                    src={hmw}
-                    alt="How Might We Statements"
-                    className="w-full cursor-pointer"
-                    onClick={() => openLightbox(0)}
-                  />
-                  <figcaption className="text-sm text-gray-500 mt-2 text-right w-full max-w-[500px] md:max-w-[600px]">
-                    <strong>HMW Statements</strong> – Guided our design process by framing key challenges in a way
-                    that encouraged <strong>innovative problem-solving</strong>.
-                  </figcaption>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-24">
+                {/* Left Column - Explanatory Text (1/3 width on large screens) */}
+                <div className="lg:col-span-1">
+                  <div className="text-left text-ink">
+                    <p className="text-body leading-relaxed">
+                      The <strong>How Might We (HMW) statements</strong> guided our design process by framing key challenges in a way that encouraged
+                      innovative problem-solving. These helped us refine our approach to <strong>onboarding, branding, and long-term engagement</strong>,
+                      ensuring the platform fosters <strong>intentional, meaningful connections</strong>.
+                    </p>
+                    <p className="text-body leading-relaxed mt-4">
+                      Meanwhile, the <strong>SWOT analysis</strong> provided a strategic foundation by evaluating <strong>strengths, weaknesses,
+                        opportunities, and threats</strong>. This allowed us to position <strong>Conscious Connections</strong> as a
+                      <strong> premium yet accessible dating platform</strong> while addressing core user pain points and competitive challenges.
+                    </p>
+                  </div>
                 </div>
 
-                {/* SWOT Analysis */}
-                <div className="w-full max-w-[500px] md:max-w-[600px] flex flex-col items-end">
-                  <img
-                    src={SWOT}
-                    alt="SWOT Analysis"
-                    className="w-full cursor-pointer"
-                    onClick={() => openLightbox(1)}
-                  />
-                  <figcaption className="text-sm text-gray-500 mt-2 text-right w-full max-w-[500px] md:max-w-[600px]">
-                    <strong>SWOT Analysis</strong> – Evaluated <strong>strengths, weaknesses, opportunities, and threats</strong>
-                    to strategically position Conscious Connections.
-                  </figcaption>
-                </div>
+                {/* Right Column - Image Grid (2/3 width on large screens) */}
+                <div className="lg:col-span-1">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-4">
+                    {/* HMW Statements */}
+                    <div className="flex flex-col">
+                      <img
+                        src={hmw}
+                        alt="How Might We Statements"
+                        className="w-full rounded-md  cursor-pointer"
+                        onClick={() => openLightbox(0)}
+                      />
+                      <figcaption className="text-sm text-gray-500 mt-2">
+                        <strong>HMW Statements</strong> – Guided our design process by framing key challenges in a way
+                        that encouraged <strong>innovative problem-solving</strong>.
+                      </figcaption>
+                    </div>
 
+                    {/* SWOT Analysis */}
+                    <div className="flex flex-col">
+                      <img
+                        src={SWOT}
+                        alt="SWOT Analysis"
+                        className="w-full rounded-md  cursor-pointer"
+                        onClick={() => openLightbox(1)}
+                      />
+                      <figcaption className="text-sm text-gray-500 mt-2">
+                        <strong>SWOT Analysis</strong> – Evaluated <strong>strengths, weaknesses, opportunities, and threats</strong>
+                        to strategically position Conscious Connections.
+                      </figcaption>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Content Section */}
-              <div className="w-full text-left text-ink mt-16">
-                <p className="text-body leading-relaxed">
-                  The <strong>Design Matrix</strong> played a crucial role in structuring our design decisions. By mapping out key user needs,
-                  business goals, and functional requirements, we were able to evaluate various approaches and prioritize solutions that
-                  aligned with both <strong>usability and brand vision</strong>.
-                </p>
-                <p className="text-body leading-relaxed mt-4">
-                  Meanwhile, the <strong>User Personas</strong> provided an essential framework for understanding our audience.
-                  By defining detailed user archetypes, we could tailor the platform’s onboarding, UI, and features to foster deeper,
-                  <strong> more meaningful connections</strong>—ensuring the design catered to real user needs rather than assumptions.
-                </p>
-              </div>
-
-              {/* Image Grid */}
-              <div className="py-8 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 ">
-                {/* User Personas */}
-                <div className="w-full max-w-[500px] text-right">
-                  <img
-                    src={persona}
-                    alt="User Personas"
-                    className="w-full max-w-[500px] md:max-w-[600px] cursor-pointer"
-                    onClick={() => openLightbox(3)}
-                  />
-                  <figcaption className="text-sm text-gray-500 mt-2">
-                    <strong>User Personas</strong>
-                  </figcaption>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mt-16">
+                {/* Left Column - Explanatory Text (1/3 width on large screens) */}
+                <div className="lg:col-span-1">
+                  <div className="text-left text-ink">
+                    <p className="text-body leading-relaxed">
+                      The <strong>Design Matrix</strong> played a crucial role in structuring our design decisions. By mapping out key user needs,
+                      business goals, and functional requirements, we were able to evaluate various approaches and prioritize solutions that
+                      aligned with both <strong>usability and brand vision</strong>.
+                    </p>
+                    <p className="text-body leading-relaxed mt-4">
+                      Meanwhile, the <strong>User Personas</strong> provided an essential framework for understanding our audience.
+                      By defining detailed user archetypes, we could tailor the platform's onboarding, UI, and features to foster deeper,
+                      <strong> more meaningful connections</strong>—ensuring the design catered to real user needs rather than assumptions.
+                    </p>
+                  </div>
                 </div>
 
-                {/* Design Matrix */}
-                <div className="w-full max-w-[500px] text-right">
-                  <img
-                    src={matrix}
-                    alt="Design Matrix"
-                    className="w-full max-w-[500px] md:max-w-[600px] cursor-pointer"
-                    onClick={() => openLightbox(2)}
-                  />
-                  <figcaption className="text-sm text-gray-500 mt-2">
-                    <strong>Design Matrix</strong>
-                  </figcaption>
+                {/* Right Column - Stacked Images (2/3 width on large screens) */}
+                <div className="lg:col-span-1">
+                  <div className="flex flex-col gap-8">
+                    {/* User Personas */}
+                    <div className="flex flex-col">
+                      <img
+                        src={persona}
+                        alt="User Personas"
+                        className="w-full rounded-md  cursor-pointer"
+                        onClick={() => openLightbox(3)}
+                      />
+                      <figcaption className="text-sm text-gray-500 mt-2">
+                        <strong>User Personas</strong> – Understanding our target audience.
+                      </figcaption>
+                    </div>
+
+                    {/* Design Matrix */}
+                    <div className="flex flex-col mt-4">
+                      <img
+                        src={matrix}
+                        alt="Design Matrix"
+                        className="w-full rounded-md  cursor-pointer"
+                        onClick={() => openLightbox(2)}
+                      />
+                      <figcaption className="text-sm text-gray-500 mt-2">
+                        <strong>Design Matrix</strong> – Aligning features with user needs and business goals.
+                      </figcaption>
+                    </div>
+                  </div>
                 </div>
               </div>
               {/* Refining the User Experience */}
@@ -507,60 +552,59 @@ function ConsciousConnections() {
               </p>
             </div>
 
-            {/* Mood Board */}
-            <div className="w-full flex flex-col items-end py-8 max-w-[500px] md:max-w-[800px] mx-auto">
-              <img
-                src={moodboard}
-                alt="Mood Board"
-                className="w-full cursor-pointer"
-                onClick={() => openLightbox(6)}
-              />
-              <figcaption className="text-sm text-gray-500 mt-2 text-right">
-                A curated <strong>mood board</strong> to explore variations in <strong>tone, style, and brand direction</strong>.
-              </figcaption>
-            </div>
+            {/* Branding Visual Assets Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-8 mt-8">
+              {/* Mood Board - Takes full width on both mobile and md screens */}
+              <div className="flex flex-col md:col-span-2">
+                <img
+                  src={moodboard}
+                  alt="Mood Board"
+                  className="w-full rounded-md  cursor-pointer"
+                  onClick={() => openLightbox(6)}
+                />
+                <figcaption className="text-sm text-gray-500 mt-2">
+                  A curated <strong>mood board</strong> to explore variations in <strong>tone, style, and brand direction</strong>.
+                </figcaption>
+              </div>
 
-            {/* Logo Draft & AI Concepts (Side by Side) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-8">
               {/* My Logo Draft */}
-              <div className="w-full flex flex-col items-right">
+              <div className="flex flex-col">
                 <img
                   src={logoDraft}
                   alt="Initial Logo Draft"
-                  className=" cursor-pointer "
+                  className="w-full rounded-md  cursor-pointer"
                   onClick={() => openLightbox(7)}
                 />
-                <figcaption className="text-sm text-gray-500 mt-2 text-right">
+                <figcaption className="text-sm text-gray-500 mt-2">
                   My <strong>initial logo draft</strong>, created in <strong>Illustrator</strong>.
                 </figcaption>
-              </div>
 
-              {/* AI-Assisted Concept Exploration */}
-              <div className="w-full flex flex-col items-right">
                 <img
                   src={logoAi}
                   alt="AI-Assisted Logo Concepts"
-                  className=" cursor-pointer"
+                  className="w-full rounded-md  cursor-pointer"
                   onClick={() => openLightbox(8)}
                 />
-                <figcaption className="text-sm text-gray-500 mt-2 text-right">
+                <figcaption className="text-sm text-gray-500 mt-2">
                   <strong>AI-assisted logo concepts</strong> used for additional exploration.
                 </figcaption>
               </div>
-            </div>
 
-            {/* Final Logo Section */}
-            <div className="w-full flex flex-col items-center py-8">
-              <img
-                src={logoFinal}
-                alt="Final Logo Design"
-                className="w-full max-w-[500px] cursor-pointer "
-                onClick={() => openLightbox(9)}
-              />
-              <figcaption className="text-sm text-gray-500 mt-2 text-center">
-                The <strong>final logo</strong>, designed in <strong>Illustrator</strong>, refined to align with the
-                brand's <strong>identity and usability</strong>.
-              </figcaption>
+              {/* Final Logo - Takes full width on both mobile and md screens */}
+              <div className="flex flex-col items-center justify-center md:col-span-1 ">
+                <div className="flex justify-center w-full">
+                  <img
+                    src={logoFinal}
+                    alt="Final Logo Design"
+                    className="w-full max-w-[400px] rounded-md  cursor-pointer"
+                    onClick={() => openLightbox(9)}
+                  />
+                </div>
+                <figcaption className="text-sm text-gray-500 mt-2 text-center max-w-[500px]">
+                  The <strong>final logo</strong>, designed in <strong>Illustrator</strong>, refined to align with the
+                  brand's <strong>identity and usability</strong>.
+                </figcaption>
+              </div>
             </div>
           </section>
 
@@ -659,7 +703,7 @@ function ConsciousConnections() {
               <div className="w-full flex justify-center">
                 <h2 className="text-h2 font-bold text-ink text-center">Reflections & Key Takeaways</h2>
               </div>
-              <div className="max-w-full md:max-w-3xl mx-auto text-body text-gray-700 mt-4">
+              <div className="max-w-full md:max-w-3xl mx-auto text-body text-gray-700 mt-4 ">
                 <p>
                   This project pushed us to think critically about how to balance
                   <strong> emotional engagement with seamless usability</strong>.
@@ -676,7 +720,7 @@ function ConsciousConnections() {
               </div>
 
               {/* Key Insights */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mt-12 text-left">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto my-16 mt-24 text-left">
 
                 {/* User-Centered Thinking */}
                 <div>
@@ -728,14 +772,43 @@ function ConsciousConnections() {
                   height="450"
                   src="https://embed.figma.com/proto/IltuxfmJxR7Ox5LduXSGmu/FLUI-Hackathon---Conscious-Connections?page-id=418%3A12564&node-id=418-15554&p=f&viewport=446%2C605%2C0.05&scaling=scale-down&content-scaling=fixed&starting-point-node-id=418%3A15554&embed-host=share"
                   allowFullScreen
-                  className="w-full max-w-[900px] rounded-lg shadow-md"
+                  className="w-full max-w-[900px] rounded-lg "
                 ></iframe>
               </div>
             </div>
           </section>
-        </div>
-      </div>
+         
 
+        </div>
+
+      </div>
+ {/* More Projects Section */}
+ <div className="mx-auto container">
+            <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
+              style={{
+                backgroundImage: `url(${logoBlack})`,
+                backgroundSize: "400px",
+                backgroundPosition: "right center",
+                backgroundRepeat: "no-repeat",
+              }}>
+              <img
+                className="side-frog w-24 h-24 absolute top-1/2 -translate-y-1/2 -left-8 z-10"
+                src={arrowSide}
+                alt="side arrow"
+              />
+              <a
+                href="/work"
+                className="btn-default"
+                aria-label="View More Projects"
+              >
+                More Projects!
+              </a>
+            </div>
+            {/* Contact Section */}
+            <div>
+              <Contact />
+            </div>
+          </div>
       {/* Lightbox Component */}
       {lightboxOpen && (
         <Lightbox

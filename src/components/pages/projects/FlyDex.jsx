@@ -39,7 +39,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 // Define navigation topics
 const topics = [
-    { id: "challenge", label: "The Challenge" },
+    { id: "Context", label: "Context" },
     { id: "Approach", label: "Approach" },
     { id: "outcome", label: "Outcome" },
     { id: "takeaways", label: "Takeaways" }
@@ -142,8 +142,11 @@ function FlyDex() {
                 className="relative min-h-screen p-8 bg-cover bg-center bg-no-repeat rounded-md border border-ink flex flex-col justify-end"
                 style={{ backgroundImage: `url(${splashMockup})` }}
             >
+                {/* Overlay to darken the image */}
+                <div className="absolute inset-0 bg-black opacity-40 rounded-md"></div>
+                
                 {/* Bottom-Left Header */}
-                <div className="text-left mb-8">
+                <div className="text-left mb-8 relative z-10">
                     <h1
                         className="text-h1 font-bold font-ppSupply text-olivewhite"
                         data-aos="fade-up"
@@ -155,28 +158,28 @@ function FlyDex() {
                 </div>
 
                 {/* Role, Date, and Project Link */}
-                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8 p-8 bg-black bg-opacity-70 rounded-md">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8 p-8 bg-black bg-opacity-70 rounded-md relative z-10">
                     {/* Role and Date */}
                     <div className="flex flex-row gap-8">
                         <div>
-                            <h2 className="text-body  font-bold text-olivewhite">Role</h2>
-                            <p className="text-base  text-olivewhite">
+                            <h2 className="text-body font-bold text-olivewhite">Role</h2>
+                            <p className="text-base text-olivewhite">
                                 UX/UI Designer
                                 <br />
                                 Product Designer
                             </p>
                         </div>
                         <div>
-                            <h2 className="text-body  font-bold text-olivewhite">Date</h2>
+                            <h2 className="text-body font-bold text-olivewhite">Date</h2>
                             <p className="text-base text-olivewhite">2024</p>
                         </div>
                         <div>
-                            <h2 className="text-body  font-bold text-olivewhite">Duration</h2>
-                            <p className="text-base  text-olivewhite">4 Weeks</p>
+                            <h2 className="text-body font-bold text-olivewhite">Duration</h2>
+                            <p className="text-base text-olivewhite">4 Weeks</p>
                         </div>
                         <div>
-                            <h2 className="text-body  font-bold text-olivewhite">Tools</h2>
-                            <p className="text-base  text-olivewhite">
+                            <h2 className="text-body font-bold text-olivewhite">Tools</h2>
+                            <p className="text-base text-olivewhite">
                                 Figma
                                 <br />
                                 Adobe Illustrator
@@ -229,10 +232,10 @@ function FlyDex() {
 
                 {/* Main Content */}
                 <div className="flex-1 mt-12 max-w-full">
-                    <section id="challenge" className="min-h-screen">
+                    <section id="Context" className="">
                         {/* Challenge */}
                         <div className="container mx-auto py-16 px-4 sm:px-8" data-aos="fade-up">
-                            <h2 className="text-hmax font-ppSupply font-bold text-ink mb-12">The Challenge</h2>
+                            <h2 className="text-hmax font-ppSupply font-bold text-ink mb-12">Context</h2>
                             <div className="flex flex-col sm:flex-row gap-24 bg-olivewhite ">
                                 <div className="sm:w-1/2">
                                     <p className="text-body  text-gray-700 leading-relaxed mb-24">
@@ -278,7 +281,8 @@ function FlyDex() {
                     {/* understanding the user */}
                     <section id="Approach">
                         <div className="container mx-auto py-16 px-4 sm:px-8" data-aos="fade-up">
-                            <h2 className="text-hmax font-ppSupply font-bold text-ink mb-12">Approach</h2>
+                            <h2 className="text-hmax font-ppSupply font-bold text-ink mb-8">Approach</h2>
+                            <h3 className="text-h1 font-ppSupply font-bold text-ink mb-2">From Pain Points to Purpose</h3>
                             <p className="text-body  text-gray-700 leading-relaxed mb-24">For me, design is about turning complex challenges into clear, engaging experiences that empower users—a principle I learned from my years of teaching. My process always begins with user research, pinpointing real-world pain points and transforming them into intuitive solutions that build confidence and inspire action.</p>
 
                             <h3 className="text-h1 font-ppSupply font-bold text-ink mb-2">The Target User</h3>
@@ -310,24 +314,28 @@ function FlyDex() {
                                     </p>
 
                                     {/* CTAs */}
-                                    <div className="mt-6 flex flex-col sm:flex-row gap-4">
+                                    <p className="text-h6 mt-12 font-bold text-gray-700 leading-relaxed">
+                                        Learn More
+                                    </p>
+                                    <div className="mt-4 flex flex-col sm:flex-row gap-4">
+                                        
                                         <button
                                             className="btn-grey"
                                             onClick={() => openJustinModal(persona)}
                                         >
-                                            Learn More About Justin
+                                            Story
                                         </button>
                                         <button
                                             className="btn-grey"
                                             onClick={() => openJustinModal(empathy)}
                                         >
-                                            How Does Justin Feel About Flyfishing?
+                                           Thoughts
                                         </button>
                                         <button
                                             className="btn-grey"
                                             onClick={() => openJustinModal(journey)}
                                         >
-                                            View Justin's Journey
+                                            Journey
                                         </button>
                                     </div>
                                 </div>
@@ -341,15 +349,21 @@ function FlyDex() {
                                     The SWOT charts below summarize the strengths, weaknesses, opportunities, and threats of two major players. These analyses played a critical role in shaping a user-centric solution that addresses real-world challenges and delivers a truly engaging experience.
                                 </p>
                                 <FlyDexSWOT />
+                                <h2 className="text-h5 font-bold text-ink mt-12 mb-4">Takeaway</h2>
+                                <p className="text-body text-gray-700 leading-relaxed mt-4 mb-16">
+                                
+                                The SWOT revealed a shared gap in beginner education and highlighted strong community and AI features to emulate. FlyDex’s design will bridge this gap with guided learning, smart fly identification, and engaging social tools—making it ideal for anglers at every skill level.
+                                </p>
                             </div>
                         </div>
                     </section>
 
                     {/* Design Vision and goals */}
                     <section id="outcome">
-                        <h2 className="container mx-auto py-16 px-4 sm:px-8 text-hmax font-ppSupply font-bold text-ink mb-12">Outcome</h2>
+                        <h2 className="container mx-auto pb-4 px-4 sm:px-8 text-hmax font-ppSupply font-bold text-ink ">Outcome</h2>
+                        <p className="container mx-auto pb-12 px-4 sm:px-8 text-body   text-ink ">Every user interview, journey map, and competitive insight sharpened my design vision: build a step‑by‑step guide that meets beginners where they struggle. By iterating on low‑fi flows and testing interactive lessons, we transformed FlyDex into a confidence‑boosting companion—delivering the right tip at the right time within a calm, nature‑inspired interface.</p>
                         <div className="container mx-auto flex flex-col lg:flex-row  gap-24 pb-16 px-4 sm:px-8">
-
+                        
                             <div className="lg:w-1/2 order-2 lg:order-1">
                                 <img
                                     src={lesson}

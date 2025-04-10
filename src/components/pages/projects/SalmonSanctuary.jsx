@@ -28,7 +28,6 @@ import styleGuide4 from "../../../assets/salmonsanctuary/style4.png";
 import styleGuide5 from "../../../assets/salmonsanctuary/style5.png";
 import styleGuide6 from "../../../assets/salmonsanctuary/style6.png";
 
-
 // Wireframe Carousel
 import wireframe1 from "../../../assets/salmonsanctuary/wireframe1.png";
 import wireframe2 from "../../../assets/salmonsanctuary/wireframe2.png";
@@ -41,17 +40,16 @@ import wireframe8 from "../../../assets/salmonsanctuary/wireframe8.png";
 import wireframe9 from "../../../assets/salmonsanctuary/wireframe9.png";
 import wireframe10 from "../../../assets/salmonsanctuary/wireframe10.png";
 
-
 // Animation Imports
 import { initSideFrogAnimation } from "../../animations/animations";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 // Update the topics array to match the correct sections
 const topics = [
-    { id: "research", label: "Understanding the Users" },
-    { id: "design", label: "Structuring a Seamless Experience" },
-    { id: "styleguide-wireframes", label: "Crafting a Cohesive Visual Identity" },
-    { id: "conclusion", label: "Reflections & Next Steps" }
+    { id: "context", label: "Context" },
+    { id: "approach", label: "Approach" },
+    { id: "outcome", label: "Outcome" },
+    { id: "takeaways", label: "Takeaways" }
 ];
 
 // Add this import at the top with other image imports
@@ -61,7 +59,6 @@ function SalmonSanctuary() {
     const [isWireframeModalOpen, setIsWireframeModalOpen] = useState(false);
     const [isStyleGuideModalOpen, setIsStyleGuideModalOpen] = useState(false);
     const [isPersonaModalOpen, setIsPersonaModalOpen] = useState(false);
-
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -178,10 +175,6 @@ function SalmonSanctuary() {
             behavior: "smooth"
         });
     };
-
-
-
-
 
     return (
         <div className="relative mt-18 px-4 sm:px-8 bg-olivewhite">
@@ -313,7 +306,7 @@ function SalmonSanctuary() {
             <hr className="my-0 border-t border-gray-300" />
 
             {/* Add the sidebar and content wrapper */}
-            <div className="flex max-w-container mx-auto md:gap-14 px-2 bg-olivewhite">
+            <div className="flex container mx-auto md:gap-14 px-2 bg-olivewhite">
                 {/* Sidebar Navigation */}
                 <div className="hidden md:block md:sticky md:top-10 md:h-fit md:py-12">
                     <ul className="flex flex-col space-y-4 pl-4 pt-16">
@@ -322,14 +315,14 @@ function SalmonSanctuary() {
                                 {activeSection === topic.id && (
                                     <div
                                         ref={(el) => bulletRefs.current[topic.id] = el}
-                                        className="absolute -left-2 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-redwood border-2 border-redwood origin-center"
+                                        className="absolute -left-2 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-redOrange border-2 border-redOrange origin-center"
                                     ></div>
                                 )}
                                 <a
                                     href={`#${topic.id}`}
                                     onClick={(e) => handleScroll(e, topic.id)}
-                                    className={`sidebar pl-2 text-gray-500 group-hover:text-redwood transition-all duration-300 text-lg relative
-                                        ${activeSection === topic.id ? 'text-redwood font-bold translate-x-2' : 'hover:translate-x-1'}`}
+                                    className={`sidebar pl-2 text-gray-500 group-hover:text-redOrange transition-all duration-300 text-h6 relative
+                                        ${activeSection === topic.id ? 'text-redOrange font-bold translate-x-2' : 'hover:translate-x-1'}`}
                                 >
                                     {topic.label}
                                 </a>
@@ -341,11 +334,11 @@ function SalmonSanctuary() {
                 {/* Main Content */}
                 <div className="flex-1 ">
                     <div className="relative bg-olivewhite  border-gray-500 mx-auto ">
-                        <section id="research">
+                        <section id="context">
                             {/* UX Research Section content including personas */}
                             <div className="container mx-auto px-4 sm:px-8 mb-32 mt-24">
                                 {/* UX Research Header */}
-                                <h2 className="text-h1 font-ppSupply font-bold text-ink mb-12">Understanding the Users</h2>
+                                <h2 className="text-hmax font-ppSupply font-bold text-ink mb-8">Context</h2>
 
                                 {/* Target Audience and Competitive Analysis */}
                                 <div className="flex flex-col lg:flex-row gap-16 mb-24">
@@ -383,10 +376,12 @@ function SalmonSanctuary() {
                                     </div>
 
                                     {/* Competitive Analysis */}
-                                    <div className="lg:w-1/3 flex flex-col border-solid border-2 border-redwood bg-olivewhite rounded-lg p-8">
+                                    <div className="lg:w-1/3 flex flex-col border-solid border-2 border-redOrange bg-olivewhite rounded-lg p-8">
                                         <h3 className="text-h2 font-bold font-ppSupply text-ink mb-6">Key Insights from Competitive Analysis</h3>
 
-                                        <p className="text-h6 font-bold text-ink mb-4">Reviewing PSF.ca revealed barriers that limited engagement:</p>
+                                        <p className="text-h6 font-bold text-ink mb-4">
+                                            Reviewing <a href="https://psf.ca" target="_blank" rel="noopener noreferrer" className="text-redOrange hover:underline">PSF.ca</a> revealed barriers that limited engagement:
+                                        </p>
                                         <ul className="list-disc pl-6 space-y-2 text-body mb-6">
                                             <li>Buried donation and volunteer options made it difficult to take action.</li>
                                             <li>Dense, text-heavy content created friction in navigation.</li>
@@ -396,15 +391,15 @@ function SalmonSanctuary() {
                                         <p className="font-bold text-h6 text-ink mb-4">How I Improved On This:</p>
                                         <ul className="list-none space-y-2 mb-6 text-body ">
                                             <li className="flex items-start gap-2">
-                                                <span className="text-redwood">✔</span>
+                                                <span className="text-redOrange">✔</span>
                                                 <span>A streamlined user journey makes taking action effortless.</span>
                                             </li>
                                             <li className="flex items-start gap-2">
-                                                <span className="text-redwood">✔</span>
+                                                <span className="text-redOrange">✔</span>
                                                 <span>Action-driven prompts encourage deeper participation.</span>
                                             </li>
                                             <li className="flex items-start gap-2">
-                                                <span className="text-redwood">✔</span>
+                                                <span className="text-redOrange">✔</span>
                                                 <span>Visual storytelling conveys urgency and impact more effectively.</span>
                                             </li>
                                         </ul>
@@ -417,13 +412,18 @@ function SalmonSanctuary() {
                                     </div>
                                 </div>
                             </div>
+                               {/* Divider */}
+                        <hr className="my-16 border-t border-gray-300" />
+
                         </section>
 
                         {/* Personas & Scenarios Section */}
+                        <section id="approach" className="mb-32">
                         <div
                             className="container mx-auto px-4 sm:px-8 mb-32"
 
                         >
+                            <h2 className="text-hmax font-ppSupply font-bold text-ink mb-8">Approach</h2>
                             <h2 className="text-h3 font-ppSupply font-bold text-ink mb-2">Building for Real Users</h2>
                             <p className="text-body  text-ink leading-relaxed mb-2">
                                 To ensure the platform met real user needs, I developed two key personas:
@@ -461,7 +461,7 @@ function SalmonSanctuary() {
                                 <div className="mb-4">
                                     <button
                                         onClick={() => toggleAccordion('journey')}
-                                        className="w-full flex justify-between items-center p-4  rounded-lg  bg-neutral  border-2 hover:border-redwood transition-colors"
+                                        className="w-full flex justify-between items-center p-4  rounded-lg  bg-neutral  border-2 hover:border-redOrange transition-colors"
                                     >
                                         <h4 className="text-h5 font-bold font-ppSupply text-left">Her Journey</h4>
                                         <span className={`transform transition-transform ${openAccordions['journey'] ? 'rotate-180' : ''}`}>
@@ -489,7 +489,7 @@ function SalmonSanctuary() {
                                 <div className="mb-4">
                                     <button
                                         onClick={() => toggleAccordion('result')}
-                                        className="w-full flex justify-between items-center p-4 bg-neutral rounded-lg border-2 hover:border-redwood transition-colors"
+                                        className="w-full flex justify-between items-center p-4 bg-neutral rounded-lg border-2 hover:border-redOrange transition-colors"
                                     >
                                         <h4 className="text-h5 font-bold font-ppSupply text-left">The Result</h4>
                                         <svg
@@ -513,10 +513,8 @@ function SalmonSanctuary() {
                             </div>
                         </div>
 
-                        {/* Divider */}
-                        <hr className="my-16 border-t border-gray-300" />
-
-                        <section id="design">
+                     
+                      
                             {/* Web Design Section content */}
                             <div className="container mx-auto px-4 sm:px-8 mb-32" >
                                 {/* Section Header */}
@@ -531,19 +529,19 @@ function SalmonSanctuary() {
                                 {/* Site Map Image */}
                                 <h5 className="text-h5 font-ppSupply font-bold text-ink mb-4">Site Map</h5>
                                 {/* Description of Site Map */}
-                                <p className="text-body  text-ink leading-relaxed mt-4 mb-8">
-                                    The site map provided a clear content hierarchy, organizing key sections like Our Work, Learn, Take Action, and Donate into an intuitive structure. Instead of overwhelming users with dense information, I prioritized progressive disclosure, allowing visitors to explore content at their own pace while always keeping action-oriented pathways visible. This approach made the site more navigable, engaging, and purpose-driven.
+                                <p className="text-body text-ink leading-relaxed mt-4 mb-8">
+                                    The site map provided a clear content hierarchy, organizing key sections like <strong>Our Work</strong>, <strong>Learn</strong>, <strong>Take Action</strong>, and <strong>Donate</strong> into an intuitive structure. Instead of overwhelming users with dense information, I prioritized progressive disclosure, allowing visitors to explore content at their own pace while always keeping action-oriented pathways visible. This approach made the site more navigable, engaging, and purpose-driven.
                                 </p>
                                 <div className="relative group">
                                     <img
                                         src={siteMap} // Replace with the actual path to your site map image
                                         alt="Salmon Sanctuary Site Map"
-                                        className="rounded-lg border-ink border-2 mx-auto mb-24"
+                                        className="rounded-lg border-ink border-2 p-4 mx-auto bg-white"
                                     />
                                 </div>
 
                                 {/* User Flow Section */}
-                                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mx-auto mb-48">
+                                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mx-auto mb-48 mt-12">
                                     {/* User Flow Text */}
                                     <div className="w-full lg:col-span-1 text-ink">
                                         {/* Description of User Flow */}
@@ -595,8 +593,9 @@ function SalmonSanctuary() {
                         <hr className="my-16 border-t border-gray-300" />
 
                         {/* Style Guide & Wireframes */}
-                        <section id="styleguide-wireframes">
+                        <section id="outcome">
                             <div className="container mx-auto px-4 sm:px-8 mb-32">
+                            <h2 className="text-hmax font-ppSupply font-bold text-ink mb-5">Outcome</h2>
                                 <h2 className="text-h1 font-ppSupply font-bold text-ink mb-2">Crafting a Cohesive Visual Identity</h2>
                                 <p className="text-body  text-ink leading-relaxed mb-8">
                                     To create a sense of trust and authenticity, I established a style guide that balanced professionalism with warmth, using a natural, conservation-inspired color palette. Typography choices were made to ensure readability across all devices, and UI elements were designed to feel approachable yet structured.
@@ -657,7 +656,7 @@ function SalmonSanctuary() {
                         <hr className="my-16 border-t border-gray-300" />
                         
                         {/* Reflections & Next Steps */}
-                        <section id="conclusion">
+                        <section id="takeaways">
                             <div className="container mx-auto px-4 sm:px-8 pb-16 ">
                                 <h2 className="text-h1 font-ppSupply font-bold text-ink mb-4">Reflections & Next Steps</h2>
                                 <div className="container mx-auto px-4 pt-8 pb-16 sm:px-8  rounded-md border-2 border-ink bg-neutral">
@@ -699,7 +698,7 @@ function SalmonSanctuary() {
             </div>
 
             {/* More Projects Section */}
-            <div className="mx-auto container">
+            <div className="mx-8">
                 <div className="more-projects relative border-ink border-2 border-b-0 bg-olivewhite p-16 flex items-center gap-8 rounded-t-xl z-10"
                     style={{
 
@@ -739,7 +738,7 @@ function SalmonSanctuary() {
                     >
                         <button
                             onClick={handleCloseModal}
-                            className="absolute top-8 right-8 text-ink text-2xl hover:text-redwood transition"
+                            className="absolute top-8 right-8 text-ink text-2xl hover:text-redOrange transition"
                         >
                             <FaTimes />
                         </button>
