@@ -9,6 +9,8 @@ import amalgmImage from '../assets/amalgm.png';
 import flyDexImage from '../assets/flydex/flydex-login-mockup.jpg';
 import ccMockup from '../assets/cc-mockup.png';
 import ldHero from '../assets/ld-hero-showcase.png';
+// Use placeholder until you have a real image
+const packratImage = "https://placehold.co/800x600?text=PackRat+App";
 
 // destructuring is used to include the limit prop that is passed from the parent component. This is used to limit the number of projects to display on the page.
 // This is done to allow us to limit the number of projects displayed on the home page vs projects page.
@@ -30,6 +32,13 @@ function Portfolio({ limit}) {
             link: '/work/flydex-app',
         },
         {
+            image: packratImage,
+            title: 'PackRat App',
+            description: 'A visual inventory application for hobbyists designed to help organize gear and supplies across multiple interests in a way that\'s both practical and enjoyable.',
+            tags: ['Full Stack', 'React', 'Express', 'MySQL', 'Authentication'],
+            link: '/work/packrat',
+        },
+        {
             image: ssImage,
             title: 'The Salmon Sanctuary',
             description: 'A user-centric charity website that effectively communicates the mission while enhancing user engagement and the donation process.',
@@ -39,7 +48,7 @@ function Portfolio({ limit}) {
         {
             image: amalgmImage,
             title: 'Amalgm Equipment',
-            description: 'This brand book outlines Amalgm’s commitment to sustainable, collaborative, and artistic apparel and equipment, emphasizing individuality and ethical design.',
+            description: 'This brand book outlines Amalgm\'s commitment to sustainable, collaborative, and artistic apparel and equipment, emphasizing individuality and ethical design.',
             tags: ['Branding', 'Graphic Design', 'Product Design'],
             link: '/work/amalgm-brand-book',
         },
@@ -90,7 +99,6 @@ function Portfolio({ limit}) {
                     </div>
                 ))}
             </div>
-
         </div>
     );
 }

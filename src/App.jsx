@@ -14,6 +14,7 @@ import FlyDex from './components/pages/projects/FlyDex';
 import IntroBumper from './components/pages/projects/IntroBumper';
 import ConsciousConnections from './components/pages/projects/ConsciousConnections';
 import LondonDrugs from './components/pages/projects/LondonDrugs';
+import PackRat from './components/pages/projects/PackRat';
 // Animation Imports
 import ScrollToTop from './components/animations/ScrollToTop';
 // import Transition from './components/animations/Transition';
@@ -51,6 +52,7 @@ function App() {
                 <Route path="/work/conscious-connections" element={<ConsciousConnections />} />
                 <Route path="/work/intro-bumper-video" element={<IntroBumper />} />
                 <Route path="/work/london-drugs" element={<LondonDrugs />} />
+                <Route path="/work/packrat" element={<PackRat />} />
                 <Route path="/art" element={<Gallery />} />
               </Route>
             </Routes>
