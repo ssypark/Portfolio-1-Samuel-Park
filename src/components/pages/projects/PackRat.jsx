@@ -11,8 +11,8 @@ import Contact from "../../Contact";
 
 // PackRat Image Imports - Using placeholder images
 import packratHero from "../../../assets/packrat/packrat-mockup.png";
-const packratUi = "https://placehold.co/800x500?text=UI+Screenshot";
-const packratMobile = "https://placehold.co/400x800?text=Mobile+View";
+import packratMb from "../../../assets/packrat/packrat-mockup.png";
+import packratUi from "../../../assets/packrat/packrat-ui.png";
 import packratDesign from "../../../assets/packrat/botw.jpg";
 import packratArchitecture from "../../../assets/packrat/app-architecture.png";
 import packratAuth from "../../../assets/packrat/auth-flow.png";
@@ -21,6 +21,7 @@ import packratAuth from "../../../assets/packrat/auth-flow.png";
 import logoBlack from "../../../assets/logo-black.svg";
 import arrowSide from "../../../assets/arrow-side.png";
 import { MdArrowOutward } from "react-icons/md";
+import BallpitBackground from "../../animations/react-bits/Ballpit";
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
@@ -50,10 +51,10 @@ function PackRat() {
     // Set up scroll tracking
     useEffect(() => {
         const sections = topics.map(topic => document.getElementById(topic.id));
-        
+
         sections.forEach(section => {
             if (!section) return;
-            
+
             ScrollTrigger.create({
                 trigger: section,
                 start: "top center",
@@ -62,7 +63,7 @@ function PackRat() {
                 onEnterBack: () => setActiveSection(section.id),
             });
         });
-        
+
         return () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill());
         };
@@ -125,84 +126,111 @@ function PackRat() {
                 <meta name="description" content="PackRat is a visual inventory application designed for hobbyists to track their gear and supplies across multiple interests." />
             </Helmet>
 
-            {/* Hero Section - Reduced Height */}
-            <div
-                className="relative min-h-[70vh] md:min-h-[80vh] p-8 bg-contain bg-center bg-no-repeat rounded-md flex flex-col justify-end"
-                style={{ backgroundImage: `url(${packratHero})` }}
-            >
-                {/* Bottom-Left Header */}
-                <div className="text-left mb-4 container mx-auto relative z-10 mx-8">
-                    <h1
-                        className="text-h1 font-bold font-ppSupply text-ink"
-                        data-aos="fade-up"
-                        data-aos-duration="500"
-                        data-aos-delay="100"
-                    >
-                        PackRat
-                    </h1>
-                    <h2
-                        className="text-h3 font-ppSupply text-ink"
-                        data-aos="fade-up"
-                        data-aos-duration="500"
-                        data-aos-delay="400"
-                    >
-                        A Visual Inventory App for People with Too Many Hobbies
-                    </h2>
-                </div>
-            </div>
+            {/* Wrapper div with shared background */}
+            <div className="relative">
+                {/* Ballpit Background - Now wrapping both sections */}
+                <BallpitBackground
+                    className="absolute inset-0 z-0"
+                    count={90}
+                    gravity={1.5}
+                    friction={0.8}
+                    wallBounce={0.95}
+                    followCursor={true}
+                    colors={['#805AD5', '#4FD1C5', '#F6AD55']}
+                />
 
-            {/* Role, Date, and Project Details - Now outside hero section */}
-            <div className="container mx-auto  pb-10 bg-olivewhite border-b border-gray-200">
-                <div className="flex flex-col md:flex-row justify-between items-start gap-8">
-                    {/* Role, Date, Duration and Tools */}
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
-                        <div>
-                            <h2 className="text-body font-bold text-ink">Role</h2>
-                            <p className="text-base text-gray-700">
-                                UX/UI Designer
-                                <br />
-                                Full-stack Developer
-                            </p>
-                        </div>
-                        <div>
-                            <h2 className="text-body font-bold text-ink">Date</h2>
-                            <p className="text-base text-gray-700">
-                                Spring 2023
-                            </p>
-                        </div>
-                        <div>
-                            <h2 className="text-body font-bold text-ink">Duration</h2>
-                            <p className="text-base text-gray-700">
-                                4 Weeks
-                            </p>
-                        </div>
-                        <div>
-                            <h2 className="text-body font-bold text-ink">Tools</h2>
-                            <p className="text-base text-gray-700">
-                                React
-                                <br />
-                                Tailwind CSS
-                                <br />
-                                MAMP
-                                <br />
-                                MySQL
-                                <br />
-                                Express
-                            </p>
-                        </div>
+                {/* Hero Section with Floating Mockup */}
+                <div className="relative min-h-[50vh] md:min-h-[60vh] flex flex-col items-center justify-center p-8 overflow-hidden">
+                    {/* Centered Mockup with Animation - Now properly centered */}
+                    <div 
+                        className="relative z-10 w-full max-w-lg sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto mb-10"
+                        data-aos="fade-down"
+                        data-aos-duration="800"
+                        data-aos-delay="200"
+                    >
+                        <img
+                            src={packratMb}
+                            alt="PackRat Interface Mockup"
+                            className="w-full h-auto mt-12"
+                        />
                     </div>
                     
-                    {/* View Website CTA */}
-                    <div className="mt-6 md:mt-0">
-                        <a
-                            href="packrat.sampark.ca" 
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn-default flex items-center gap-2"
-                            aria-label="Visit PackRat Website"
+                    {/* Bottom-Left Header */}
+                    <div className="relative z-20 self-start max-w-2xl">
+                        <h1
+                            className="text-h1 font-bold font-ppSupply text-ink"
+                            data-aos="fade-up"
+                            data-aos-duration="500"
+                            data-aos-delay="100"
                         >
-                            Visit Website <MdArrowOutward size={18} />
-                        </a>
+                            PackRat
+                        </h1>
+                        <h2
+                            className="text-h3 font-ppSupply text-ink"
+                            data-aos="fade-up"
+                            data-aos-duration="500"
+                            data-aos-delay="400"
+                        >
+                            A Visual Inventory App for People with Too Many Hobbies
+                        </h2>
+                    </div>
+                </div>
+
+                {/* Role, Date, and Project Details - With full-width gradient background */}
+                <div className="relative z-10 w-full before:content-[''] before:absolute before:inset-0 before:bg-gradient-to-t from-olivewhite/90 via-olivewhite/50 to-transparent before:-z-[1] border-b border-gray-200">
+                    <div className="container mx-auto px-8 pb-10">
+                        <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+                            {/* Role, Date, Duration and Tools */}
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-12">
+                                <div>
+                                    <h2 className="text-body font-bold text-ink">Role</h2>
+                                    <p className="text-base text-gray-700">
+                                        UX/UI Designer
+                                        <br />
+                                        Full-stack Developer
+                                    </p>
+                                </div>
+                                <div>
+                                    <h2 className="text-body font-bold text-ink">Date</h2>
+                                    <p className="text-base text-gray-700">
+                                        Spring 2023
+                                    </p>
+                                </div>
+                                <div>
+                                    <h2 className="text-body font-bold text-ink">Duration</h2>
+                                    <p className="text-base text-gray-700">
+                                        4 Weeks
+                                    </p>
+                                </div>
+                                <div>
+                                    <h2 className="text-body font-bold text-ink">Tools</h2>
+                                    <p className="text-base text-gray-700">
+                                        React
+                                        <br />
+                                        Tailwind CSS
+                                        <br />
+                                        MAMP
+                                        <br />
+                                        MySQL
+                                        <br />
+                                        Express
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* View Website CTA */}
+                            <div className="mt-6 md:mt-0">
+                                <a
+                                    href="packrat.sampark.ca"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="btn-default flex items-center gap-2"
+                                    aria-label="Visit PackRat Website"
+                                >
+                                    Visit Website <MdArrowOutward size={18} />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -242,7 +270,7 @@ function PackRat() {
                             <div className="flex flex-col sm:flex-row gap-12 bg-olivewhite">
                                 <div className="sm:w-2/3">
                                     <p className="text-body text-gray-700 leading-relaxed mb-8">
-                                        I've always had a hard time keeping track of my gear. Fly fishing supplies, tubes of paint, cycling tools, gardening equipment — they all pile up. Most inventory apps feel like they're made for managing warehouses, not messy personal collections. I needed something simple, flexible, and visual — something I'd actually want to use.
+                                        I've always had a hard time keeping track of my gear. Fly fishing supplies, tubes of paint, cycling tools, gardening equipment. It's like they all pile up. Most inventory apps feel like they're made for managing warehouses, not messy personal collections. I needed something simple, flexible, and visual to help me keep track of my gear. I couldn't find something I'd actually want to use.
                                     </p>
                                     <p className="text-body text-gray-700 leading-relaxed mb-8">
                                         PackRat started as a personal tool to solve that problem. I designed and built a full-stack inventory app where I could sort my items by category, upload images, and browse through them in a way that felt more like a game than a spreadsheet. Later, I expanded it with user authentication so each person could manage their own private collections.
@@ -286,28 +314,21 @@ function PackRat() {
                                     </ul>
                                 </div>
                             </div>
-                            
-                            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-                                <div 
-                                    className="rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity shadow-md"
-                                    onClick={() => openModal(packratUi)}
+
+                            <div className="mt-12">
+                                <div
+                                    className="rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
+                                    onClick={() => openModal(packratMb)}
                                 >
-                                    <img 
-                                        src={packratUi} 
-                                        alt="PackRat UI Screenshot" 
+                                    <img
+                                        src={packratMb}
+                                        alt="PackRat Interface Mockup"
                                         className="w-full h-auto"
                                     />
                                 </div>
-                                <div 
-                                    className="rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity shadow-md"
-                                    onClick={() => openModal(packratMobile)}
-                                >
-                                    <img 
-                                        src={packratMobile} 
-                                        alt="PackRat Mobile View" 
-                                        className="w-full h-auto"
-                                    />
-                                </div>
+                                <p className="text-sm text-gray-500 mt-2 text-center">
+                                    The PackRat interface with its orb-based visual inventory system
+                                </p>
                             </div>
                         </div>
                     </section>
@@ -465,30 +486,49 @@ function PackRat() {
                                     </div>
                                 </div>
 
-                                {/* Design Decisions */}
+                                {/* Design Highlights */}
                                 <div>
                                     <h3 className="text-h2 font-ppSupply font-bold text-ink mb-8">Design Highlights</h3>
-                                    <ul className="list-none space-y-4 text-body">
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-redOrange font-bold">•</span>
+
+                                    {/* Image First - Full Width */}
+                                    <div className="mt-12">
+                                        <div
+                                            className="rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity shadow-lg border border-ink"
+                                            onClick={() => openModal(packratUi)}
+                                        >
+                                            <img
+                                                src={packratUi}
+                                                alt="PackRat Interface Mockup"
+                                                className="w-full h-auto"
+                                            />
+                                        </div>
+                                        <p className="text-sm text-gray-500 mt-2 text-center">
+                                            The PackRat interface with its orb-based visual inventory system
+                                        </p>
+                                    </div>
+
+                                    {/* Text Content Below */}
+                                    <ul className="list-none space-y-5 text-body">
+                                        <li className="flex items-start gap-3">
+                                            <span className="text-redOrange font-bold text-xl">•</span>
                                             <div>
                                                 <span className="font-bold">Orb-Based UI:</span> Items are displayed as interactive orbs on a floating shelf, making the inventory feel more like a game than a database.
                                             </div>
                                         </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-redOrange font-bold">•</span>
+                                        <li className="flex items-start gap-3">
+                                            <span className="text-redOrange font-bold text-xl">•</span>
                                             <div>
                                                 <span className="font-bold">Custom Categories:</span> Users can create and manage their own organizational system, adapting the app to their specific needs.
                                             </div>
                                         </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-redOrange font-bold">•</span>
+                                        <li className="flex items-start gap-3">
+                                            <span className="text-redOrange font-bold text-xl">•</span>
                                             <div>
                                                 <span className="font-bold">Visual Filtering:</span> Categories visually highlight and filter relevant items, making sorting intuitive and playful.
                                             </div>
                                         </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="text-redOrange font-bold">•</span>
+                                        <li className="flex items-start gap-3">
+                                            <span className="text-redOrange font-bold text-xl">•</span>
                                             <div>
                                                 <span className="font-bold">Component Architecture:</span> Modular design ensures the application is maintainable and easy to extend with new features.
                                             </div>
