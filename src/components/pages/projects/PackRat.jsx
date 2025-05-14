@@ -221,7 +221,7 @@ function PackRat() {
                             {/* View Website CTA */}
                             <div className="mt-6 md:mt-0">
                                 <a
-                                    href="packrat.sampark.ca"
+                                    href="https://packrat.sampark.ca"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="btn-default flex items-center gap-2"
