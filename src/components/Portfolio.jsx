@@ -9,21 +9,29 @@ import amalgmImage from '../assets/amalgm.png';
 import flyDexImage from '../assets/flydex/flydex-login-mockup.jpg';
 import ccMockup from '../assets/cc-mockup.png';
 import ldHero from '../assets/ld-hero-showcase.png';
+import packratHero from '../assets/packrat-hero-showcase.png';
 // Use placeholder until you have a real image
 const packratImage = "https://placehold.co/800x600?text=PackRat+App";
 
 // destructuring is used to include the limit prop that is passed from the parent component. This is used to limit the number of projects to display on the page.
 // This is done to allow us to limit the number of projects displayed on the home page vs projects page.
-function Portfolio({ limit}) {
+function Portfolio({ limit }) {
     useEffect(() => {
         AOS.init({
             duration: 1000,
             easing: "ease-in-out",
         });
     }, []);
-    
+
     // This state is used to store the projects array for the Portfolio component
     const [projects, setProjects] = useState([
+        {
+            image: packratHero,
+            title: 'PackRat App',
+            description: 'A visual inventory application for hobbyists designed to help organize gear and supplies across multiple interests in a way that\'s both practical and enjoyable.',
+            tags: ['Full Stack', 'React', 'Express', 'MySQL', 'Authentication'],
+            link: '/work/packrat',
+        },
         {
             image: flyDexImage,
             title: 'FlyDex App',
@@ -31,13 +39,7 @@ function Portfolio({ limit}) {
             tags: ['UX/UI', 'UX Research', 'Wireframing'],
             link: '/work/flydex-app',
         },
-        {
-            image: packratImage,
-            title: 'PackRat App',
-            description: 'A visual inventory application for hobbyists designed to help organize gear and supplies across multiple interests in a way that\'s both practical and enjoyable.',
-            tags: ['Full Stack', 'React', 'Express', 'MySQL', 'Authentication'],
-            link: '/work/packrat',
-        },
+
         {
             image: ssImage,
             title: 'The Salmon Sanctuary',
@@ -66,7 +68,7 @@ function Portfolio({ limit}) {
             tags: ['UX Research', 'UX/UI', 'Wireframing', 'User Testing', 'Case Study'],
             link: '/work/london-drugs',
         },
-        
+
         // {
         //     image: introBumperImage,
         //     title: 'Intro Bumper Video',

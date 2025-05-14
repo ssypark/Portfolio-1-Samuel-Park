@@ -151,7 +151,7 @@ function PackRat() {
                         <img
                             src={packratMb}
                             alt="PackRat Interface Mockup"
-                            className="w-full h-auto mt-12"
+                            className="w-full h-auto mt-14"
                         />
                     </div>
                     
