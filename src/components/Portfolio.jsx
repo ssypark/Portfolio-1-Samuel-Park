@@ -10,6 +10,8 @@ import flyDexImage from '../assets/flydex/flydex-login-mockup.jpg';
 import ccMockup from '../assets/cc-mockup.png';
 import ldHero from '../assets/ld-hero-showcase.png';
 import packratHero from '../assets/packrat-hero-showcase.png';
+import madItalianImage from '../assets/mad-italian/mad-italian-hero.png'; // New import for The Mad Italian hero image
+
 // Use placeholder until you have a real image
 const packratImage = "https://placehold.co/800x600?text=PackRat+App";
 
@@ -25,13 +27,7 @@ function Portfolio({ limit }) {
 
     // This state is used to store the projects array for the Portfolio component
     const [projects, setProjects] = useState([
-        {
-            image: packratHero,
-            title: 'PackRat App',
-            description: 'A visual inventory application for hobbyists designed to help organize gear and supplies across multiple interests in a way that\'s both practical and enjoyable.',
-            tags: ['Full Stack', 'React', 'Express', 'MySQL', 'Authentication'],
-            link: '/work/packrat',
-        },
+
         {
             image: flyDexImage,
             title: 'FlyDex App',
@@ -55,6 +51,13 @@ function Portfolio({ limit }) {
             link: '/work/amalgm-brand-book',
         },
         {
+            image: madItalianImage,
+            title: 'The Mad Italian Brand Guide',
+            description: 'A comprehensive brand identity system for a local pizza restaurant, featuring custom typography, color palette, logo variations, and brand voice guidelines that capture the rustic, neighborly spirit of authentic Italian dining.',
+            tags: ['Branding', 'Graphic Design', 'Typography', 'Logo Design'],
+            link: '/work/mad-italian-brand-guide',
+        },
+        {
             image: ccMockup,
             title: 'Conscious Connections',
             description: 'Conscious Connections was designed during a weekend hackathon, where we aimed to create an immersive relationship experience that fosters meaningful connections beyond swipes and shallow matches.',
@@ -68,7 +71,13 @@ function Portfolio({ limit }) {
             tags: ['UX Research', 'UX/UI', 'Wireframing', 'User Testing', 'Case Study'],
             link: '/work/london-drugs',
         },
-
+        {
+            image: packratHero,
+            title: 'PackRat App',
+            description: 'A visual inventory application for hobbyists designed to help organize gear and supplies across multiple interests in a way that\'s both practical and enjoyable.',
+            tags: ['Full Stack', 'React', 'Express', 'MySQL', 'Authentication'],
+            link: '/work/packrat',
+        },
         // {
         //     image: introBumperImage,
         //     title: 'Intro Bumper Video',
