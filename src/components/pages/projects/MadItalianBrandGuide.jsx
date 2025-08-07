@@ -29,7 +29,7 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const topics = [
     { id: "context", label: "Context" },
     { id: "approach", label: "Approach" },
-    { id: "deliverables", label: "Deliverables" },
+    { id: "outcome", label: "Outcome" },
     { id: "takeaways", label: "Takeaways" },
 ];
 
@@ -151,7 +151,7 @@ function MadItalianBrandGuide() {
             <div className="relative bg-gradient-to-b from-gray-100 to-olivewhite">
                 {/* Hero Image */}
                 <div className="container mx-auto pt-48 pb-16">
-                    <div className="max-w-6xl mx-auto">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-8">
                         <img
                             src={madItalianHero}
                             alt="The Mad Italian Brand Guide"
@@ -161,24 +161,17 @@ function MadItalianBrandGuide() {
                 </div>
 
                 {/* Project Title, Description and Details */}
-                <div className="container mx-auto  pb-16">
-                    <div className="flex flex-col lg:flex-row gap-12 max-w-6xl mx-auto">
+                <div className="container mx-auto pb-16">
+                    <div className="flex flex-col lg:flex-row gap-12 max-w-7xl mx-auto px-4 sm:px-8">
                         {/* Left Column - Title and Description */}
                         <div className="lg:w-2/3">
-                            <h1
-                                className="text-6xl font-bold font-ppSupply text-ink mb-4"
-                            >
+                            <h1 className="text-6xl font-bold font-ppSupply text-ink mb-4">
                                 The Mad Italian
                             </h1>
-                            <h2
-                                className="text-2xl font-bold font-ppSupply text-ink mb-4"
-                            >
+                            <h2 className="text-2xl font-bold font-ppSupply text-ink mb-4">
                                 Brand Style Guide
                             </h2>
-                            <p
-                                className="text-xl text-gray-600 mb-8"
-
-                            >
+                            <p className="text-xl text-gray-600 mb-8">
                                 A comprehensive brand identity system for Langley's neighborhood pizza restaurant, capturing rustic authenticity with contemporary appeal through custom typography, flexible logo variations, and warm color palette.
                             </p>
 
@@ -286,7 +279,7 @@ function MadItalianBrandGuide() {
                                         The Mad Italian's owner reached out to our team knowing his restaurant had great pizza, but his online presence wasn't telling that story. His logo was made in Canva, his colors felt random, and he wasn't sure how to talk to customers in a way that felt authentically him.
                                     </p>
                                     <p className="text-body text-gray-700 leading-relaxed mb-8">
-                                        Over three weeks, we spent time with the owner understanding his vision through multiple meetings and feedback sessions. While Kevin built out the wireframes and developed the website, Vahan and I focused on the brand system—creating logo variations, a cohesive color palette, typography that felt handcrafted but professional, and most importantly, a voice that captured what made The Mad Italian special: that neighborly, easygoing pride you feel when you know you're serving the best pizza in town.
+                                        Over three weeks, we spent time with the owner understanding his vision through multiple meetings and feedback sessions. I focused on the brand system—creating logo variations, a cohesive color palette, typography that felt handcrafted but professional, and most importantly, a voice that captured what made The Mad Italian special: that neighborly, easygoing pride you feel when you know you're serving the best pizza in town.
                                     </p>
                                     <p className="text-body text-gray-700 leading-relaxed mb-8">
                                         Through several iterations and client reviews, we refined the system to balance our design vision with his comfort level. The goal wasn't to reinvent the restaurant, but to give him tools that would help him show up consistently and confidently across all touchpoints.
@@ -382,9 +375,9 @@ function MadItalianBrandGuide() {
                     </section>
 
                     {/* Deliverables Section */}
-                    <section id="deliverables">
+                    <section id="outcome">
                         <div className="container mx-auto py-16 px-4 sm:px-8">
-                            <h2 className="text-hmax font-ppSupply font-bold text-ink mb-2">Deliverables</h2>
+                            <h2 className="text-hmax font-ppSupply font-bold text-ink mb-2">Outcome</h2>
                             <p className="text-h6 text-gray-700 leading-relaxed mb-16">
                                 The final brand system provides The Mad Italian with all the tools needed to maintain consistent, engaging communication across every customer touchpoint—from storefront signage to social media.
                             </p>
@@ -392,7 +385,11 @@ function MadItalianBrandGuide() {
                             <div className="space-y-24">
                                 {/* Logo System */}
                                 <div className="space-y-12">
+                                      
                                     <div>
+                                        <div className="bg-neutral inline-block px-3 py-1 rounded-full text-sm font-bold text-ink mb-4">
+                                        Logo System
+                                    </div>
                                         <h3 className="text-h3 font-ppSupply font-bold text-ink mb-4">What Goes on the Pizza Box Matters</h3>
                                         <p className="text-body text-gray-700 leading-relaxed mb-6 max-w-3xl">
                                             We created a flexible logo system with three variations—each designed for different uses, all keeping the same recognizable identity.
@@ -448,6 +445,9 @@ function MadItalianBrandGuide() {
                                 {/* Color Palette */}
                                 <div className="order-2 lg:order-1">
                                     <div className="p-6">
+                                        <div className="bg-neutral inline-block px-3 py-1 rounded-full text-sm font-bold text-ink mb-4">
+                                        Color Palette
+                                    </div>
                                         {/* Section Text */}
                                         <h3 className="text-h3 font-ppSupply font-bold text-ink mb-4">A Palette That Feels Like Pizza Night</h3>
                                         <p className="text-body text-gray-700 leading-relaxed mb-8">
@@ -517,6 +517,9 @@ function MadItalianBrandGuide() {
                                 {/* Photography Direction */}
                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                                     <div>
+                                        <div className="bg-neutral inline-block px-3 py-1 rounded-full text-sm font-bold text-ink mb-4">
+                                        Photography Direction
+                                    </div>
                                         <h3 className="text-h3 font-ppSupply font-bold text-ink mb-4">
                                             Photos That Feel Like the Last Slice Is Still Warm
                                         </h3>
@@ -559,6 +562,9 @@ function MadItalianBrandGuide() {
                     {/* Takeaways Section */}
                     <section id="takeaways" className="container mx-auto pb-48 px-4 sm:px-8">
                         <h2 className="text-hmax font-ppSupply font-bold text-ink pt-16 mb-8">Takeaways</h2>
+                        
+          
+
                         <div className="bg-neutral border-2 border-ink rounded-lg p-8">
                             <h3 className="text-h2 font-ppSupply font-bold text-ink mb-4">Sometimes the best design work happens when clients say no.</h3>
                             <p className="text-body text-gray-700 leading-relaxed mb-8">
@@ -605,6 +611,21 @@ function MadItalianBrandGuide() {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                                      {/* Add CTA here - after title, before reflection */}
+                        <div className="text-center mb-12">
+                            <p className="text-body text-gray-700 pt-16 mb-6">
+                                Ready to see the complete brand system in action?
+                            </p>
+                            <a
+                                href="https://www.figma.com/slides/XytWlhM7wyWWrZFqP3rRoJ/The-Mad-Italian?node-id=1-42&t=HuZL0qA8RI8njhfI-1"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="btn-default inline-flex items-center gap-2 text-lg px-8 py-4"
+                                aria-label="View Complete Brand Guide"
+                            >
+                                View Complete Brand Guide <MdArrowOutward size={20} />
+                            </a>
                         </div>
                     </section>
                 </div>

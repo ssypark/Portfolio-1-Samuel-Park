@@ -99,8 +99,9 @@ function SalmonSanctuary() {
 
     // Add these state variables
     const bulletRefs = useRef({});
+    const sidebarRef = useRef(); // Add this line
     const [activeSection, setActiveSection] = useState(null);
-    const [openAccordions, setOpenAccordions] = useState({});
+    const [openAccordions, setOpenAccordions] = useState({}); // Add this line
 
     // Add the toggle function
     const toggleAccordion = (id) => {
@@ -166,8 +167,7 @@ function SalmonSanctuary() {
     const handleScroll = (e, id) => {
         e.preventDefault();
         const element = document.getElementById(id);
-        const offset = 100; // Adjust this value to control how far from the top the section stops
-        const elementPosition = element.getBoundingClientRect().top;
+        const offset = 100; // Adjust this value to control how far from
         const offsetPosition = elementPosition + window.pageYOffset - offset;
 
         window.scrollTo({
@@ -306,9 +306,12 @@ function SalmonSanctuary() {
             <hr className="my-0 border-t border-gray-300" />
 
             {/* Add the sidebar and content wrapper */}
-            <div className="flex container mx-auto md:gap-14 px-2 bg-olivewhite">
+            <div className="flex container mx-auto md:gap-8 px-2 bg-olivewhite">
                 {/* Sidebar Navigation */}
-                <div className="hidden md:block md:sticky md:top-10 md:h-fit md:py-12">
+                <div
+                    className="hidden md:block md:sticky md:top-10 md:h-fit md:py-12 pl-8"
+                    ref={sidebarRef}
+                >
                     <ul className="flex flex-col space-y-4 pl-4 pt-16">
                         {topics.map((topic) => (
                             <li key={topic.id} className="relative group flex items-center">
@@ -321,7 +324,7 @@ function SalmonSanctuary() {
                                 <a
                                     href={`#${topic.id}`}
                                     onClick={(e) => handleScroll(e, topic.id)}
-                                    className={`sidebar pl-2 text-gray-500 group-hover:text-redOrange transition-all duration-300 text-h5 relative
+                                    className={`sidebar pl-2 text-gray-500 group-hover:text-redOrange transition-all duration-300 text-md relative
                                         ${activeSection === topic.id ? 'text-redOrange font-bold translate-x-2' : 'hover:translate-x-1'}`}
                                 >
                                     {topic.label}
@@ -332,8 +335,8 @@ function SalmonSanctuary() {
                 </div>
 
                 {/* Main Content */}
-                <div className="flex-1 ">
-                    <div className="relative bg-olivewhite  border-gray-500 mx-auto ">
+                <div className="flex-1 mt-12 max-w-full">
+                    <div className="relative bg-olivewhite border-gray-500 mx-auto">
                         <section id="context">
                             {/* UX Research Section content including personas */}
                             <div className="container mx-auto px-4 sm:px-8 mb-32 mt-24">

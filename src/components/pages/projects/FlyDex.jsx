@@ -48,6 +48,7 @@ const topics = [
 function FlyDex() {
     const [activeSection, setActiveSection] = useState('challenge');
     const bulletRefs = useRef({});
+    const sidebarRef = useRef(); // Add this line
 
     useEffect(() => {
         AOS.init({
@@ -127,6 +128,28 @@ function FlyDex() {
         setJustinModalOpen(false);
         setModalImage("");
     };
+
+    // Add sidebar animation effect after your existing useEffects (around line 90)
+    useEffect(() => {
+        if (!sidebarRef.current) return;
+
+        gsap.fromTo(
+            sidebarRef.current,
+            { x: -100, opacity: 0 },
+            {
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: sidebarRef.current,
+                    start: "top 80%",
+                    toggleActions: "play none none none",
+                },
+            }
+        );
+    }, []);
+
     return (
         <div className="bg-olivewhite pb-24 min-h-screen">
             <Helmet>
@@ -207,7 +230,10 @@ function FlyDex() {
             {/* Content Section with Sidebar */}
             <div className="flex container mx-auto md:gap-8 px-2 bg-olivewhite">
                 {/* Sidebar Navigation */}
-                <div className="hidden md:block md:sticky md:top-10 md:h-fit md:py-12 pl-8">
+                <div
+                    className="hidden md:block md:sticky md:top-10 md:h-fit md:py-12 pl-8"
+                    ref={sidebarRef}
+                >
                     <ul className="flex flex-col space-y-4 pl-4 pt-16">
                         {topics.map((topic) => (
                             <li key={topic.id} className="relative group flex items-center">
@@ -220,8 +246,8 @@ function FlyDex() {
                                 <a
                                     href={`#${topic.id}`}
                                     onClick={(e) => handleScroll(e, topic.id)}
-                                    className={`sidebar pl-2 text-gray-500 group-hover:text-redOrange transition-all duration-300 text-h5 relative
-                                        ${activeSection === topic.id ? 'text-redOrange font-bold  translate-x-2' : 'hover:translate-x-1'}`}
+                                    className={`sidebar pl-2 text-gray-500 group-hover:text-redOrange transition-all duration-300 text-md relative
+                                        ${activeSection === topic.id ? 'text-redOrange font-bold translate-x-2' : 'hover:translate-x-1'}`}
                                 >
                                     {topic.label}
                                 </a>

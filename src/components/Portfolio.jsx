@@ -44,19 +44,20 @@ function Portfolio({ limit }) {
             link: '/work/salmon-sanctuary',
         },
         {
-            image: amalgmImage,
-            title: 'Amalgm Equipment',
-            description: 'This brand book outlines Amalgm\'s commitment to sustainable, collaborative, and artistic apparel and equipment, emphasizing individuality and ethical design.',
-            tags: ['Branding', 'Graphic Design', 'Product Design'],
-            link: '/work/amalgm-brand-book',
-        },
-        {
             image: madItalianImage,
             title: 'The Mad Italian Brand Guide',
             description: 'A comprehensive brand identity system for a local pizza restaurant, featuring custom typography, color palette, logo variations, and brand voice guidelines that capture the rustic, neighborly spirit of authentic Italian dining.',
             tags: ['Branding', 'Graphic Design', 'Typography', 'Logo Design'],
             link: '/work/mad-italian-brand-guide',
         },
+        {
+            image: amalgmImage,
+            title: 'Amalgm Equipment',
+            description: 'This brand book outlines Amalgm\'s commitment to sustainable, collaborative, and artistic apparel and equipment, emphasizing individuality and ethical design.',
+            tags: ['Branding', 'Graphic Design', 'Product Design'],
+            link: '/work/amalgm-brand-book',
+        },
+
         {
             image: ccMockup,
             title: 'Conscious Connections',
