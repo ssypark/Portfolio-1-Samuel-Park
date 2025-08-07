@@ -19,6 +19,9 @@ import madItalianLogo from "../../../assets/mad-italian/logo.png";
 import madItalianSplatter from "../../../assets/mad-italian/splatter.png";
 import madItalianMoodboard from "../../../assets/mad-italian/moodboard.png";
 import madItalianOldLogo from "../../../assets/mad-italian/old-logo.jpg";
+import kilnRegular from "../../../assets/mad-italian/kiln-regular.png";
+import antonio from "../../../assets/mad-italian/antonio.png";
+import inter from "../../../assets/mad-italian/inter-regular.png";
 
 
 import logoBlack from "../../../assets/logo-black.svg";
@@ -513,7 +516,54 @@ function MadItalianBrandGuide() {
                                         </div>
                                     </div>
                                 </div>
+                        
+{/* Typography System */}
+<div className=" gap-12 items-start">
+  <div>
+    <div className="bg-neutral inline-block px-3 py-1 rounded-full text-sm font-bold text-ink mb-4">
+      Typography
+    </div>
+    <h3 className="text-h3 font-ppSupply font-bold text-ink mb-4">
+      Fonts That Say Pizza Without Saying Pizza
+    </h3>
+    <p className="text-body text-gray-700 leading-relaxed mb-8">
+      We chose a trio of typefaces that felt like they could belong on a menu, a window sign, or a branded tee. Each one plays a specific role in the system, balancing personality and clarity across every medium.
+    </p>
 
+    <div className=" p-6 space-y-6">
+      <div>
+        <img src={kilnRegular} alt="Kiln Regular Display" className="w-auto h-13 " />
+        <p className="text-xs text-gray-500 mb-2">Used for large display text and expressive accents.</p>
+        <p className="text-sm text-gray-700 mb-2">
+          Our display typeface. Kiln adds warmth and handcrafted energy to headlines and titles. Think chalkboard signs or wood-fired menus.
+        </p>
+        
+      </div>
+
+      <div>
+        <img src={antonio} alt="Antonio Display" className="w-auto h-13" />
+        <p className="text-xs mb-2 text-gray-500">Used for section headers, CTAs, and accent text.</p>
+        <p className="text-sm text-gray-700 mb-2">
+          This bold, condensed sans in all caps gives hierarchy to key headlines and section markers. It keeps the system clean, confident, and modern.
+        </p>
+        
+      </div>
+
+      <div>
+        <img src={inter} alt="Inter Display" className="w-auto h-13 -mb-2" />
+        <p className="text-xs mb-2 text-gray-500">Used for paragraphs, details, and general content.</p>
+        <p className="text-sm text-gray-700 mb-2">
+          A versatile sans-serif for everything else. Inter handles body text with legibility and ease—perfect for menus, descriptions, and captions.
+        </p>
+        
+      </div>
+    </div>
+
+ 
+  </div>
+
+  {/* You can include a moodboard or type pairings preview here if you'd like */}
+</div>
                                 {/* Photography Direction */}
                                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                                     <div>
