@@ -22,6 +22,7 @@ import madItalianOldLogo from "../../../assets/mad-italian/old-logo.jpg";
 import kilnRegular from "../../../assets/mad-italian/kiln-regular.png";
 import antonio from "../../../assets/mad-italian/antonio.png";
 import inter from "../../../assets/mad-italian/inter-regular.png";
+import madItalianPizzaBox from "../../../assets/mad-italian/pizza-box_mockup.png";
 
 
 import logoBlack from "../../../assets/logo-black.svg";
@@ -561,7 +562,17 @@ function MadItalianBrandGuide() {
 
  
   </div>
-
+    <div>
+        <img
+            src={madItalianPizzaBox}
+            alt="The Mad Italian Pizza Box Mockup"
+            className="w-full"
+        />
+        <p className="text-sm text-gray-500 mt-2 text-center">
+            Pizza box design showcasing the brand system in real-world application
+        </p>
+    </div>
+    <div></div>
   {/* You can include a moodboard or type pairings preview here if you'd like */}
 </div>
                                 {/* Photography Direction */}
@@ -608,6 +619,8 @@ function MadItalianBrandGuide() {
                             </div>
                         </div>
                     </section>
+
+                    
 
                     {/* Takeaways Section */}
                     <section id="takeaways" className="container mx-auto pb-48 px-4 sm:px-8">
